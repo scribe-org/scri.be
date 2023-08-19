@@ -122,10 +122,6 @@ The following are the current and planned technologies for [scri.be](https://scr
 
 - [Nuxt.js](https://nuxt.com) • [Vue.js](https://vuejs.org) • [TypeScript](https://www.typescriptlang.org) • [Tailwind CSS](https://tailwindcss.com) • [Headless UI](https://headlessui.com)
 
-### Backend
-
-- [Django](https://www.djangoproject.com) • [Supabase](https://supabase.com/) (planned) • [PostgreSQL](https://www.postgresql.org) (planned)
-
 ### Deployment
 
 - [Docker](https://www.docker.com) • [Netlify](https://www.netlify.com) • [Vitest](https://vitest.dev/) (planned)
@@ -187,6 +183,12 @@ Many thanks to all the [scri.be contributors](https://github.com/scribe-org/scri
 <a href="https://github.com/scribe-org/scri.be/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=scribe-org/scri.be" />
 </a>
+
+### Code and Dependencies
+
+The Scribe team would like to thank all the great software that made scri.be's development possible 💙
+
+- Countless [Nuxt modules](https://nuxt.com/modules)
 
 ### Wikimedia Communities
 
