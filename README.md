@@ -43,7 +43,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/scri.be/b
 > [!NOTE]\
 > Just because an issue is assigned on GitHub doesn't mean that the team isn't interested in your contribution! Feel free to write [in the issues](https://github.com/scribe-org/scri.be/issues) and we can potentially reassign it to you.
 
-Those interested can further check the [`-next release-`](https://github.com/scribe-org/scri.be/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/scri.be/labels/-priority-) labels in the [issues](https://github.com/scribe-org/scri.be/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors.
+Those interested can further check the [`-next release-`](https://github.com/scribe-org/scri.be/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/scri.be/labels/-priority-) labels in the [issues](https://github.com/scribe-org/scri.be/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors. For those new to coding or our tech stack, we've collected [links to helpful documentation pages](https://github.com/scribe-org/scri.be/blob/main/CONTRIBUTING.md#learning-the-tech) in the [contribution guidelines](https://github.com/scribe-org/scri.be/blob/main/CONTRIBUTING.md).
 
 <a id="ways-to-help"></a>
 
@@ -84,33 +84,64 @@ The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scrib
 >
 > - [bradlc.vscode-tailwindcss](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 > - [heybourn.headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind)
+> - [ms-vsliveshare.vsliveshare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) # for collaboration
 > - [Vue.volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 > - [Vue.vscode-typescript-vue-plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
 >
 > </p>
 > </details>
 
-2. To setup your development environment, first install [Docker](https://docs.docker.com/install) and [Docker-Compose](https://docs.docker.com/compose).
+2. To setup your development environment, first install [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/).
 
-> [!NOTE]\
+> [!NOTE]
 > If you are new to Docker, as an alternative Scribe recommends installing [Docker Desktop](https://docs.docker.com/desktop/). Docker Desktop comes with many Docker tools and a straightforward user interface.
 
-3. Then clone this repository with the below command:
+3. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the [scri.be repo](https://github.com/scribe-org/scri.be), clone your fork, and configure the remotes:
+
+> [!NOTE]
+>
+> <details><summary>Consider using SSH</summary>
+>
+> <p>
+>
+> Alternatively to using HTTPS as in the instructions below, consider SSH to interact with GitHub from the terminal. SSH allows you to connect without a user-pass authentication flow.
+>
+> To run git commands with SSH, remember then to substitute the HTTPS URL, `https://github.com/...`, with the SSH one, `git@github.com:...`.
+>
+> - e.g. Cloning now becomes `git clone git@github.com:<your-username>/scri.be.git`
+>
+> GitHub also has their documentation on how to [Generate new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). 🔑
+>
+> </p>
+> </details>
 
 ```bash
-git clone https://github.com/scribe-org/scri.be.git
-```
-
-4. Enter the created directory and start your docker images with the following:
-
-```bash
+# Clone your fork of the repo into the current directory.
+git clone https://github.com/<your-username>/scri.be.git
+# Navigate to the newly cloned directory.
 cd scri.be
-docker-compose up
-# Or with new dependencies:
-# docker-compose up --build
+# Assign the original repo to a remote called "upstream".
+git remote add upstream https://github.com/scribe-org/scri.be.git
 ```
 
-5. You can then visit <http://localhost:3000> to see the development frontend build once the container is up and running.
+Now, if you run `git remote -v` you should see two remote repositories named:
+
+- `origin` (forked repository)
+- `upstream` (scri.be repository)
+
+4. Create a `.env` file and start your docker images with the following:
+
+   ```bash
+   cp .env.example .env
+   docker compose up
+   # Or with new dependencies:
+   # docker compose up --build
+   ```
+
+5. You can visit <http://localhost:3000/> to see the development build once the container is up and running.
+
+> [!NOTE]
+> Feel free to contact the team in the [General room on Matrix](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org) if you're having problems getting your environment setup!
 
 <a id="tech-stack"></a>
 
