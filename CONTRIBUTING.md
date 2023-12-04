@@ -92,6 +92,7 @@ Scribe is very open to contributions from people in the early stages of their co
 - [Headless UI docs](https://headlessui.com/)
 
 </p>
+</details>
 
 <details><summary>Deployment tech docs</summary>
 <p>
@@ -143,7 +144,7 @@ Scribe is very open to contributions from people in the early stages of their co
 >
 > - e.g. Cloning now becomes `git clone git@github.com:<your-username>/scri.be.git`
 >
-> GitHub also has their documentation on how to [Generate new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). 🔑
+> GitHub also has their documentation on how to [Generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 🔑
 >
 > </p>
 > </details>
