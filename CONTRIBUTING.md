@@ -158,10 +158,9 @@ cd scri.be
 git remote add upstream https://github.com/scribe-org/scri.be.git
 ```
 
-Now, if you run `git remote -v` you should see two remote repositories named:
-
-- `origin` (forked repository)
-- `upstream` (scri.be repository)
+- Now, if you run `git remote -v` you should see two remote repositories named:
+  - `origin` (forked repository)
+  - `upstream` (scri.be repository)
 
 4. Create a `.env` file and start your docker images with the following:
 
