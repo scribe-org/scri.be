@@ -60,6 +60,9 @@ Those interested can further check the [`-next release-`](https://github.com/scr
 
 The Scribe road map can be followed in the organization's [project board](https://github.com/orgs/scribe-org/projects/1) where we list the most important issues along with their priority, status and an indication of which sub projects they're included in (if applicable).
 
+> [!NOTE]\
+> Consider joining our [bi-weekly developer syncs](https://etherpad.wikimedia.org/p/scribe-dev-sync)!
+
 <a id="designs"></a>
 
 ## Designs [`⇧`](#contents)
@@ -209,7 +212,7 @@ The following are the current and planned technologies for [scri.be](https://scr
   <br>
 </div>
 
-# Powered By
+# Powered By [`⇧`](#contents)
 
 ### Contributors
 
