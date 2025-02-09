@@ -4,12 +4,6 @@
   <div class="flex flex-row justify-start">
     <!-- Note: Content Sections Left -->
     <div class="mt-0 flex w-[80%] flex-col justify-items-start">
-      <!-- overflow-y-hidden is to prevent the logo from expanding beyond its bound on mobile Safari. -->
-      <div class="focus-inside relative z-0 h-10 w-36 overflow-y-hidden">
-        <LogoActivist
-          class="z-1 absolute inset-0 flex items-center justify-center overflow-clip"
-        />
-      </div>
       <p class="mt-3 text-primary-text">
         {{ $t(i18nMap.components.footer.flex._global.activist_tagline) }}
       </p>

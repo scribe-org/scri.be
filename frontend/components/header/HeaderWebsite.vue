@@ -12,18 +12,6 @@
   >
     <!-- MARK: Mobile Header -->
     <div v-if="!aboveMediumBP" id="mobile-header" class="flex px-4 py-3">
-      <div class="z-0 mx-auto">
-        <div
-          class="absolute left-0 top-0 z-0 flex h-full w-full items-center justify-center"
-        >
-          <div>
-            <LogoActivist
-              class="z-1 flex h-full items-center justify-center overflow-clip"
-              :is-mobile="true"
-            />
-          </div>
-        </div>
-      </div>
       <SidebarRight>
         <div class="flex-col space-y-2">
           <DropdownTheme
@@ -34,85 +22,18 @@
             class="w-full"
             :location="DropdownLocation.SIDE_MENU"
           />
-          <DropdownCreate
-            v-if="userIsSignedIn && devMode.active"
-            id="create"
-            class="w-full"
-            :location="DropdownLocation.SIDE_MENU"
-          />
-          <DropdownInfo
-            v-if="devMode.active"
-            id="info"
-            class="w-full"
-            :location="DropdownLocation.SIDE_MENU"
-          />
-          <DropdownUserOptions
-            v-if="devMode.active"
-            id="user-options"
-            class="w-full"
-            :location="DropdownLocation.SIDE_MENU"
-            :userIsSignedIn="userIsSignedIn"
-          />
         </div>
       </SidebarRight>
     </div>
     <!-- MARK: Desktop Header -->
     <div v-if="aboveMediumBP" id="desktop-header" class="mx-auto py-3">
       <div class="responsive-px-5 flex items-center justify-between">
-        <div class="flex items-center md:space-x-4 lg:space-x-6 xl:space-x-8">
-          <div class="relative z-0 h-10 w-36">
-            <LogoActivist
-              class="z-1 absolute inset-0 flex items-center justify-center overflow-clip"
-            />
-          </div>
-          <BtnRoadMap />
-        </div>
         <div>
           <div class="flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
             <DropdownTheme />
             <DropdownLanguage />
             <BtnRouteInternal
-              v-if="aboveLargeBP && devMode.active"
-              id="btn-sign-in-large"
-              class="block"
-              :cta="true"
-              :label="i18nMap._global.sign_in"
-              linkTo="/auth/sign-in"
-              fontSize="sm"
-              :ariaLabel="i18nMap._global.sign_in_aria_label"
-            />
-            <BtnRouteInternal
-              v-else-if="aboveMediumBP && devMode.active"
-              id="btn-sign-in-medium"
-              class="block"
-              :cta="true"
-              :label="i18nMap._global.sign_in"
-              linkTo="/auth/sign-in"
-              fontSize="xs"
-              :ariaLabel="i18nMap._global.sign_in_aria_label"
-            />
-            <BtnRouteInternal
-              v-if="aboveLargeBP && devMode.active"
-              id="btn-sign-up-large"
-              class="block"
-              :cta="true"
-              :label="i18nMap._global.sign_up"
-              linkTo="/auth/sign-up"
-              fontSize="sm"
-              :ariaLabel="i18nMap._global.sign_up_aria_label"
-            />
-            <BtnRouteInternal
-              v-else-if="aboveMediumBP && devMode.active"
-              id="btn-sign-up-medium"
-              class="block"
-              :cta="true"
-              :label="i18nMap._global.sign_up"
-              linkTo="/auth/sign-up"
-              fontSize="xs"
-              :ariaLabel="i18nMap._global.sign_up_aria_label"
-            />
-            <BtnRouteInternal
-              v-if="aboveLargeBP && !devMode.active"
+              v-if="aboveLargeBP"
               id="btn-get-in-touch-large"
               class="block"
               :cta="true"
@@ -122,7 +43,7 @@
               :ariaLabel="i18nMap.components.header_website.support_aria_label"
             />
             <BtnRouteInternal
-              v-else-if="aboveMediumBP && !devMode.active"
+              v-else-if="aboveMediumBP"
               id="btn-get-in-touch-medium"
               class="block"
               :cta="true"
@@ -141,11 +62,6 @@
 <script setup lang="ts">
 import { i18nMap } from "~/types/i18n-map";
 import { DropdownLocation } from "~/types/location";
-
-const devMode = useDevMode();
-devMode.check();
-
-const { userIsSignedIn } = useUser();
 
 const aboveMediumBP = useBreakpoint("md");
 const aboveLargeBP = useBreakpoint("lg");
