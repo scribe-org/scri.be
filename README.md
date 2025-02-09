@@ -8,19 +8,19 @@
 [![nuxt](https://img.shields.io/badge/Nuxt%203-41b883.svg?logo=nuxt.js&logoColor=ffffff)](#tech-stack)
 [![vue](https://img.shields.io/badge/Vue%203-41b883.svg?logo=vue.js&logoColor=ffffff)](#tech-stack)
 [![tailwind](https://img.shields.io/badge/Tailwind%203-38BDF8.svg?logo=tailwindcss&logoColor=ffffff)](#tech-stack)
-[![license](https://img.shields.io/github/license/scribe-org/scri.be.svg?label=%20)](https://github.com/scribe-org/scri.be/blob/main/LICENSE.txt)
-[![coc](https://img.shields.io/badge/Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/scri.be/blob/main/.github/CODE_OF_CONDUCT.md)
+[![license](https://img.shields.io/github/license/scribe-org/scri.be.svg?label=%20)](LICENSE.txt)
+[![coc](https://img.shields.io/badge/Contributor%20Covenant-ff69b4.svg)](.github/CODE_OF_CONDUCT.md)
 [![mastodon](https://img.shields.io/badge/Mastodon-6364FF.svg?logo=mastodon&logoColor=ffffff)](https://wikis.world/@scribe)
 [![matrix](https://img.shields.io/badge/Matrix-000000.svg?logo=matrix&logoColor=ffffff)](https://matrix.to/#/#scribe_community:matrix.org)
 
 ## Scribe's community portal scri.be
 
-**scri.be** is the landing page and general purpose domain of the Scribe organization. Its purpose is to present Scribe's projects and provide resources for those who want to learn more about app functionality as well as join the community.
+**scri.be** is the landing page of the Scribe organization. Its purpose is to present Scribe's projects and provide resources for those who want to learn more about app functionality as well as join the community.
 
-> [!NOTE]\
+> [!NOTE]
 > The [contributing](#contributing) section has information for those interested, with the articles and presentations in [featured by](#featured-by) also being good resources for learning more about Scribe.
 
-Scribe apps are available on [iOS](https://github.com/scribe-org/Scribe-iOS), [Android](https://github.com/scribe-org/Scribe-Android) (planned) and [Desktop](https://github.com/scribe-org/Scribe-Desktop) (planned). For the data formatting processes see [Scribe-Data](https://github.com/scribe-org/Scribe-Data).
+Scribe apps are available on [iOS](https://github.com/scribe-org/Scribe-iOS), [Android](https://github.com/scribe-org/Scribe-Android) (WIP) and [Desktop](https://github.com/scribe-org/Scribe-Desktop) (WIP). For the data formatting processes see [Scribe-Data](https://github.com/scribe-org/Scribe-Data) and for our data server see [Scribe-Server](https://github.com/scribe-org/Scribe-Server).
 
 <a id="contents"></a>
 
@@ -36,14 +36,14 @@ Scribe apps are available on [iOS](https://github.com/scribe-org/Scribe-iOS), [A
 
 <a href="https://matrix.to/#/#scribe_community:matrix.org"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/MatrixLogoGrey.png" height="50" alt="Public Matrix Chat" align="right"></a>
 
-Scribe uses [Matrix](https://matrix.org/) for communications. You're more than welcome to [join us in our public chat rooms](https://matrix.to/#/#scribe_community:matrix.org) to share ideas, ask questions or just say hi :)
+Scribe uses [Matrix](https://matrix.org/) for internal communication. You're more than welcome to [join us in our public chat rooms](https://matrix.to/#/#scribe_community:matrix.org) to share ideas, ask questions or just say hi :)
 
-Please see the [contribution guidelines](https://github.com/scribe-org/scri.be/blob/main/CONTRIBUTING.md) if you are interested in contributing to scri.be. Work that is in progress or could be implemented is tracked in the [issues](https://github.com/scribe-org/scri.be/issues) and [projects](https://github.com/scribe-org/scri.be/projects).
+Please see the [contribution guidelines](CONTRIBUTING.md) and [style guide](STYLEGUIDE.md) if you are interested in contributing to scri.be. Work that is in progress or could be implemented is tracked in the [issues](https://github.com/scribe-org/scri.be/issues) and [projects](https://github.com/scribe-org/scri.be/projects).
 
-> [!NOTE]\
+> [!NOTE]
 > Just because an issue is assigned on GitHub doesn't mean that the team isn't interested in your contribution! Feel free to write [in the issues](https://github.com/scribe-org/scri.be/issues) and we can potentially reassign it to you.
 
-Those interested can further check the [`-next release-`](https://github.com/scribe-org/scri.be/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/scri.be/labels/-priority-) labels in the [issues](https://github.com/scribe-org/scri.be/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors. For those new to coding or our tech stack, we've collected [links to helpful documentation pages](https://github.com/scribe-org/scri.be/blob/main/CONTRIBUTING.md#learning-the-tech) in the [contribution guidelines](https://github.com/scribe-org/scri.be/blob/main/CONTRIBUTING.md).
+Those interested can further check the [`-next release-`](https://github.com/scribe-org/scri.be/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/scri.be/labels/-priority-) labels in the [issues](https://github.com/scribe-org/scri.be/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors. For those new to coding or our tech stack, we've collected [links to helpful documentation pages](CONTRIBUTING.md#learning-the-tech) in the [contribution guidelines](CONTRIBUTING.md).
 
 <a id="ways-to-help"></a>
 
@@ -60,7 +60,7 @@ Those interested can further check the [`-next release-`](https://github.com/scr
 
 The Scribe road map can be followed in the organization's [project board](https://github.com/orgs/scribe-org/projects/1) where we list the most important issues along with their priority, status and an indication of which sub projects they're included in (if applicable).
 
-> [!NOTE]\
+> [!NOTE]
 > Consider joining our [bi-weekly developer syncs](https://etherpad.wikimedia.org/p/scribe-dev-sync)!
 
 <a id="designs"></a>
@@ -86,10 +86,15 @@ The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scrib
 > VS Code
 >
 > - [bradlc.vscode-tailwindcss](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-> - [heybourn.headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind)
-> - [ms-vsliveshare.vsliveshare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) # for collaboration
+> - [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+> - [streetsidesoftware.code-spell-checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 > - [Vue.volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-> - [Vue.vscode-typescript-vue-plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+>
+> WebStorm
+>
+> - Check out the [Vue.js development docs](https://www.jetbrains.com/help/webstorm/vue-js.html)
+> - Make sure a [local Node.js interpreter](https://www.jetbrains.com/help/webstorm/developing-node-js-applications.html#ws_node_configure_local_node_interpreter) is configured in your project
+> - Make sure the [Vue.js plugin](https://github.com/JetBrains/intellij-plugins/tree/master/vuejs) and [JavaScript Debugger](https://www.jetbrains.com/help/webstorm/configuring-javascript-debugger.html) are enabled in the plugins page of the settings
 >
 > </p>
 > </details>
@@ -131,19 +136,34 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
   - `origin` (forked repository)
   - `upstream` (scri.be repository)
 
-4. Create a `.env` file and start your docker images with the following:
+4. Start your docker images with the following:
 
    ```bash
-   cp .env.example .env
-   docker compose up
-   # Or with new dependencies:
-   # docker compose up --build
+   # --build only necessary with new dependencies or backend model changes
+   docker compose --env-file .env.dev up --build
+
+   # And to stop the containers when you're done working:
+   # docker compose --env-file .env.dev down
    ```
 
-5. You can visit <http://localhost:3000/> to see the development build once the container is up and running.
+5. You can visit <http://localhost:3000/> to see the development frontend once the container is up and running.
 
 > [!NOTE]
 > Feel free to contact the team in the [General room on Matrix](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org) if you're having problems getting your environment setup!
+
+6. Install [pre-commit](https://pre-commit.com/) to ensure that each of your commits is properly checked against our linter and formatters:
+
+   ```bash
+   # In the project root:
+   pre-commit install
+   ```
+
+> [!NOTE]
+> pre-commit is Python package that can be installed via pip or any other Python package manager. You can also find it in our [requirements.txt](backend/requirements.txt) file.
+>
+> ```bash
+> pip install pre-commit
+> ```
 
 <a id="tech-stack"></a>
 
@@ -157,17 +177,17 @@ The following are the current and planned technologies for [scri.be](https://scr
 
 ### Deployment
 
-- [Docker](https://www.docker.com) • [Netlify](https://www.netlify.com) • [Vitest](https://vitest.dev/) (planned)
+- [Docker](https://www.docker.com) • [Netlify](https://www.netlify.com) • [Vitest](https://vitest.dev/)
 
 ### Localization
 
-- [Nuxt I18n](https://github.com/nuxt-modules/i18n) • [Transifex](https://www.transifex.com/) (planned)
+- [Nuxt I18n](https://github.com/nuxt-modules/i18n)
 
 ### Analytics
 
-- [Plausible](https://plausible.io/) (planned)
+- [Plausible](https://plausible.io/)
 
-> [!NOTE]\
+> [!NOTE]
 > Those new to any frameworks or technologies who want to work on their skills are more than welcome to contribute!
 
 <a id="featured-by"></a>
@@ -179,6 +199,15 @@ The following are the current and planned technologies for [scri.be](https://scr
 
 <strong>2024</strong>
 
+- October: [Blog post on Medium](https://medium.com/@arpita151103/scribe-an-open-source-solution-for-language-learning-and-data-accessibility-092dab026fd6) discussing the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) development process, community and features
+- October: [Blog post on medium](https://medium.com/@mhmohona/ins-and-outs-of-scribe-data-cli-bd51202aa7c6) describing the main features of [Scribe-Data](https://github.com/scribe-org/Scribe-Data)
+- September: [Final Google Summer of Code report](https://medium.com/@mhmohona/the-final-stretch-gsoc-journey-with-scribe-data-1740084c958d) on the creation of the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) CLI
+- August: [Final Google Summer of Code report](https://jagmarcel.hashnode.dev/gsoc-2024-final-report) on the creation of Scribe's cross-language translation functionality
+- July: [Blog post on Medium](https://medium.com/@mhmohona/halfway-there-my-gsoc-adventure-with-scribe-data-cli-2ffe6d727ecb) about the progress on creating the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) CLI
+- July: [Blog post on Hashnode](https://jagmarcel.hashnode.dev/gsoc-2024-midterm-report) providing an midterm report on the localization and translation expansion for [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS)
+- July: [Blog post on Hashnode](https://jagmarcel.hashnode.dev/my-first-experiences-with-gsoc) about the initial steps towards the localization of [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS)
+- June: [Blog post on Medium](https://medium.com/@mhmohona/first-month-as-a-gsoc-intern-building-scribe-data-cli-d0c12c9e8371) about the planned [Scribe-Data](https://github.com/scribe-org/Scribe-Data) CLI
+- April: [Blog post on Medium](https://medium.com/@mhmohona/scribe-data-a-guide-to-open-source-language-data-a801c59db4c9) about [Scribe-Data](https://github.com/scribe-org/Scribe-Data) and its functionalities
 - February: [Presentation slides](https://docs.google.com/presentation/d/1lMhYiQx1R99SVGhbikUGjOVaFgPPASvbzM2Bsu3NXSg/edit?usp=sharing) for Scribe's participation at the [Wikimedia Tech Safari Program](https://www.mediawiki.org/wiki/Wikimedia_Tech_Safari_Program)
 
 <strong>2023</strong>
@@ -207,7 +236,14 @@ The following are the current and planned technologies for [scri.be](https://scr
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://www.mediawiki.org/wiki/New_Developers#Scribe"><img height="120" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WikimediaFoundationLogo.png" alt="Wikimedia Foundation logo linking to the MediaWiki new developers page."></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <br>
+</div>
+
+<div align="center">
+  <br>
     <a href="https://summerofcode.withgoogle.com/"><img height="120" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/GSoCLogo.png" alt="Google Summer of Code logo linking to its website."></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.outreachy.org/"><img height="90" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/OutreachyLogo.png" alt="Outreachy logo linking to its website."></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <br>
 </div>

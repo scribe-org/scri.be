@@ -4,11 +4,11 @@
 
 # Visual Studio Code
 .vscode/*
+!.vscode/settings.json
 !.vscode/extensions.json
 
-# Django and Python
-__pycache__
-.venv
+# Webstorm
+.idea
 
 # Nuxt dev/build outputs
 .output
@@ -21,3 +21,17 @@ dist
 
 # Node dependencies
 node_modules
+
+# Vue/Nuxt
+frontend/.data
+# i18n fix
+vue-i18n.d.ts
+
+# Yarn
+frontend/.pnp.*
+frontend/.yarn/*
+frontend/!.yarn/patches
+frontend/!.yarn/plugins
+frontend/!.yarn/releases
+frontend/!.yarn/sdks
+frontend/!.yarn/versions

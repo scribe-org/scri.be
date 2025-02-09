@@ -1,8 +1,8 @@
 {
   "recommendations": [
     "bradlc.vscode-tailwindcss",
-    "heybourn.headwind",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
     "Vue.volar",
-    "Vue.vscode-typescript-vue-plugin"
   ]
 }

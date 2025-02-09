@@ -1,0 +1,67 @@
+Privacy Policy
+
+Last updated February 9th, 2025
+
+Introduction
+
+At scri.be, we value your privacy and are committed to maintaining
+the trust and confidence of our users. This Privacy Policy explains
+how we handle your information and the choices you have regarding your
+information.
+
+By using scri.be, you agree to the provisions of this Privacy Policy.
+Our primary goal is to provide a platform that allows users to engage in
+activism without compromising their safety. We have and will continue to
+implement various measures to ensure the privacy and security of our users.
+If you have any questions or concerns, please contact us at
+security[at]scri.be.
+
+We encourage users to contribute to scri.be and participate in discussions
+about privacy, security, and other important topics. By engaging with our
+community, you can help shape the future of scri.be and ensure that it
+remains a safe, inclusive, and empowering platform for all.
+
+Information We Collect
+
+scri.be uses Plausible Analytics for non-identifiable tracking of the
+regions from which people visit. The platform does not collect any personally
+identifiable information from our users at this time. In the future we will
+collect user generated usernames that could be used to identify individuals as
+well as email addresses of some users. We will do our best to provide options for
+people to use the platform without providing personally identifiable
+information wherever possible.
+
+How We Use Information
+
+We use the anonymous location data we collect from Plausible Analytics
+to get a better idea of where there's interest in the platform. As we do not
+collect personal information at this time, we do not use any such information
+for any purpose.
+
+Data Sharing and Third-Party Services
+
+We do not share your personal information with any third parties. scri.be
+is dedicated to ensuring the privacy of our users. The team has no plans to share
+data with parties outside of our organization.
+
+Data Security and Breaches
+
+We are committed to ensuring the security of our users and their information.
+In the event of a data breach, we will promptly notify affected users and take
+appropriate measures to address the situation. We also encourage users to practice
+good security habits, such as using strong passwords and enabling two-factor
+authentication when available.
+
+Your Rights
+
+As we do not collect personal information at this time, you do not need to worry
+about exercising any rights related to your personal data. However, if you have
+any questions or concerns about this Privacy Policy or our practices, please
+feel free to contact us at security[at]scri.be.
+
+Changes to This Policy
+
+We may update this Privacy Policy from time to time. If we make significant
+changes, we will notify you through the platform or by other means. By continuing
+to use scri.be after any changes are in effect, you agree to the updated
+Privacy Policy.
