@@ -4,7 +4,7 @@ Thank you for your interest in contributing!
 
 Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 
-Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open-source project. In return, and in accordance with this project's [code of conduct](https://github.com/scribe-org/scri.be/blob/main/.github/CODE_OF_CONDUCT.md), other contributors will reciprocate that respect in addressing your issue or assessing changes and features.
+Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open-source project. In return, and in accordance with this project's [code of conduct](.github/CODE_OF_CONDUCT.md), other contributors will reciprocate that respect in addressing your issue or assessing changes and features.
 
 If you have questions or would like to communicate with the team, please [join us in our public Matrix chat rooms](https://matrix.to/#/#scribe_community:matrix.org). We'd be happy to hear from you!
 
@@ -16,12 +16,16 @@ If you have questions or would like to communicate with the team, please [join u
 - [Tech stack](#tech-stack)
 - [Learning the tech stack](#learning-the-tech)
 - [Development environment](#dev-env)
+- [Style guide](#style-guide-)
+- [Linting](#linting-)
+- [Testing](#testing-)
 - [Issues and projects](#issues-projects)
 - [Bug reports](#bug-reports)
 - [Feature requests](#feature-requests)
 - [Pull requests](#pull-requests)
 - [Localization](#localization)
 - [Documentation](#documentation)
+- [Accessibility](#accessibility-)
 - [Design](#design)
 
 <a id="first-steps"></a>
@@ -35,7 +39,7 @@ Thank you for your interest in contributing to Scribe's website [scri.be](https:
   - Scribe would suggest that you use the [Element](https://element.io/) client
   - The [General](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org) channel would be a great place to start!
   - Feel free to introduce yourself and tell us what your interests are if you're comfortable :)
-- Read through this contributing guide for all the information you need to contribute
+- Read through this contributing guide and the [style guide](STYLEGUIDE.md) for all the information you need to contribute
 - Look into issues marked [`good first issue`](https://github.com/scribe-org/scri.be/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) and the [Projects board](https://github.com/orgs/scribe-org/projects/1) to get a better understanding of what you can work on
 - Check out our [public designs on Figma](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?type=design&node-id=405-464&mode=design&t=E3ccS9Z8MDVSizQ4-0) to understand Scribes's goals and direction
 - Consider joining our [bi-weekly developer sync](https://etherpad.wikimedia.org/p/scribe-dev-sync)!
@@ -52,15 +56,15 @@ The following are the current and planned technologies for [scri.be](https://scr
 
 ### Deployment
 
-- [Docker](https://www.docker.com) • [Netlify](https://www.netlify.com) • [Vitest](https://vitest.dev/) (planned)
+- [Docker](https://www.docker.com) • [Netlify](https://www.netlify.com) • [Vitest](https://vitest.dev/)
 
 ### Localization
 
-- [Nuxt I18n](https://github.com/nuxt-modules/i18n) • [Transifex](https://www.transifex.com/) (planned)
+- [Nuxt I18n](https://github.com/nuxt-modules/i18n)
 
 ### Analytics
 
-- [Plausible](https://plausible.io/) (planned)
+- [Plausible](https://plausible.io/)
 
 > [!NOTE]
 > Those new to any frameworks or technologies who want to work on their skills are more than welcome to contribute!
@@ -119,10 +123,15 @@ Scribe is very open to contributions from people in the early stages of their co
 > VS Code
 >
 > - [bradlc.vscode-tailwindcss](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-> - [heybourn.headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind)
-> - [ms-vsliveshare.vsliveshare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) # for collaboration
+> - [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+> - [streetsidesoftware.code-spell-checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 > - [Vue.volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-> - [Vue.vscode-typescript-vue-plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+>
+> WebStorm
+>
+> - Check out the [Vue.js development docs](https://www.jetbrains.com/help/webstorm/vue-js.html)
+> - Make sure a [local Node.js interpreter](https://www.jetbrains.com/help/webstorm/developing-node-js-applications.html#ws_node_configure_local_node_interpreter) is configured in your project
+> - Make sure the [Vue.js plugin](https://github.com/JetBrains/intellij-plugins/tree/master/vuejs) and [JavaScript Debugger](https://www.jetbrains.com/help/webstorm/configuring-javascript-debugger.html) are enabled in the plugins page of the settings
 >
 > </p>
 > </details>
@@ -164,19 +173,68 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
   - `origin` (forked repository)
   - `upstream` (scri.be repository)
 
-4. Create a `.env` file and start your docker images with the following:
+4. Start your docker images with the following:
 
    ```bash
-   cp .env.example .env
-   docker compose up
-   # Or with new dependencies:
-   # docker compose up --build
+   # --build only necessary with new dependencies or backend model changes.
+   docker compose --env-file .env.dev up --build
+
+   # And to stop the containers when you're done working:
+   docker compose --env-file .env.dev down
    ```
 
-5. You can visit <http://localhost:3000/> to see the development build once the container is up and running.
+5. You can visit <http://localhost:3000/> to see the development frontend once the container is up and running.
 
 > [!NOTE]
-> Feel free to contact the team in the [General room on Matrix](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org) if you're having problems getting your environment setup!
+> Feel free to contact the team in the [Web room on Matrix](https://matrix.to/#/#scri.be:matrix.org) if you're having problems getting your environment setup!
+
+<a id="style-guide-"></a>
+
+## Style guide [`⇧`](#contents)
+
+Please see the [scri.be style guide](STYLEGUIDE.md) for details about how to follow the code style for the project. We made these guidelines to assure that we as a community write clean, cohesive code that's easy to write and review. Suggestions for the style guide are welcome.
+
+<a id="linting-"></a>
+
+## Linting [`⇧`](#contents)
+
+For the frontend [eslint](https://eslint.org/), [eslint-vue](https://eslint.vuejs.org/) and [vue-a11y](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/) are added via the dependencies to provide linting support.
+
+<a id="testing-"></a>
+
+## Testing [`⇧`](#contents)
+
+### Frontend
+
+#### Static Testing
+
+Please check the formatting of your code using Prettier and run the static type check with eslint before pull requests with the following command:
+
+```bash
+# Within ./frontend:
+yarn format
+yarn lint
+```
+
+You can further run the following commands for TypeScript type checks on the frontend:
+
+```bash
+# Within ./frontend:
+yarn run postinstall
+yarn typecheck
+```
+
+> [!NOTE]
+> Pre-existing TS errors may be ignored. If you need assistance then feel free to open a PR and we'll support!
+
+#### Automated Testing
+
+We use [Vitest](https://vitest.dev/) for component and unit testing.  You can run them with the following command:
+
+```bash
+# Within ./frontend:
+yarn test
+```
 
 <a id="issues-projects"></a>
 
@@ -184,7 +242,7 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
 
 The [issue tracker for scri.be](https://github.com/scribe-org/scri.be/issues) is the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests) and [submitting pull requests](#pull-requests). Scribe also organizes related issues into [projects](https://github.com/scribe-org/scri.be/projects).
 
-> [!NOTE]\
+> [!NOTE]
 > Just because an issue is assigned on GitHub doesn't mean that the team isn't interested in your contribution! Feel free to write [in the issues](https://github.com/scribe-org/scri.be/issues) and we can potentially reassign it to you.
 
 Be sure to check the [`-next release-`](https://github.com/scribe-org/scri.be/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/scri.be/labels/-priority-) labels in the [issues](https://github.com/scribe-org/scri.be/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors.
@@ -225,7 +283,7 @@ Feature requests are more than welcome! Please take a moment to find out whether
 
 # Pull requests [`⇧`](#contents)
 
-Good pull requests - patches, improvements and new features - are the foundation of our community making scri.be. They should remain focused in scope and avoid containing unrelated commits. Note that all contributions to this project will be made under [the specified license](https://github.com/scribe-org/scri.be/blob/main/LICENSE.txt) and should follow the code style standards ([contact us](https://matrix.to/#/#scribe_community:matrix.org) if unsure).
+Good pull requests - patches, improvements and new features - are the foundation of our community making scri.be. They should remain focused in scope and avoid containing unrelated commits. Note that all contributions to this project will be made under [the specified license](LICENSE.txt) and should follow the code style standards ([contact us](https://matrix.to/#/#scribe_community:matrix.org) if unsure).
 
 **Please ask first** before embarking on any significant pull request (implementing features, refactoring code, etc), otherwise you risk spending a lot of time working on something that the developers might not want to merge into the project. With that being said, major additions are very appreciated!
 
@@ -244,7 +302,28 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
    git checkout -b <topic-branch-name>
    ```
 
-3. Commit your changes in logical chunks, and please try to adhere to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+3. Install [pre-commit](https://pre-commit.com/) to ensure that each of your commits is properly checked against our linter and formatters:
+
+   ```bash
+   # In the project root:
+   pre-commit install
+   ```
+
+> [!NOTE]
+> pre-commit is Python package that can be installed via pip or any other Python package manager. You can also find it in our [requirements.txt](backend/requirements.txt) file.
+>
+> ```bash
+> pip install pre-commit
+> ```
+
+> [!NOTE]
+> If you are having issues with pre-commit and want to send along your changes regardless, you can ignore the pre-commit hooks via the following:
+>
+> ```bash
+> git commit --no-verify -m "COMMIT_MESSAGE"
+> ```
+
+4. Commit your changes in logical chunks, and please try to adhere to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 > [!NOTE]
 > The following are tools and methods to help you write good commit messages ✨
@@ -252,19 +331,19 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
 > - [commitlint](https://commitlint.io/) helps write [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 > - Git's [interactive rebase](https://docs.github.com/en/github/getting-started-with-github/about-git-rebase) cleans up commits
 
-4. Locally merge (or rebase) the upstream development branch into your topic branch:
+5. Locally merge (or rebase) the upstream development branch into your topic branch:
 
    ```bash
    git pull --rebase upstream <dev-branch>
    ```
 
-5. Push your topic branch up to your fork:
+6. Push your topic branch up to your fork:
 
    ```bash
    git push origin <topic-branch-name>
    ```
 
-6. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description.
+7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description.
 
 Thank you in advance for your contributions!
 
@@ -277,6 +356,37 @@ Being an app that focusses on language learning, localization plays a big part i
 # Documentation [`⇧`](#contents)
 
 Documentation is an invaluable way to contribute to coding projects as it allows others to more easily understand the project structure and contribute. Issues related to documentation are marked with the [`documentation`](https://github.com/scribe-org/scri.be/labels/documentation) label.
+
+<a id="accessibility-"></a>
+
+## Accessibility [`⇧`](#contents)
+
+Thank you for your interest in improving scri.be's accessibility. We want our platform to not only be usable for all people, but also to provide a welcoming environment within the development community for all. This section lists a few points to account for when checking accessibility constraints during development:
+
+### Transitions
+
+Users who have motion sickness have the ability to disable transitions and animations on their devices. We use the external dependency [reduced-motion](https://github.com/lucianmurmurache/reduced-motion) to disable transitions and animations in this case.
+
+### Tab focusing
+
+Tab focusing sadly doesn't work out of the box for many browsers. Chrome works great, but the following changes are needed for browsers to function properly with tabs. We'll test scrib.be against browsers with these settings with the assumption that people who need tab for more control of the interface will be able to activate them.
+
+**Firefox**
+
+- Go to `about:config`
+- Search for `accessibility.tabfocus` and check that it's set to type `Boolean` with value `true`
+- Remove it and select `Number` instead
+- Click on the add button and then enter the value `7`
+
+**Safari**
+
+- Go to `Keyboard` in `System Preferences` for your computer (assuming it's a Mac)
+- Select `Use keyboard navigation to move focus between controls` on Mac OS Catalina or `All controls` on earlier Mac OS versions
+- In Safari go to `Settings`
+- Go to the `Advanced` tab
+- Select `Press Tab to highlight each item on a webpage`
+
+Once the above steps are finished you should be able to use tab to navigate web pages :)
 
 # Design [`⇧`](#contents)
 

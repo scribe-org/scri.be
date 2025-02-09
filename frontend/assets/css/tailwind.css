@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light {
+  --layer-0: 255, 255, 255;
+  --layer-1: 76, 173, 230;
+  --layer-2: 94, 181, 232;
+  --primary-text: 0, 0, 0;
+  --distinct-text: 90, 90, 90;
+  --link-text: 0, 92, 184;
+  --link-text-hover: 0, 59, 119;
+  --highlight: 140, 140, 140;
+  --highlight-darker: 120, 120, 120;
+  --highlight-lighter: 140, 140, 140;
+  --scribe-blue: 76, 173, 230;
+  --scribe-blue-lighter: 94, 181, 232;
+  --scribe-blue-darker: 59, 142, 194;
+}
+
+.dark {
+  --layer-0: 6, 8, 15;
+  --layer-1: 62, 149, 204;
+  --layer-2: 59, 142, 194;
+  --section-div: 43, 50, 59;
+  --primary-text: 255, 255, 255;
+  --distinct-text: 150, 150, 150;
+  --link-text: 86, 167, 252;
+  --link-text-hover: 134, 192, 253;
+  --highlight: 70, 70, 70;
+  --highlight-darker: 70, 70, 70;
+  --highlight-lighter: 120, 120, 120;
+  --scribe-blue: 62, 149, 204;
+  --scribe-blue-lighter: 76, 173, 230;
+  --scribe-blue-darker: 59, 142, 194;
+}
+
+@layer base {
+  body {
+    @apply bg-layer-2;
+  }
+  * {
+    @apply scrollbar scrollbar-track-transparent scrollbar-thumb-distinct-text scrollbar-thumb-rounded-md scrollbar-w-2;
+  }
+}
+
+@layer components {
+  .bg-breakpoint-test {
+    @apply bg-red-500 sm:bg-orange-500 md:bg-yellow-500 lg:bg-green-500 xl:bg-blue-500 2xl:bg-violet-500 3xl:bg-pink-500;
+  }
+
+  .btn-base-class {
+    @apply focus-brand elem-shadow-sm w-fit select-none px-4 py-2 text-center font-semibold;
+  }
+
+  .btn-disabled {
+    @apply focus-off elem-shadow-sm w-fit select-none px-4 py-2 text-center font-semibold;
+  }
+
+  .elem-shadow-sm {
+    @apply shadow-sm shadow-zinc-700;
+  }
+
+  .elem-shadow-md {
+    @apply shadow-md shadow-zinc-700;
+  }
+
+  .elem-shadow-lg {
+    @apply shadow-lg shadow-zinc-700;
+  }
+
+  .focus-brand {
+    @apply rounded-sm focus:outline-none focus-visible:border-link-text focus-visible:ring-2 focus-visible:ring-link-text;
+  }
+
+  .focus-inside {
+    @apply rounded-sm focus-within:border-link-text focus-within:outline-none focus-within:ring-2 focus-within:ring-link-text;
+  }
+
+  .link-text {
+    @apply text-link-text hover:text-link-text-hover;
+  }
+
+  .responsive-h1 {
+    @apply font-display text-2xl sm:text-3xl md:text-4xl xl:text-5xl;
+  }
+
+  .responsive-h2 {
+    @apply font-display text-xl sm:text-2xl md:text-3xl xl:text-4xl;
+  }
+
+  .responsive-h3 {
+    @apply font-display text-lg sm:text-xl md:text-2xl xl:text-3xl;
+  }
+
+  .responsive-h4 {
+    @apply font-display text-base sm:text-lg md:text-xl xl:text-2xl;
+  }
+
+  .responsive-h5 {
+    @apply font-display text-base md:text-lg xl:text-xl;
+  }
+
+  .responsive-px-1 {
+    @apply px-1 sm:px-2;
+  }
+
+  .responsive-px-2 {
+    @apply px-2 lg:px-4 xl:px-6;
+  }
+
+  .responsive-px-3 {
+    @apply px-4 lg:px-6 xl:px-8;
+  }
+
+  .responsive-px-4 {
+    @apply px-6 lg:px-8 xl:px-10;
+  }
+
+  .responsive-px-5 {
+    @apply px-6 lg:px-10 xl:px-14;
+  }
+
+  .responsive-py-1 {
+    @apply py-1 sm:py-2;
+  }
+
+  .responsive-py-2 {
+    @apply py-2 lg:py-4 xl:py-6;
+  }
+
+  .responsive-py-3 {
+    @apply py-4 lg:py-6 xl:py-8;
+  }
+
+  .responsive-py-4 {
+    @apply py-6 lg:py-8 xl:py-10;
+  }
+
+  .responsive-py-5 {
+    @apply py-8 lg:py-10 xl:py-14;
+  }
+
+  .style-btn {
+    @apply focus-brand elem-shadow-sm bg-layer-0 text-primary-text hover:bg-highlight active:bg-layer-0 dark:border dark:border-primary-text;
+  }
+
+  .style-btns-next-to-one-another {
+    @apply mx-auto grid max-w-[70%] grid-cols-1 gap-y-4 sm:mx-0 sm:max-w-[90%] sm:grid-cols-2 sm:grid-rows-1 sm:gap-x-4 sm:gap-y-0 md:max-w-[70%] md:gap-x-6 lg:max-w-[60%] xl:max-w-[70%] xl:gap-x-8 2xl:max-w-[80%];
+  }
+
+  .style-cta {
+    @apply focus-brand border-scribe-blue fill-scribe-blue text-scribe-blue border bg-layer-0 hover:bg-highlight active:bg-layer-0;
+  }
+
+  .style-cta-disabled {
+    @apply focus-brand border-scribe-blue/50 fill-scribe-blue/50 text-scribe-blue/50 cursor-not-allowed border bg-layer-0 hover:bg-highlight active:bg-layer-0;
+  }
+
+  .style-cta-secondary {
+    @apply focus-brand bg-scribe-blue hover:bg-scribe-blue-lighter active:bg-scribe-blue border border-primary-text fill-primary-text text-primary-text dark:hover:bg-highlight-darker;
+  }
+
+  .style-cta-secondary-disabled {
+    @apply focus-brand bg-scribe-blue active:bg-scribe-blue cursor-not-allowed border border-primary-text/50 fill-primary-text/50 text-primary-text/50;
+  }
+}

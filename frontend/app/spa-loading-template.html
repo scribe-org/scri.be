@@ -1,0 +1,52 @@
+<div>
+  <img src="/icons/scribe/scribe_icon.png" height="160" width="160" />
+</div>
+
+<style>
+  html,
+  body {
+    height: 100%;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #4cade6;
+  }
+
+  div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .img-dark-mode {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html,
+    body {
+      height: 100%;
+      overflow-y: hidden;
+      margin: 0;
+      padding: 0;
+      background-color: #3e95cc;
+    }
+
+    .img-dark-mode {
+      display: block;
+    }
+
+    .img-light-mode {
+      display: none;
+    }
+  }
+</style>
