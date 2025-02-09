@@ -13,6 +13,5 @@ header:
     - 'LICENSE'
     - 'NOTICE'
     - '**/.git/**'
-    - '**/*__init__.py'
   comment: on-failure
   license-location-threshold: 10
