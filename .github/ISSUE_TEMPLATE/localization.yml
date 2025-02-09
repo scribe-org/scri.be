@@ -1,5 +1,6 @@
 name: 🌐 Localization
 description: Report issues or offer help for scri.be localizations.
+type: "task"
 labels: ["localization"]
 projects: ["scribe-org/1"]
 body:
