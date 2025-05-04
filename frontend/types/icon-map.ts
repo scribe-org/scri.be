@@ -5,6 +5,8 @@ export enum IconMap {
   ARROW_LEFT = "bi:arrow-left",
   ARROW_RIGHT = "bi:arrow-right",
   ARROW_UP = "bi:arrow-up",
+  CHEVRON_DOWN = "bi:chevron-down",
+  CHEVRON_UP = "bi:chevron-up",
   CIRCLE_INFO = "bi:info-circle",
   COLOR_MODE_DARK = "bi:moon",
   COLOR_MODE_LIGHT = "bi:sun",
@@ -20,4 +22,5 @@ export enum IconMap {
   MASTODON = "simple-icons:mastodon",
   MATRIX = "IconMatrix",
   SHARE = "bi:box-arrow-up",
+  STAR = "octicon:star-24",
 }

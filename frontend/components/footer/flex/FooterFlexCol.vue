@@ -4,7 +4,7 @@
   <div class="flex flex-col items-center justify-center space-y-5">
     <div class="flex flex-col items-center justify-center space-y-2">
       <p class="text-primary-text">
-        {{ $t("i18n.components.footer.flex._global.activist_tagline") }}
+        {{ $t("i18n.components.footer.flex._global.scribe_tagline") }}
       </p>
       <!-- Note: Platform Links -->
       <div class="flex flex-wrap items-center justify-center">

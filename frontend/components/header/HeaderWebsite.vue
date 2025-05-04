@@ -11,7 +11,11 @@
     }"
   >
     <!-- MARK: Mobile Header -->
-    <div v-if="!aboveMediumBP" id="mobile-header" class="flex px-4 py-3">
+    <div
+      v-if="!aboveMediumBP"
+      id="mobile-header"
+      class="flex justify-end px-4 py-3"
+    >
       <SidebarRight>
         <div class="flex-col space-y-2">
           <DropdownTheme
@@ -27,7 +31,7 @@
     </div>
     <!-- MARK: Desktop Header -->
     <div v-if="aboveMediumBP" id="desktop-header" class="mx-auto py-3">
-      <div class="responsive-px-5 flex items-center justify-between">
+      <div class="responsive-px-5 flex items-center justify-end">
         <div>
           <div class="flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
             <DropdownTheme />
@@ -38,7 +42,7 @@
               class="block"
               :cta="true"
               label="i18n._global.support"
-              linkTo="https://docs.activist.org/activist/welcome/support-us"
+              linkTo="/"
               fontSize="sm"
               ariaLabel="i18n.components.header_website.support_aria_label"
             />
@@ -48,7 +52,7 @@
               class="block"
               :cta="true"
               label="i18n._global.support"
-              linkTo="https://docs.activist.org/activist/welcome/support-us"
+              linkTo="/"
               fontSize="xs"
               ariaLabel="i18n.components.header_website.support_aria_label"
             />

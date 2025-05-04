@@ -8,7 +8,7 @@
     >
       <a
         class="focus-brand hover:text-primary-text"
-        href="https://github.com/activist-org/activist"
+        href="https://github.com/scribe-org"
         target="_blank"
         :aria-label="$t('i18n.components._global.github')"
       >
@@ -22,7 +22,7 @@
       </a>
       <a
         class="focus-brand hover:text-primary-text"
-        href="https://matrix.to/#/#activist_community:matrix.org"
+        href="https://matrix.to/#/#scribe_community:matrix.org"
         target="_blank"
         :aria-label="$t('i18n.components._global.matrix')"
       >
@@ -36,13 +36,13 @@
       </a>
       <a
         class="focus-brand hover:text-primary-text"
-        href="https://instagram.com/activist_org"
+        href="https://wikis.world/@scribe"
         target="_blank"
         :aria-label="$t('i18n.components._global.mastodon')"
       >
         <MetaTagSocialMedia
           class="!gap-2"
-          :iconName="IconMap.INSTAGRAM"
+          :iconName="IconMap.MASTODON"
           :text="$t('i18n.components._global.mastodon')"
           iconSize="1em"
           textUtilityClasses="sr-only sm:not-sr-only"

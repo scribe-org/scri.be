@@ -5,7 +5,7 @@
     <!-- Note: Content Sections Left -->
     <div class="mt-0 flex w-[80%] flex-col justify-items-start">
       <p class="mt-3 text-primary-text">
-        {{ $t("i18n.components.footer.flex._global.activist_tagline") }}
+        {{ $t("i18n.components.footer.flex._global.scribe_tagline") }}
       </p>
       <!-- Note: Platform Links -->
       <div class="mt-2 flex justify-start">
