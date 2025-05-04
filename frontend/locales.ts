@@ -22,7 +22,7 @@ export const locales: Locale[] = [
     name: LOCALE_NAME.ENGLISH,
     file: "../en-US.json",
     isCatchallLocale: true,
-  }
+  },
 ];
 
 export default locales;

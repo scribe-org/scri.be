@@ -153,18 +153,18 @@
   }
 
   .style-cta {
-    @apply focus-brand border-scribe-blue fill-scribe-blue text-scribe-blue border bg-layer-0 hover:bg-highlight active:bg-layer-0;
+    @apply focus-brand border border-scribe-blue bg-layer-0 fill-scribe-blue text-scribe-blue hover:bg-highlight active:bg-layer-0;
   }
 
   .style-cta-disabled {
-    @apply focus-brand border-scribe-blue/50 fill-scribe-blue/50 text-scribe-blue/50 cursor-not-allowed border bg-layer-0 hover:bg-highlight active:bg-layer-0;
+    @apply focus-brand cursor-not-allowed border border-scribe-blue/50 bg-layer-0 fill-scribe-blue/50 text-scribe-blue/50 hover:bg-highlight active:bg-layer-0;
   }
 
   .style-cta-secondary {
-    @apply focus-brand bg-scribe-blue hover:bg-scribe-blue-lighter active:bg-scribe-blue border border-primary-text fill-primary-text text-primary-text dark:hover:bg-highlight-darker;
+    @apply focus-brand border border-primary-text bg-scribe-blue fill-primary-text text-primary-text hover:bg-scribe-blue-lighter active:bg-scribe-blue dark:hover:bg-highlight-darker;
   }
 
   .style-cta-secondary-disabled {
-    @apply focus-brand bg-scribe-blue active:bg-scribe-blue cursor-not-allowed border border-primary-text/50 fill-primary-text/50 text-primary-text/50;
+    @apply focus-brand cursor-not-allowed border border-primary-text/50 bg-scribe-blue fill-primary-text/50 text-primary-text/50 active:bg-scribe-blue;
   }
 }

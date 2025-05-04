@@ -37,20 +37,20 @@
               id="btn-get-in-touch-large"
               class="block"
               :cta="true"
-              :label="i18nMap._global.support"
+              label="i18n._global.support"
               linkTo="https://docs.activist.org/activist/welcome/support-us"
               fontSize="sm"
-              :ariaLabel="i18nMap.components.header_website.support_aria_label"
+              ariaLabel="i18n.components.header_website.support_aria_label"
             />
             <BtnRouteInternal
               v-else-if="aboveMediumBP"
               id="btn-get-in-touch-medium"
               class="block"
               :cta="true"
-              :label="i18nMap._global.support"
+              label="i18n._global.support"
               linkTo="https://docs.activist.org/activist/welcome/support-us"
               fontSize="xs"
-              :ariaLabel="i18nMap.components.header_website.support_aria_label"
+              ariaLabel="i18n.components.header_website.support_aria_label"
             />
           </div>
         </div>
@@ -60,7 +60,6 @@
 </template>
 
 <script setup lang="ts">
-import { i18nMap } from "~/types/i18n-map";
 import { DropdownLocation } from "~/types/location";
 
 const aboveMediumBP = useBreakpoint("md");

@@ -5,7 +5,7 @@
     <!-- Note: Content Sections Left -->
     <div class="mt-0 flex w-[80%] flex-col justify-items-start">
       <p class="mt-3 text-primary-text">
-        {{ $t(i18nMap.components.footer.flex._global.activist_tagline) }}
+        {{ $t("i18n.components.footer.flex._global.activist_tagline") }}
       </p>
       <!-- Note: Platform Links -->
       <div class="mt-2 flex justify-start">
@@ -43,11 +43,11 @@
         href="https://www.netlify.com/"
         target="_blank"
       >
-        {{ $t(i18nMap.components.footer.flex._global.powered_by_netlify) }}
+        {{ $t("i18n.components.footer.flex._global.powered_by_netlify") }}
       </a>
       <div class="mt-2 text-primary-text">
         {{
-          $t(i18nMap.components.footer.flex._global.copyright, {
+          $t("i18n.components.footer.flex._global.copyright", {
             year: new Date().getFullYear(),
           })
         }}
@@ -60,7 +60,7 @@
       <!-- Note: Connect Links -->
       <div>
         <p class="text-xl font-medium text-primary-text">
-          {{ $t(i18nMap.components._global.connect) }}
+          {{ $t("i18n.components._global.connect") }}
         </p>
         <template v-for="(connect, index) in links.connectLinks">
           <a
@@ -82,7 +82,7 @@
       <!-- Note: Resources Links -->
       <div>
         <p class="text-xl font-medium text-primary-text">
-          {{ $t(i18nMap._global.resources) }}
+          {{ $t("i18n._global.resources") }}
         </p>
         <template v-for="(resource, index) in links.resourcesLinks">
           <p
@@ -98,7 +98,7 @@
       <!-- Note: Organization Links -->
       <div>
         <p class="text-xl font-medium text-primary-text">
-          {{ $t(i18nMap._global.organization) }}
+          {{ $t("i18n._global.organization") }}
         </p>
         <template v-for="(oLink, index) in links.organizationLinks">
           <p
@@ -116,8 +116,6 @@
 </template>
 
 <script setup lang="ts">
-import { i18nMap } from "~/types/i18n-map";
-
 const localePath = useLocalePath();
 
 defineProps<{

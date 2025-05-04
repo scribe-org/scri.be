@@ -4,7 +4,7 @@
   <div class="flex flex-col items-center justify-center space-y-5">
     <div class="flex flex-col items-center justify-center space-y-2">
       <p class="text-primary-text">
-        {{ $t(i18nMap.components.footer.flex._global.activist_tagline) }}
+        {{ $t("i18n.components.footer.flex._global.activist_tagline") }}
       </p>
       <!-- Note: Platform Links -->
       <div class="flex flex-wrap items-center justify-center">
@@ -33,7 +33,7 @@
       <!-- Note: Connect Links -->
       <div>
         <p class="text-xl font-medium text-primary-text">
-          {{ $t(i18nMap.components._global.connect) }}
+          {{ $t("i18n.components._global.connect") }}
         </p>
         <div class="mt-1 flex gap-10 sm:mt-0 sm:flex-col sm:gap-0">
           <template v-for="(connect, index) in links.connectLinks">
@@ -57,7 +57,7 @@
       <!-- Note: Resources Links -->
       <div>
         <p class="mt-6 text-xl font-medium text-primary-text sm:mt-0">
-          {{ $t(i18nMap._global.resources) }}
+          {{ $t("i18n._global.resources") }}
         </p>
         <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
           <template v-for="(resource, index) in links.resourcesLinks">
@@ -81,7 +81,7 @@
       <!-- Note: Organization Links -->
       <div>
         <p class="mt-6 text-xl font-medium text-primary-text sm:mt-0">
-          {{ $t(i18nMap._global.organization) }}
+          {{ $t("i18n._global.organization") }}
         </p>
         <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
           <template v-for="(oLink, index) in links.organizationLinks">
@@ -125,11 +125,11 @@
         href="https://www.netlify.com/"
         target="_blank"
       >
-        {{ $t(i18nMap.components.footer.flex._global.powered_by_netlify) }}
+        {{ $t("i18n.components.footer.flex._global.powered_by_netlify") }}
       </a>
       <div class="mt-2 text-primary-text">
         {{
-          $t(i18nMap.components.footer.flex._global.copyright, {
+          $t("i18n.components.footer.flex._global.copyright", {
             year: new Date().getFullYear(),
           })
         }}
@@ -139,8 +139,6 @@
 </template>
 
 <script setup lang="ts">
-import { i18nMap } from "~/types/i18n-map";
-
 const localePath = useLocalePath();
 
 defineProps<{

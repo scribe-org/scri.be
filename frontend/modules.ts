@@ -13,4 +13,15 @@ const modules: (string | [string, Record<string, object>] | NuxtModule)[] = [
   "@nuxtjs/tailwindcss",
 ];
 
+// This plugin may depend on Pinia.
+const vueUse = "@vueuse/nuxt";
+if (process.env.VITEST) {
+  modules.push(vueUse);
+} else {
+  // These modules currently do not work in a vitest environment:
+  // @pinia/nuxt
+  // pinia-plugin-persistedstate/nuxt
+  modules.push("@pinia/nuxt", vueUse, "pinia-plugin-persistedstate/nuxt");
+}
+
 export default modules;
