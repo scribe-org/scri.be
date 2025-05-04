@@ -3,11 +3,11 @@
   <header
     ref="header"
     id="header"
-    class="sticky top-0 z-10 drop-shadow-md duration-500"
+    class="sticky top-0 z-10 duration-500"
     :class="{
-      'bg-layer-2': headerOpacity == 1,
-      'bg-layer-2/80': headerOpacity == 0.8,
-      'invisible opacity-0': headerOpacity == 0,
+      'bg-scribe-blue': headerOpacity == 1,
+      'bg-scribe-blue/80 drop-shadow-md': headerOpacity == 0.8,
+      'invisible opacity-0 drop-shadow-md': headerOpacity == 0,
     }"
   >
     <!-- MARK: Mobile Header -->

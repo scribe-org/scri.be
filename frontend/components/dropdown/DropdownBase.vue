@@ -77,7 +77,7 @@
         'absolute right-0 mt-2 origin-top-right divide-y bg-layer-0 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:border dark:border-primary-text':
           !isSideLeftMenu,
         '!static': isSideMenu || isSideLeftMenu,
-        'mt-1 bg-layer-2 p-1': isSideLeftMenu,
+        'mt-1 bg-layer-0 p-1': isSideLeftMenu,
       }"
     >
       <slot />

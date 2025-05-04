@@ -1,13 +1,13 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <div
-    class="responsive-py-4 flex w-full flex-col space-y-1 bg-highlight text-distinct-text sm:space-y-2 xl:space-y-4"
+    class="responsive-py-4 flex w-full flex-col space-y-1 bg-scribe-blue-lighter text-primary-text dark:bg-scribe-blue-darker sm:space-y-2 xl:space-y-4"
   >
     <div
       class="flex justify-center space-x-12 text-lg sm:space-x-8 xl:space-x-12 xl:text-xl"
     >
       <a
-        class="focus-brand hover:text-primary-text"
+        class="focus-brand hover:text-distinct-text"
         href="https://github.com/scribe-org"
         target="_blank"
         :aria-label="$t('i18n.components._global.github')"
@@ -21,7 +21,7 @@
         />
       </a>
       <a
-        class="focus-brand hover:text-primary-text"
+        class="focus-brand hover:text-distinct-text"
         href="https://matrix.to/#/#scribe_community:matrix.org"
         target="_blank"
         :aria-label="$t('i18n.components._global.matrix')"
@@ -35,7 +35,7 @@
         />
       </a>
       <a
-        class="focus-brand hover:text-primary-text"
+        class="focus-brand hover:text-distinct-text"
         href="https://wikis.world/@scribe"
         target="_blank"
         :aria-label="$t('i18n.components._global.mastodon')"

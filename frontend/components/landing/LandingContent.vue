@@ -11,13 +11,13 @@
       <img
         v-if="$colorMode.value == 'light'"
         class="mb-4 h-36 sm:h-44 lg:hidden"
-        :src="imgUrl + '_light.png'"
+        :src="imgUrl + '_light.svg'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
         class="mb-4 h-36 sm:h-44 lg:hidden"
-        :src="imgUrl + '_dark.png'"
+        :src="imgUrl + '_dark.svg'"
         :alt="$t(imageAltText)"
       />
       <h2
@@ -48,30 +48,30 @@
     <div class="hidden h-60 w-60 lg:block xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
-        :src="imgUrl + '_light.png'"
+        :src="imgUrl + '_light.svg'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
-        :src="imgUrl + '_dark.png'"
+        :src="imgUrl + '_dark.svg'"
         :alt="$t(imageAltText)"
       />
     </div>
   </div>
   <div
     v-else-if="contentPosition === 'right'"
-    class="flex items-center justify-center bg-layer-2 py-8 text-primary-text sm:py-12 md:py-16 lg:space-x-20 lg:py-24 xl:space-x-32 xl:py-28 2xl:space-x-40"
+    class="flex items-center justify-center bg-layer-0 py-8 text-primary-text sm:py-12 md:py-16 lg:space-x-20 lg:py-24 xl:space-x-32 xl:py-28 2xl:space-x-40"
   >
     <!-- Note: image left of content. -->
     <div class="hidden h-60 w-60 lg:block xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
-        :src="imgUrl + '_light.png'"
+        :src="imgUrl + '_light.svg'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
-        :src="imgUrl + '_dark.png'"
+        :src="imgUrl + '_dark.svg'"
         :alt="$t(imageAltText)"
       />
     </div>
@@ -82,13 +82,13 @@
       <img
         v-if="$colorMode.value == 'light'"
         class="mb-4 h-36 sm:h-44 lg:hidden"
-        :src="imgUrl + '_light.png'"
+        :src="imgUrl + '_light.svg'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
         class="mb-4 h-36 sm:h-44 lg:hidden"
-        :src="imgUrl + '_dark.png'"
+        :src="imgUrl + '_dark.svg'"
         :alt="$t(imageAltText)"
       />
       <h2
@@ -149,7 +149,7 @@
         <BtnRouteInternal
           :id="btnId2"
           class="w-full"
-          :cta="false"
+          :cta="true"
           :label="`${btnText2}`"
           :linkTo="`${btnUrl2}`"
           fontSize="xl"

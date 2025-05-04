@@ -183,8 +183,8 @@ For the frontend scri.be uses [Prettier](https://prettier.io/) to format the cod
 The files [frontend/assets/css/tailwind.css](frontend/assets/css/tailwind.css) and [frontend/tailwind.config.ts](frontend/tailwind.config.ts) define all colors for the project. Light and dark mode versions of each color are defined and loaded in via variables such that we only need to use a singular identifier throughout the codebase. There are however cases where you still need to specify `dark:` for colors - specifically when the color identifier for light mode is different than dark mode.
 
 ```html
-<!-- This div has a reactive background color as layer-2 is defined variably based on the color mode. -->
-<div class="bg-layer-2"></div>
+<!-- This div has a reactive background color as layer-0 is defined variably based on the color mode. -->
+<div class="bg-layer-0"></div>
 ```
 
 Note further that Tailwind allows for alpha components for opacity to be applied to colors directly within the class declaration. We thus do not need to save versions of colors with transparency unless they are inherently used with an alpha less than one. An example of a color that has an inherent non-one alpha is `primary-text` (`rgba(var(--primary-text), 0.85)`). To apply an alpha component to a color in Tailwind you follow it with a slash and the alpha that should be used as in the following example:

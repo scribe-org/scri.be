@@ -9,7 +9,7 @@
       <!-- Note: Platform Links -->
       <div class="flex flex-wrap items-center justify-center">
         <template v-for="(platform, index) in links.platformLinks">
-          <div class="hover:text-primary-text">
+          <div class="hover:text-distinct-text">
             <NuxtLink
               v-if="platform.isLocalePath"
               class="focus-brand"
@@ -38,7 +38,7 @@
         <div class="mt-1 flex gap-10 sm:mt-0 sm:flex-col sm:gap-0">
           <template v-for="(connect, index) in links.connectLinks">
             <a
-              class="focus-brand mt-2 flex items-center space-x-2 text-base hover:text-primary-text"
+              class="focus-brand mt-2 flex items-center space-x-2 text-base hover:text-distinct-text"
               :class="{ 'mt-3': index === 0 }"
               :href="connect.url"
               target="_blank"
@@ -62,7 +62,7 @@
         <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
           <template v-for="(resource, index) in links.resourcesLinks">
             <p
-              class="mt-2 text-base hover:text-primary-text"
+              class="mt-2 text-base hover:text-distinct-text"
               :class="{ 'sm:mt-3': index === 0 }"
             >
               <NuxtLink class="focus-brand" :to="localePath(resource.url)">
@@ -86,7 +86,7 @@
         <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
           <template v-for="(oLink, index) in links.organizationLinks">
             <p
-              class="mt-2 text-base hover:text-primary-text"
+              class="mt-2 text-base hover:text-distinct-text"
               :class="{ 'sm:mt-3': index === 0 }"
             >
               <NuxtLink class="focus-brand" :to="localePath(oLink.url)">
@@ -107,7 +107,7 @@
       <!-- Note: Legal Links -->
       <div class="flex flex-wrap items-center justify-center">
         <template v-for="(policy, index) in links.legalLinks">
-          <div class="hover:text-primary-text">
+          <div class="hover:text-distinct-text">
             <NuxtLink class="focus-brand" :to="localePath(policy.url)">
               {{ $t(policy.name) }}
             </NuxtLink>
@@ -121,7 +121,7 @@
         </template>
       </div>
       <a
-        class="mt-2 w-fit hover:text-primary-text"
+        class="mt-2 w-fit hover:text-distinct-text"
         href="https://www.netlify.com/"
         target="_blank"
       >

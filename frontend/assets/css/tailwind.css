@@ -7,15 +7,11 @@
 
 .light {
   --layer-0: 255, 255, 255;
-  --layer-1: 76, 173, 230;
-  --layer-2: 94, 181, 232;
   --primary-text: 0, 0, 0;
   --distinct-text: 90, 90, 90;
   --link-text: 0, 92, 184;
   --link-text-hover: 0, 59, 119;
-  --highlight: 140, 140, 140;
-  --highlight-darker: 120, 120, 120;
-  --highlight-lighter: 140, 140, 140;
+  --highlight: 226, 226, 226;
   --scribe-blue: 76, 173, 230;
   --scribe-blue-lighter: 94, 181, 232;
   --scribe-blue-darker: 59, 142, 194;
@@ -23,16 +19,12 @@
 
 .dark {
   --layer-0: 6, 8, 15;
-  --layer-1: 62, 149, 204;
-  --layer-2: 59, 142, 194;
   --section-div: 43, 50, 59;
   --primary-text: 255, 255, 255;
   --distinct-text: 150, 150, 150;
   --link-text: 86, 167, 252;
   --link-text-hover: 134, 192, 253;
-  --highlight: 70, 70, 70;
-  --highlight-darker: 70, 70, 70;
-  --highlight-lighter: 120, 120, 120;
+  --highlight: 22, 24, 29;
   --scribe-blue: 62, 149, 204;
   --scribe-blue-lighter: 76, 173, 230;
   --scribe-blue-darker: 59, 142, 194;
@@ -40,10 +32,10 @@
 
 @layer base {
   body {
-    @apply bg-layer-2;
+    @apply bg-scribe-blue;
   }
   * {
-    @apply scrollbar scrollbar-track-transparent scrollbar-thumb-distinct-text scrollbar-thumb-rounded-md scrollbar-w-2;
+    @apply scrollbar scrollbar-track-layer-0 scrollbar-thumb-distinct-text scrollbar-thumb-rounded-md scrollbar-w-2;
   }
 }
 
@@ -153,18 +145,22 @@
   }
 
   .style-cta {
-    @apply focus-brand border border-scribe-blue bg-layer-0 fill-scribe-blue text-scribe-blue hover:bg-highlight active:bg-layer-0;
+    @apply focus-brand border border-primary-text bg-scribe-blue fill-primary-text text-primary-text hover:bg-scribe-blue-lighter active:bg-scribe-blue dark:hover:bg-scribe-blue-darker;
   }
 
   .style-cta-disabled {
-    @apply focus-brand cursor-not-allowed border border-scribe-blue/50 bg-layer-0 fill-scribe-blue/50 text-scribe-blue/50 hover:bg-highlight active:bg-layer-0;
+    @apply focus-brand cursor-not-allowed border border-primary-text/50 bg-scribe-blue fill-primary-text/50 text-primary-text/50 active:bg-scribe-blue;
   }
 
   .style-cta-secondary {
-    @apply focus-brand border border-primary-text bg-scribe-blue fill-primary-text text-primary-text hover:bg-scribe-blue-lighter active:bg-scribe-blue dark:hover:bg-highlight-darker;
+    @apply focus-brand border border-scribe-blue bg-layer-0 fill-scribe-blue text-scribe-blue hover:bg-highlight active:bg-layer-0;
   }
 
   .style-cta-secondary-disabled {
-    @apply focus-brand cursor-not-allowed border border-primary-text/50 bg-scribe-blue fill-primary-text/50 text-primary-text/50 active:bg-scribe-blue;
+    @apply focus-brand cursor-not-allowed border border-scribe-blue/50 bg-layer-0 fill-scribe-blue/50 text-scribe-blue/50 hover:bg-highlight active:bg-layer-0;
+  }
+
+  .style-menu-option-cta {
+    @apply focus-brand bg-layer-0 fill-primary-text text-primary-text hover:bg-scribe-blue-lighter dark:hover:bg-scribe-blue-darker;
   }
 }

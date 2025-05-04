@@ -6,7 +6,7 @@
     class="flex w-full items-center rounded-md text-sm"
     :class="{
       'group py-2 pl-4 pr-3': !isSideLeftMenu,
-      'bg-cta-orange/80 dark:bg-cta-orange/25 dark:text-cta-orange': active,
+      'bg-scribe-blue-lighter dark:bg-scribe-blue-darker': active,
       'text-primary-text': !active,
       'relative z-0 space-x-2 p-2 text-left font-medium': isSideLeftMenu,
     }"

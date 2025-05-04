@@ -51,7 +51,7 @@
         header="i18n.pages.index.about_us"
         tagline="i18n.pages.index.scribe_section_tagline"
         text="i18n.pages.index.scribe_section_text"
-        :imgUrl="SCRIBE_ICON_IMAGE_URL"
+        :imgUrl="SCRIBE_ICON_URL"
         imageAltText="i18n._global.scribe_icon_img_alt_text"
         btnText1="i18n.pages.index.learn_more"
         btnUrl1="/"

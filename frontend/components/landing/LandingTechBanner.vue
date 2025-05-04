@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <div
-    class="flex w-full flex-col items-center justify-center space-y-3 bg-layer-1 py-8 text-primary-text sm:py-12 md:py-16 lg:py-24 xl:space-y-4 xl:py-28"
+    class="flex w-full flex-col items-center justify-center space-y-3 bg-scribe-blue-lighter py-8 text-primary-text dark:bg-scribe-blue-darker sm:py-12 md:py-16 lg:py-24 xl:space-y-4 xl:py-28"
   >
     <h2
       class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl xl:text-4xl"
