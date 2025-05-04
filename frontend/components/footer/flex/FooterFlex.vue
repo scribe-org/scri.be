@@ -35,7 +35,10 @@
               {{ $t(policy.name) }}
             </NuxtLink>
           </div>
-          <div v-if="index < links.legalLinks.length - 1" class="px-2">•</div>
+          <div v-if="index < links.legalLinks.length - 1" class="px-2">
+            <!-- Fix for ESLint and Prettier. -->
+            •
+          </div>
         </template>
       </div>
       <a

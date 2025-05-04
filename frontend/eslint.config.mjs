@@ -47,7 +47,10 @@ export default withNuxt({
       },
     ],
     "vue/html-self-closing": "off",
-    "vue/multi-word-component-names": "off",
+    "vue/html-closing-bracket-newline": "error",
+    "vue/multiline-html-element-content-newline": "error",
+    "vue/singleline-html-element-content-newline": "error",
+    "vue/multi-word-component-names": "off", // causes errors with page files
     "vue/no-empty-component-block": "error",
     "vue/no-multiple-template-root": "off",
     "vue/no-use-v-if-with-v-for": "off",

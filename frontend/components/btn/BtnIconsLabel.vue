@@ -12,13 +12,13 @@
       v-if="label"
       class="mx-auto"
       :class="{ 'hidden md:block': hideLabelOnMobile }"
-      >{{ $t(label) }}</span
-    >
+      >{{ $t(label) }}
+    </span>
     <div v-else class="-mx-1"></div>
     <Icon v-if="rightIcon" class="ml-2" :name="rightIcon" :size="iconSize" />
     <div
       v-if="counter"
-      class="-m-[0.1rem] ml-2 rounded-lg bg-black/20 px-1 py-[0.1rem] dark:bg-cta-orange/25"
+      class="dark:bg-cta-orange/25 -m-[0.1rem] ml-2 rounded-lg bg-black/20 px-1 py-[0.1rem]"
     >
       {{ counter }}
     </div>

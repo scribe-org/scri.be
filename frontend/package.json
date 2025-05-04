@@ -10,6 +10,8 @@
     "preview": "nuxi preview",
     "postinstall": "nuxi prepare",
     "test": "vitest run --run",
+    "test:local": "cross-env TEST_ENV=local playwright test",
+    "test:prod": "cross-env TEST_ENV=prod playwright test",
     "typecheck": "nuxi typecheck",
     "format": "yarn prettier . --check --config ../.prettierrc --ignore-path ../.prettierignore",
     "lint": "eslint ."
