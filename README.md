@@ -13,6 +13,10 @@
 [![mastodon](https://img.shields.io/badge/Mastodon-6364FF.svg?logo=mastodon&logoColor=ffffff)](https://wikis.world/@scribe)
 [![matrix](https://img.shields.io/badge/Matrix-000000.svg?logo=matrix&logoColor=ffffff)](https://matrix.to/#/#scribe_community:matrix.org)
 
+[![testing](https://img.shields.io/badge/Testing-F0F0EB.svg?logo=github&logoColor=000000)](https://github.com/scribe-org/scri.be/actions)
+[![ci_frontend](https://img.shields.io/github/actions/workflow/status/scribe-org/scri.be/pr_ci_frontend.yaml?branch=main&label=frontend)](https://github.com/scribe-org/scri.be/actions/workflows/pr_ci_frontend.yaml)
+<!-- [![ci_i18n](https://img.shields.io/github/actions/workflow/status/scribe-org/scri.be/pr_ci_i18n.yaml?branch=main&label=i18n)](https://github.com/scribe-org/scri.be/actions/workflows/pr_ci_i18n.yaml) -->
+
 ## Scribe's community portal scri.be
 
 **scri.be** is the landing page of the Scribe organization. Its purpose is to present Scribe's projects and provide resources for those who want to learn more about app functionality as well as join the community.
