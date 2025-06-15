@@ -173,7 +173,23 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
   - `origin` (forked repository)
   - `upstream` (scri.be repository)
 
-4. Start your docker images with the following:
+4. Create a virtual environment for the developer tools, activate it and install dependencies:
+
+    ```bash
+    # Unix or MacOS:
+    python3 -m venv venv
+    source venv/bin/activate
+
+    # Windows:
+    python -m venv venv
+    venv\Scripts\activate.bat
+
+    # After activating venv:
+    pip install --upgrade pip
+    pip install -r requirements-dev.txt
+    ```
+
+5. Start your docker images with the following:
 
    ```bash
    # --build only necessary with new dependencies or backend model changes.
@@ -183,10 +199,24 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
    docker compose --env-file .env.dev down
    ```
 
-5. You can visit <http://localhost:3000/> to see the development frontend once the container is up and running.
+6. You can visit <http://localhost:3000/> to see the development frontend once the container is up and running.
 
 > [!NOTE]
 > Feel free to contact the team in the [Web room on Matrix](https://matrix.to/#/#scri.be:matrix.org) if you're having problems getting your environment setup!
+
+7. Install [pre-commit](https://pre-commit.com/) to ensure that each of your commits is properly checked against our linter and formatters:
+
+   ```bash
+   # In the project root:
+   pre-commit install
+   ```
+
+> [!NOTE]
+> pre-commit is Python package that can be installed via pip or any other Python package manager. You can also find it in our [requirements.txt](backend/requirements.txt) file.
+>
+> ```bash
+> pip install pre-commit
+> ```
 
 <a id="style-guide-"></a>
 

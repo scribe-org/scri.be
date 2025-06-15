@@ -2,15 +2,25 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-      - id: trailing-whitespace
+      # - id: trailing-whitespace  # handled by Ruff and Prettier
       - id: end-of-file-fixer
         exclude: ^docs/|README.md$
       - id: check-yaml
       - id: check-added-large-files
       # - id: pretty-format-json
 
-  # - repo: https://github.com/tcort/markdown-link-check
-  #   rev: v3.13.6
-  #   hooks:
-  #     - id: markdown-link-check
-  #       args: [-q]
+  - repo: local
+    hooks:
+      - id: prettier-eslint-checks
+        name: run prettier and eslint checks
+        files: ^frontend/
+        entry: python ./pre_commit_scripts/prettier_eslint_checks.py
+        language: python
+        pass_filenames: false
+
+      # - id: run-i18n-check
+      #   name: run i18n-check
+      #   files: ^frontend/
+      #   entry: i18n-check -a
+      #   language: python
+      #   pass_filenames: false

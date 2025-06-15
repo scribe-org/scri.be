@@ -10,7 +10,7 @@
 # Webstorm
 .idea
 
-# Django and Python
+# Python
 .venv
 venv/
 
