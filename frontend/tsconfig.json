@@ -5,11 +5,6 @@
     "strict": true,
     "skipLibCheck": true,
     "module": "ESNext",
-    "types": [
-      "@vueuse/nuxt",
-      "@vueuse/core",
-      "@pinia/nuxt",
-      "vitest/globals"
-    ]
+    "types": ["@vueuse/nuxt", "@vueuse/core", "@pinia/nuxt", "vitest/globals"]
   }
 }

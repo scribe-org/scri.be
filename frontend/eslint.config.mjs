@@ -1,14 +1,17 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
+import perfectionist from "eslint-plugin-perfectionist";
 import vue from "eslint-plugin-vue";
 import vueA11y from "eslint-plugin-vuejs-accessibility";
 import withNuxt from "./.nuxt/eslint.config.mjs";
 
-export default withNuxt({
+// Note: flat/strongly-recommended and flat/recommended are also options.
+export default withNuxt(...vue.configs["flat/essential"], {
   files: ["**/*.js", "**/*.ts", "**/*.vue"],
 
   plugins: {
     vue,
     "vuejs-accessibility": vueA11y,
+    perfectionist,
   },
 
   rules: {
@@ -72,6 +75,13 @@ export default withNuxt({
           some: ["nesting", "id"],
         },
         allowChildren: false,
+      },
+    ],
+    "perfectionist/sort-imports": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
       },
     ],
   },

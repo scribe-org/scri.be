@@ -21,7 +21,7 @@ jobs:
     name: Run PR Frontend Check
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Project
         uses: actions/checkout@v4
 
       - name: Setup Node environment
@@ -45,7 +45,7 @@ jobs:
       - name: Run Nuxt Type Check
         if: always()
         working-directory: ./frontend
-        run: sudo yarn nuxi typecheck
+        run: sudo yarn typecheck
 
       - name: Run ESLint - Linting
         if: always()
@@ -55,4 +55,4 @@ jobs:
       # - name: Run Vitest - Component Testing
       #   if: always()
       #   working-directory: ./frontend
-      #   run: sudo yarn test
+      #   run: sudo yarn test --silent

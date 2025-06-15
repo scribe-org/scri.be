@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { resolve } from "path";
+
 import head from "./head";
 import locales from "./locales";
 import modules from "./modules";
