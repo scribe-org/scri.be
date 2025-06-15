@@ -8,7 +8,7 @@
 .light {
   --layer-0: 255, 255, 255;
   --primary-text: 0, 0, 0;
-  --distinct-text: 90, 90, 90;
+  --distinct-text: 0, 0, 0;
   --link-text: 0, 92, 184;
   --link-text-hover: 0, 59, 119;
   --highlight: 226, 226, 226;
@@ -21,7 +21,7 @@
   --layer-0: 6, 8, 15;
   --section-div: 43, 50, 59;
   --primary-text: 255, 255, 255;
-  --distinct-text: 150, 150, 150;
+  --distinct-text: 255, 255, 255;
   --link-text: 86, 167, 252;
   --link-text-hover: 134, 192, 253;
   --highlight: 22, 24, 29;

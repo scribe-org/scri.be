@@ -74,7 +74,7 @@ const platformLinks = [
   {
     name: "i18n.components._global.roadmap",
     isLocalePath: true,
-    url: "/",
+    url: "https://github.com/orgs/scribe-org/projects/1",
   },
 ];
 

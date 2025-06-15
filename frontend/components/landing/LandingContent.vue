@@ -35,14 +35,14 @@
       >
         {{ $t(text) }}
       </p>
-      <BtnRouteInternal
+      <!-- <BtnRouteInternal
         :id="btnId1"
         :cta="true"
         :label="`${btnText1}`"
         :linkTo="`${btnUrl1}`"
         fontSize="xl"
         :ariaLabel="btnAriaLabel1 ? btnAriaLabel1 : ''"
-      />
+      /> -->
     </div>
     <!-- Note: image right of content. -->
     <div class="hidden h-60 w-60 lg:block xl:h-72 xl:w-72">
@@ -106,14 +106,14 @@
       >
         {{ $t(text) }}
       </p>
-      <BtnRouteInternal
+      <!-- <BtnRouteInternal
         :id="btnId1"
         :cta="true"
         :label="`${btnText1}`"
         :linkTo="`${btnUrl1}`"
         fontSize="xl"
         :ariaLabel="btnAriaLabel1 ? btnAriaLabel1 : ''"
-      />
+      /> -->
     </div>
   </div>
   <div
@@ -136,7 +136,7 @@
       >
         {{ $t(text) }}
       </p>
-      <div class="style-btns-next-to-one-another">
+      <!-- <div class="style-btns-next-to-one-another">
         <BtnRouteInternal
           :id="btnId1"
           class="w-full"
@@ -155,7 +155,7 @@
           fontSize="xl"
           :ariaLabel="btnAriaLabel2 ? btnAriaLabel2 : ''"
         />
-      </div>
+      </div> -->
       <div>
         <GridSupporters class="mt-6 xl:mt-8" />
       </div>
