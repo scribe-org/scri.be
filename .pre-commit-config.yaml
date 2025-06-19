@@ -18,9 +18,9 @@ repos:
         language: python
         pass_filenames: false
 
-      # - id: run-i18n-check
-      #   name: run i18n-check
-      #   files: ^frontend/
-      #   entry: i18n-check -a
-      #   language: python
-      #   pass_filenames: false
+      - id: run-i18n-check
+        name: run i18n-check key-value checks
+        files: ^frontend/
+        entry: i18n-check -a
+        language: python
+        pass_filenames: false
