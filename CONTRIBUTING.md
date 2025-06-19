@@ -111,7 +111,7 @@ Scribe is very open to contributions from people in the early stages of their co
 
 <a id="dev-env"></a>
 
-# Development environment [`⇧`](#contents)
+## Development environment [`⇧`](#contents)
 
 1. First and foremost, please see the suggested IDE extensions in the dropdown below to make sure that your editor is set up properly.
 
@@ -269,7 +269,7 @@ yarn test
 
 <a id="issues-projects"></a>
 
-# Issues and projects [`⇧`](#contents)
+## Issues and projects [`⇧`](#contents)
 
 The [issue tracker for scri.be](https://github.com/scribe-org/scri.be/issues) is the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests) and [submitting pull requests](#pull-requests). Scribe also organizes related issues into [projects](https://github.com/scribe-org/scri.be/projects).
 
@@ -280,7 +280,7 @@ Be sure to check the [`-next release-`](https://github.com/scribe-org/scri.be/la
 
 <a id="bug-reports"></a>
 
-# Bug reports [`⇧`](#contents)
+## Bug reports [`⇧`](#contents)
 
 A bug is a _demonstrable problem_ that is caused by the code in the repository. Good bug reports are extremely helpful - thank you!
 
@@ -306,13 +306,13 @@ Again, thank you for your time in reporting issues!
 
 <a id="feature-requests"></a>
 
-# Feature requests [`⇧`](#contents)
+## Feature requests [`⇧`](#contents)
 
 Feature requests are more than welcome! Please take a moment to find out whether your idea fits with the scope and aims of the project. When making a suggestion, provide as much detail and context as possible, and further make clear the degree to which you would like to contribute in its development. Feature requests are marked with the [`Feature`](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue%20state%3Aopen%20type%3AFeature) type, and can be made using the [feature request](https://github.com/scribe-org/scri.be/issues/new?assignees=&labels=feature&template=feature_request.yml) template.
 
 <a id="pull-requests"></a>
 
-# Pull requests [`⇧`](#contents)
+## Pull requests [`⇧`](#contents)
 
 Good pull requests - patches, improvements and new features - are the foundation of our community making scri.be. They should remain focused in scope and avoid containing unrelated commits. Note that all contributions to this project will be made under [the specified license](LICENSE.txt) and should follow the code style standards ([contact us](https://matrix.to/#/#scribe_community:matrix.org) if unsure).
 
@@ -380,11 +380,7 @@ Thank you in advance for your contributions!
 
 <a id="documentation"></a>
 
-# Localization [`⇧`](#contents)
-
-Being an app that focusses on language learning, localization plays a big part in what Scribe will eventually be. Those interested in contributing to localization for the app are welcome to check related issues using the [`localization`](https://github.com/scribe-org/scri.be/issues?q=is%3Aopen+is%3Aissue+label%3Alocalization) label, and are further welcome to open their own issues using the [localization](https://github.com/scribe-org/scri.be/issues/new?assignees=&labels=design&template=localization.yml) template!
-
-# Documentation [`⇧`](#contents)
+## Documentation [`⇧`](#contents)
 
 Documentation is an invaluable way to contribute to coding projects as it allows others to more easily understand the project structure and contribute. Issues related to documentation are marked with the [`documentation`](https://github.com/scribe-org/scri.be/labels/documentation) label.
 
@@ -421,7 +417,7 @@ Once the above steps are finished you should be able to use tab to navigate web 
 
 <a id="internationalization-"></a>
 
-# Internationalization [`⇧`](#contents)
+## Internationalization [`⇧`](#contents)
 
 scri.be uses [i18n-check](https://github.com/activist-org/i18n-check) to validate our internationalization key-value pairs. The basic commands to check the i18n keys and values are:
 
@@ -443,7 +439,7 @@ If you do need to edit the directories and files skipped by certain checks, then
 
 <a id="design-"></a>
 
-# Design [`⇧`](#contents)
+## Design [`⇧`](#contents)
 
 <a href="https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/figma_logo.png" height="50" alt="Public Figma Designs" align="right"></a>
 
