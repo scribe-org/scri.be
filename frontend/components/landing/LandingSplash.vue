@@ -7,7 +7,7 @@
       <img
         class="w-[40%]"
         :src="SCRIBE_LOGO_URL"
-        alt="i18n._global.scribe_logo_img_alt_text"
+        alt="i18n.components.landing_splash.scribe_logo_img_alt_text"
       />
     </div>
   </div>

@@ -36,18 +36,18 @@ const connectLinks = [
 
 const resourcesLinks = [
   {
-    name: "i18n.components._global.documentation",
+    name: "i18n.components.footer_website.documentation",
     url: "/",
   },
   // {
-  //   name: "i18n._global.contact,
+  //   name: "i18n.components.footer_website.contact,
   //   url: "/contact",
   // },
 ];
 
 const organizationLinks = [
   {
-    name: "i18n._global.about",
+    name: "i18n.components.footer_website.about",
     url: "/",
   },
   {
@@ -72,7 +72,7 @@ const platformLinks = [
     url: "https://github.com/scribe-org",
   },
   {
-    name: "i18n.components._global.roadmap",
+    name: "i18n.components.footer_website.roadmap",
     isLocalePath: true,
     url: "https://github.com/orgs/scribe-org/projects/1",
   },

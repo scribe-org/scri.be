@@ -26,6 +26,7 @@ If you have questions or would like to communicate with the team, please [join u
 - [Localization](#localization)
 - [Documentation](#documentation)
 - [Accessibility](#accessibility-)
+- [Internationalization](#internationalization-)
 - [Design](#design)
 
 <a id="first-steps"></a>
@@ -417,6 +418,23 @@ Tab focusing sadly doesn't work out of the box for many browsers. Chrome works g
 - Select `Press Tab to highlight each item on a webpage`
 
 Once the above steps are finished you should be able to use tab to navigate web pages :)
+
+<a id="internationalization-"></a>
+
+# Internationalization [`⇧`](#contents)
+
+scri.be uses [i18n-check](https://github.com/activist-org/i18n-check) to validate our internationalization key-value pairs. The basic command to check the i18n keys and values is:
+
+```bash
+# Note: You need to have installed the requirements-dev.txt file in your virtual environment.
+i18n-check -a  # run all checks
+```
+
+You can also run individual checks. Please see the [documentation for i18n-check](https://i18n-check.readthedocs.io/en/latest/) to learn more.
+
+If you do need to edit the directories and files skipped by certain checks, then these edits can be made in the [.i18n-check.yaml](./.i18n-check.yaml) file. If you're having issues using `i18n-check`, please feel free to contact the team for support!
+
+<a id="design-"></a>
 
 # Design [`⇧`](#contents)
 

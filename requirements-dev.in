@@ -7,5 +7,6 @@
 # is important as otherwise we could be running tests with different versions
 # than production.
 
+i18n-check
 pip-tools
 pre-commit

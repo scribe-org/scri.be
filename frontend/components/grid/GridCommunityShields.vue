@@ -43,7 +43,7 @@
     <ShieldCommunity
       class="fill-primary-text"
       href="https://github.com/scribe-org/Scribe-iOS/stargazers"
-      :text="$t('i18n.components._global.star')"
+      :text="$t('i18n.components.grid_community_shields.star')"
       :isLoading="isLoading"
       :count="GitHubData.stargazers_count"
     >

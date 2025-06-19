@@ -33,7 +33,7 @@
       <!-- Note: Connect Links -->
       <div>
         <p class="text-xl font-medium text-primary-text">
-          {{ $t("i18n.components._global.connect") }}
+          {{ $t("i18n.components.footer.flex._global.connect") }}
         </p>
         <div class="mt-1 flex gap-10 sm:mt-0 sm:flex-col sm:gap-0">
           <template v-for="(connect, index) in links.connectLinks">
@@ -57,7 +57,7 @@
       <!-- Note: Resources Links -->
       <div>
         <p class="mt-6 text-xl font-medium text-primary-text sm:mt-0">
-          {{ $t("i18n._global.resources") }}
+          {{ $t("i18n.components.footer.flex._global.resources") }}
         </p>
         <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
           <template v-for="(resource, index) in links.resourcesLinks">
@@ -81,7 +81,7 @@
       <!-- Note: Organization Links -->
       <div>
         <p class="mt-6 text-xl font-medium text-primary-text sm:mt-0">
-          {{ $t("i18n._global.organization") }}
+          {{ $t("i18n.components.footer.flex._global.organization") }}
         </p>
         <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
           <template v-for="(oLink, index) in links.organizationLinks">

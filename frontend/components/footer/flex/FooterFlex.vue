@@ -63,7 +63,7 @@
       <!-- Note: Connect Links -->
       <div>
         <p class="text-xl font-medium text-primary-text">
-          {{ $t("i18n.components._global.connect") }}
+          {{ $t("i18n.components.footer.flex._global.connect") }}
         </p>
         <template v-for="(connect, index) in links.connectLinks">
           <a
@@ -85,7 +85,7 @@
       <!-- Note: Resources Links -->
       <div>
         <p class="text-xl font-medium text-primary-text">
-          {{ $t("i18n._global.resources") }}
+          {{ $t("i18n.components.footer.flex._global.resources") }}
         </p>
         <template v-for="(resource, index) in links.resourcesLinks">
           <p
@@ -101,7 +101,7 @@
       <!-- Note: Organization Links -->
       <div>
         <p class="text-xl font-medium text-primary-text">
-          {{ $t("i18n._global.organization") }}
+          {{ $t("i18n.components.footer.flex._global.organization") }}
         </p>
         <template v-for="(oLink, index) in links.organizationLinks">
           <p
