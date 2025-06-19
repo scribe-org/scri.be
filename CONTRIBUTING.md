@@ -423,11 +423,18 @@ Once the above steps are finished you should be able to use tab to navigate web 
 
 # Internationalization [`⇧`](#contents)
 
-scri.be uses [i18n-check](https://github.com/activist-org/i18n-check) to validate our internationalization key-value pairs. The basic command to check the i18n keys and values is:
+scri.be uses [i18n-check](https://github.com/activist-org/i18n-check) to validate our internationalization key-value pairs. The basic commands to check the i18n keys and values are:
 
 ```bash
 # Note: You need to have installed the requirements-dev.txt file in your virtual environment.
 i18n-check -a  # run all checks
+i18n-check -ki  # run key identifiers check
+i18n-check -ik  # run invalid keys check
+i18n-check -uk  # run unused keys check
+i18n-check -nsk  # run non-source keys check
+i18n-check -rk  # run repeat keys check
+i18n-check -rv  # run repeat values check
+i18n-check -nk  # run nested keys check
 ```
 
 You can also run individual checks. Please see the [documentation for i18n-check](https://i18n-check.readthedocs.io/en/latest/) to learn more.
