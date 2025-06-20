@@ -5,7 +5,8 @@ export const SCRIBE_LOGO_URL = "/images/scribe/scribe_logo.svg";
 export const SCRIBE_LOGO_NO_SHADOW_URL =
   "/images/scribe/scribe_logo_no_shadow.svg";
 
-export const LANGUAGE_KEYBOARDS_IMAGE_URL = "";
-export const CONJUGATE_IMAGE_URL = "";
-export const INFRASTRUCTURE_IMAGE_URL = "";
-export const SCRIBE_COMMUNITY_IMAGE_URL = "";
+export const LANGUAGE_KEYBOARDS_IMAGE_URL =
+  "/images/landing/language_keyboards";
+export const CONJUGATE_IMAGE_URL = "/images/landing/conjugate";
+export const INFRASTRUCTURE_IMAGE_URL = "/images/landing/infrastructure";
+export const SCRIBE_COMMUNITY_IMAGE_URL = "/images/landing/scribe_community";

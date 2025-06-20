@@ -11,13 +11,13 @@
       <img
         v-if="$colorMode.value == 'light'"
         class="mb-4 h-36 sm:h-44 lg:hidden"
-        :src="imgUrl + '_light.svg'"
+        :src="imgUrl + '_light.png'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
         class="mb-4 h-36 sm:h-44 lg:hidden"
-        :src="imgUrl + '_dark.svg'"
+        :src="imgUrl + '_dark.png'"
         :alt="$t(imageAltText)"
       />
       <h2
@@ -48,12 +48,12 @@
     <div class="hidden h-60 w-60 lg:block xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
-        :src="imgUrl + '_light.svg'"
+        :src="imgUrl + '_light.png'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
-        :src="imgUrl + '_dark.svg'"
+        :src="imgUrl + '_dark.png'"
         :alt="$t(imageAltText)"
       />
     </div>
@@ -66,12 +66,12 @@
     <div class="hidden h-60 w-60 lg:block xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
-        :src="imgUrl + '_light.svg'"
+        :src="imgUrl + '_light.png'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
-        :src="imgUrl + '_dark.svg'"
+        :src="imgUrl + '_dark.png'"
         :alt="$t(imageAltText)"
       />
     </div>
@@ -82,13 +82,13 @@
       <img
         v-if="$colorMode.value == 'light'"
         class="mb-4 h-36 sm:h-44 lg:hidden"
-        :src="imgUrl + '_light.svg'"
+        :src="imgUrl + '_light.png'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
         class="mb-4 h-36 sm:h-44 lg:hidden"
-        :src="imgUrl + '_dark.svg'"
+        :src="imgUrl + '_dark.png'"
         :alt="$t(imageAltText)"
       />
       <h2
