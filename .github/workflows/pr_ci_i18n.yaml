@@ -36,5 +36,10 @@ jobs:
           echo PATH=$PATH >> $GITHUB_ENV
           uv pip install -r requirements-dev.txt
 
+      - name: Show Working Directory and Files
+        run: |
+          pwd
+          ls -la
+
       - name: Execute All i18n-check Key-Value Checks
         run: i18n-check -a
