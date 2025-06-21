@@ -10,13 +10,13 @@
       <!-- Note: image on top of content. -->
       <img
         v-if="$colorMode.value == 'light' && !aboveLargeBP"
-        class="mb-4 h-40 sm:h-52 md:h-56"
+        class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgUrl + '_light.png'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark' && !aboveLargeBP"
-        class="mb-4 h-40 sm:h-52 md:h-56"
+        class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgUrl + '_dark.png'"
         :alt="$t(imageAltText)"
       />
@@ -81,13 +81,13 @@
       <!-- Note: image on top of content. -->
       <img
         v-if="$colorMode.value == 'light' && !aboveLargeBP"
-        class="mb-4 h-40 sm:h-52 md:h-56"
+        class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgUrl + '_light.png'"
         :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark' && !aboveLargeBP"
-        class="mb-4 h-40 sm:h-52 md:h-56"
+        class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgUrl + '_dark.png'"
         :alt="$t(imageAltText)"
       />
