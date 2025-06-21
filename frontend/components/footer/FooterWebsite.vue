@@ -15,6 +15,12 @@ import { IconMap } from "~/types/icon-map";
 
 const connectLinks = [
   {
+    name: "team@scri.be",
+    url: "mailto:team@scri.be",
+    iconName: `${IconMap.ENVELOPE}`,
+    iconSize: "1.05em",
+  },
+  {
     name: "i18n.components._global.github",
     url: "https://github.com/scribe-org",
     iconName: `${IconMap.GITHUB}`,
@@ -34,31 +40,31 @@ const connectLinks = [
   },
 ];
 
-const resourcesLinks = [
-  {
-    name: "i18n.components.footer_website.documentation",
-    url: "/",
-  },
-  // {
-  //   name: "i18n.components.footer_website.contact,
-  //   url: "/contact",
-  // },
-];
+// const resourcesLinks = [
+//   {
+//     name: "i18n.components.footer_website.documentation",
+//     url: "/",
+//   },
+//   {
+//     name: "i18n.components.footer_website.contact",
+//     url: "/contact",
+//   },
+// ];
 
-const organizationLinks = [
-  {
-    name: "i18n.components.footer_website.about",
-    url: "/",
-  },
-  {
-    name: "i18n.components.footer_website.supporters",
-    url: "/",
-  },
-  {
-    name: "i18n.components.footer_website.imprint",
-    url: "/",
-  },
-];
+// const organizationLinks = [
+//   {
+//     name: "i18n.components.footer_website.about",
+//     url: "/",
+//   },
+//   {
+//     name: "i18n.components.footer_website.supporters",
+//     url: "/",
+//   },
+//   {
+//     name: "i18n.components.footer_website.imprint",
+//     url: "/",
+//   },
+// ];
 
 const platformLinks = [
   {
@@ -78,22 +84,22 @@ const platformLinks = [
   },
 ];
 
-const legalLinks = [
-  {
-    name: "i18n.components.footer_website.trademark_policy",
-    url: "/",
-  },
-  {
-    name: "i18n.components.footer_website.privacy_policy",
-    url: "/",
-  },
-];
+// const legalLinks = [
+//   {
+//     name: "i18n.components.footer_website.trademark_policy",
+//     url: "/",
+//   },
+//   {
+//     name: "i18n.components.footer_website.privacy_policy",
+//     url: "/",
+//   },
+// ];
 
 const links = {
   connectLinks,
-  resourcesLinks,
-  organizationLinks,
+  // resourcesLinks,
+  // organizationLinks,
   platformLinks,
-  legalLinks,
+  // legalLinks,
 };
 </script>

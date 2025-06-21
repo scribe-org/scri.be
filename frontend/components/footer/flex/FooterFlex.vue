@@ -28,19 +28,19 @@
         </template>
       </div>
       <!-- Note: Legal Links -->
-      <div class="mt-5 flex">
+      <!-- <div class="mt-5 flex">
         <template v-for="(policy, index) in links.legalLinks">
           <div class="hover:text-distinct-text">
             <NuxtLink class="focus-brand" :to="localePath(policy.url)">
               {{ $t(policy.name) }}
             </NuxtLink>
           </div>
-          <div v-if="index < links.legalLinks.length - 1" class="px-2">
-            <!-- Fix for ESLint and Prettier. -->
-            •
+          <div v-if="index < links.legalLinks.length - 1" class="px-2"> -->
+      <!-- Fix for ESLint and Prettier. -->
+      <!-- •
           </div>
         </template>
-      </div>
+      </div> -->
       <a
         class="focus-brand mt-2 w-fit hover:text-distinct-text"
         href="https://www.netlify.com/"
@@ -83,7 +83,7 @@
         </template>
       </div>
       <!-- Note: Resources Links -->
-      <div>
+      <!-- <div>
         <p class="text-xl font-medium text-primary-text">
           {{ $t("i18n.components.footer.flex._global.resources") }}
         </p>
@@ -97,9 +97,9 @@
             </NuxtLink>
           </p>
         </template>
-      </div>
+      </div> -->
       <!-- Note: Organization Links -->
-      <div>
+      <!-- <div>
         <p class="text-xl font-medium text-primary-text">
           {{ $t("i18n.components.footer.flex._global.organization") }}
         </p>
@@ -113,7 +113,7 @@
             </NuxtLink>
           </p>
         </template>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -128,24 +128,24 @@ defineProps<{
       url: string;
       isLocalePath: boolean;
     }[];
-    legalLinks: {
-      name: string;
-      url: string;
-    }[];
+    // legalLinks: {
+    //   name: string;
+    //   url: string;
+    // }[];
     connectLinks: {
       name: string;
       url: string;
       iconName: string;
       iconSize: string;
     }[];
-    resourcesLinks: {
-      name: string;
-      url: string;
-    }[];
-    organizationLinks: {
-      name: string;
-      url: string;
-    }[];
+    // resourcesLinks: {
+    //   name: string;
+    //   url: string;
+    // }[];
+    // organizationLinks: {
+    //   name: string;
+    //   url: string;
+    // }[];
   };
 }>();
 </script>

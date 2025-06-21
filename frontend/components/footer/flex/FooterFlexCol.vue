@@ -28,10 +28,10 @@
       </div>
     </div>
     <div
-      class="grid max-w-xl justify-items-center gap-0 text-center sm:grid-cols-3 sm:gap-12 sm:text-left md:gap-16"
+      class="grid max-w-xl justify-items-center gap-0 text-center sm:grid-cols-1 sm:gap-12 sm:text-left md:gap-16"
     >
       <!-- Note: Connect Links -->
-      <div>
+      <div class="text-center">
         <p class="text-xl font-medium text-primary-text">
           {{ $t("i18n.components.footer.flex._global.connect") }}
         </p>
@@ -55,7 +55,7 @@
         </div>
       </div>
       <!-- Note: Resources Links -->
-      <div>
+      <!-- <div>
         <p class="mt-6 text-xl font-medium text-primary-text sm:mt-0">
           {{ $t("i18n.components.footer.flex._global.resources") }}
         </p>
@@ -77,9 +77,9 @@
             </p>
           </template>
         </div>
-      </div>
+      </div> -->
       <!-- Note: Organization Links -->
-      <div>
+      <!-- <div>
         <p class="mt-6 text-xl font-medium text-primary-text sm:mt-0">
           {{ $t("i18n.components.footer.flex._global.organization") }}
         </p>
@@ -101,11 +101,11 @@
             </p>
           </template>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="flex flex-col items-center justify-center">
       <!-- Note: Legal Links -->
-      <div class="flex flex-wrap items-center justify-center">
+      <!-- <div class="flex flex-wrap items-center justify-center">
         <template v-for="(policy, index) in links.legalLinks">
           <div class="hover:text-distinct-text">
             <NuxtLink class="focus-brand" :to="localePath(policy.url)">
@@ -119,7 +119,7 @@
             </span>
           </div>
         </template>
-      </div>
+      </div> -->
       <a
         class="mt-2 w-fit hover:text-distinct-text"
         href="https://www.netlify.com/"
@@ -148,24 +148,24 @@ defineProps<{
       url: string;
       isLocalePath: boolean;
     }[];
-    legalLinks: {
-      name: string;
-      url: string;
-    }[];
+    // legalLinks: {
+    //   name: string;
+    //   url: string;
+    // }[];
     connectLinks: {
       name: string;
       url: string;
       iconName: string;
       iconSize: string;
     }[];
-    resourcesLinks: {
-      name: string;
-      url: string;
-    }[];
-    organizationLinks: {
-      name: string;
-      url: string;
-    }[];
+    // resourcesLinks: {
+    //   name: string;
+    //   url: string;
+    // }[];
+    // organizationLinks: {
+    //   name: string;
+    //   url: string;
+    // }[];
   };
 }>();
 </script>

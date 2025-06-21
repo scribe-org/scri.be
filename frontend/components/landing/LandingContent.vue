@@ -9,29 +9,29 @@
     >
       <!-- Note: image on top of content. -->
       <img
-        v-if="$colorMode.value == 'light'"
-        class="mb-4 h-36 sm:h-44 lg:hidden"
+        v-if="$colorMode.value == 'light' && !aboveLargeBP"
+        class="mb-4 h-40 sm:h-52 md:h-56"
         :src="imgUrl + '_light.png'"
         :alt="$t(imageAltText)"
       />
       <img
-        v-else-if="$colorMode.value == 'dark'"
-        class="mb-4 h-36 sm:h-44 lg:hidden"
+        v-else-if="$colorMode.value == 'dark' && !aboveLargeBP"
+        class="mb-4 h-40 sm:h-52 md:h-56"
         :src="imgUrl + '_dark.png'"
         :alt="$t(imageAltText)"
       />
       <h2
-        class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-left sm:text-3xl xl:text-4xl"
+        class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl lg:text-left xl:text-4xl"
       >
         {{ $t(header) }}
       </h2>
       <p
-        class="text-transform: w-10/12 text-center text-base uppercase tracking-wider text-distinct-text sm:w-full sm:text-left sm:text-lg xl:text-xl"
+        class="text-transform: w-10/12 text-center text-base uppercase tracking-wider text-distinct-text sm:w-full sm:text-lg lg:text-left xl:text-xl"
       >
         {{ $t(tagline) }}
       </p>
       <p
-        class="w-10/12 pb-2 text-center text-sm sm:w-full sm:text-left sm:text-base md:text-lg"
+        class="w-10/12 pb-2 text-center text-sm sm:w-full sm:text-base md:text-lg lg:text-left"
       >
         {{ $t(text) }}
       </p>
@@ -45,7 +45,7 @@
       /> -->
     </div>
     <!-- Note: image right of content. -->
-    <div class="hidden h-60 w-60 lg:block xl:h-72 xl:w-72">
+    <div v-if="aboveLargeBP" class="h-60 w-60 xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
         :src="imgUrl + '_light.png'"
@@ -63,7 +63,7 @@
     class="flex items-center justify-center bg-layer-0 py-8 text-primary-text sm:py-12 md:py-16 lg:space-x-20 lg:py-24 xl:space-x-32 xl:py-28 2xl:space-x-40"
   >
     <!-- Note: image left of content. -->
-    <div class="hidden h-60 w-60 lg:block xl:h-72 xl:w-72">
+    <div v-if="aboveLargeBP" class="h-60 w-60 xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
         :src="imgUrl + '_light.png'"
@@ -80,29 +80,29 @@
     >
       <!-- Note: image on top of content. -->
       <img
-        v-if="$colorMode.value == 'light'"
-        class="mb-4 h-36 sm:h-44 lg:hidden"
+        v-if="$colorMode.value == 'light' && !aboveLargeBP"
+        class="mb-4 h-40 sm:h-52 md:h-56"
         :src="imgUrl + '_light.png'"
         :alt="$t(imageAltText)"
       />
       <img
-        v-else-if="$colorMode.value == 'dark'"
-        class="mb-4 h-36 sm:h-44 lg:hidden"
+        v-else-if="$colorMode.value == 'dark' && !aboveLargeBP"
+        class="mb-4 h-40 sm:h-52 md:h-56"
         :src="imgUrl + '_dark.png'"
         :alt="$t(imageAltText)"
       />
       <h2
-        class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-left sm:text-3xl xl:text-4xl"
+        class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl lg:text-left xl:text-4xl"
       >
         {{ $t(header) }}
       </h2>
       <p
-        class="text-transform: w-10/12 text-center text-base uppercase tracking-wider text-distinct-text sm:w-full sm:text-left sm:text-lg xl:text-xl"
+        class="text-transform: w-10/12 text-center text-base uppercase tracking-wider text-distinct-text sm:w-full sm:text-lg lg:text-left xl:text-xl"
       >
         {{ $t(tagline) }}
       </p>
       <p
-        class="w-10/12 pb-2 text-center text-sm sm:w-full sm:text-left sm:text-base md:text-lg"
+        class="w-10/12 pb-2 text-center text-sm sm:w-full sm:text-base md:text-lg lg:text-left"
       >
         {{ $t(text) }}
       </p>
@@ -187,4 +187,6 @@ defineProps<{
   btnAriaLabel2?: string;
   subText?: string;
 }>();
+
+const aboveLargeBP = useBreakpoint("lg");
 </script>

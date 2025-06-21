@@ -36,7 +36,7 @@
           <div class="flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
             <DropdownTheme />
             <DropdownLanguage />
-            <BtnRouteInternal
+            <!-- <BtnRouteInternal
               v-if="aboveLargeBP"
               id="btn-get-in-touch-large"
               class="block"
@@ -55,7 +55,7 @@
               linkTo="/"
               fontSize="xs"
               ariaLabel="i18n.components.header_website.support_aria_label"
-            />
+            /> -->
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
 import { DropdownLocation } from "~/types/location";
 
 const aboveMediumBP = useBreakpoint("md");
-const aboveLargeBP = useBreakpoint("lg");
+// const aboveLargeBP = useBreakpoint("lg");
 
 const headerOpacity: Ref<number> = ref(1);
 const prevScrollY: Ref<number> = ref(0);
