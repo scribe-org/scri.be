@@ -3,7 +3,7 @@
 </div>
 
 [![platforms](https://img.shields.io/badge/Web-0183DC.svg?logo=windows-terminal&logoColor=ffffff)](https://github.com/scribe-org/scri.be)
-[![netlify](https://img.shields.io/netlify/f184f5a7-e9a8-4e3a-be26-70fefb50d4cb?label=%20&logo=netlify&logoColor=ffffff)](https://app.netlify.com/sites/scribe-org)
+[![netlify](https://img.shields.io/netlify/340cbdff-befd-419f-b8f2-68c258272a95?label=%20&logo=netlify&logoColor=ffffff)](https://app.netlify.com/sites/scri-be)
 [![issues](https://img.shields.io/github/issues/scribe-org/scri.be?label=%20&logo=github)](https://github.com/scribe-org/scri.be/issues)
 [![nuxt](https://img.shields.io/badge/Nuxt%203-41b883.svg?logo=nuxt.js&logoColor=ffffff)](#tech-stack)
 [![vue](https://img.shields.io/badge/Vue%203-41b883.svg?logo=vue.js&logoColor=ffffff)](#tech-stack)
