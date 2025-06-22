@@ -109,4 +109,9 @@ export default defineNuxtConfig({
   nitro: {
     preset: "netlify-static",
   },
+
+  plausible: {
+    // Prevent tracking on localhost.
+    ignoredHostnames: ["localhost"],
+  },
 });
