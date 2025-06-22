@@ -1,0 +1,12 @@
+{
+  "i18n.components._global.github": "गिटहब",
+  "i18n.components._global.mastodon": "मास्टोडॉन",
+  "i18n.components._global.matrix": "मैट्रिक्स",
+  "i18n.components.footer_website.about": "हमारे बारे में",
+  "i18n.components.footer_website.contact": "संपर्क करें",
+  "i18n.components.footer_website.documentation": "दस्तावेज़",
+  "i18n.pages.index.title": "स्वागत है",
+  "i18n.pages.index.about_us": "हमारे बारे में",
+  "i18n.pages.index.learn_more": "और जानें",
+  "i18n.pages.index.our_supporters": "हमारे समर्थक"
+}
