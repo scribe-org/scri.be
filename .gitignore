@@ -21,6 +21,7 @@ venv/
 .nitro
 .cache
 .env
+.env.*         # ✅ Ignore all .env files like .env.dev, .env.local, etc.
 dist
 
 # Node dependencies
@@ -39,3 +40,13 @@ frontend/!.yarn/plugins
 frontend/!.yarn/releases
 frontend/!.yarn/sdks
 frontend/!.yarn/versions
+
+# 🚫 Lock files (choose only one depending on your package manager)
+# Ignore NPM lockfile if using Yarn
+package-lock.json
+# OR ignore Yarn lockfile if using NPM
+# yarn.lock
+
+# Optional: Ignore backend lockfiles too if you have a separate backend
+backend/package-lock.json
+backend/yarn.lock
