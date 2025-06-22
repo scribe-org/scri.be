@@ -109,6 +109,4 @@ export default defineNuxtConfig({
   nitro: {
     preset: "netlify-static",
   },
-
-  compatibilityDate: "2025-06-22",
 });
