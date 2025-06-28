@@ -3,6 +3,15 @@
     "strict": true,
     "skipLibCheck": true,
     "module": "ESNext",
+<<<<<<< HEAD
     "types": ["@vueuse/nuxt", "@vueuse/core", "@pinia/nuxt", "vitest/globals"]
+=======
+  "types": ["@vueuse/nuxt", "@vueuse/core", "@pinia/nuxt", "vitest/globals"],
+  
+  //Required to support @/ or ~/ alias everywhere (TypeScript, IDEs, CI, Docker)
+  "paths": {
+    "@/*": ["./*"],
+    "~/*": ["./*"]
+>>>>>>> 7376e75 (chore(tsconfig): improve IDE and CI support for @ and ~ aliases)
   }
 }
