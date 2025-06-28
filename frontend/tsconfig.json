@@ -3,21 +3,6 @@
     "strict": true,
     "skipLibCheck": true,
     "module": "ESNext",
-    "lib": ["ESNext"],
-    "types": [
-      "@vueuse/nuxt",
-      "@vueuse/core",
-      "@pinia/nuxt",
-      "vitest/globals"
-    ],
-
-    // Required to support @/ or ~/ alias everywhere
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"],
-      "~/*": ["./*"]
-    }
-  },
-  // Ensures all files are included
-  "include": ["./**/*"]
+    "types": ["@vueuse/nuxt", "@vueuse/core", "@pinia/nuxt", "vitest/globals"]
+  }
 }
