@@ -5,6 +5,8 @@ export enum IconMap {
   ARROW_LEFT = "bi:arrow-left",
   ARROW_RIGHT = "bi:arrow-right",
   ARROW_UP = "bi:arrow-up",
+  CHEVRON_BAR_LEFT = "bi:chevron-bar-left",
+  CHEVRON_BAR_RIGHT = "bi:chevron-bar-right",
   CHEVRON_DOWN = "bi:chevron-down",
   CHEVRON_UP = "bi:chevron-up",
   CIRCLE_INFO = "bi:info-circle",
