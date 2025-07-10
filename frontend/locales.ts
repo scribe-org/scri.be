@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 export enum LOCALE_NAME {
+  BENGALI = "বাংলা",
   ENGLISH = "English",
   HINDI = "हिन्दी",
   MALAYALAM = "മലയാളം",
@@ -9,6 +10,7 @@ export enum LOCALE_NAME {
 }
 
 export enum LOCALE_CODE {
+  BENGALI = "bn",
   ENGLISH = "en",
   HINDI = "hi",
   MALAYALAM = "ml",
@@ -26,6 +28,13 @@ export interface Locale {
 }
 
 export const locales: Locale[] = [
+  {
+    code: LOCALE_CODE.BENGALI,
+    language: "bn",
+    name: LOCALE_NAME.BENGALI,
+    file: "../bn.json",
+    isCatchallLocale: true,
+  },
   {
     code: LOCALE_CODE.ENGLISH,
     language: "en-US",
