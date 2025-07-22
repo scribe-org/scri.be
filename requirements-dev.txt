@@ -6,7 +6,7 @@
 #
 build==1.2.2.post1
     # via pip-tools
-certifi==2025.6.15
+certifi==2025.7.14
     # via
     #   i18n-check
     #   requests
@@ -22,7 +22,7 @@ distlib==0.3.9
     # via virtualenv
 filelock==3.18.0
     # via virtualenv
-i18n-check==1.4.1
+i18n-check==1.7.0
     # via -r requirements-dev.in
 identify==2.6.12
     # via pre-commit
@@ -30,6 +30,14 @@ idna==3.10
     # via
     #   i18n-check
     #   requests
+markdown-it-py==3.0.0
+    # via
+    #   i18n-check
+    #   rich
+mdurl==0.1.2
+    # via
+    #   i18n-check
+    #   markdown-it-py
 nodeenv==1.9.1
     # via pre-commit
 packaging==25.0
@@ -40,6 +48,10 @@ platformdirs==4.3.8
     # via virtualenv
 pre-commit==4.2.0
     # via -r requirements-dev.in
+pygments==2.19.2
+    # via
+    #   i18n-check
+    #   rich
 pyproject-hooks==1.2.0
     # via
     #   build
@@ -49,6 +61,8 @@ pyyaml==6.0.2
     #   i18n-check
     #   pre-commit
 requests==2.32.4
+    # via i18n-check
+rich==14.0.0
     # via i18n-check
 urllib3==2.5.0
     # via
