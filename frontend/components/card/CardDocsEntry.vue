@@ -1,3 +1,4 @@
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <NuxtLink
     class="card-style hover:bg-light-highlight dark:hover:bg-dark-highlight group flex w-full space-x-4 px-3 py-3 lg:px-4"
