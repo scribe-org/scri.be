@@ -40,31 +40,27 @@ const connectLinks = [
   },
 ];
 
-// const resourcesLinks = [
-//   {
-//     name: "i18n.components.footer_website.documentation",
-//     url: "/",
-//   },
-//   {
-//     name: "i18n.components.footer_website.contact",
-//     url: "/contact",
-//   },
-// ];
+const resourcesLinks = [
+  {
+    name: "i18n.components.footer_website.documentation",
+    url: "/docs",
+  },
+];
 
-// const organizationLinks = [
-//   {
-//     name: "i18n.components.footer_website.about",
-//     url: "/",
-//   },
-//   {
-//     name: "i18n.components.footer_website.supporters",
-//     url: "/",
-//   },
-//   {
-//     name: "i18n.components.footer_website.imprint",
-//     url: "/",
-//   },
-// ];
+const organizationLinks = [
+  {
+    name: "i18n.components.footer_website.about",
+    url: "/docs/about/community",
+  },
+  {
+    name: "i18n.components.footer_website.supporters",
+    url: "/docs/about/supporters-showcase",
+  },
+  {
+    name: "i18n._global.imprint",
+    url: "/docs/about/imprint",
+  },
+];
 
 const platformLinks = [
   {
@@ -84,22 +80,22 @@ const platformLinks = [
   },
 ];
 
-// const legalLinks = [
-//   {
-//     name: "i18n.components.footer_website.trademark_policy",
-//     url: "/",
-//   },
-//   {
-//     name: "i18n.components.footer_website.privacy_policy",
-//     url: "/",
-//   },
-// ];
+const legalLinks = [
+  {
+    name: "i18n._global.trademark_policy",
+    url: "/docs/legal/trademark-policy",
+  },
+  {
+    name: "i18n._global.privacy_policy",
+    url: "/docs/legal/privacy-policy",
+  },
+];
 
 const links = {
   connectLinks,
-  // resourcesLinks,
-  // organizationLinks,
+  resourcesLinks,
+  organizationLinks,
   platformLinks,
-  // legalLinks,
+  legalLinks,
 };
 </script>

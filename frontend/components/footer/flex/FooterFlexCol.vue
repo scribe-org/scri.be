@@ -3,7 +3,7 @@
   <!-- Note: Content Sections Top for Mobile -->
   <div class="flex flex-col items-center justify-center space-y-5">
     <div class="flex flex-col items-center justify-center space-y-2">
-      <p class="text-primary-text">
+      <p>
         {{ $t("i18n.components.footer.flex._global.scribe_tagline") }}
       </p>
       <!-- Note: Platform Links -->
@@ -32,7 +32,7 @@
     >
       <!-- Note: Connect Links -->
       <div class="text-center">
-        <p class="text-xl font-medium text-primary-text">
+        <p class="text-xl font-medium">
           {{ $t("i18n.components.footer.flex._global.connect") }}
         </p>
         <div class="mt-1 flex gap-10 sm:mt-0 sm:flex-col sm:gap-0">
@@ -55,8 +55,8 @@
         </div>
       </div>
       <!-- Note: Resources Links -->
-      <!-- <div>
-        <p class="mt-6 text-xl font-medium text-primary-text sm:mt-0">
+      <div>
+        <p class="mt-6 text-xl font-medium sm:mt-0">
           {{ $t("i18n.components.footer.flex._global.resources") }}
         </p>
         <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
@@ -77,10 +77,10 @@
             </p>
           </template>
         </div>
-      </div> -->
+      </div>
       <!-- Note: Organization Links -->
-      <!-- <div>
-        <p class="mt-6 text-xl font-medium text-primary-text sm:mt-0">
+      <div>
+        <p class="mt-6 text-xl font-medium sm:mt-0">
           {{ $t("i18n.components.footer.flex._global.organization") }}
         </p>
         <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
@@ -101,11 +101,11 @@
             </p>
           </template>
         </div>
-      </div> -->
+      </div>
     </div>
     <div class="flex flex-col items-center justify-center">
       <!-- Note: Legal Links -->
-      <!-- <div class="flex flex-wrap items-center justify-center">
+      <div class="flex flex-wrap items-center justify-center">
         <template v-for="(policy, index) in links.legalLinks">
           <div class="hover:text-distinct-text">
             <NuxtLink class="focus-brand" :to="localePath(policy.url)">
@@ -119,7 +119,7 @@
             </span>
           </div>
         </template>
-      </div> -->
+      </div>
       <a
         class="mt-2 w-fit hover:text-distinct-text"
         href="https://www.netlify.com/"
@@ -127,13 +127,13 @@
       >
         {{ $t("i18n.components.footer.flex._global.powered_by_netlify") }}
       </a>
-      <div class="mt-2 text-primary-text">
+      <p class="mt-2">
         {{
           $t("i18n.components.footer.flex._global.copyright", {
             year: new Date().getFullYear(),
           })
         }}
-      </div>
+      </p>
     </div>
   </div>
 </template>
@@ -148,24 +148,24 @@ defineProps<{
       url: string;
       isLocalePath: boolean;
     }[];
-    // legalLinks: {
-    //   name: string;
-    //   url: string;
-    // }[];
+    legalLinks: {
+      name: string;
+      url: string;
+    }[];
     connectLinks: {
       name: string;
       url: string;
       iconName: string;
       iconSize: string;
     }[];
-    // resourcesLinks: {
-    //   name: string;
-    //   url: string;
-    // }[];
-    // organizationLinks: {
-    //   name: string;
-    //   url: string;
-    // }[];
+    resourcesLinks: {
+      name: string;
+      url: string;
+    }[];
+    organizationLinks: {
+      name: string;
+      url: string;
+    }[];
   };
 }>();
 </script>

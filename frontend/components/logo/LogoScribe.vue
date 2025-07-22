@@ -3,7 +3,7 @@
   <NuxtLink
     :to="localePath('/')"
     class="focus-brand"
-    :aria-label="$t('i18n.components.logo_activist.aria_label')"
+    :aria-label="$t('i18n.components.logo_scribe.logo_aria_label')"
   >
     <svg
       width="831"

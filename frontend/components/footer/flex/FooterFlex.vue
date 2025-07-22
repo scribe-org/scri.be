@@ -4,7 +4,7 @@
   <div class="flex flex-row justify-start">
     <!-- Note: Content Sections Left -->
     <div class="mt-0 flex w-[80%] flex-col justify-items-start">
-      <p class="mt-3 text-primary-text">
+      <p class="mt-3">
         {{ $t("i18n.components.footer.flex._global.scribe_tagline") }}
       </p>
       <!-- Note: Platform Links -->
@@ -28,19 +28,19 @@
         </template>
       </div>
       <!-- Note: Legal Links -->
-      <!-- <div class="mt-5 flex">
+      <div class="mt-5 flex">
         <template v-for="(policy, index) in links.legalLinks">
           <div class="hover:text-distinct-text">
             <NuxtLink class="focus-brand" :to="localePath(policy.url)">
               {{ $t(policy.name) }}
             </NuxtLink>
           </div>
-          <div v-if="index < links.legalLinks.length - 1" class="px-2"> -->
-      <!-- Fix for ESLint and Prettier. -->
-      <!-- •
+          <div v-if="index < links.legalLinks.length - 1" class="px-2">
+            <!-- Fix for ESLint and Prettier. -->
+            •
           </div>
         </template>
-      </div> -->
+      </div>
       <a
         class="focus-brand mt-2 w-fit hover:text-distinct-text"
         href="https://www.netlify.com/"
@@ -48,7 +48,7 @@
       >
         {{ $t("i18n.components.footer.flex._global.powered_by_netlify") }}
       </a>
-      <div class="mt-2 text-primary-text">
+      <div class="mt-2">
         {{
           $t("i18n.components.footer.flex._global.copyright", {
             year: new Date().getFullYear(),
@@ -62,7 +62,7 @@
     >
       <!-- Note: Connect Links -->
       <div>
-        <p class="text-xl font-medium text-primary-text">
+        <p class="text-xl font-medium">
           {{ $t("i18n.components.footer.flex._global.connect") }}
         </p>
         <template v-for="(connect, index) in links.connectLinks">
@@ -83,8 +83,8 @@
         </template>
       </div>
       <!-- Note: Resources Links -->
-      <!-- <div>
-        <p class="text-xl font-medium text-primary-text">
+      <div>
+        <p class="text-xl font-medium">
           {{ $t("i18n.components.footer.flex._global.resources") }}
         </p>
         <template v-for="(resource, index) in links.resourcesLinks">
@@ -97,10 +97,10 @@
             </NuxtLink>
           </p>
         </template>
-      </div> -->
+      </div>
       <!-- Note: Organization Links -->
-      <!-- <div>
-        <p class="text-xl font-medium text-primary-text">
+      <div>
+        <p class="text-xl font-medium">
           {{ $t("i18n.components.footer.flex._global.organization") }}
         </p>
         <template v-for="(oLink, index) in links.organizationLinks">
@@ -113,7 +113,7 @@
             </NuxtLink>
           </p>
         </template>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -128,24 +128,24 @@ defineProps<{
       url: string;
       isLocalePath: boolean;
     }[];
-    // legalLinks: {
-    //   name: string;
-    //   url: string;
-    // }[];
+    legalLinks: {
+      name: string;
+      url: string;
+    }[];
     connectLinks: {
       name: string;
       url: string;
       iconName: string;
       iconSize: string;
     }[];
-    // resourcesLinks: {
-    //   name: string;
-    //   url: string;
-    // }[];
-    // organizationLinks: {
-    //   name: string;
-    //   url: string;
-    // }[];
+    resourcesLinks: {
+      name: string;
+      url: string;
+    }[];
+    organizationLinks: {
+      name: string;
+      url: string;
+    }[];
   };
 }>();
 </script>
