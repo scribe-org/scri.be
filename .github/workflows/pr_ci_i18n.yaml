@@ -39,4 +39,3 @@ jobs:
       - name: Execute All i18n-check Key-Value Checks
         run: |
           i18n-check -a
-          echo "Exit code: $?"
