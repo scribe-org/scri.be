@@ -123,12 +123,21 @@
   "i18n.pages.docs.data.learn_more.feature_3": "Supports keyboards, conjugation, and other Scribe features.",
   "i18n.pages.docs.data.learn_more.feature_4": "Data sourced from trusted, open repositories like Wikidata.",
   "i18n.pages.docs.data.learn_more.feature_5": "Enhances your experience with smart suggestions and reliable results.",
-  "i18n.pages.docs.server.learn_more.intro_paragraph": "Scribe-Server is the backbone of the Scribe ecosystem, ensuring that all your language tools and resources are always available when you need them. By connecting your devices to a secure and reliable server, Scribe-Server delivers up-to-date features, data, and support for a seamless user experience.",
+  "i18n.pages.docs.server.learn_more.intro_paragraph": "Scribe-Server is the backbone of the Scribe ecosystem, ensuring that all your language tools and resources are always available when you need them. By connecting your devices to a secure and reliable server, Scribe-Server delivers up-to-date features, data, and support for a seamless user experience. Scribe-Server is hosted on Toolforge and uses MariaDB to manage and deliver language data efficiently.",
   "i18n.pages.docs.server.learn_more.benefits_paragraph": "With Scribe-Server, you benefit from fast performance, automatic updates, and synchronized access to language services across all your devices. The server infrastructure works quietly in the background, so you can focus on learning, communicating, and exploring languages—knowing that Scribe is always ready to help.",
   "i18n.pages.docs.server.learn_more.key_features_heading": "Key Features:",
   "i18n.pages.docs.server.learn_more.feature_1": "Reliable access to language tools and resources, anytime and anywhere.",
   "i18n.pages.docs.server.learn_more.feature_2": "Automatic updates to keep your features and data current.",
   "i18n.pages.docs.server.learn_more.feature_3": "Fast, responsive performance for a smooth user experience.",
   "i18n.pages.docs.server.learn_more.feature_4": "Secure and private connection for your language activities.",
-  "i18n.pages.docs.server.learn_more.feature_5": "Seamless integration with all Scribe apps and services."
+  "i18n.pages.docs.server.learn_more.feature_5": "Seamless integration with all Scribe apps and services.",
+  "i18n.pages.docs.server.learn_more.page_header": "Scribe-Server: Reliable Language Services for Everyone",
+  "i18n.pages.docs.language_keyboards.learn_more.intro_paragraph": "Scribe Language Keyboards are smart, user-friendly keyboards designed to make typing in different languages easy and enjoyable. Whether you're learning a new language or communicating with friends and colleagues around the world, Scribe keyboards help you express yourself accurately and confidently, right from your device.",
+  "i18n.pages.docs.language_keyboards.learn_more.benefits_paragraph": "With Scribe, you can seamlessly switch between languages, access helpful tools like translation and conjugation, and enjoy a typing experience tailored to your needs. Our keyboards are built to integrate smoothly with your favorite apps and devices, supporting a wide range of languages and offering features that make multilingual communication effortless.",
+  "i18n.pages.docs.language_keyboards.learn_more.key_features_heading": "Key Features:",
+  "i18n.pages.docs.language_keyboards.learn_more.feature_1": "Easy language switching for multilingual users.",
+  "i18n.pages.docs.language_keyboards.learn_more.feature_2": "Built-in translation and verb conjugation tools.",
+  "i18n.pages.docs.language_keyboards.learn_more.feature_3": "Smart suggestions for correct spelling, grammar, and word choice.",
+  "i18n.pages.docs.language_keyboards.learn_more.feature_4": "Seamless integration with all your favorite apps and devices.",
+  "i18n.pages.docs.language_keyboards.learn_more.feature_5": "Support for a growing list of world languages, with more added regularly."
 }

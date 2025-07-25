@@ -71,10 +71,10 @@
             <BtnRouteInternal
               class="w-full"
               :cta="true"
-              label="i18n.pages.docs._global.return_to_docs_home"
+              :label="'i18n.pages.docs._global.return_to_docs_home'"
               linkTo="/"
               fontSize="lg"
-              ariaLabel="i18n.pages.docs._global.return_to_docs_home_aria_label"
+              :ariaLabel="'i18n.pages.docs._global.return_to_docs_home_aria_label'"
             />
           </PageCommunityFooter>
         </div>

@@ -5,10 +5,8 @@
   >
     <Head>
       <Title>
-{{
-        $t("i18n.pages.docs.data.learn_more.wikidata_data_extraction")
-      }}
-</Title>
+        {{ $t("i18n.pages.docs.data.learn_more.wikidata_data_extraction") }}
+      </Title>
     </Head>
     <div
       class="responsive-py-4 responsive-px-5 flex w-full flex-col items-center"
