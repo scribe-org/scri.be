@@ -6,7 +6,7 @@
     :menuButtonIcon="IconMap.CIRCLE_INFO"
     menuButtonLabel="About Scribe"
     :isMenuButtonUppercase="false"
-    :menuButtonAriaLabel="'i18n.components.dropdown._global.open_dropdown_aria_label'"
+    :menuButtonAriaLabel="'i18n.components.dropdown._global.open_menu_dropdown_aria_label'"
   >
     <ul class="px-2 py-2">
       <NuxtLink to="/docs/about/community">

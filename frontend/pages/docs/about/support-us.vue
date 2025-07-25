@@ -8,7 +8,7 @@
     </Head>
     <PageDocs
       imgURL="/icons/docs/join_icon"
-      imgAltText="i18n.pages.supporters._global.join_img_alt_text"
+      imgAltText="i18n.pages.docs.about.support_us.join_img_alt_text"
     >
       <h1 class="font-bold">
         {{ $t("i18n.pages._global.become_supporter") }}

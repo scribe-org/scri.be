@@ -14,7 +14,9 @@
           class="items-center space-y-4 text-left md:items-start 2xl:col-span-1 2xl:row-start-1"
         >
           <PageBreadcrumbs />
-          <h1 class="pb-2 font-bold">Page header</h1>
+          <h1 class="pb-2 font-bold">
+            {{ $t("i18n.pages.docs.server.learn_more.scribe_server_api") }}
+          </h1>
           <p>{{ $t("i18n.pages.docs._global.lorem_ipsum_page_text") }}</p>
           <PageCommunityFooter>
             <BtnRouteInternal

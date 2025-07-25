@@ -8,7 +8,7 @@
     </Head>
     <PageDocs
       imgURL="/icons/docs/bootstrap_shield_check"
-      imgAltText="i18n.pages.legal._global.privacy_policy_alt_text"
+      imgAltText="i18n.pages.docs.legal.privacy_policy.privacy_policy_alt_text"
     >
       <PageBreadcrumbs />
       <h1 class="pb-2 font-bold">

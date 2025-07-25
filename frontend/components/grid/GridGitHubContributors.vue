@@ -11,9 +11,9 @@
             class="ring-light-section-div hover:ring-light-cta-orange dark:ring-dark-section-div dark:hover:ring-light-cta-orange dark:hover:ring-offset-dark-layer-0 h-16 w-16 rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
             :src="item.avatarUrl"
             :alt="
-              $t('i18n.components.grid_github_contributors.img_alt_text') +
-              ' ' +
-              item.loginID
+              $t('i18n.components.grid_git_hub_contributors.img_alt_text', {
+                github_user_id: item.loginID,
+              })
             "
           />
           <p
@@ -65,6 +65,12 @@ interface GithubContributor {
   loginID: string;
 }
 
+interface GithubContributorResponse {
+  avatar_url: string;
+  html_url: string;
+  login: string;
+}
+
 const isLoading = ref<boolean>(false);
 const githubData = ref<GithubContributor[]>([]);
 const currentPage = ref<number>(1);
@@ -87,7 +93,7 @@ async function fetchDataFromGitHubAPI(page: number, numPerPage: number = 30) {
     }
 
     githubData.value = githubData.value.concat(
-      data.map((item: any) => {
+      data.map((item: GithubContributorResponse) => {
         return {
           avatarUrl: item.avatar_url,
           htmlUrl: item.html_url,
