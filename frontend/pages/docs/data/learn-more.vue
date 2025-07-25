@@ -4,9 +4,11 @@
     class="bg-light-layer-0 text-light-text dark:bg-dark-layer-0 dark:text-dark-text"
   >
     <Head>
-      <Title>{{
+      <Title>
+{{
         $t("i18n.pages.docs.data.learn_more.wikidata_data_extraction")
-      }}</Title>
+      }}
+</Title>
     </Head>
     <div
       class="responsive-py-4 responsive-px-5 flex w-full flex-col items-center"
@@ -20,20 +22,20 @@
             {{ $t("i18n.pages.docs.data.learn_more.wikidata_data_extraction") }}
           </h1>
           <p>
-            {{ $t('i18n.pages.docs.data.learn_more.intro_paragraph') }}
+            {{ $t("i18n.pages.docs.data.learn_more.intro_paragraph") }}
           </p>
           <p class="mt-4">
-            {{ $t('i18n.pages.docs.data.learn_more.benefits_paragraph') }}
+            {{ $t("i18n.pages.docs.data.learn_more.benefits_paragraph") }}
           </p>
-          <h2 class="mt-8 mb-2 font-semibold text-lg">
-            {{ $t('i18n.pages.docs.data.learn_more.key_features_heading') }}
+          <h2 class="mb-2 mt-8 text-lg font-semibold">
+            {{ $t("i18n.pages.docs.data.learn_more.key_features_heading") }}
           </h2>
-          <ul class="list-disc pl-6 space-y-2">
-            <li>{{ $t('i18n.pages.docs.data.learn_more.feature_1') }}</li>
-            <li>{{ $t('i18n.pages.docs.data.learn_more.feature_2') }}</li>
-            <li>{{ $t('i18n.pages.docs.data.learn_more.feature_3') }}</li>
-            <li>{{ $t('i18n.pages.docs.data.learn_more.feature_4') }}</li>
-            <li>{{ $t('i18n.pages.docs.data.learn_more.feature_5') }}</li>
+          <ul class="list-disc space-y-2 pl-6">
+            <li>{{ $t("i18n.pages.docs.data.learn_more.feature_1") }}</li>
+            <li>{{ $t("i18n.pages.docs.data.learn_more.feature_2") }}</li>
+            <li>{{ $t("i18n.pages.docs.data.learn_more.feature_3") }}</li>
+            <li>{{ $t("i18n.pages.docs.data.learn_more.feature_4") }}</li>
+            <li>{{ $t("i18n.pages.docs.data.learn_more.feature_5") }}</li>
           </ul>
           <PageCommunityFooter>
             <BtnRouteInternal
