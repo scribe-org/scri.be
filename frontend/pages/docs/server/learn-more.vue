@@ -15,7 +15,7 @@
         >
           <PageBreadcrumbs />
           <h1 class="pb-2 font-bold">
-            {{ $t("i18n.pages.docs.server.learn_more.page_header") }}
+            {{ $t("i18n.pages.docs.server.learn_more.scribe_server_api") }}
           </h1>
           <p>
             {{ $t("i18n.pages.docs.server.learn_more.intro_paragraph") }}

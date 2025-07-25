@@ -8,7 +8,7 @@
     </Head>
     <PageDocs
       imgURL="/icons/docs/bootstrap_trademark"
-      imgAltText="i18n.pages.legal._global.trademark_policy_alt_text"
+      imgAltText="i18n.pages.docs.legal.trademark_policy.trademark_policy_alt_text"
     >
       <PageBreadcrumbs />
       <h1 class="pb-2 font-bold">

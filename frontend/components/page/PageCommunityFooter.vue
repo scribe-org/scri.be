@@ -2,7 +2,7 @@
 <template>
   <div class="flex-col">
     <h4 class="font-bold">
-      {{ $t("i18n.components.page_community_footer.invite_text_1_1") }}
+      {{ $t("i18n.components.page_community_footer.invite_text_1") }}
     </h4>
     <ul class="list-disc space-y-1 pb-1 pl-4 pt-3">
       <li>
@@ -65,14 +65,4 @@
 
 <script setup lang="ts">
 import { IconMap } from "~/types/icon-map";
-
-export interface Props {
-  header?: string;
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  header: "i18n.components.page_community_footer.invite_text_1",
-});
-
-const headerText = ref(props.header);
 </script>

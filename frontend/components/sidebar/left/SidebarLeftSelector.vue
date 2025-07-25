@@ -12,11 +12,14 @@
           v-if="sidebar.collapsed == false || sidebar.collapsedSwitch == false"
           class="select-none whitespace-nowrap"
         >
-          <span class="sr-only">{{ $t("i18n._global.navigate_to") }}</span>
+          <span class="sr-only">{{
+            $t("i18n.components.sidebar_left_selector.navigate_to")
+          }}</span>
           {{ $t(label) }}
         </p>
         <span v-else class="sr-only">
-          {{ $t("i18n._global.navigate_to") }} {{ $t(label) }}
+          {{ $t("i18n.components.sidebar_left_selector.navigate_to") }}
+          {{ $t(label) }}
         </span>
       </Transition>
     </div>
