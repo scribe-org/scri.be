@@ -15,7 +15,7 @@
         >
           <PageBreadcrumbs />
           <h1 class="pb-2 font-bold">
-            {{ $t("i18n.pages.docs.server.learn_more.scribe_server_api") }}
+            {{ $t("i18n.pages.docs.server.learn_more.page_header") }}
           </h1>
           <p>
             {{ $t("i18n.pages.docs.server.learn_more.intro_paragraph") }}
@@ -24,7 +24,7 @@
             {{ $t("i18n.pages.docs.server.learn_more.benefits_paragraph") }}
           </p>
           <h2 class="mb-2 mt-8 text-lg font-semibold">
-            {{ $t("i18n.pages.docs.server.learn_more.key_features_heading") }}
+            {{ $t("i18n.pages.docs._global.learn_more.key_features") }}:
           </h2>
           <ul class="list-disc space-y-2 pl-6">
             <li>{{ $t("i18n.pages.docs.server.learn_more.feature_1") }}</li>
