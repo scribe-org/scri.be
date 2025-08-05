@@ -2,12 +2,12 @@
 <template>
   <div>
     <Head>
-      <Title>{{ $t("i18n.pages.docs.about.community.our_community") }}</Title>
+      <Title>{{ $t("i18n._global.our_community") }}</Title>
     </Head>
     <PageDocs imgURL="image_url" imgAltText="image_alt_text">
       <PageBreadcrumbs />
       <h1 class="pb-2 font-bold">
-        {{ $t("i18n.pages.docs.about.community.our_community") }}
+        {{ $t("i18n._global.our_community") }}
       </h1>
       <p>{{ $t("i18n.pages.docs._global.lorem_ipsum_page_text") }}</p>
       <PageCommunityFooter>

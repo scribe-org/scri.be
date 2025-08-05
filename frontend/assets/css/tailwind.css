@@ -12,11 +12,12 @@ MARK: Colors
 
 .light {
   --layer-0: 255, 255, 255;
+  --layer-1: 226, 226, 226;
   --primary-text: 0, 0, 0;
   --distinct-text: 0, 0, 0;
   --link-text: 0, 92, 184;
   --link-text-hover: 0, 59, 119;
-  --highlight: 226, 226, 226;
+  --highlight: 214, 214, 214;
   --scribe-blue: 76, 173, 230;
   --scribe-blue-lighter: 94, 181, 232;
   --scribe-blue-darker: 59, 142, 194;
@@ -24,12 +25,13 @@ MARK: Colors
 
 .dark {
   --layer-0: 6, 8, 15;
+  --layer-1: 22, 24, 29;
   --section-div: 43, 50, 59;
   --primary-text: 255, 255, 255;
   --distinct-text: 255, 255, 255;
   --link-text: 86, 167, 252;
   --link-text-hover: 134, 192, 253;
-  --highlight: 22, 24, 29;
+  --highlight: 44, 48, 58;
   --scribe-blue: 62, 149, 204;
   --scribe-blue-lighter: 76, 173, 230;
   --scribe-blue-darker: 59, 142, 194;
@@ -131,6 +133,14 @@ MARK: Base
 
   .focus-inside {
     @apply rounded-sm focus-within:border-link-text focus-within:outline-none focus-within:ring-2 focus-within:ring-link-text;
+  }
+
+  /*
+  MARK: Cards
+  */
+
+  .card-style {
+    @apply elem-shadow-sm rounded-md sm:rounded-lg;
   }
 
   /*

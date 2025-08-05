@@ -3,17 +3,28 @@
   <DropdownBase
     class="dropdown-language"
     :location="location"
-    :menuButtonIcon="IconMap.CIRCLE_INFO"
-    menuButtonLabel="About Scribe"
+    :menuButtonIcon="IconMap.SCRIBE"
+    menuButtonLabel="i18n._global.about_scribe"
     :isMenuButtonUppercase="false"
-    :menuButtonAriaLabel="'i18n.components.dropdown._global.open_menu_dropdown_aria_label'"
+    menuButtonAriaLabel="i18n.components.dropdown._global.open_menu_dropdown_aria_label"
   >
     <ul class="px-2 py-2">
+      <NuxtLink to="/docs/about">
+        <MenuItem v-slot="{ active }" class="flex">
+          <MenuItemLabel
+            :isButton="false"
+            :iconName="IconMap.INDEX"
+            label="i18n.components.dropdown._global.index"
+            :active="active"
+          />
+        </MenuItem>
+      </NuxtLink>
       <NuxtLink to="/docs/about/community">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
             :isButton="false"
-            label="Our community"
+            :iconName="IconMap.COMMUNITY"
+            label="i18n._global.our_community"
             :active="active"
           />
         </MenuItem>
@@ -22,7 +33,8 @@
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
             :isButton="false"
-            label="Around the web"
+            :iconName="IconMap.WEB"
+            label="i18n._global.around_the_web"
             :active="active"
           />
         </MenuItem>
@@ -31,7 +43,8 @@
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
             :isButton="false"
-            label="Supporters"
+            :iconName="IconMap.HEART"
+            label="i18n._global.supporters"
             :active="active"
           />
         </MenuItem>
@@ -40,14 +53,20 @@
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
             :isButton="false"
-            label="Support Scribe"
+            :iconName="IconMap.SUPPORT"
+            label="i18n._global.support_scribe"
             :active="active"
           />
         </MenuItem>
       </NuxtLink>
       <NuxtLink to="/docs/about/imprint">
         <MenuItem v-slot="{ active }" class="flex">
-          <MenuItemLabel :isButton="false" label="Imprint" :active="active" />
+          <MenuItemLabel
+            :isButton="false"
+            :iconName="IconMap.INFORMATION_CIRCLE"
+            label="i18n._global.imprint"
+            :active="active"
+          />
         </MenuItem>
       </NuxtLink>
     </ul>

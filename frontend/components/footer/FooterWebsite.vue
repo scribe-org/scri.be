@@ -42,7 +42,7 @@ const connectLinks = [
 
 const resourcesLinks = [
   {
-    name: "i18n.components.footer_website.documentation",
+    name: "i18n.components._global.documentation",
     url: "/docs",
   },
 ];
@@ -53,7 +53,7 @@ const organizationLinks = [
     url: "/docs/about/community",
   },
   {
-    name: "i18n.components.footer_website.supporters",
+    name: "i18n._global.supporters",
     url: "/docs/about/supporters-showcase",
   },
   {

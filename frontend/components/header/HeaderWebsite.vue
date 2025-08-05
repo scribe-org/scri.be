@@ -18,6 +18,16 @@
     >
       <SidebarRight>
         <div class="flex-col space-y-2">
+          <BtnRouteInternal
+            id="btn-get-in-touch-large"
+            class="flex w-full border-0 bg-layer-0 hover:bg-highlight dark:hover:bg-highlight"
+            :cta="true"
+            linkTo="/docs"
+            label="i18n.components._global.documentation"
+            fontSize="base"
+            :leftIcon="IconMap.DOCUMENTATION"
+            ariaLabel="i18n.components._global.view_docs_aria_label"
+          />
           <DropdownTheme
             class="w-full"
             :location="DropdownLocation.SIDE_MENU"
@@ -34,28 +44,28 @@
       <div class="responsive-px-5 flex items-center justify-end">
         <div>
           <div class="flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
-            <DropdownTheme />
-            <DropdownLanguage />
-            <!-- <BtnRouteInternal
-              v-if="aboveLargeBP"
-              id="btn-get-in-touch-large"
-              class="block"
-              :cta="true"
-              label="i18n.components.header_website.support"
-              linkTo="/"
-              fontSize="sm"
-              ariaLabel="i18n.components.header_website.support_aria_label"
-            />
             <BtnRouteInternal
-              v-else-if="aboveMediumBP"
-              id="btn-get-in-touch-medium"
-              class="block"
+              id="btn-get-in-touch-large"
+              class="border-0 bg-layer-0 hover:bg-highlight dark:hover:bg-highlight"
               :cta="true"
+              linkTo="/docs"
+              label="i18n.components._global.documentation"
+              fontSize="base"
+              :leftIcon="IconMap.DOCUMENTATION"
+              ariaLabel="i18n.components._global.view_docs_aria_label"
+            />
+            <!-- <BtnRouteInternal
+              id="btn-get-in-touch-large"
+              class="border-0 bg-layer-0"
+              :cta="true"
+              linkTo="/docs/about/support-us"
               label="i18n.components.header_website.support"
-              linkTo="/"
-              fontSize="xs"
+              fontSize="base"
+              :leftIcon="IconMap.SUPPORT"
               ariaLabel="i18n.components.header_website.support_aria_label"
             /> -->
+            <DropdownTheme />
+            <DropdownLanguage />
           </div>
         </div>
       </div>
@@ -64,10 +74,10 @@
 </template>
 
 <script setup lang="ts">
+import { IconMap } from "~/types/icon-map";
 import { DropdownLocation } from "~/types/location";
 
 const aboveMediumBP = useBreakpoint("md");
-// const aboveLargeBP = useBreakpoint("lg");
 
 const headerOpacity: Ref<number> = ref(1);
 const prevScrollY: Ref<number> = ref(0);

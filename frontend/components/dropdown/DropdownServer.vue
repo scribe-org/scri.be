@@ -4,16 +4,27 @@
     class="dropdown-language"
     :location="location"
     :menuButtonIcon="IconMap.SERVER"
-    menuButtonLabel="Data Server"
+    menuButtonLabel="i18n._global.data_server"
     :isMenuButtonUppercase="false"
-    :menuButtonAriaLabel="'i18n.components.dropdown._global.open_menu_dropdown_aria_label'"
+    menuButtonAriaLabel="i18n.components.dropdown._global.open_menu_dropdown_aria_label"
   >
     <ul class="px-2 py-2">
+      <NuxtLink to="/docs/server">
+        <MenuItem v-slot="{ active }" class="flex">
+          <MenuItemLabel
+            :isButton="false"
+            :iconName="IconMap.INDEX"
+            label="i18n.components.dropdown._global.index"
+            :active="active"
+          />
+        </MenuItem>
+      </NuxtLink>
       <NuxtLink to="/docs/server/learn-more">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
             :isButton="false"
-            label="Learn more"
+            :iconName="IconMap.INFORMATION_CIRCLE"
+            label="i18n._global.learn_more"
             :active="active"
           />
         </MenuItem>
@@ -22,14 +33,20 @@
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
             :isButton="false"
-            label="Available data"
+            :iconName="IconMap.DATA_AVAILABLE"
+            label="i18n._global.available_data"
             :active="active"
           />
         </MenuItem>
       </NuxtLink>
       <NuxtLink to="/docs/server/changelog">
         <MenuItem v-slot="{ active }" class="flex">
-          <MenuItemLabel :isButton="false" label="Changelog" :active="active" />
+          <MenuItemLabel
+            :isButton="false"
+            :iconName="IconMap.CHANGELOG"
+            label="i18n._global.changelog"
+            :active="active"
+          />
         </MenuItem>
       </NuxtLink>
     </ul>
