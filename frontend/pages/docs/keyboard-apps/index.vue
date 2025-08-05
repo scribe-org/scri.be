@@ -2,18 +2,18 @@
 <template>
   <div>
     <Head>
-      <Title>{{ $t("i18n._global.data_server") }}</Title>
+      <Title>{{ $t("i18n._global.keyboard_apps") }}</Title>
     </Head>
     <div>
       <div class="responsive-py-4 responsive-px-5 flex-col space-y-3">
         <PageBreadcrumbs />
         <h1 class="transition-all duration-500">
-          {{ $t("i18n._global.data_server") }}
+          {{ $t("i18n._global.keyboard_apps") }}
         </h1>
       </div>
     </div>
     <div class="responsive-px-5 flex-col space-y-4 pb-10">
-      <p>{{ $t("i18n.pages.docs._global.data_server_description") }}</p>
+      <p>{{ $t("i18n.pages.docs._global.keyboard_apps_description") }}</p>
       <GridDocEntries class="responsive-py-1" :cards="cards" />
     </div>
   </div>
@@ -36,15 +36,6 @@ const cards: DocsEntry[] = [
   },
   {
     id: 1,
-    url: "available-data",
-    title: "i18n._global.available_data",
-    description: "i18n.pages.docs._global.index.content_page_description",
-    iconURL: IconMap.DATA_AVAILABLE,
-    iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
-  },
-  {
-    id: 2,
     url: "changelog",
     title: "i18n._global.changelog",
     description: "i18n.pages.docs._global.index.content_page_description",

@@ -27,7 +27,7 @@
         :is="infoLabel.is"
         v-bind="infoLabel"
       >
-        {{ label }}
+        {{ $t(label) }}
       </component>
     </Transition>
   </component>

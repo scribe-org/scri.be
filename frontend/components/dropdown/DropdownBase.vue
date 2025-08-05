@@ -43,7 +43,7 @@
                   'select-none': isSideLeftMenu,
                 }"
               >
-                {{ menuButtonLabel }}
+                {{ $t(`${menuButtonLabel}`) }}
               </p>
             </Transition>
           </div>

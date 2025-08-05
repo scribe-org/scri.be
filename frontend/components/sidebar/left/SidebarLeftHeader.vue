@@ -16,7 +16,7 @@
           'w-6': sidebar.collapsed == true && sidebar.collapsedSwitch == true,
         }"
       >
-        <IconScribe
+        <IconScribeSidebar
           class="z-1 absolute inset-0 flex h-6 w-8 flex-shrink-0 items-center justify-center overflow-clip"
           :class="{
             hidden:

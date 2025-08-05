@@ -23,6 +23,7 @@ export default <Partial<Config>>{
       },
       colors: {
         "layer-0": "rgba(var(--layer-0))",
+        "layer-1": "rgba(var(--layer-1))",
         "primary-text": "rgba(var(--primary-text), 0.85)",
         "distinct-text": "rgba(var(--distinct-text), 0.65)",
         "section-div": "rgba(var(--section-div))",
