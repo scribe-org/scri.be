@@ -5,11 +5,10 @@
       <MenuButton
         @focus="expandOnFocus"
         v-slot="{ open }"
-        class="selected-option style-btn inline-flex w-full select-none whitespace-nowrap rounded-md border-none px-4 py-2 font-semibold"
+        class="selected-option style-btn inline-flex w-full select-none whitespace-nowrap rounded-md border-none px-2 py-2 font-semibold"
         :class="{
-          'pl-6': isSideMenu,
-          'style-menu-option-cta flex items-center rounded-md pl-1':
-            isSideLeftMenu,
+          'pl-5': isSideMenu,
+          'flex items-center rounded-md pl-1': isSidebarLeftMenu,
         }"
         :aria-label="$t(`${menuButtonAriaLabel}`)"
       >
@@ -17,30 +16,30 @@
           class="flex items-center justify-between space-x-2 text-sm"
           :class="{
             'relative z-0 w-full pl-[0.625rem] text-left font-medium':
-              isSideLeftMenu,
+              isSidebarLeftMenu,
           }"
         >
           <div class="flex items-center space-x-2">
             <Icon
               :name="menuButtonIcon"
               :class="{
-                'h-5 w-5 flex-shrink-0 text-center': isSideLeftMenu,
+                'h-5 w-5 flex-shrink-0 text-center': isSidebarLeftMenu,
               }"
-              :size="isSideLeftMenu ? '1em' : ''"
+              :size="isSidebarLeftMenu ? '1em' : ''"
             />
             <Transition name="text">
               <p
                 v-if="
-                  !isSideLeftMenu ||
-                  sidebar.collapsed == false ||
-                  sidebar.collapsedSwitch == false
+                  !isSidebarLeftMenu ||
+                  !sidebar.collapsed ||
+                  !sidebar.collapsedSwitch
                 "
                 :class="{
-                  'sr-only lg:not-sr-only': !isSideLeftMenu,
+                  'sr-only lg:not-sr-only': !isSidebarLeftMenu,
                   '!not-sr-only !ml-3': isSideMenu,
                   uppercase: isMenuButtonUppercase,
                   'font-bold': isMenuButtonBold,
-                  'select-none': isSideLeftMenu,
+                  'select-none': isSidebarLeftMenu,
                 }"
               >
                 {{ $t(`${menuButtonLabel}`) }}
@@ -50,19 +49,19 @@
           <Transition name="chevron">
             <Icon
               v-if="
-                !isSideLeftMenu ||
-                sidebar.collapsed == false ||
-                sidebar.collapsedSwitch == false
+                !isSidebarLeftMenu ||
+                !sidebar.collapsed ||
+                !sidebar.collapsedSwitch
               "
               class="right-3"
               :class="{
                 'rotate-180 transform': open,
                 absolute: isSideMenu,
-                'absolute right-2': isSideLeftMenu,
+                'absolute right-2': isSidebarLeftMenu,
               }"
-              :size="isSideLeftMenu ? '1rem' : ''"
+              :size="isSidebarLeftMenu ? '1rem' : ''"
               :name="
-                isSideLeftMenu
+                isSidebarLeftMenu
                   ? `${IconMap.CHEVRON_UP}`
                   : `${IconMap.CHEVRON_DOWN}`
               "
@@ -75,9 +74,9 @@
       class="focus-brand rounded-md"
       :class="{
         'absolute right-0 mt-2 origin-top-right divide-y bg-layer-0 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:border dark:border-primary-text':
-          !isSideLeftMenu,
-        '!static': isSideMenu || isSideLeftMenu,
-        'mt-1 bg-layer-0 p-1': isSideLeftMenu,
+          !isSidebarLeftMenu,
+        '!static': isSideMenu || isSidebarLeftMenu,
+        'mt-1 bg-layer-0 p-1': isSidebarLeftMenu,
       }"
     >
       <slot />
@@ -102,7 +101,7 @@ const props = defineProps<{
 
 const sidebar = useSidebar();
 
-const isSideLeftMenu = computed(() => {
+const isSidebarLeftMenu = computed(() => {
   return props.location === DropdownLocation.SIDE_LEFT_MENU;
 });
 

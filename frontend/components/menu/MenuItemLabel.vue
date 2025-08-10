@@ -5,22 +5,22 @@
     v-bind="infoComponent"
     class="flex w-full items-center rounded-md text-sm"
     :class="{
-      'group py-2 pl-4 pr-3': !isSideLeftMenu,
+      'group py-2 pl-4 pr-3': !isSidebarLeftMenu,
       'bg-scribe-blue-lighter dark:bg-scribe-blue-darker': active,
       'text-primary-text': !active,
-      'relative z-0 space-x-2 p-2 text-left font-medium': isSideLeftMenu,
+      'relative z-0 space-x-2 p-2 text-left font-medium': isSidebarLeftMenu,
     }"
   >
     <Icon
       v-if="iconName"
       :name="iconName"
       size="1em"
-      :class="{ 'h-5 w-5 flex-shrink-0': isSideLeftMenu }"
+      :class="{ 'h-5 w-5 flex-shrink-0': isSidebarLeftMenu }"
     />
     <Transition>
       <component
         v-if="
-          !isSideLeftMenu ||
+          !isSidebarLeftMenu ||
           sidebar.collapsed == false ||
           sidebar.collapsedSwitch == false
         "
@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  isSideLeftMenu?: boolean | undefined;
+  isSidebarLeftMenu?: boolean | undefined;
   isButton: boolean;
   handlerClick?: () => void;
   iconName?: string | undefined;
@@ -64,7 +64,7 @@ const infoLabel = computed(() => {
         is: "p",
         class: "pl-2 pr-2",
       }
-    : props.isSideLeftMenu
+    : props.isSidebarLeftMenu
       ? {
           is: "p",
           class:
