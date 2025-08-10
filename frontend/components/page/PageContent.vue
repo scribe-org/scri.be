@@ -13,7 +13,7 @@
       'w-11/12 sm:w-10/12': includeBreadcrumbs,
     }"
   >
-    <div class="items-center space-y-4 text-left md:items-start">
+    <div class="items-center text-left md:items-start">
       <!-- Note: image floating right of content. -->
       <img
         v-if="aboveMediumBP && !above2xlBP"
@@ -21,7 +21,9 @@
         :src="imgURL + '_' + $colorMode.value + '.png'"
         :alt="$t(imgAltText)"
       />
-      <slot />
+      <div class="space-y-4">
+        <slot />
+      </div>
     </div>
     <div class="flex justify-end pr-32">
       <!-- Note: image right of content. -->

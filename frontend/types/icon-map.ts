@@ -5,7 +5,8 @@ export enum IconMap {
   ARROW_LEFT = "bi:arrow-left",
   ARROW_RIGHT = "bi:arrow-right",
   ARROW_UP = "bi:arrow-up",
-  CHANGELOG = "bi:file-text",
+  BLOG_POST = "bi:file-text",
+  CHANGELOG = "bi:file-earmark-code",
   CHEVRON_BAR_LEFT = "bi:chevron-bar-left",
   CHEVRON_BAR_RIGHT = "bi:chevron-bar-right",
   CHEVRON_DOWN = "bi:chevron-down",
@@ -39,5 +40,4 @@ export enum IconMap {
   STAR = "octicon:star-24",
   SUPPORT = "IconSupport",
   TRADEMARK = "bi:badge-tm",
-  WEB = "bi:globe2",
 }

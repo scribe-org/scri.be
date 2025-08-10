@@ -29,12 +29,12 @@
           />
         </MenuItem>
       </NuxtLink>
-      <NuxtLink to="/docs/about/around-the-web">
+      <NuxtLink to="/docs/about/blog-posts">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
             :isButton="false"
-            :iconName="IconMap.WEB"
-            label="i18n._global.around_the_web"
+            :iconName="IconMap.BLOG_POST"
+            label="i18n._global.blog_posts"
             :active="active"
           />
         </MenuItem>

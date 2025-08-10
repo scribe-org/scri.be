@@ -10,6 +10,7 @@
       imgURL="/icons/docs/bootstrap_info_circle"
       imgAltText="i18n.pages.docs.about.imprint.imprint_img_alt_text"
     >
+      <PageBreadcrumbs />
       <h1 class="pb-2 font-bold">
         {{ $t("i18n._global.imprint") }}
       </h1>

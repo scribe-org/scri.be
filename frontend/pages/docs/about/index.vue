@@ -1,21 +1,19 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
+  <Head>
+    <Title>{{ $t("i18n._global.about_scribe") }}</Title>
+  </Head>
   <div>
-    <Head>
-      <Title>{{ $t("i18n._global.about_scribe") }}</Title>
-    </Head>
-    <div>
-      <div class="responsive-py-4 responsive-px-5 flex-col space-y-3">
-        <PageBreadcrumbs />
-        <h1 class="transition-all duration-500">
-          {{ $t("i18n._global.about_scribe") }}
-        </h1>
-      </div>
+    <div class="responsive-py-4 responsive-px-5 flex-col space-y-3">
+      <PageBreadcrumbs />
+      <h1 class="transition-all duration-500">
+        {{ $t("i18n._global.about_scribe") }}
+      </h1>
     </div>
-    <div class="responsive-px-5 flex-col space-y-4 pb-10">
-      <p>{{ $t("i18n.pages.docs._global.about_scribe_description") }}</p>
-      <GridDocEntries class="responsive-py-1" :cards="cards" />
-    </div>
+  </div>
+  <div class="responsive-px-5 flex-col space-y-4 pb-10">
+    <p>{{ $t("i18n.pages.docs._global.about_scribe_description") }}</p>
+    <GridDocEntries class="responsive-py-1" :cards="cards" />
   </div>
 </template>
 
@@ -36,10 +34,10 @@ const cards: DocsEntry[] = [
   },
   {
     id: 1,
-    url: "around-the-web",
-    title: "i18n._global.around_the_web",
+    url: "blog-posts",
+    title: "i18n._global.blog_posts",
     description: "i18n.pages.docs._global.index.content_page_description",
-    iconURL: IconMap.WEB,
+    iconURL: IconMap.BLOG_POST,
     iconSize: "3em",
     imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
   },

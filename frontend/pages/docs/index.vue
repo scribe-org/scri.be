@@ -1,21 +1,19 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
+  <Head>
+    <Title>{{ $t("i18n.pages.docs.index.scribe_documentation") }}</Title>
+  </Head>
   <div>
-    <Head>
-      <Title>{{ $t("i18n.pages.docs.index.scribe_documentation") }}</Title>
-    </Head>
-    <div>
-      <div class="responsive-py-4 responsive-px-5 flex-col space-y-3">
-        <PageBreadcrumbs />
-        <h1 class="transition-all duration-500">
-          {{ $t("i18n.pages.docs.index.scribe_documentation") }}
-        </h1>
-      </div>
+    <div class="responsive-py-4 responsive-px-5 flex-col space-y-3">
+      <PageBreadcrumbs />
+      <h1 class="transition-all duration-500">
+        {{ $t("i18n.pages.docs.index.scribe_documentation") }}
+      </h1>
     </div>
-    <div class="responsive-px-5 flex-col space-y-4 pb-10">
-      <p>{{ $t("i18n.pages.docs.index.docs_description") }}</p>
-      <GridDocEntries class="responsive-py-1" :cards="cards" />
-    </div>
+  </div>
+  <div class="responsive-px-5 flex-col space-y-4 pb-10">
+    <p>{{ $t("i18n.pages.docs.index.docs_description") }}</p>
+    <GridDocEntries class="responsive-py-1" :cards="cards" />
   </div>
 </template>
 
