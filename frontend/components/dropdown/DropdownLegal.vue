@@ -15,7 +15,7 @@
             :isButton="false"
             :iconName="IconMap.INDEX"
             label="i18n.components.dropdown._global.index"
-            :active="active"
+            :active="active || isCurrentPath('/docs/legal')"
           />
         </MenuItem>
       </NuxtLink>
@@ -25,7 +25,7 @@
             :isButton="false"
             :iconName="IconMap.PRIVACY_POLICY"
             label="i18n._global.privacy_policy"
-            :active="active"
+            :active="active || isCurrentPath('/docs/legal/privacy-policy')"
           />
         </MenuItem>
       </NuxtLink>
@@ -35,7 +35,7 @@
             :isButton="false"
             :iconName="IconMap.TRADEMARK"
             label="i18n._global.trademark_policy"
-            :active="active"
+            :active="active || isCurrentPath('/docs/legal/trademark-policy')"
           />
         </MenuItem>
       </NuxtLink>
@@ -53,4 +53,6 @@ import { IconMap } from "~/types/icon-map";
 defineProps<{
   location?: DropdownLocation;
 }>();
+
+const { isCurrentPath } = useCurrentPath();
 </script>

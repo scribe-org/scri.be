@@ -15,7 +15,7 @@
             :isButton="false"
             :iconName="IconMap.INDEX"
             label="i18n.components.dropdown._global.index"
-            :active="active"
+            :active="active || isCurrentPath('/docs/about')"
           />
         </MenuItem>
       </NuxtLink>
@@ -25,7 +25,7 @@
             :isButton="false"
             :iconName="IconMap.COMMUNITY"
             label="i18n._global.our_community"
-            :active="active"
+            :active="active || isCurrentPath('/docs/about')/community"
           />
         </MenuItem>
       </NuxtLink>
@@ -35,7 +35,7 @@
             :isButton="false"
             :iconName="IconMap.BLOG_POST"
             label="i18n._global.blog_posts"
-            :active="active"
+            :active="active || isCurrentPath('/docs/about/blog-posts')"
           />
         </MenuItem>
       </NuxtLink>
@@ -45,7 +45,7 @@
             :isButton="false"
             :iconName="IconMap.HEART"
             label="i18n._global.supporters"
-            :active="active"
+            :active="active || isCurrentPath('/docs/about/supporters-showcase')"
           />
         </MenuItem>
       </NuxtLink>
@@ -55,7 +55,7 @@
             :isButton="false"
             :iconName="IconMap.SUPPORT"
             label="i18n._global.support_scribe"
-            :active="active"
+            :active="active || isCurrentPath('/docs/about/support-us')"
           />
         </MenuItem>
       </NuxtLink>
@@ -65,7 +65,7 @@
             :isButton="false"
             :iconName="IconMap.INFORMATION_CIRCLE"
             label="i18n._global.imprint"
-            :active="active"
+            :active="active || isCurrentPath('/docs/about/imprint')"
           />
         </MenuItem>
       </NuxtLink>
@@ -83,4 +83,6 @@ import { IconMap } from "~/types/icon-map";
 defineProps<{
   location?: DropdownLocation;
 }>();
+
+const { isCurrentPath } = useCurrentPath();
 </script>
