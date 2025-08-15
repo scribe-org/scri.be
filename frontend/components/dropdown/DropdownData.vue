@@ -16,6 +16,9 @@
             :iconName="IconMap.INDEX"
             label="i18n.components.dropdown._global.index"
             :active="active || isCurrentPath('/docs/data')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/data'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -26,6 +29,9 @@
             :iconName="IconMap.INFORMATION_CIRCLE"
             label="i18n._global.learn_more"
             :active="active || isCurrentPath('/docs/data/learn-more')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/data/learn-more'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -36,6 +42,9 @@
             :iconName="IconMap.CHANGELOG"
             label="i18n._global.changelog"
             :active="active || isCurrentPath('/docs/data/changelog')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/data/changelog'),
+            }"
           />
         </MenuItem>
       </NuxtLink>

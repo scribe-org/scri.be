@@ -16,6 +16,9 @@
             :iconName="IconMap.INDEX"
             label="i18n.components.dropdown._global.index"
             :active="active || isCurrentPath('/docs/legal')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/legal'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -26,6 +29,9 @@
             :iconName="IconMap.PRIVACY_POLICY"
             label="i18n._global.privacy_policy"
             :active="active || isCurrentPath('/docs/legal/privacy-policy')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/legal/privacy-policy'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -36,6 +42,9 @@
             :iconName="IconMap.TRADEMARK"
             label="i18n._global.trademark_policy"
             :active="active || isCurrentPath('/docs/legal/trademark-policy')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/legal/trademark-policy'),
+            }"
           />
         </MenuItem>
       </NuxtLink>

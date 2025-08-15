@@ -63,9 +63,9 @@ const baseClasses = "w-full";
 const getLinkClasses = (path: string) => {
   const active = isActive(path);
   if (active) {
-    return `${baseClasses} !border-3 !border-solid !border-white bg-highlight hover:bg-gray-500 dark:hover:bg-gray-700`;
+    return `${baseClasses} !border-3 !border-solid bg-highlight hover:bg-gray-500 dark:hover:bg-gray-700`;
   } else {
-    return `${baseClasses} !border-0 bg-layer-0 hover:bg-highlight dark:hover:bg-highlight`;
+    return `${baseClasses} border-0 bg-layer-0 hover:bg-highlight dark:hover:bg-highlight`;
   }
 };
 </script>
