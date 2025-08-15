@@ -17,7 +17,8 @@
             label="i18n.components.dropdown._global.index"
             :active="active || isCurrentPath('/docs/conjugate')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/conjugate'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/conjugate'),
             }"
           />
         </MenuItem>
@@ -30,7 +31,8 @@
             label="i18n._global.learn_more"
             :active="active || isCurrentPath('/docs/conjugate/learn-more')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/conjugate/learn-more'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/conjugate/learn-more'),
             }"
           />
         </MenuItem>
@@ -43,7 +45,8 @@
             label="i18n._global.changelog"
             :active="active || isCurrentPath('/docs/conjugate/changelog')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/conjugate/changelog'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/conjugate/changelog'),
             }"
           />
         </MenuItem>

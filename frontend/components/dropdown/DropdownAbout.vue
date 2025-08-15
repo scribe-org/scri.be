@@ -17,7 +17,8 @@
             label="i18n.components.dropdown._global.index"
             :active="active || isCurrentPath('/docs/about')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/about'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/about'),
             }"
           />
         </MenuItem>
@@ -30,7 +31,8 @@
             label="i18n._global.our_community"
             :active="active || isCurrentPath('/docs/about/community')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/about/community'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/about/community'),
             }"
           />
         </MenuItem>
@@ -43,7 +45,8 @@
             label="i18n._global.blog_posts"
             :active="active || isCurrentPath('/docs/about/blog-posts')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/about/blog-posts'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/about/blog-posts'),
             }"
           />
         </MenuItem>
@@ -56,7 +59,8 @@
             label="i18n._global.supporters"
             :active="active || isCurrentPath('/docs/about/supporters-showcase')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/about/supporters-showcase'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/about/supporters-showcase'),
             }"
           />
         </MenuItem>
@@ -69,7 +73,8 @@
             label="i18n._global.support_scribe"
             :active="active || isCurrentPath('/docs/about/support-us')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/about/support-us'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/about/support-us'),
             }"
           />
         </MenuItem>
@@ -82,7 +87,8 @@
             label="i18n._global.imprint"
             :active="active || isCurrentPath('/docs/about/imprint')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/about/imprint'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/about/imprint'),
             }"
           />
         </MenuItem>

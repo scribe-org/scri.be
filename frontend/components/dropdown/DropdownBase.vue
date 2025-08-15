@@ -121,7 +121,6 @@ const expandOnFocus = () => {
 defineOptions({
   inheritAttrs: false,
 });
-
 </script>
 
 <style>

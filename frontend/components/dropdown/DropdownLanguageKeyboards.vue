@@ -17,7 +17,8 @@
             label="i18n.components.dropdown._global.index"
             :active="active || isCurrentPath('/docs/keyboard-apps')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/keyboard-apps'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/keyboard-apps'),
             }"
           />
         </MenuItem>
@@ -30,7 +31,8 @@
             label="i18n._global.learn_more"
             :active="active || isCurrentPath('/docs/keyboard-apps/learn-more')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/keyboard-apps/learn-more'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/keyboard-apps/learn-more'),
             }"
           />
         </MenuItem>
@@ -43,7 +45,8 @@
             label="i18n._global.changelog"
             :active="active || isCurrentPath('/docs/keyboard-apps/changelog')"
             :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter': isCurrentPath('/docs/keyboard-apps/changelog'),
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/keyboard-apps/changelog'),
             }"
           />
         </MenuItem>
