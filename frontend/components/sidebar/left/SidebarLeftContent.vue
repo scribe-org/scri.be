@@ -13,6 +13,7 @@
       "
       fontSize="base"
       :leftIcon="IconMap.DOCUMENTATION"
+      iconSize="1.1em"
       ariaLabel="i18n.components._global.view_docs_aria_label"
     />
     <DropdownLanguageKeyboards
@@ -49,7 +50,7 @@ import { DropdownLocation } from "~/types/location";
 const sidebar = useSidebar();
 const route = useRoute();
 
-// function to check if a path is active
+// Function to check if a path is active.
 const isActive = (path: string) => {
   if (path === "/docs") {
     return route.path === "/docs";
@@ -58,12 +59,12 @@ const isActive = (path: string) => {
   return route.path === path || route.path.startsWith(path + "/");
 };
 
-const baseClasses = "w-full";
+const baseClasses = "flex w-full border-none";
 
 const getLinkClasses = (path: string) => {
   const active = isActive(path);
   if (active) {
-    return `${baseClasses} !border-3 !border-solid bg-highlight hover:bg-gray-500 dark:hover:bg-gray-700`;
+    return `${baseClasses} bg-highlight hover:bg-highlight-darker dark:hover:bg-highlight-lighter`;
   } else {
     return `${baseClasses} border-0 bg-layer-0 hover:bg-highlight dark:hover:bg-highlight`;
   }
