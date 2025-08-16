@@ -30,6 +30,8 @@ export default <Partial<Config>>{
         "link-text": "rgba(var(--link-text), 0.9)",
         "link-text-hover": "rgba(var(--link-text-hover), 0.9)",
         highlight: "rgba(var(--highlight))",
+        "highlight-darker": "rgba(var(--highlight-darker))",
+        "highlight-lighter": "rgba(var(--highlight-lighter))",
         "scribe-blue": "rgba(var(--scribe-blue))",
         "scribe-blue-lighter": "rgba(var(--scribe-blue-lighter))",
         "scribe-blue-darker": "rgba(var(--scribe-blue-darker))",
