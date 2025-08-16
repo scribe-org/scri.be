@@ -15,7 +15,11 @@
             :isButton="false"
             :iconName="IconMap.INDEX"
             label="i18n.components.dropdown._global.index"
-            :active="active"
+            :active="active || isCurrentPath('/docs/server')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/server'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -25,7 +29,11 @@
             :isButton="false"
             :iconName="IconMap.INFORMATION_CIRCLE"
             label="i18n._global.learn_more"
-            :active="active"
+            :active="active || isCurrentPath('/docs/server/learn-more')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/server/learn-more'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -35,7 +43,11 @@
             :isButton="false"
             :iconName="IconMap.DATA_AVAILABLE"
             label="i18n._global.available_data"
-            :active="active"
+            :active="active || isCurrentPath('/docs/server/available-data')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/server/available-data'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -45,7 +57,11 @@
             :isButton="false"
             :iconName="IconMap.CHANGELOG"
             label="i18n._global.changelog"
-            :active="active"
+            :active="active || isCurrentPath('/docs/server/changelog')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/server/changelog'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -63,4 +79,6 @@ import { IconMap } from "~/types/icon-map";
 defineProps<{
   location?: DropdownLocation;
 }>();
+
+const { isCurrentPath } = useCurrentPath();
 </script>

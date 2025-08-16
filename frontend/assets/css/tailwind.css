@@ -18,6 +18,8 @@ MARK: Colors
   --link-text: 0, 92, 184;
   --link-text-hover: 0, 59, 119;
   --highlight: 214, 214, 214;
+  --highlight-darker: 186, 186, 186;
+  --highlight-lighter: 214, 214, 214;
   --scribe-blue: 76, 173, 230;
   --scribe-blue-lighter: 94, 181, 232;
   --scribe-blue-darker: 59, 142, 194;
@@ -31,7 +33,9 @@ MARK: Colors
   --distinct-text: 255, 255, 255;
   --link-text: 86, 167, 252;
   --link-text-hover: 134, 192, 253;
-  --highlight: 44, 48, 58;
+  --highlight: 48, 48, 58;
+  --highlight-darker: 48, 48, 58;
+  --highlight-lighter: 68, 68, 78;
   --scribe-blue: 62, 149, 204;
   --scribe-blue-lighter: 76, 173, 230;
   --scribe-blue-darker: 59, 142, 194;

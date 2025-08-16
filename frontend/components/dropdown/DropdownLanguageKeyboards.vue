@@ -15,7 +15,11 @@
             :isButton="false"
             :iconName="IconMap.INDEX"
             label="i18n.components.dropdown._global.index"
-            :active="active"
+            :active="active || isCurrentPath('/docs/keyboard-apps')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/keyboard-apps'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -25,7 +29,11 @@
             :isButton="false"
             :iconName="IconMap.INFORMATION_CIRCLE"
             label="i18n._global.learn_more"
-            :active="active"
+            :active="active || isCurrentPath('/docs/keyboard-apps/learn-more')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/keyboard-apps/learn-more'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -35,7 +43,11 @@
             :isButton="false"
             :iconName="IconMap.CHANGELOG"
             label="i18n._global.changelog"
-            :active="active"
+            :active="active || isCurrentPath('/docs/keyboard-apps/changelog')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/keyboard-apps/changelog'),
+            }"
           />
         </MenuItem>
       </NuxtLink>
@@ -53,4 +65,6 @@ import { IconMap } from "~/types/icon-map";
 defineProps<{
   location?: DropdownLocation;
 }>();
+
+const { isCurrentPath } = useCurrentPath();
 </script>
