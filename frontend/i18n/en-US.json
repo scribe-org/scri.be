@@ -3,6 +3,8 @@
   "i18n._global.available_data": "Available Data",
   "i18n._global.blog_posts": "Blog Posts",
   "i18n._global.changelog": "Changelog",
+  "i18n._global.android_changelog": "Android Changelog",
+  "i18n._global.ios_changelog": "iOS Changelog",
   "i18n._global.conjugate_apps": "Conjugate Apps",
   "i18n._global.data_extraction": "Data Extraction",
   "i18n._global.data_server": "Data Server",
