@@ -11,32 +11,55 @@ Loading changelog...
       <div v-else-if="error">
 Error: {{ error }}
 </div>
-      <div v-else v-html="renderedMarkdown" class="prose"></div>
+      <div v-else class="changelog-container">
+        <div v-html="htmlContent" class="prose"></div>
+      </div>
     </div>
   </PageDocs>
 </template>
 
 <script setup>
-import MarkdownIt from "markdown-it";
+import { ref, onMounted, computed } from "vue";
 
-const md = new MarkdownIt();
-const markdownContent = ref(""); // API content goes here
+const md = useMarkdown();
+const { base64ToUTF8 } = useBase64Decoder();
+// This ref will hold the raw Markdown string
+const markdownContent = ref("");
 
-const renderedMarkdown = computed(() => {
+// HTML based on the markdownContent ref
+const htmlContent = computed(() => {
   return md.render(markdownContent.value);
 });
 
+const loading = ref(true);
+const error = ref(null);
+
 // Fetch changelog content
 onMounted(async () => {
-  const response = await $fetch(
-    "https://api.github.com/repos/scribe-org/Scribe-Data/contents/CHANGELOG.md"
-  );
-  const changelog = atob(response.content);
-  markdownContent.value = changelog;
+  try {
+    const response = await $fetch(
+      "https://api.github.com/repos/scribe-org/Scribe-Data/contents/CHANGELOG.md"
+    );
+    // decode the content
+    const changelog = base64ToUTF8(response.content);
+    markdownContent.value = changelog;
+  } catch (err) {
+    error.value = err.message;
+  } finally {
+    loading.value = false;
+  }
 });
 </script>
 
 <style>
+/* CSS for the scrolling container */
+.changelog-container {
+  height: 80vh; /* Adjust as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc; /* For visualization */
+  padding: 1rem;
+}
+
 .prose h1,
 .prose h2,
 .prose h3 {
@@ -52,5 +75,18 @@ onMounted(async () => {
 }
 .prose h3 {
   font-size: 1.25rem;
+}
+
+/* sticky CSS */
+.version-section {
+  padding-top: 1px;
+}
+.version-section h2 {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
 }
 </style>
