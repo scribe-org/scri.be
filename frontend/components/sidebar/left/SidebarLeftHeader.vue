@@ -17,7 +17,7 @@
         }"
       >
         <IconScribeSidebar
-          class="z-1 absolute inset-0 flex h-6 w-8 flex-shrink-0 items-center justify-center overflow-clip"
+          class="z-1 absolute inset-0 flex h-20 w-8 flex-shrink-0 items-center justify-center overflow-clip"
           :class="{
             hidden:
               sidebar.collapsed == false || sidebar.collapsedSwitch == false,
