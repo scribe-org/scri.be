@@ -1,3 +1,4 @@
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <PageDocs
     imgURL="/icons/docs/bootstrap_file_code"
@@ -50,43 +51,3 @@ onMounted(async () => {
   }
 });
 </script>
-
-<style>
-/* CSS for the scrolling container */
-.changelog-container {
-  height: 80vh; /* Adjust as needed */
-  overflow-y: auto;
-  border: 1px solid #ccc; /* For visualization */
-  padding: 1rem;
-}
-
-.prose h1,
-.prose h2,
-.prose h3 {
-  font-weight: bold;
-  margin: 1rem 0;
-}
-.prose h1 {
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-}
-.prose h2 {
-  font-size: 1.5rem;
-}
-.prose h3 {
-  font-size: 1.25rem;
-}
-
-/* sticky CSS */
-.version-section {
-  padding-top: 1px;
-}
-.version-section h2 {
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  padding: 15px 0;
-  border-bottom: 1px solid #ddd;
-  z-index: 10;
-}
-</style>

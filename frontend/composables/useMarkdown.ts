@@ -7,7 +7,7 @@ export function useMarkdown(): MarkdownIt {
   md.renderer.rules.heading_open = (tokens, idx, options, env, self) => {
     const token = tokens[idx];
     if (token.tag === "h2") {
-      return '<div class="version-section"><h2 class="sticky-header">';
+      return '<div class="changelog-version-section"><h2 class="sticky-header">';
     }
     return self.renderToken(tokens, idx, options);
   };
