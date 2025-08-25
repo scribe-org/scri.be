@@ -13,7 +13,7 @@ Loading changelog...
 Error: {{ error }}
 </div>
       <div v-else class="changelog-container">
-        <div v-html="htmlContent" class="prose"></div>
+        <div class="prose"></div>
       </div>
     </div>
   </PageDocs>
@@ -28,7 +28,7 @@ const { base64ToUTF8 } = useBase64Decoder();
 const markdownContent = ref("");
 
 // HTML based on the markdownContent ref
-const htmlContent = computed(() => {
+const _htmlContent = computed(() => {
   return md.render(markdownContent.value);
 });
 
