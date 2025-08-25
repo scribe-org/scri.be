@@ -44,7 +44,7 @@ const error = ref(null);
 onMounted(async () => {
   try {
     const response = await $fetch(
-      "https://api.github.com/repos/scribe-org/Scribe-Server/contents/CHANGELOG.md"
+      "https://api.github.com/repos/scribe-org/Scribe-iOS/contents/CHANGELOG.md"
     );
     // Decode the content.
     const changelog = base64ToUTF8(response.content);

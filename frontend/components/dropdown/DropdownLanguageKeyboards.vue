@@ -37,16 +37,34 @@
           />
         </MenuItem>
       </NuxtLink>
-      <NuxtLink to="/docs/keyboard-apps/changelog">
-        <MenuItem v-slot="{ active }" class="flex">
+      <NuxtLink to="/docs/keyboard-apps/android-changelog">
+        <MenuItem v-slot="{ active }" class="flex whitespace-nowrap">
           <MenuItemLabel
             :isButton="false"
             :iconName="IconMap.CHANGELOG"
-            label="i18n._global.changelog"
-            :active="active || isCurrentPath('/docs/keyboard-apps/changelog')"
+            label="i18n._global.android_changelog"
+            :active="
+              active || isCurrentPath('/docs/keyboard-apps/android-changelog')
+            "
             :class="{
               'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
-                isCurrentPath('/docs/keyboard-apps/changelog'),
+                isCurrentPath('/docs/keyboard-apps/android-changelog'),
+            }"
+          />
+        </MenuItem>
+      </NuxtLink>
+      <NuxtLink to="/docs/keyboard-apps/ios-changelog">
+        <MenuItem v-slot="{ active }" class="flex whitespace-nowrap">
+          <MenuItemLabel
+            :isButton="false"
+            :iconName="IconMap.CHANGELOG"
+            label="i18n._global.ios_changelog"
+            :active="
+              active || isCurrentPath('/docs/keyboard-apps/ios-changelog')
+            "
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/keyboard-apps/ios-changelog'),
             }"
           />
         </MenuItem>

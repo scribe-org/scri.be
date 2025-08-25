@@ -1,0 +1,51 @@
+/*
+MARK: Container
+*/
+
+.changelog-container {
+  height: full;
+}
+
+/*
+MARK: Content
+*/
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.prose h1 {
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+}
+.prose h2 {
+  font-size: 1.5rem;
+}
+.prose h3 {
+  font-size: 1.25rem;
+}
+.prose ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+.prose a {
+  color: #45a1d9;
+}
+
+/*
+MARK: Version
+*/
+
+.version-section {
+  padding-top: 1px;
+}
+.version-section h2 {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+}
