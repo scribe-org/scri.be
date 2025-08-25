@@ -37,16 +37,32 @@
           />
         </MenuItem>
       </NuxtLink>
-      <NuxtLink to="/docs/conjugate/changelog">
-        <MenuItem v-slot="{ active }" class="flex">
+      <NuxtLink to="/docs/conjugate/android-changelog">
+        <MenuItem v-slot="{ active }" class="flex whitespace-nowrap">
           <MenuItemLabel
             :isButton="false"
             :iconName="IconMap.CHANGELOG"
-            label="i18n._global.changelog"
-            :active="active || isCurrentPath('/docs/conjugate/changelog')"
+            label="i18n._global.android_changelog"
+            :active="
+              active || isCurrentPath('/docs/conjugate/android-changelog')
+            "
             :class="{
               'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
-                isCurrentPath('/docs/conjugate/changelog'),
+                isCurrentPath('/docs/conjugate/android-changelog'),
+            }"
+          />
+        </MenuItem>
+      </NuxtLink>
+      <NuxtLink to="/docs/conjugate/ios-changelog">
+        <MenuItem v-slot="{ active }" class="flex whitespace-nowrap">
+          <MenuItemLabel
+            :isButton="false"
+            :iconName="IconMap.CHANGELOG"
+            label="i18n._global.ios_changelog"
+            :active="active || isCurrentPath('/docs/conjugate/ios-changelog')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/conjugate/ios-changelog'),
             }"
           />
         </MenuItem>

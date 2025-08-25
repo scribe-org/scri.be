@@ -6,7 +6,7 @@
   >
     <PageBreadcrumbs />
     <h1 class="pb-2 font-bold">
-      {{ $t("i18n._global.changelog") }}
+      {{ $t("i18n._global.android_changelog") }}
     </h1>
   </PageDocs>
 </template>

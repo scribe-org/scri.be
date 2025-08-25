@@ -56,7 +56,7 @@ export default defineNuxtConfig({
     classSuffix: "",
   },
 
-  css: ["reduced-motion/css"],
+  css: ["reduced-motion/css", "~/assets/css/changelog.css"],
 
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
