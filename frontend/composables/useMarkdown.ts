@@ -1,4 +1,4 @@
-// composables/useMarkdown.ts
+// SPDX-License-Identifier: AGPL-3.0-or-later
 import MarkdownIt from "markdown-it";
 
 export function useMarkdown(): MarkdownIt {
