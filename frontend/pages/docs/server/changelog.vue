@@ -7,41 +7,46 @@
     <PageBreadcrumbs />
     <div>
       <div v-if="loading">
-Loading changelog...
-</div>
+        {{ $t("i18n.pages.docs._global.changelog.loading_changelog") }}
+      </div>
       <div v-else-if="error">
-Error: {{ error }}
-</div>
+        {{
+          $t("i18n.pages.docs._global.changelog.error", {
+            error: error,
+          })
+        }}
+      </div>
       <div v-else class="changelog-container">
-        <div class="prose"></div>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div v-html="htmlContent" class="prose"></div>
       </div>
     </div>
   </PageDocs>
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 const md = useMarkdown();
 const { base64ToUTF8 } = useBase64Decoder();
-// This ref will hold the raw Markdown string
+// This ref will hold the raw Markdown string.
 const markdownContent = ref("");
 
-// HTML based on the markdownContent ref
-const _htmlContent = computed(() => {
+// HTML based on the markdownContent ref.
+const htmlContent = computed(() => {
   return md.render(markdownContent.value);
 });
 
 const loading = ref(true);
 const error = ref(null);
 
-// Fetch changelog content
+// Fetch changelog content.
 onMounted(async () => {
   try {
     const response = await $fetch(
       "https://api.github.com/repos/scribe-org/Scribe-Server/contents/CHANGELOG.md"
     );
-    // decode the content
+    // Decode the content.
     const changelog = base64ToUTF8(response.content);
     markdownContent.value = changelog;
   } catch (err) {

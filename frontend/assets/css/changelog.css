@@ -1,10 +1,15 @@
-/* CSS for the scrolling container */
+/*
+MARK: Container
+*/
+
 .changelog-container {
-  height: 80vh;
-  overflow-y: auto;
-  border: 1px solid #ccc;
+  height: full;
   padding: 1rem;
 }
+
+/*
+MARK: Content
+*/
 
 .prose h1,
 .prose h2,
@@ -22,8 +27,18 @@
 .prose h3 {
   font-size: 1.25rem;
 }
+.prose ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+.prose a {
+  color: #45a1d9;
+}
 
-/* sticky CSS */
+/*
+MARK: Version
+*/
+
 .version-section {
   padding-top: 1px;
 }
