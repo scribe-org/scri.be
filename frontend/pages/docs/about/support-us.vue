@@ -7,7 +7,7 @@
       <Title>{{ $t("i18n.pages._global.become_supporter") }}</Title>
     </Head>
     <PageDocs
-      imgURL="/icons/docs/join_icon"
+      imgURL="/icons/docs/flaticon_support"
       imgAltText="i18n.pages.docs.about.support_us.join_img_alt_text"
     >
       <PageBreadcrumbs />
