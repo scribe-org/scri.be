@@ -254,7 +254,7 @@ Many thanks to all the [scri.be contributors](https://github.com/scribe-org/scri
 
 ### Code and Dependencies
 
-The Scribe team would like to thank all the great software that made scri.be's development possible, with special thanks going to:
+The Scribe community would like to thank all the great software that made scri.be's development possible, with special thanks going to:
 
 - [Vue.js](https://vuejs.org/)
 - [Nuxt](https://nuxt.com/)
