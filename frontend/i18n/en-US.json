@@ -109,6 +109,8 @@
   "i18n.pages.docs._global.return_to_docs_home_aria_label": "Return to the home page of the Scribe documentation",
   "i18n.pages.docs.about._global.people_img_alt_text": "An icon of two people next to one another",
   "i18n.pages.docs.about.blog_posts.file_text_img_alt_text": "An icon of a file with lines of text on it",
+  "i18n.pages.docs.about.blog_posts.lack_of_localization_notice": "Please note that this page is not localized, with the entries below being in the language of the article.",
+  "i18n.pages.docs.about.blog_posts.welcome_message": "Welcome to the Scribe blog posts! Below you can find articles on Scribe's software from members of our community and from around the web. Feel free to add your own article to this page!",
   "i18n.pages.docs.about.community.section_2_1_paragraph_1_1": "Thank you to all of our amazing",
   "i18n.pages.docs.about.community.section_2_1_paragraph_1_2": "GitHub contributors",
   "i18n.pages.docs.about.imprint.imprint_img_alt_text": "An information i with a circle around it.",
