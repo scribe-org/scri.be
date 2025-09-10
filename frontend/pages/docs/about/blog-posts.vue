@@ -19,9 +19,179 @@
         {{ $t("i18n.pages.docs.about.blog_posts.lack_of_localization_notice") }}
       </p>
       <h3>2025</h3>
-      <ul class="list-disc pl-6"></ul>
+      <ul class="list-disc pl-6">
+        <li>
+          August:
+          <a
+            class="link-text"
+            href="https://outreachy-michael.hashnode.dev/from-self-doubt-to-automation-my-outreachy-internship-journey"
+            target="_blank"
+          >
+            Blog post on Hashnode
+          </a>
+          describing the experience and learnings of
+          <a
+            class="link-text"
+            href="https://www.outreachy.org/"
+            target="_blank"
+          >
+            Outreachy
+          </a>
+          with Scribe
+        </li>
+        <li>
+          July:
+          <a
+            class="link-text"
+            href="https://outreachy-michael.hashnode.dev/understanding-scribe-a-newcomers-guide-to-smart-language-learning-keyboards"
+            target="_blank"
+          >
+            Blog post on Hashnode
+          </a>
+          with explanations about the Scribe community and language keyboards
+          including
+          <a
+            class="link-text"
+            href="https://github.com/scribe-org/Scribe-Android"
+            target="_blank"
+          >
+            Scribe-Android
+          </a>
+        </li>
+        <li>
+          June:
+          <a
+            class="link-text"
+            href="https://outreachy-michael.hashnode.dev/introduce-yourself-who-are-you-michael"
+            target="_blank"
+          >
+            Blog post on Hashnode
+          </a>
+          with an introduction from Scribe's
+          <a
+            class="link-text"
+            href="https://www.outreachy.org/"
+            target="_blank"
+          >
+            Outreachy
+          </a>
+          intern
+        </li>
+        <!-- HERE -->
+        <li>
+          April:
+          <a
+            class="link-text"
+            href="https://scribe-server.hashnode.dev/deploy-scribe-server-toolforge"
+            target="_blank"
+          >
+            Blog post on Hashnode
+          </a>
+          introducing the
+          <a
+            class="link-text"
+            href="https://github.com/scribe-org/Scribe-Server"
+            target="_blank"
+          >
+            Scribe-Server
+          </a>
+          deployment process and working with
+          <a
+            class="link-text"
+            href="https://admin.toolforge.org/"
+            target="_blank"
+          >
+            Wikimedia Toolforge
+          </a>
+        </li>
+        <li>
+          January:
+          <a
+            class="link-text"
+            href="https://axif.hashnode.dev/automating-query"
+            target="_blank"
+          >
+            Blog post on Hashnode
+          </a>
+          presenting the Wikidata query generation process written as a part of
+          Scribe's
+          <a
+            class="link-text"
+            href="https://www.outreachy.org/"
+            target="_blank"
+          >
+            Outreachy
+          </a>
+          internship
+        </li>
+        <li>
+          January:
+          <a
+            class="link-text"
+            href="https://axif.hashnode.dev/how-to-start-scribe"
+            target="_blank"
+          >
+            Blog post on Hashnode
+          </a>
+          discussing the architecture of Scribe applications including
+          <a
+            class="link-text"
+            href="https://github.com/scribe-org/Scribe-Data"
+            target="_blank"
+          >
+            Scribe-Data
+          </a>
+          and how to start contributing
+        </li>
+        <li>
+          January:
+          <a
+            class="link-text"
+            href="https://axif.hashnode.dev/struggles-wins-and-scribe-data-my-outreachy-journey"
+            target="_blank"
+          >
+            Blog post on Hashnode
+          </a>
+          discussing working with Wikidata and its database dumps within
+          Scribe's
+          <a
+            class="link-text"
+            href="https://www.outreachy.org/"
+            target="_blank"
+          >
+            Outreachy
+          </a>
+          internship
+        </li>
+      </ul>
       <h3>2024</h3>
       <ul class="list-disc pl-6">
+        <li>
+          December:
+          <a
+            class="link-text"
+            href="https://axif.hashnode.dev/create-scribe-data-wikidata-based-translation"
+            target="_blank"
+          >
+            Blog post on Hashnode
+          </a>
+          discussing the development of the
+          <a
+            class="link-text"
+            href="https://github.com/scribe-org/Scribe-Data"
+            target="_blank"
+          >
+            Scribe-Data
+          </a>
+          translation generation process as a part of
+          <a
+            class="link-text"
+            href="https://www.outreachy.org/"
+            target="_blank"
+          >
+            Outreachy
+          </a>
+        </li>
         <li>
           October:
           <a
@@ -48,7 +218,7 @@
             href="https://medium.com/@mhmohona/ins-and-outs-of-scribe-data-cli-bd51202aa7c6"
             target="_blank"
           >
-            Blog post on medium
+            Blog post on Medium
           </a>
           describing the main features of
           <a
