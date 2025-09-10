@@ -2,7 +2,7 @@
 <template>
   <div>
     <ul class="flex flex-wrap justify-center gap-4 md:justify-normal">
-      <li v-for="item in githubData" :key="item.loginID">
+      <li v-for="item in githubShownData" :key="item.loginID">
         <NuxtLink
           class="focus-brand flex w-20 flex-col items-center space-y-1"
           :to="localePath(item.htmlUrl)"
@@ -63,44 +63,68 @@ interface GithubContributor {
   avatarUrl: string;
   htmlUrl: string;
   loginID: string;
+  contributions: number;
 }
 
 interface GithubContributorResponse {
   avatar_url: string;
   html_url: string;
   login: string;
+  contributions: number;
 }
 
 const isLoading = ref<boolean>(false);
 const githubData = ref<GithubContributor[]>([]);
-const currentPage = ref<number>(1);
+const githubShownData = ref<GithubContributor[]>([]);
 const hasMoreContributors = ref<boolean>(true);
 
+let numberShown = 30;
+
 onMounted(() => {
-  fetchDataFromGitHubAPI(currentPage.value);
+  fetchDataFromGitHubAPI();
 });
 
-async function fetchDataFromGitHubAPI(page: number, numPerPage: number = 30) {
+async function fetchDataFromGitHubAPI() {
   isLoading.value = true;
   try {
-    const response = await fetch(
-      `https://api.github.com/repos/scribe-org/Scribe-Android/contributors?per_page=${numPerPage}&page=${page}`
+    console.log(await fetch(`https://api.github.com/rate_limit`));
+    const repoResponse = await fetch(
+      `https://api.github.com/orgs/scribe-org/repos?per-page=100`,
     );
-    const data = await response.json();
+    const repos = await repoResponse.json();
 
-    if (data.length < numPerPage) {
-      hasMoreContributors.value = false;
-    }
+    for (const repo of repos) {
+      const response = await fetch(
+        `https://api.github.com/repos/scribe-org/${repo.name}/contributors?per_page=100`,
+      );
+      const data = await response.json();
 
-    githubData.value = githubData.value.concat(
-      data.map((item: GithubContributorResponse) => {
+      const contributors = data.map((item: GithubContributorResponse) => {
         return {
           avatarUrl: item.avatar_url,
           htmlUrl: item.html_url,
           loginID: item.login,
+          contributions: item.contributions,
         };
-      })
-    );
+      });
+
+      for (const c of contributors) {
+        const existingItem = githubData.value.find(d => d.loginID === c.loginID);
+
+        if (existingItem) {
+          existingItem.contributions += c.contributions;
+        } else {
+          githubData.value = githubData.value.concat(c);
+        }
+      }
+    }
+
+    githubData.value.sort((a, b) => b.contributions - a.contributions); // Sorts list by number of contributions
+    if (githubData.value.length > numberShown) {
+      githubShownData.value = githubData.value.slice(0, numberShown);
+    } else {
+      hasMoreContributors.value = false;
+    }
   } catch (error) {
     console.error(error);
   } finally {
@@ -109,7 +133,12 @@ async function fetchDataFromGitHubAPI(page: number, numPerPage: number = 30) {
 }
 
 function onClickLoadMoreContributors() {
-  currentPage.value++;
-  fetchDataFromGitHubAPI(currentPage.value);
+  numberShown += 30;
+  if (githubData.value.length < numberShown) {
+    hasMoreContributors.value = false;
+    githubShownData.value = githubData.value;
+  } else {
+    githubShownData.value = githubData.value.slice(0, numberShown);
+  }
 }
 </script>
