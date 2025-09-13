@@ -8,7 +8,7 @@
     </Head>
     <PageDocs
       imgURL="/icons/docs/bootstrap_heart"
-      imgAltText="i18n.pages.docs.about._global.people_img_alt_text"
+      imgAltText="i18n.pages.docs.about._global.heart_img_alt_text"
     >
       <PageBreadcrumbs />
       <h1 class="font-bold">

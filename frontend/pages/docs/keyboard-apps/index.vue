@@ -30,7 +30,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs._global.index.content_page_description",
     iconURL: IconMap.INFORMATION_CIRCLE,
     iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
+    imgAltText: "i18n.pages.docs._global.imprint_img_alt_text",
   },
   {
     id: 1,
@@ -39,7 +39,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs._global.index.content_page_description",
     iconURL: IconMap.CHANGELOG,
     iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
+    imgAltText: "i18n.pages.docs._global.changelog.file_code_img_alt_text",
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs._global.index.content_page_description",
     iconURL: IconMap.CHANGELOG,
     iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
+    imgAltText: "i18n.pages.docs._global.changelog.file_code_img_alt_text",
   },
 ];
 </script>

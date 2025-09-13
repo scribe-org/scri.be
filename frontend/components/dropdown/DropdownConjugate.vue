@@ -37,7 +37,7 @@
           />
         </MenuItem>
       </NuxtLink>
-      <NuxtLink to="/docs/conjugate/android-changelog">
+      <!-- <NuxtLink to="/docs/conjugate/android-changelog">
         <MenuItem v-slot="{ active }" class="flex whitespace-nowrap">
           <MenuItemLabel
             :isButton="false"
@@ -66,7 +66,7 @@
             }"
           />
         </MenuItem>
-      </NuxtLink>
+      </NuxtLink> -->
     </ul>
   </DropdownBase>
 </template>

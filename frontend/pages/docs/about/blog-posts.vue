@@ -5,7 +5,7 @@
   </Head>
   <PageDocs
     imgURL="/icons/docs/bootstrap_file_text"
-    imgAltText="i18n.pages.docs.about.blog_posts.file_text_img_alt_text"
+    imgAltText="i18n.pages.docs.about._global.file_text_img_alt_text"
   >
     <PageBreadcrumbs />
     <h1 class="pb-2 font-bold">
