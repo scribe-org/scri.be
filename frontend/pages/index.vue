@@ -86,6 +86,28 @@
         btnId1="btn-support-us"
         btnId2="btn-supporters-showcase"
       />
+      <div
+        class="flex flex-col items-center justify-center w-1/2 sm:w-full sm:max-w-full pb-10 pt-16 sm:pb-16 md:pb-20 xl:py-24 ml-auto mr-auto space-y-3 xl:space-y-4"
+      >
+        <h2
+          class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl xl:text-4xl"
+        >
+          {{ $t("i18n.pages.index.contributors") }}
+        </h2>
+        <p
+          class="text-transform: w-10/12 text-center text-base uppercase tracking-wider text-distinct-text sm:w-full sm:text-lg xl:text-xl"
+        >
+          {{ $t("i18n.pages.index.contributors_tagline") }}
+        </p>
+        <p
+          class="mx-12 w-10/12 pb-2 text-center text-sm sm:text-base md:w-full md:max-w-lg md:text-lg lg:max-w-xl"
+        >
+          {{ $t("i18n.pages.index.contributors_text") }}
+        </p>
+        <GridGitHubContributors />
+      </div>
     </div>
   </div>
 </template>
+<script setup lang="ts">
+</script>
