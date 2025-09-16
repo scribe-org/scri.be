@@ -3,9 +3,9 @@
   <div>
     <ul
       :class="{
-          'flex flex-wrap justify-center gap-4': true,
-          'md:justify-normal': !alwaysCentered,
-        }"
+        'flex flex-wrap justify-center gap-4': true,
+        'md:justify-normal': !alwaysCentered,
+      }"
     >
       <li v-for="item in githubShownData" :key="item.loginID">
         <NuxtLink
@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   alwaysCentered: {
     type: Boolean,
     default: false,
@@ -101,13 +101,13 @@ async function fetchDataFromGitHubAPI() {
   try {
     console.log(await fetch(`https://api.github.com/rate_limit`));
     const repoResponse = await fetch(
-      `https://api.github.com/orgs/scribe-org/repos?per-page=100`,
+      `https://api.github.com/orgs/scribe-org/repos?per-page=100`
     );
     const repos = await repoResponse.json();
 
     for (const repo of repos) {
       const response = await fetch(
-        `https://api.github.com/repos/scribe-org/${repo.name}/contributors?per_page=100`,
+        `https://api.github.com/repos/scribe-org/${repo.name}/contributors?per_page=100`
       );
       const data = await response.json();
 
@@ -121,7 +121,9 @@ async function fetchDataFromGitHubAPI() {
       });
 
       for (const c of contributors) {
-        const existingItem = githubData.value.find(d => d.loginID === c.loginID);
+        const existingItem = githubData.value.find(
+          (d) => d.loginID === c.loginID
+        );
 
         if (existingItem) {
           existingItem.contributions += c.contributions;
