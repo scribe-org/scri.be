@@ -13,3 +13,5 @@ checks:
     active: True
     directories-to-skip: [node_modules]
     files-to-skip: []
+  missing-keys:
+    active: False

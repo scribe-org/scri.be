@@ -8,7 +8,7 @@
     </Head>
     <PageDocs
       imgURL="/icons/docs/flaticon_support"
-      imgAltText="i18n.pages.docs.about.support_us.join_img_alt_text"
+      imgAltText="i18n.pages.docs.about._global.support_img_alt_text"
     >
       <PageBreadcrumbs />
       <h1 class="font-bold">

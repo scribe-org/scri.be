@@ -10,7 +10,7 @@
       <Icon :name="iconURL" :size="iconSize" />
     </div>
     <div
-      class="text-light-text dark:text-dark-text w-min grow flex-col space-y-2 lg:space-y-4"
+      class="text-light-text dark:text-dark-text w-min grow flex-col space-y-2 lg:space-y-3"
     >
       <p class="responsive-h4 font-bold">
         {{ $t(title) }}

@@ -79,20 +79,6 @@
           />
         </MenuItem>
       </NuxtLink>
-      <NuxtLink to="/docs/about/imprint">
-        <MenuItem v-slot="{ active }" class="flex">
-          <MenuItemLabel
-            :isButton="false"
-            :iconName="IconMap.INFORMATION_CIRCLE"
-            label="i18n._global.imprint"
-            :active="active || isCurrentPath('/docs/about/imprint')"
-            :class="{
-              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
-                isCurrentPath('/docs/about/imprint'),
-            }"
-          />
-        </MenuItem>
-      </NuxtLink>
     </ul>
   </DropdownBase>
 </template>

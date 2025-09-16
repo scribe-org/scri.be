@@ -2,7 +2,7 @@
 <template>
   <PageDocs
     imgURL="/icons/docs/bootstrap_clipboard_data"
-    imgAltText="i18n.pages.docs.server.available_data.clipboard_data_img_alt_text"
+    imgAltText="i18n.pages.docs.server._global.clipboard_data_img_alt_text"
   >
     <PageBreadcrumbs />
     <h1 class="pb-2 font-bold">
