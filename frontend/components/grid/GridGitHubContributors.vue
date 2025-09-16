@@ -1,7 +1,12 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <div>
-    <ul class="flex flex-wrap justify-center gap-4 md:justify-normal">
+    <ul
+      :class="{
+          'flex flex-wrap justify-center gap-4': true,
+          'md:justify-normal': !alwaysCentered,
+        }"
+    >
       <li v-for="item in githubShownData" :key="item.loginID">
         <NuxtLink
           class="focus-brand flex w-20 flex-col items-center space-y-1"
@@ -57,6 +62,13 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps({
+  alwaysCentered: {
+    type: Boolean,
+    default: false,
+  },
+});
+
 const localePath = useLocalePath();
 
 interface GithubContributor {

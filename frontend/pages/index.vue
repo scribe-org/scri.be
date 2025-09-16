@@ -87,7 +87,7 @@
         btnId2="btn-supporters-showcase"
       />
       <div
-        class="flex flex-col items-center justify-center w-1/2 sm:w-full sm:max-w-full pb-10 pt-16 sm:pb-16 md:pb-20 xl:py-24 ml-auto mr-auto space-y-3 xl:space-y-4"
+        class="flex flex-col items-center justify-center w-full md:w-1/2 pb-10 pt-16 sm:pb-16 md:pb-20 xl:py-24 ml-auto mr-auto space-y-3 xl:space-y-4"
       >
         <h2
           class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl xl:text-4xl"
@@ -104,10 +104,8 @@
         >
           {{ $t("i18n.pages.index.contributors_text") }}
         </p>
-        <GridGitHubContributors />
+        <GridGitHubContributors alwaysCentered/>
       </div>
     </div>
   </div>
 </template>
-<script setup lang="ts">
-</script>
