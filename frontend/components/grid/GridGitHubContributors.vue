@@ -101,14 +101,20 @@ async function fetchDataFromGitHubAPI() {
   isLoading.value = true;
   try {
     console.log(await fetch(`https://api.github.com/rate_limit`));
-    const repoResponse = await fetch(
-      `https://api.github.com/orgs/scribe-org/repos?per-page=100`
-    );
-    const repos = await repoResponse.json();
+    const scribeRepos = [
+      "Scribe-Android",
+      "Scribe-iOS",
+      "Scribe-Data",
+      "Scribe-Server",
+      "Scribe-Desktop",
+      "Scribe-i18n",
+      "scri.be",
+      "Organization",
+    ];
 
-    for (const repo of repos) {
+    for (const repo of scribeRepos) {
       const response = await fetch(
-        `https://api.github.com/repos/scribe-org/${repo.name}/contributors?per_page=100`
+        `https://api.github.com/repos/scribe-org/${repo}/contributors?per_page=100`
       );
       const data = await response.json();
 
