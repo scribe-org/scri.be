@@ -87,7 +87,7 @@
         btnId2="btn-supporters-showcase"
       />
       <div
-        class="mx-auto flex w-full flex-col items-center justify-center space-y-3 pb-10 pt-16 sm:pb-16 md:pb-20 xl:space-y-4 xl:py-24"
+        class="mx-auto flex w-4/5 flex-col items-center justify-center space-y-3 pb-10 pt-16 sm:pb-16 md:w-3/5 md:pb-20 xl:space-y-4 xl:py-24"
       >
         <h2
           class="w-4/5 text-center text-2xl font-semibold sm:text-3xl md:w-3/5 xl:text-4xl"
