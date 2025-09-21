@@ -8,7 +8,7 @@
     </Head>
     <PageDocs
       imgURL="/icons/docs/bootstrap_info_circle"
-      imgAltText="i18n.pages.docs._global.imprint_img_alt_text"
+      imgAltText="i18n.pages.docs._global.information_icon_img_alt_text"
     >
       <PageBreadcrumbs />
       <h1 class="pb-2 font-bold">

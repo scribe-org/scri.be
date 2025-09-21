@@ -37,7 +37,7 @@
           />
         </MenuItem>
       </NuxtLink>
-      <!-- <NuxtLink to="/docs/server/available-data">
+      <NuxtLink to="/docs/server/available-data">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
             :isButton="false"
@@ -50,7 +50,7 @@
             }"
           />
         </MenuItem>
-      </NuxtLink> -->
+      </NuxtLink>
       <NuxtLink to="/docs/server/changelog">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel

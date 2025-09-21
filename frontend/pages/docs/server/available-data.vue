@@ -8,5 +8,6 @@
     <h1 class="pb-2 font-bold">
       {{ $t("i18n._global.available_data") }}
     </h1>
+    <p>{{ $t("i18n.pages.docs.server.available_data.under_development") }}</p>
   </PageDocs>
 </template>

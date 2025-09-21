@@ -48,7 +48,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs.legal.index.imprint",
     iconURL: IconMap.INFORMATION_CIRCLE,
     iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.imprint_img_alt_text",
+    imgAltText: "i18n.pages.docs._global.information_icon_img_alt_text",
   },
 ];
 </script>
