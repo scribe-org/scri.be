@@ -87,21 +87,19 @@
         btnId2="btn-supporters-showcase"
       />
       <div
-        class="ml-auto mr-auto flex w-full flex-col items-center justify-center space-y-3 pb-10 pt-16 sm:pb-16 md:w-1/2 md:pb-20 xl:space-y-4 xl:py-24"
+        class="mx-auto flex w-4/5 flex-col items-center justify-center space-y-3 pb-10 pt-16 sm:pb-16 md:w-3/5 md:pb-20 xl:space-y-4 xl:py-24"
       >
         <h2
-          class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl xl:text-4xl"
+          class="w-4/5 text-center text-2xl font-semibold sm:text-3xl md:w-3/5 xl:text-4xl"
         >
           {{ $t("i18n.pages.index.contributors") }}
         </h2>
         <p
-          class="text-transform: w-10/12 text-center text-base uppercase tracking-wider text-distinct-text sm:w-full sm:text-lg xl:text-xl"
+          class="w-4/5 text-center text-base uppercase tracking-wider text-distinct-text sm:text-lg md:w-3/5 xl:text-xl"
         >
           {{ $t("i18n.pages.index.contributors_tagline") }}
         </p>
-        <p
-          class="mx-12 w-10/12 pb-2 text-center text-sm sm:text-base md:w-full md:max-w-lg md:text-lg lg:max-w-xl"
-        >
+        <p class="mx-12 w-4/5 pb-2 text-center text-sm sm:text-base md:w-3/5">
           {{ $t("i18n.pages.index.contributors_text") }}
         </p>
         <GridGitHubContributors alwaysCentered />

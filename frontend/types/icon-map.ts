@@ -39,5 +39,6 @@ export enum IconMap {
   SHARE = "bi:box-arrow-up",
   STAR = "octicon:star-24",
   SUPPORT = "IconSupport",
+  THREE_DOTS_HORIZONTAL = "bi:three-dots",
   TRADEMARK = "bi:badge-tm",
 }

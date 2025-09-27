@@ -30,7 +30,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs._global.keyboard_apps_description",
     iconURL: IconMap.KEYBOARD,
     iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
+    imgAltText: "i18n.pages.docs.index.content_page_img_alt_text",
   },
   {
     id: 1,
@@ -39,7 +39,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs._global.conjugate_apps_description",
     iconURL: IconMap.CONJUGATE,
     iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
+    imgAltText: "i18n.pages.docs.index.content_page_img_alt_text",
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs._global.data_extraction_description",
     iconURL: IconMap.DATA_PACK,
     iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
+    imgAltText: "i18n.pages.docs.index.content_page_img_alt_text",
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs._global.data_server_description",
     iconURL: IconMap.SERVER,
     iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
+    imgAltText: "i18n.pages.docs.index.content_page_img_alt_text",
   },
   {
     id: 4,
@@ -66,7 +66,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs._global.about_scribe_description",
     iconURL: IconMap.SCRIBE,
     iconSize: "3.5em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
+    imgAltText: "i18n.pages.docs.index.content_page_img_alt_text",
   },
   {
     id: 5,
@@ -75,7 +75,7 @@ const cards: DocsEntry[] = [
     description: "i18n.pages.docs._global.legal_description",
     iconURL: IconMap.LEGAL,
     iconSize: "3em",
-    imgAltText: "i18n.pages.docs._global.content_page_img_alt_text",
+    imgAltText: "i18n.pages.docs.index.content_page_img_alt_text",
   },
 ];
 </script>

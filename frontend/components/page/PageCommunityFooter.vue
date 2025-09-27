@@ -40,13 +40,17 @@
         {{ $t("i18n.components.page_community_footer.invite_text_3_3") }}
       </li>
       <li>
-        {{ $t("i18n.components.page_community_footer.visit_our") }}
+        {{ $t("i18n.components.page_community_footer.invite_text_4_1") }}
         <a
           class="focus-brand link-text items-center"
           href="https://hosted.weblate.org/projects/scribe/scribe-i18n/"
           target="_blank"
         >
-          {{ $t("i18n.components.page_community_footer.invite_text_4_2") }}
+          {{
+            $t(
+              "i18n.components.page_community_footer.weblate_internationalization_project"
+            )
+          }}
           <Icon
             :name="IconMap.EXTERNAL_LINK"
             size="1em"

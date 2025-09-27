@@ -1,75 +1,76 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
-  <div>
-    <ul
-      :class="{
-        'flex flex-wrap justify-center gap-4': true,
-        'md:justify-normal': !alwaysCentered,
-      }"
-    >
-      <li v-for="item in githubShownData" :key="item.loginID">
-        <NuxtLink
-          class="focus-brand flex w-20 flex-col items-center space-y-1"
-          :to="localePath(item.htmlUrl)"
+  <ul
+    :class="{
+      'flex flex-wrap justify-center gap-4': true,
+      'md:justify-normal': !alwaysCentered,
+    }"
+  >
+    <li v-for="item in githubShownData" :key="item.loginID">
+      <NuxtLink
+        class="focus-brand flex w-20 flex-col items-center space-y-1"
+        :to="localePath(item.htmlUrl)"
+        target="_blank"
+      >
+        <img
+          class="ring-light-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 h-16 w-16 rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
+          :src="item.avatarUrl"
+          :alt="
+            $t('i18n.components.grid_git_hub_contributors.img_alt_text', {
+              github_user_id: item.loginID,
+            })
+          "
+        />
+        <p
+          class="text-light-text hover:text-light-text dark:text-dark-text dark:hover:text-dark-text w-full truncate text-center text-sm"
         >
-          <img
-            class="ring-light-section-div hover:ring-light-cta-orange dark:ring-dark-section-div dark:hover:ring-light-cta-orange dark:hover:ring-offset-dark-layer-0 h-16 w-16 rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
-            :src="item.avatarUrl"
-            :alt="
-              $t('i18n.components.grid_git_hub_contributors.img_alt_text', {
-                github_user_id: item.loginID,
-              })
-            "
-          />
-          <p
-            class="text-light-text hover:text-light-text dark:text-dark-text dark:hover:text-dark-text w-full truncate text-center text-sm"
-          >
-            {{ item.loginID }}
-          </p>
-        </NuxtLink>
-      </li>
-      <li v-if="hasMoreContributors">
-        <button
-          @click="onClickLoadMoreContributors"
-          class="focus-brand relative flex w-20 flex-col items-center space-y-1"
-          :aria-label="
-            $t('i18n.components.grid_git_hub_contributors.show_more_aria_label')
+          {{ item.loginID }}
+        </p>
+      </NuxtLink>
+    </li>
+    <li v-if="hasMoreContributors">
+      <button
+        @click="onClickLoadMoreContributors"
+        class="focus-brand relative flex w-20 flex-col items-center space-y-1"
+        :aria-label="
+          $t('i18n.components.grid_git_hub_contributors.show_more_aria_label')
+        "
+      >
+        <span
+          v-if="isLoading"
+          class="absolute inline-flex h-[4.5rem] w-[4.5rem] animate-ping rounded-full border-4 border-scribe-blue opacity-75"
+        ></span>
+        <span
+          class="bg-light-section-div ring-light-section-div dark:bg-dark-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 flex h-16 w-16 items-center justify-center rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
+          :alt="
+            $t(
+              'i18n.components.grid_git_hub_contributors.show_more_img_alt_text'
+            )
           "
         >
-          <span
-            v-if="isLoading"
-            class="absolute inline-flex h-[4.5rem] w-[4.5rem] animate-ping rounded-full border-4 border-scribe-blue opacity-75"
-          ></span>
-          <span
-            class="bg-light-section-div ring-light-section-div hover:ring-light-cta-orange dark:bg-dark-section-div dark:ring-dark-section-div dark:hover:ring-light-cta-orange dark:hover:ring-offset-dark-layer-0 flex h-16 w-16 items-center justify-center rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
-            :alt="
-              $t(
-                'i18n.components.grid_git_hub_contributors.show_more_img_alt_text'
-              )
-            "
-          >
-            <Icon
-              name="bx:dots-horizontal-rounded"
-              size="3em"
-              class="text-light-text dark:text-dark-text"
-            />
-          </span>
-          <p
-            class="text-light-text hover:text-light-text dark:text-dark-text dark:hover:text-dark-text w-full truncate text-center text-sm"
-          >
+          <Icon
+            :name="IconMap.THREE_DOTS_HORIZONTAL"
+            size="3em"
+            class="text-light-text dark:text-dark-text"
+          />
+        </span>
+        <p
+          class="text-light-text hover:text-light-text dark:text-dark-text dark:hover:text-dark-text w-full truncate text-center text-sm"
+        >
             {{
               isLoading
                 ? $t("i18n.components.grid_git_hub_contributors.loading")
                 : $t("i18n.components.grid_git_hub_contributors.show_more")
             }}
-          </p>
-        </button>
-      </li>
-    </ul>
-  </div>
+        </p>
+      </button>
+    </li>
+  </ul>
 </template>
 
 <script setup lang="ts">
+import { IconMap } from "~/types/icon-map";
+
 defineProps({
   alwaysCentered: {
     type: Boolean,
@@ -108,14 +109,20 @@ async function fetchDataFromGitHubAPI() {
   isLoading.value = true;
   try {
     console.log(await fetch(`https://api.github.com/rate_limit`));
-    const repoResponse = await fetch(
-      `https://api.github.com/orgs/scribe-org/repos?per-page=100`
-    );
-    const repos = await repoResponse.json();
+    const scribeRepos = [
+      "Scribe-Android",
+      "Scribe-iOS",
+      "Scribe-Data",
+      "Scribe-Server",
+      "Scribe-Desktop",
+      "Scribe-i18n",
+      "scri.be",
+      "Organization",
+    ];
 
-    for (const repo of repos) {
+    for (const repo of scribeRepos) {
       const response = await fetch(
-        `https://api.github.com/repos/scribe-org/${repo.name}/contributors?per_page=100`
+        `https://api.github.com/repos/scribe-org/${repo}/contributors?per_page=100`
       );
       const data = await response.json();
 
@@ -141,7 +148,8 @@ async function fetchDataFromGitHubAPI() {
       }
     }
 
-    githubData.value.sort((a, b) => b.contributions - a.contributions); // Sorts list by number of contributions
+    // Sorts list by number of contributions.
+    githubData.value.sort((a, b) => b.contributions - a.contributions);
     if (githubData.value.length > numberShown) {
       githubShownData.value = githubData.value.slice(0, numberShown);
     } else {

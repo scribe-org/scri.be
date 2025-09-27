@@ -11,15 +11,18 @@
     <h1 class="pb-2 font-bold">
       {{ $t("i18n._global.our_community") }}
     </h1>
-    <p>{{ $t("i18n.pages.docs._global.lorem_ipsum_page_text") }}</p>
+    <p>{{ $t("i18n.pages.docs.about.community.description") }}</p>
+    <h2 class="pt-4">
+      {{ $t("i18n.pages.docs.about.community.open_source_developers") }}
+    </h2>
     <p class="space-x-1">
-      {{ $t("i18n.pages.docs.about.community.section_2_1_paragraph_1_1") }}
+      {{ $t("i18n.pages.docs.about.community.contributor_thank_you") }}
       <a
         class="focus-brand link-text"
         href="https://github.com/scribe-org/"
         target="_blank"
       >
-        {{ $t("i18n.pages.docs.about.community.section_2_1_paragraph_1_2") }}
+        {{ $t("i18n.pages.docs.about.community.github_contributors") }}
         <Icon
           name="bi:box-arrow-up-right"
           size="1em"
@@ -29,7 +32,27 @@
       <Icon :name="IconMap.HEART" size="1em" style="vertical-align: baseline" />
     </p>
     <GridGitHubContributors />
-    <PageCommunityFooter>
+    <h2 class="pt-4">
+      {{ $t("i18n.pages.docs.about.community.open_design_professionals") }}
+    </h2>
+    <p>
+      {{ $t("i18n.pages.docs.about.community.open_design_description") }}
+      <a class="link-text" href="https://opensourcedesign.net/">
+        opensourcedesign.net
+      </a>
+      .
+    </p>
+    <h2 class="pt-4">
+      {{ $t("i18n.pages.docs.about.community.localization_specialist") }}
+    </h2>
+    <p>
+      {{ $t("i18n.pages.docs.about.community.localization_description") }}
+      <a class="link-text" href="https://hosted.weblate.org/projects/scribe/">
+        weblate.org/projects/scribe
+      </a>
+      .
+    </p>
+    <PageCommunityFooter class="pt-4">
       <BtnRouteInternal
         class="w-full"
         :cta="true"

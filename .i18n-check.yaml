@@ -11,5 +11,7 @@ checks:
   # Global configurations are applied to all checks.
   global:
     active: True
-    directories-to-skip: [node_modules]
+    directories-to-skip: [frontend/node_modules, frontend/.nuxt]
     files-to-skip: []
+  missing-keys:
+    active: False

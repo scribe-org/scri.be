@@ -23,6 +23,20 @@
           />
         </MenuItem>
       </NuxtLink>
+      <NuxtLink to="/docs/legal/trademark-policy">
+        <MenuItem v-slot="{ active }" class="flex">
+          <MenuItemLabel
+            :isButton="false"
+            :iconName="IconMap.TRADEMARK"
+            label="i18n._global.trademark_policy"
+            :active="active || isCurrentPath('/docs/legal/trademark-policy')"
+            :class="{
+              'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
+                isCurrentPath('/docs/legal/trademark-policy'),
+            }"
+          />
+        </MenuItem>
+      </NuxtLink>
       <NuxtLink to="/docs/legal/privacy-policy">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
@@ -37,16 +51,16 @@
           />
         </MenuItem>
       </NuxtLink>
-      <NuxtLink to="/docs/legal/trademark-policy">
+      <NuxtLink to="/docs/about/imprint">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
             :isButton="false"
-            :iconName="IconMap.TRADEMARK"
-            label="i18n._global.trademark_policy"
-            :active="active || isCurrentPath('/docs/legal/trademark-policy')"
+            :iconName="IconMap.INFORMATION_CIRCLE"
+            label="i18n._global.imprint"
+            :active="active || isCurrentPath('/docs/about/imprint')"
             :class="{
               'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
-                isCurrentPath('/docs/legal/trademark-policy'),
+                isCurrentPath('/docs/about/imprint'),
             }"
           />
         </MenuItem>
