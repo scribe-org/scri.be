@@ -31,16 +31,20 @@
     <li v-if="hasMoreContributors">
       <button
         @click="onClickLoadMoreContributors"
-        class="focus-brand flex w-20 flex-col items-center space-y-1"
+        class="focus-brand relative flex w-20 flex-col items-center space-y-1"
         :aria-label="
-          $t('i18n.components.grid_git_hub_contributors.load_more_aria_label')
+          $t('i18n.components.grid_git_hub_contributors.show_more_aria_label')
         "
       >
+        <span
+          v-if="isLoading"
+          class="absolute inline-flex h-[4rem] w-[4rem] animate-ping rounded-full border-4 border-scribe-blue opacity-75"
+        ></span>
         <span
           class="bg-light-section-div ring-light-section-div dark:bg-dark-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 flex h-16 w-16 items-center justify-center rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
           :alt="
             $t(
-              'i18n.components.grid_git_hub_contributors.load_more_img_alt_text'
+              'i18n.components.grid_git_hub_contributors.show_more_img_alt_text'
             )
           "
         >
@@ -53,7 +57,11 @@
         <p
           class="text-light-text hover:text-light-text dark:text-dark-text dark:hover:text-dark-text w-full truncate text-center text-sm"
         >
-          {{ $t("i18n.components.grid_git_hub_contributors.load_more") }}
+          {{
+            isLoading
+              ? $t("i18n.components.grid_git_hub_contributors.loading")
+              : $t("i18n.components.grid_git_hub_contributors.show_more")
+          }}
         </p>
       </button>
     </li>
