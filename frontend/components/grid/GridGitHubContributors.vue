@@ -57,11 +57,11 @@
         <p
           class="text-light-text hover:text-light-text dark:text-dark-text dark:hover:text-dark-text w-full truncate text-center text-sm"
         >
-            {{
-              isLoading
-                ? $t("i18n.components.grid_git_hub_contributors.loading")
-                : $t("i18n.components.grid_git_hub_contributors.show_more")
-            }}
+          {{
+            isLoading
+              ? $t("i18n.components.grid_git_hub_contributors.loading")
+              : $t("i18n.components.grid_git_hub_contributors.show_more")
+          }}
         </p>
       </button>
     </li>
