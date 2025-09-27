@@ -38,7 +38,7 @@
       >
         <span
           v-if="isLoading"
-          class="absolute inline-flex h-[4.5rem] w-[4.5rem] animate-ping rounded-full border-4 border-scribe-blue opacity-75"
+          class="absolute inline-flex h-[4rem] w-[4rem] animate-ping rounded-full border-4 border-scribe-blue opacity-75"
         ></span>
         <span
           class="bg-light-section-div ring-light-section-div dark:bg-dark-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 flex h-16 w-16 items-center justify-center rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
