@@ -3,14 +3,13 @@ import type { NuxtModule } from "@nuxt/schema";
 
 const modules: (string | [string, Record<string, object>] | NuxtModule)[] = [
   "@nuxt/content",
-  "nuxt-icon",
-  "@nuxtjs/color-mode",
-  "@nuxtjs/device",
   "@nuxt/devtools",
   "@nuxt/eslint",
+  "@nuxt/icon",
+  "@nuxtjs/color-mode",
+  "@nuxtjs/device",
   "@nuxtjs/i18n",
   "@nuxtjs/plausible",
-  "@nuxtjs/tailwindcss",
 ];
 
 // This plugin may depend on Pinia.

@@ -1,18 +1,19 @@
 services:
   frontend:
-      env_file:
-        - .env.dev
-      build:
-        context: ./frontend
-      container_name: nuxt_frontend
-      command: sh -c "corepack enable && yarn install && yarn dev --port ${FRONTEND_PORT}"
-      volumes:
-        - ./frontend:/app
-      ports:
-        - "${FRONTEND_PORT}:${FRONTEND_PORT}"
-        - "24678:24678"
-      healthcheck:
-        test: ["CMD-SHELL", "curl -f http://localhost:${FRONTEND_PORT}/ || exit 1"]
-        interval: 10s
-        timeout: 5s
-        retries: 5
+    env_file:
+      - .env.dev
+    build:
+      context: ./frontend
+    container_name: nuxt_frontend
+    command: sh -c "corepack enable && yarn install && yarn dev --port ${FRONTEND_PORT}"
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+      - "24678:24678"
+    healthcheck:
+      test:
+        ["CMD-SHELL", "curl -f http://localhost:${FRONTEND_PORT}/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

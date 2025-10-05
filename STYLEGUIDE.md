@@ -183,7 +183,7 @@ For the frontend scri.be uses [Prettier](https://prettier.io/) to format the cod
 
 ## Colors [`⇧`](#contents)
 
-The files [frontend/assets/css/tailwind.css](frontend/assets/css/tailwind.css) and [frontend/tailwind.config.ts](frontend/tailwind.config.ts) define all colors for the project. Light and dark mode versions of each color are defined and loaded in via variables such that we only need to use a singular identifier throughout the codebase. There are however cases where you still need to specify `dark:` for colors - specifically when the color identifier for light mode is different than dark mode.
+The files [frontend/app/assets/css/tailwind.css](frontend/app/assets/css/tailwind.css) and [frontend/tailwind.config.ts](frontend/tailwind.config.ts) define all colors for the platform. Light and dark mode versions of each color are defined and loaded in via variables such that we only need to use a singular identifier throughout the codebase. There are however cases where you still need to specify `dark:` for colors - specifically when the color identifier for light mode is different than dark mode.
 
 ```html
 <!-- This div has a reactive background color as layer-0 is defined variably based on the color mode. -->
@@ -350,7 +350,7 @@ Localization keys should be defined based on the file in which they're used with
 
 Please define all routes for images and icons in the respective [url registry utils file](frontend/utils/imageURLRegistry.s.ts) and [icon map enum](frontend/types/icon-map.ts).
 
-scri.be uses [nuxt-icon](https://github.com/nuxt-modules/icon) for all icons. Icons are defined via `<Icon :name="IconMap.ICON_REF"/>` components, with [Icônes](https://icones.js.org/) being a good place to look for [Iconify](https://iconify.design/) based files to import. The `<Icon/>` component also has a `size` argument that `em` based arguments can be passed to. There's also a `color` argument, but colors are handled with Tailwind CSS via the `text-COLOR` class argument.
+scri.be uses [@nuxt/icon](https://github.com/nuxt-modules/icon) for all icons. Icons are defined via `<Icon :name="IconMap.ICON_REF"/>` components, with [Icônes](https://icones.js.org/) being a good place to look for [Iconify](https://iconify.design/) based files to import. The `<Icon/>` component also has a `size` argument that `em` based arguments can be passed to. There's also a `color` argument, but colors are handled with Tailwind CSS via the `text-COLOR` class argument.
 
 Custom icons for scri.be can further be found in the [Icon directory of the frontend components](frontend/components/icon). These icons can also be referenced via the `<Icon>` component via their file name (ex: `<Icon name="IconConjugationTable">` for the conjugation table icon). For Tailwind coloration note that we need to use `fill-COLOR` for the custom scri.be icons rather than `text-COLOR`.
 

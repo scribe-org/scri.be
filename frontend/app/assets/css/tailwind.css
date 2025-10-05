@@ -1,0 +1,214 @@
+/* SPDX-License-Identifier: AGPL-3.0-or-later */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap");
+
+@import "tailwindcss";
+
+@config "~~/tailwind.config.ts";
+
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+}
+
+/*
+MARK: Colors
+*/
+
+.light {
+  --layer-0: 255, 255, 255;
+  --layer-1: 226, 226, 226;
+  --primary-text: 0, 0, 0;
+  --distinct-text: 0, 0, 0;
+  --link-text: 0, 92, 184;
+  --link-text-hover: 0, 59, 119;
+  --highlight: 214, 214, 214;
+  --highlight-darker: 186, 186, 186;
+  --highlight-lighter: 214, 214, 214;
+  --scribe-blue: 76, 173, 230;
+  --scribe-blue-lighter: 94, 181, 232;
+  --scribe-blue-darker: 59, 142, 194;
+}
+
+.dark {
+  --layer-0: 6, 8, 15;
+  --layer-1: 22, 24, 29;
+  --section-div: 43, 50, 59;
+  --primary-text: 255, 255, 255;
+  --distinct-text: 255, 255, 255;
+  --link-text: 86, 167, 252;
+  --link-text-hover: 134, 192, 253;
+  --highlight: 48, 48, 58;
+  --highlight-darker: 48, 48, 58;
+  --highlight-lighter: 68, 68, 78;
+  --scribe-blue: 62, 149, 204;
+  --scribe-blue-lighter: 76, 173, 230;
+  --scribe-blue-darker: 59, 142, 194;
+}
+
+/*
+MARK: Base
+*/
+
+@layer base {
+  body {
+    @apply bg-scribe-blue;
+  }
+  * {
+    @apply scrollbar scrollbar-track-layer-0 scrollbar-thumb-distinct-text scrollbar-thumb-rounded-md scrollbar-w-2;
+  }
+
+  /*
+  MARK: Typography
+  */
+
+  h1 {
+    @apply text-primary-text responsive-h1;
+  }
+
+  h2 {
+    @apply text-primary-text responsive-h2;
+  }
+
+  h3 {
+    @apply text-primary-text responsive-h3;
+  }
+
+  h4 {
+    @apply text-primary-text responsive-h4;
+  }
+
+  h5 {
+    @apply text-primary-text responsive-h5;
+  }
+
+  h6 {
+    @apply text-primary-text responsive-h6;
+  }
+
+  p {
+    @apply text-base text-primary-text;
+  }
+
+  ul {
+    @apply text-base text-primary-text;
+  }
+
+  ol {
+    @apply text-base text-primary-text;
+  }
+
+  /* Note: Not used because this colors all NuxtLink components. */
+  /* a {
+    @apply link-text text-base;
+  } */
+}
+
+@layer components {
+  /*
+  MARK: Text Color
+  */
+
+  .link-text {
+    @apply text-link-text hover:text-link-text-hover;
+  }
+
+  /*
+  MARK: Buttons
+  */
+
+  .btn-base-class {
+    @apply w-fit select-none px-4 py-2 text-center font-semibold elem-shadow-sm focus-brand;
+  }
+
+  .style-btn {
+    @apply bg-layer-0 text-primary-text elem-shadow-sm focus-brand hover:bg-highlight active:bg-layer-0 dark:border dark:border-primary-text;
+  }
+
+  .style-btns-next-to-one-another {
+    @apply mx-auto grid max-w-[70%] grid-cols-1 gap-y-4 sm:mx-0 sm:max-w-[90%] sm:grid-cols-2 sm:grid-rows-1 sm:gap-x-4 sm:gap-y-0 md:max-w-[80%] md:gap-x-6 xl:gap-x-8;
+  }
+
+  .style-cta {
+    @apply border border-primary-text bg-scribe-blue fill-primary-text text-primary-text focus-brand hover:bg-scribe-blue-lighter active:bg-scribe-blue dark:hover:bg-scribe-blue-darker;
+  }
+
+  .style-cta:disabled {
+    @apply cursor-not-allowed border-primary-text/50 fill-primary-text/50 text-primary-text/50;
+  }
+
+  .style-cta-secondary {
+    @apply border border-scribe-blue bg-layer-0 fill-scribe-blue text-scribe-blue focus-brand hover:bg-highlight active:bg-layer-0;
+  }
+
+  .style-cta-secondary:disabled {
+    @apply cursor-not-allowed border-scribe-blue/50 fill-scribe-blue/50 text-scribe-blue/50;
+  }
+
+  .style-menu-option-cta {
+    @apply bg-layer-0 fill-primary-text text-primary-text focus-brand hover:bg-scribe-blue-lighter dark:hover:bg-scribe-blue-darker;
+  }
+
+  /*
+  MARK: Cards
+  */
+
+  .card-style {
+    @apply rounded-md elem-shadow-sm sm:rounded-lg;
+  }
+
+  /*
+  MARK: Padding
+  */
+
+  .responsive-px-1 {
+    @apply px-1 sm:px-2;
+  }
+
+  .responsive-px-2 {
+    @apply px-2 lg:px-4 xl:px-6;
+  }
+
+  .responsive-px-3 {
+    @apply px-4 lg:px-6 xl:px-8;
+  }
+
+  .responsive-px-4 {
+    @apply px-6 lg:px-8 xl:px-10;
+  }
+
+  .responsive-px-5 {
+    @apply px-6 lg:px-10 xl:px-14;
+  }
+
+  .responsive-py-1 {
+    @apply py-1 sm:py-2;
+  }
+
+  .responsive-py-2 {
+    @apply py-2 lg:py-4 xl:py-6;
+  }
+
+  .responsive-py-3 {
+    @apply py-4 lg:py-6 xl:py-8;
+  }
+
+  .responsive-py-4 {
+    @apply py-6 lg:py-8 xl:py-10;
+  }
+
+  .responsive-py-5 {
+    @apply py-8 lg:py-10 xl:py-14;
+  }
+
+  /*
+  MARK: Shadow
+  */
+
+  .elem-shadow-md {
+    @apply shadow-md shadow-zinc-700;
+  }
+
+  .elem-shadow-lg {
+    @apply shadow-lg shadow-zinc-700;
+  }
+}
