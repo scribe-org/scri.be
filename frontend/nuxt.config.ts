@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from "path";
 
+import tailwindcss from "@tailwindcss/vite";
+
+import locales from "./app/utils/locales";
 import head from "./head";
-import locales from "./locales";
 import modules from "./modules";
 
 export default defineNuxtConfig({
@@ -12,19 +13,11 @@ export default defineNuxtConfig({
   },
 
   modules: modules,
-  ssr: false,
 
-  typescript: {
-    // strict: true,
-    // typeCheck: true,
-  },
+  ssr: false,
 
   devtools: {
     enabled: true,
-  },
-
-  alias: {
-    "@": resolve(__dirname, "./"),
   },
 
   plugins: ["~/plugins/i18n-head.ts"],
@@ -38,6 +31,7 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    plugins: [tailwindcss()],
     server: {
       watch: {
         usePolling: true,
@@ -56,28 +50,25 @@ export default defineNuxtConfig({
     classSuffix: "",
   },
 
-  css: ["reduced-motion/css", "~/assets/css/changelog.css"],
-
-  tailwindcss: {
-    cssPath: "~/assets/css/tailwind.css",
-    configPath: "tailwind.config.ts",
-  },
+  css: [
+    "~/assets/css/tailwind.css",
+    "~/assets/css/changelog.css",
+    "reduced-motion/css",
+  ],
 
   postcss: {
     plugins: {
-      tailwindcss: {},
       autoprefixer: {},
     },
   },
 
   i18n: {
-    lazy: true,
     strategy: "prefix_and_default",
-    langDir: "./i18n",
-    vueI18n: "./i18n.config.ts",
+    langDir: "locales",
+    vueI18n: "i18n.config.ts",
     baseUrl: "https://scri.be",
-    locales,
     defaultLocale: "en",
+    locales,
     customRoutes: "config",
     pages: {},
     detectBrowserLanguage: {
@@ -93,16 +84,9 @@ export default defineNuxtConfig({
     },
   ],
 
-  vue: {
-    compilerOptions: {
-      isCustomElement: (tag) =>
-        ["swiper-slide", "swiper-container"].includes(tag),
-    },
-  },
-
   hooks: {
-    "app:resolve": (app) => {
-      console.log("App instance resolved:", app);
+    "app:resolve": (_app) => {
+      // Note: For future implementation.
     },
   },
 
