@@ -7,9 +7,11 @@
         atTopShadow,
     }"
   >
-    <div class="flex items-center pb-2 pl-[0.85rem] pr-6 pt-3">
+    <div
+      class="flex h-16 items-center pb-2 pl-[0.85rem] pr-6 pt-3 align-bottom"
+    >
       <div
-        class="relative z-0 h-8"
+        class="relative z-0 h-auto"
         :class="{
           'w-32':
             sidebar.collapsed == false || sidebar.collapsedSwitch == false,
