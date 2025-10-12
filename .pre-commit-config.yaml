@@ -26,4 +26,3 @@ repos:
         pass_filenames: false
         additional_dependencies:
           - i18n-check
-          - packaging
