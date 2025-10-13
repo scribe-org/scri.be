@@ -7,9 +7,11 @@
         atTopShadow,
     }"
   >
-    <div class="flex items-center pb-2 pl-[0.85rem] pr-6 pt-3">
+    <div
+      class="flex h-16 items-center pb-2 pl-[0.85rem] pr-6 pt-3 align-bottom"
+    >
       <div
-        class="relative z-0 h-8"
+        class="relative z-0 h-auto"
         :class="{
           'w-32':
             sidebar.collapsed == false || sidebar.collapsedSwitch == false,
@@ -17,7 +19,7 @@
         }"
       >
         <IconScribeSidebar
-          class="z-1 absolute inset-0 flex h-[5.75rem] w-8 flex-shrink-0 items-center justify-center overflow-clip"
+          class="z-1 absolute inset-0 flex h-[4rem] w-8 flex-shrink-0 items-center justify-center overflow-clip"
           :class="{
             hidden:
               sidebar.collapsed == false || sidebar.collapsedSwitch == false,
@@ -51,7 +53,11 @@
             )
           "
         >
-          <SidebarLeftToggle chevronDirection="right" iconSize="1.4em" />
+          <SidebarLeftToggle
+            class="flex"
+            chevronDirection="right"
+            iconSize="1.4em"
+          />
         </button>
       </div>
     </div>

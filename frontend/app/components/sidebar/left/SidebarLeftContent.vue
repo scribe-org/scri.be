@@ -3,7 +3,7 @@
   <div class="flex flex-col space-y-2 px-1 pt-4 transition-all duration-500">
     <BtnRouteInternal
       id="btn-get-in-touch-large"
-      :class="getLinkClasses('/docs')"
+      :class="[getLinkClasses('/docs'), 'h-12']"
       :cta="true"
       linkTo="/docs"
       :label="
@@ -13,7 +13,7 @@
       "
       fontSize="base"
       :leftIcon="IconMap.DOCUMENTATION"
-      iconSize="1.1em"
+      iconSize="1.2rem"
       ariaLabel="i18n.components._global.view_docs_aria_label"
     />
     <DropdownLanguageKeyboards

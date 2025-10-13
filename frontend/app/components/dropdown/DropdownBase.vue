@@ -5,7 +5,7 @@
       <MenuButton
         @focus="expandOnFocus"
         v-slot="{ open }"
-        class="selected-option style-btn inline-flex w-full select-none whitespace-nowrap rounded-md border-none px-2 py-2 font-semibold"
+        class="selected-option style-btn inline-flex h-12 w-full select-none whitespace-nowrap rounded-md border-none px-2 py-2 font-semibold"
         :class="[
           {
             'pl-5': isSideMenu,
@@ -18,7 +18,7 @@
         <div
           class="flex items-center justify-between space-x-2 text-sm"
           :class="{
-            'relative z-0 w-full pl-[0.625rem] text-left font-medium':
+            'relative z-0 w-full pl-[0.7rem] text-left font-medium':
               isSidebarLeftMenu,
           }"
         >
@@ -28,7 +28,7 @@
               :class="{
                 'h-5 w-5 flex-shrink-0 text-center': isSidebarLeftMenu,
               }"
-              :size="isSidebarLeftMenu ? '1em' : ''"
+              :size="isSidebarLeftMenu ? '1.3rem' : ''"
             />
             <Transition name="text">
               <p
@@ -62,7 +62,7 @@
                 absolute: isSideMenu,
                 'absolute right-2': isSidebarLeftMenu,
               }"
-              :size="isSidebarLeftMenu ? '1rem' : ''"
+              :size="isSidebarLeftMenu ? '1.3rem' : ''"
               :name="
                 isSidebarLeftMenu
                   ? `${IconMap.CHEVRON_UP}`
