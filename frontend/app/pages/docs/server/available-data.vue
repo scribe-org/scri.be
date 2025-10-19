@@ -1,4 +1,5 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+
 <template>
   <PageDocs
     imgURL="/icons/docs/bootstrap_clipboard_data"
@@ -18,19 +19,13 @@
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Languages</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nouns</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Verbs</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Translations*</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Prepositions†</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Emoji Keywords</th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
             <tr v-for="(item, index) in languageData" :key="index">
-              <td class="px-6 py-4 whitespace-nowrap">{{ item.language }}</td>
+              <td class="px-6 py-4 whitespace-nowrap">{{ item.language_name }}</td>
               <td class="px-6 py-4 whitespace-nowrap">{{ item.nouns }}</td>
               <td class="px-6 py-4 whitespace-nowrap">{{ item.verbs }}</td>
-              <td class="px-6 py-4 whitespace-nowrap">{{ item.translations }}</td>
-              <td class="px-6 py-4 whitespace-nowrap">{{ item.prepositions }}</td>
-              <td class="px-6 py-4 whitespace-nowrap">{{ item.emojis }}</td>
             </tr>
           </tbody>
         </table>
@@ -40,3 +35,26 @@
 
 </template>
 
+<script>
+export default {
+data() {
+  return {
+    languageData: [],
+    error: null
+  }
+},
+async mounted() {
+  try {
+  const response = await fetch('https://scribe-server.toolforge.org/api/v1/language-stats');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    this.languageData = data || [];
+    } catch (error) {
+      this.error = error.message;
+      console.error('Error fetching data:', error);
+    }
+  }
+}
+</script>
