@@ -1,5 +1,4 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
-
 <template>
   <PageDocs
     imgURL="/icons/docs/bootstrap_clipboard_data"
@@ -9,7 +8,6 @@
     <h1 class="pb-2 font-bold">
       {{ $t("i18n._global.available_data") }}
     </h1>
-
     <p>{{ $t("i18n.pages.docs.server.available_data.table_description") }}</p>
     <div class="my-6 flex justify-center">
       <div class="w-full max-w-4xl overflow-x-auto">
