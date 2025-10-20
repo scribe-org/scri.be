@@ -24,33 +24,34 @@
   </PageDocs>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
 
 const md = useMarkdown();
 const { base64ToUTF8 } = useBase64Decoder();
-// This ref will hold the raw Markdown string.
-const markdownContent = ref("");
 
-// HTML based on the markdownContent ref.
-const htmlContent = computed(() => {
-  return md.render(markdownContent.value);
-});
+const markdownContent = ref<string>("");
+const htmlContent = computed(() => md.render(markdownContent.value));
+const loading = ref<boolean>(true);
+const error = ref<string | null>(null);
 
-const loading = ref(true);
-const error = ref(null);
+type GitHubContent = { content: string };
 
 // Fetch changelog content.
 onMounted(async () => {
   try {
-    const response = await $fetch(
-      "https://api.github.com/repos/scribe-org/Scribe-Android/contents/CHANGELOG_CONJUGATE.md"
+    const response = await $fetch<GitHubContent>(
+      "https://api.github.com/repos/scribe-org/Scribe-Anroid/contents/CHANGELOG_CONJUGATE.md"
     );
     // Decode the content.
     const changelog = base64ToUTF8(response.content);
     markdownContent.value = changelog;
-  } catch (err) {
-    error.value = err.message;
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      error.value = err.message;
+    } else {
+      error.value = String(err);
+    }
   } finally {
     loading.value = false;
   }

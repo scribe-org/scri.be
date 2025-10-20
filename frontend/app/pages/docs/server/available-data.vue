@@ -10,38 +10,38 @@
       {{ $t("i18n._global.available_data") }}
     </h1>
 
-    <p>{{ $t("i18n.pages.docs.server.available_data.under_development") }}</p>
+    <p>{{ $t("i18n.pages.docs.server.available_data.table_description") }}</p>
     <div class="my-6 flex justify-center">
       <div class="w-full max-w-4xl overflow-x-auto">
-        <table class="min-w-full divide-y divide-gray-200">
-          <thead class="bg-gray-50">
+        <table class="min-w-full divide-y divide-distinct-text">
+          <thead class="bg-highlight">
             <tr>
               <th
-                class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-primary-text"
               >
-                Languages
+                {{ $t("i18n.pages.docs.server.available_data.language") }}
               </th>
               <th
-                class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-primary-text"
               >
-                Nouns
+                {{ $t("i18n.pages.docs.server.available_data.nouns") }}
               </th>
               <th
-                class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-primary-text"
               >
-                Verbs
+                {{ $t("i18n.pages.docs.server.available_data.verbs") }}
               </th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-gray-200 bg-white">
+          <tbody class="divide-y divide-distinct-text bg-layer-0">
             <tr v-for="(item, index) in languageData" :key="index">
-              <td class="whitespace-nowrap px-6 py-4">
+              <td class="whitespace-nowrap px-6 py-4 text-primary-text">
                 {{ item.language_name }}
               </td>
-              <td class="whitespace-nowrap px-6 py-4">
+              <td class="whitespace-nowrap px-6 py-4 text-primary-text">
                 {{ item.nouns }}
               </td>
-              <td class="whitespace-nowrap px-6 py-4">
+              <td class="whitespace-nowrap px-6 py-4 text-primary-text">
                 {{ item.verbs }}
               </td>
             </tr>
@@ -52,27 +52,34 @@
   </PageDocs>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      languageData: [],
-      error: null,
-    };
-  },
-  async mounted() {
-    try {
-      const response = await fetch(
-        "https://scribe-server.toolforge.org/api/v1/language-stats"
+<script setup lang="ts">
+import { onMounted, ref } from "vue";
+
+type LanguageDataStat = Record<string, unknown>;
+
+const languageData = ref<LanguageDataStat[]>([]);
+const error = ref<string | null>(null);
+
+onMounted(async () => {
+  try {
+    const response = await fetch(
+      "https://scribe-server.toolforge.org/api/v1/language-stats"
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        `Network response was not ok: ${response.status} ${response.statusText}`
       );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      this.languageData = data || [];
-    } catch (error) {
-      this.error = error.message;
     }
-  },
-};
+
+    const data = (await response.json()) as LanguageDataStat[] | null;
+    languageData.value = data ?? [];
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      error.value = err.message;
+    } else {
+      error.value = String(err);
+    }
+  }
+});
 </script>
