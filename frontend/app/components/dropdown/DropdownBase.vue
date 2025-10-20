@@ -5,11 +5,11 @@
       <MenuButton
         @focus="expandOnFocus"
         v-slot="{ open }"
-        class="selected-option style-btn inline-flex h-12 w-full select-none whitespace-nowrap rounded-md border-none px-2 py-2 font-semibold"
+        class="selected-option style-btn inline-flex w-full select-none whitespace-nowrap rounded-md border-none px-2 py-2 font-semibold"
         :class="[
           {
             'pl-5': isSideMenu,
-            'flex items-center rounded-md pl-1': isSidebarLeftMenu,
+            'flex h-12 items-center rounded-md pl-1': isSidebarLeftMenu,
           },
           $attrs.class,
         ]"

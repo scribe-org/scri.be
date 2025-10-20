@@ -17,7 +17,7 @@
       class="flex justify-end px-4 py-3"
     >
       <SidebarRight>
-        <div class="flex-col space-y-2">
+        <div class="flex flex-col space-y-2">
           <BtnRouteInternal
             id="btn-get-in-touch-large"
             class="flex w-full border-0 bg-layer-0 hover:bg-highlight dark:hover:bg-highlight"
