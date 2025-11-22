@@ -1,13 +1,21 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
-      # - id: trailing-whitespace  # handled by Ruff and Prettier
+      - id: trailing-whitespace
       - id: end-of-file-fixer
         exclude: ^docs/|README.md$
       - id: check-yaml
       - id: check-added-large-files
-      # - id: pretty-format-json
+
+  - repo: https://github.com/to-sta/spdx-checker-pre-commit
+    rev: 0.1.5
+    hooks:
+      - id: spdx-license-checker
+        name: run spdx-checker license check
+        exclude: ^(?:.*/)?__init__\.py$
+        args: [-l, AGPL-3.0-or-later]
+        types_or: [python, ts, javascript, vue, css, html]
 
   - repo: local
     hooks:
