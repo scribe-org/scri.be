@@ -22,7 +22,7 @@ distlib==0.4.0
     # via virtualenv
 filelock==3.20.0
     # via virtualenv
-i18n-check==1.15.3
+i18n-check==1.15.4
     # via -r requirements-dev.in
 identify==2.6.15
     # via pre-commit
@@ -46,7 +46,7 @@ packaging==25.0
     #   i18n-check
 pip-tools==7.5.2
     # via -r requirements-dev.in
-platformdirs==4.5.0
+platformdirs==4.5.1
     # via virtualenv
 pre-commit==4.5.0
     # via -r requirements-dev.in
@@ -66,7 +66,7 @@ requests==2.32.5
     # via i18n-check
 rich==14.2.0
     # via i18n-check
-urllib3==2.5.0
+urllib3==2.6.0
     # via
     #   i18n-check
     #   requests
