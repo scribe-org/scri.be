@@ -13,3 +13,5 @@ checks:
     active: True
   missing-keys:
     active: False
+  key-naming:
+    keys-to-ignore: [i18n.app.*]
