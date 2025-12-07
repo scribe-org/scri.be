@@ -67,17 +67,17 @@
         </p>
         <template v-for="(connect, index) in links.connectLinks">
           <a
+            :aria-label="$t(connect.name)"
             class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
             :class="{ 'mt-3': index === 0 }"
             :href="connect.url"
             target="_blank"
-            :aria-label="$t(connect.name)"
           >
             <MetaTagSocialMedia
               class="!gap-2"
               :iconName="connect.iconName"
-              :text="$t(connect.name)"
               :iconSize="connect.iconSize"
+              :text="$t(connect.name)"
             />
           </a>
         </template>

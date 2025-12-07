@@ -4,8 +4,8 @@
     class="responsive-py-4 responsive-px-5 flex w-full flex-col items-center"
   >
     <PageContent
-      :imgURL="imgURL"
       :imgAltText="imgAltText"
+      :imgURL="imgURL"
       :includeBreadcrumbs="true"
     >
       <slot />

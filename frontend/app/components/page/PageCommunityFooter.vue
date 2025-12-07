@@ -40,7 +40,7 @@
         {{ $t("i18n.components.page_community_footer.invite_text_3_3") }}
       </li>
       <li>
-        {{ $t("i18n.components.page_community_footer.invite_text_4_1") }}
+        {{ $t("i18n.components.page_community_footer.visit_our") }}
         <a
           class="link-text items-center focus-brand"
           href="https://hosted.weblate.org/projects/scribe/scribe-i18n/"
@@ -66,7 +66,3 @@
     <slot />
   </div>
 </template>
-
-<script setup lang="ts">
-import { IconMap } from "~/types/icon-map";
-</script>

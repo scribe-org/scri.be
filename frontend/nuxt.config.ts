@@ -3,9 +3,9 @@
 
 import tailwindcss from "@tailwindcss/vite";
 
-import locales from "./app/utils/locales";
 import head from "./head";
 import modules from "./modules";
+import locales from "./shared/utils/locales";
 
 export default defineNuxtConfig({
   app: {

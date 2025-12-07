@@ -1,8 +1,8 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <header
-    ref="header"
     id="header"
+    ref="header"
     class="sticky top-0 z-10 duration-500"
     :class="{
       'bg-scribe-blue': headerOpacity == 1,
@@ -12,21 +12,21 @@
   >
     <!-- MARK: Mobile Header -->
     <div
-      v-if="!aboveMediumBP"
       id="mobile-header"
+      v-if="!aboveMediumBP"
       class="flex justify-end px-4 py-3"
     >
       <SidebarRight>
         <div class="flex flex-col space-y-2">
           <BtnRouteInternal
             id="btn-get-in-touch-large"
+            ariaLabel="i18n.components._global.view_docs_aria_label"
             class="flex w-full border-0 bg-layer-0 hover:bg-highlight dark:hover:bg-highlight"
             :cta="true"
-            linkTo="/docs"
-            label="i18n.components._global.documentation"
             fontSize="base"
+            label="i18n.components._global.documentation"
             :leftIcon="IconMap.DOCUMENTATION"
-            ariaLabel="i18n.components._global.view_docs_aria_label"
+            linkTo="/docs"
           />
           <DropdownTheme
             class="w-full"
@@ -40,19 +40,19 @@
       </SidebarRight>
     </div>
     <!-- MARK: Desktop Header -->
-    <div v-if="aboveMediumBP" id="desktop-header" class="mx-auto py-3">
+    <div id="desktop-header" v-if="aboveMediumBP" class="mx-auto py-3">
       <div class="responsive-px-5 flex items-center justify-end">
         <div>
           <div class="flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
             <BtnRouteInternal
               id="btn-get-in-touch-large"
+              ariaLabel="i18n.components._global.view_docs_aria_label"
               class="border-0 bg-layer-0 hover:bg-highlight dark:hover:bg-highlight"
               :cta="true"
-              linkTo="/docs"
-              label="i18n.components._global.documentation"
               fontSize="base"
+              label="i18n.components._global.documentation"
               :leftIcon="IconMap.DOCUMENTATION"
-              ariaLabel="i18n.components._global.view_docs_aria_label"
+              linkTo="/docs"
             />
             <!-- <BtnRouteInternal
               id="btn-get-in-touch-large"
@@ -74,9 +74,6 @@
 </template>
 
 <script setup lang="ts">
-import { IconMap } from "~/types/icon-map";
-import { DropdownLocation } from "~/types/location";
-
 const aboveMediumBP = useBreakpoint("md");
 
 const headerOpacity: Ref<number> = ref(1);

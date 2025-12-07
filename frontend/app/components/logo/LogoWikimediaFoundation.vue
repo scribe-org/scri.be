@@ -1,12 +1,12 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <svg
+    aria-hidden="true"
     class="fill-distinct-text"
-    width="562"
     height="562"
     viewBox="0 0 562 562"
+    width="562"
     xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
   >
     <path
       d="M29.5 392.2L41.4 353.6H57L68.8 392.2L82.1 353.6H98.3L74.9 420.7H63.8L49.1 374L34.5 420.7H23.4L0 353.6H16.2L29.5 392.2Z"

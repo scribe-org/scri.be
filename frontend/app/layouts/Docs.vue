@@ -3,10 +3,10 @@
   <NuxtLayout name="app">
     <SidebarLeft
       v-if="aboveMediumBP"
-      @mouseover="sidebarHover = true"
+      @blur="sidebarHover = false"
       @focus="sidebarHover = true"
       @mouseleave="sidebarHover = false"
-      @blur="sidebarHover = false"
+      @mouseover="sidebarHover = true"
       class="block"
     />
     <div class="flex flex-col md:h-screen md:overflow-y-scroll">
@@ -47,6 +47,8 @@ const handleWindowSizeChange = () => {
 const sidebarHover = ref(false);
 const sidebarContentScrollable = useState<boolean>("sidebarContentScrollable");
 
+const { getSidebarContentDynamicClass, getSidebarFooterDynamicClass } =
+  useSidebarClass();
 const sidebarContentDynamicClass = getSidebarContentDynamicClass(
   sidebarContentScrollable.value,
   sidebarHover

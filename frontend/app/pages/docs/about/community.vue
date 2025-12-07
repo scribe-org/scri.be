@@ -4,8 +4,8 @@
     <Title>{{ $t("i18n._global.our_community") }}</Title>
   </Head>
   <PageDocs
-    imgURL="/icons/docs/bootstrap_people"
     imgAltText="i18n.pages.docs.about._global.people_img_alt_text"
+    imgURL="/icons/docs/bootstrap_people"
   >
     <PageBreadcrumbs />
     <h1 class="pb-2 font-bold">
@@ -54,17 +54,13 @@
     </p>
     <PageCommunityFooter class="pt-4">
       <BtnRouteInternal
+        ariaLabel="i18n.pages.docs._global.return_to_docs_home_aria_label"
         class="w-full"
         :cta="true"
+        fontSize="lg"
         label="i18n.pages.docs._global.return_to_docs_home"
         linkTo="/"
-        fontSize="lg"
-        ariaLabel="i18n.pages.docs._global.return_to_docs_home_aria_label"
       />
     </PageCommunityFooter>
   </PageDocs>
 </template>
-
-<script setup lang="ts">
-import { IconMap } from "~/types/icon-map";
-</script>

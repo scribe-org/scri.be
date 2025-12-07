@@ -3,18 +3,18 @@
   <div class="flex flex-col space-y-2 px-1 pt-4 transition-all duration-500">
     <BtnRouteInternal
       id="btn-get-in-touch-large"
+      ariaLabel="i18n.components._global.view_docs_aria_label"
       :class="[getLinkClasses('/docs'), 'h-12']"
       :cta="true"
-      linkTo="/docs"
+      fontSize="base"
+      iconSize="1.2rem"
       :label="
         !sidebar.collapsed || !sidebar.collapsedSwitch
           ? 'i18n.components._global.documentation'
           : ''
       "
-      fontSize="base"
       :leftIcon="IconMap.DOCUMENTATION"
-      iconSize="1.2rem"
-      ariaLabel="i18n.components._global.view_docs_aria_label"
+      linkTo="/docs"
     />
     <DropdownLanguageKeyboards
       :class="getLinkClasses('/docs/keyboard-apps')"
@@ -44,9 +44,6 @@
 </template>
 
 <script setup lang="ts">
-import { IconMap } from "~/types/icon-map";
-import { DropdownLocation } from "~/types/location";
-
 const sidebar = useSidebar();
 const route = useRoute();
 
