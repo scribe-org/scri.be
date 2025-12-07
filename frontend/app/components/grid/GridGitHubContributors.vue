@@ -9,17 +9,17 @@
     <li v-for="item in githubShownData" :key="item.loginID">
       <NuxtLink
         class="flex w-20 flex-col items-center space-y-1 focus-brand"
-        :to="localePath(item.htmlUrl)"
         target="_blank"
+        :to="localePath(item.htmlUrl)"
       >
         <img
-          class="ring-light-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 h-16 w-16 rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
-          :src="item.avatarUrl"
           :alt="
             $t('i18n.components.grid_git_hub_contributors.img_alt_text', {
               github_user_id: item.loginID,
             })
           "
+          class="ring-light-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 h-16 w-16 rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
+          :src="item.avatarUrl"
         />
         <p
           class="text-light-text hover:text-light-text dark:text-dark-text dark:hover:text-dark-text w-full truncate text-center text-sm"
@@ -31,27 +31,27 @@
     <li v-if="hasMoreContributors">
       <button
         @click="onClickLoadMoreContributors"
-        class="relative flex w-20 flex-col items-center space-y-1 focus-brand"
         :aria-label="
           $t('i18n.components.grid_git_hub_contributors.show_more_aria_label')
         "
+        class="relative flex w-20 flex-col items-center space-y-1 focus-brand"
       >
         <span
           v-if="isLoading"
           class="absolute inline-flex h-[4rem] w-[4rem] animate-ping rounded-full border-4 border-scribe-blue opacity-75"
         ></span>
         <span
-          class="bg-light-section-div ring-light-section-div dark:bg-dark-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 flex h-16 w-16 items-center justify-center rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
           :alt="
             $t(
               'i18n.components.grid_git_hub_contributors.show_more_img_alt_text'
             )
           "
+          class="bg-light-section-div ring-light-section-div dark:bg-dark-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 flex h-16 w-16 items-center justify-center rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
         >
           <Icon
+            class="text-light-text dark:text-dark-text"
             :name="IconMap.THREE_DOTS_HORIZONTAL"
             size="3em"
-            class="text-light-text dark:text-dark-text"
           />
         </span>
         <p
@@ -69,8 +69,6 @@
 </template>
 
 <script setup lang="ts">
-import { IconMap } from "~/types/icon-map";
-
 defineProps({
   alwaysCentered: {
     type: Boolean,

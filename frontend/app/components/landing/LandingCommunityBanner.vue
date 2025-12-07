@@ -7,51 +7,47 @@
       class="flex justify-center space-x-12 text-lg sm:space-x-8 xl:space-x-12 xl:text-xl"
     >
       <a
+        :aria-label="$t('i18n.components._global.github')"
         class="focus-brand hover:text-distinct-text"
         href="https://github.com/scribe-org"
         target="_blank"
-        :aria-label="$t('i18n.components._global.github')"
       >
         <MetaTagSocialMedia
           class="!gap-2"
           :iconName="IconMap.GITHUB"
-          :text="$t('i18n.components._global.github')"
           iconSize="1.1em"
+          :text="$t('i18n.components._global.github')"
           textUtilityClasses="sr-only sm:not-sr-only"
         />
       </a>
       <a
+        :aria-label="$t('i18n.components._global.matrix')"
         class="focus-brand hover:text-distinct-text"
         href="https://matrix.to/#/#scribe_community:matrix.org"
         target="_blank"
-        :aria-label="$t('i18n.components._global.matrix')"
       >
         <MetaTagSocialMedia
           class="!gap-2"
           :iconName="IconMap.MATRIX"
-          :text="$t('i18n.components._global.matrix')"
           iconSize="1.061em"
+          :text="$t('i18n.components._global.matrix')"
           textUtilityClasses="sr-only sm:not-sr-only"
         />
       </a>
       <a
+        :aria-label="$t('i18n.components._global.mastodon')"
         class="focus-brand hover:text-distinct-text"
         href="https://wikis.world/@scribe"
         target="_blank"
-        :aria-label="$t('i18n.components._global.mastodon')"
       >
         <MetaTagSocialMedia
           class="!gap-2"
           :iconName="IconMap.MASTODON"
-          :text="$t('i18n.components._global.mastodon')"
           iconSize="1em"
+          :text="$t('i18n.components._global.mastodon')"
           textUtilityClasses="sr-only sm:not-sr-only"
         />
       </a>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { IconMap } from "~/types/icon-map";
-</script>

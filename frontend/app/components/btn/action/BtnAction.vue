@@ -2,25 +2,23 @@
 <template>
   <button
     :id="id"
+    :aria-label="$t(ariaLabel)"
     class="btn-base-class rounded-md xl:rounded-lg"
     :class="btnDynamicClass"
-    :aria-label="$t(ariaLabel)"
   >
     <BtnIconsLabel
-      :label="label"
+      :counter="counter"
       :hideLabelOnMobile="hideLabelOnMobile"
+      :iconSize="iconSize"
+      :label="label"
       :leftIcon="leftIcon"
       :rightIcon="rightIcon"
-      :iconSize="iconSize"
-      :counter="counter"
     />
   </button>
 </template>
 
 <script setup lang="ts">
-import type { BtnAction } from "~/types/btn-props";
-
-import { getBtnDynamicClass } from "~/utils/btnUtils";
+import type { BtnAction } from "#shared/types/btn-props";
 
 const props = defineProps<BtnAction>();
 

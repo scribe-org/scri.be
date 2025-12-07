@@ -3,8 +3,9 @@
   <Menu as="div" class="relative inline-block text-left">
     <div>
       <MenuButton
-        @focus="expandOnFocus"
         v-slot="{ open }"
+        @focus="expandOnFocus"
+        :aria-label="$t(`${menuButtonAriaLabel}`)"
         class="selected-option style-btn inline-flex w-full select-none whitespace-nowrap rounded-md border-none px-2 py-2 font-semibold"
         :class="[
           {
@@ -13,7 +14,6 @@
           },
           $attrs.class,
         ]"
-        :aria-label="$t(`${menuButtonAriaLabel}`)"
       >
         <div
           class="flex items-center justify-between space-x-2 text-sm"
@@ -24,10 +24,10 @@
         >
           <div class="flex items-center space-x-2">
             <Icon
-              :name="menuButtonIcon"
               :class="{
                 'h-5 w-5 flex-shrink-0 text-center': isSidebarLeftMenu,
               }"
+              :name="menuButtonIcon"
               :size="isSidebarLeftMenu ? '1.3rem' : ''"
             />
             <Transition name="text">
@@ -62,12 +62,12 @@
                 absolute: isSideMenu,
                 'absolute right-2': isSidebarLeftMenu,
               }"
-              :size="isSidebarLeftMenu ? '1.3rem' : ''"
               :name="
                 isSidebarLeftMenu
                   ? `${IconMap.CHEVRON_UP}`
                   : `${IconMap.CHEVRON_DOWN}`
               "
+              :size="isSidebarLeftMenu ? '1.3rem' : ''"
             />
           </Transition>
         </div>
@@ -89,9 +89,6 @@
 
 <script setup lang="ts">
 import { Menu, MenuButton, MenuItems } from "@headlessui/vue";
-
-import { IconMap } from "~/types/icon-map";
-import { DropdownLocation } from "~/types/location";
 
 const props = defineProps<{
   location?: DropdownLocation;

@@ -10,15 +10,15 @@
       <!-- Note: image on top of content. -->
       <img
         v-if="$colorMode.value == 'light' && !aboveLargeBP"
+        :alt="$t(imageAltText)"
         class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgURL + '_light.png'"
-        :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark' && !aboveLargeBP"
+        :alt="$t(imageAltText)"
         class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgURL + '_dark.png'"
-        :alt="$t(imageAltText)"
       />
       <h2
         class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl lg:text-left xl:text-4xl"
@@ -37,24 +37,24 @@
       </p>
       <BtnRouteInternal
         :id="btnId1"
+        :ariaLabel="btnAriaLabel1 ? btnAriaLabel1 : ''"
         :cta="true"
+        fontSize="xl"
         :label="`${btnText1}`"
         :linkTo="`${btnUrl1}`"
-        fontSize="xl"
-        :ariaLabel="btnAriaLabel1 ? btnAriaLabel1 : ''"
       />
     </div>
     <!-- Note: image right of content. -->
     <div v-if="aboveLargeBP" class="h-60 w-60 xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
-        :src="imgURL + '_light.png'"
         :alt="$t(imageAltText)"
+        :src="imgURL + '_light.png'"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
-        :src="imgURL + '_dark.png'"
         :alt="$t(imageAltText)"
+        :src="imgURL + '_dark.png'"
       />
     </div>
   </div>
@@ -66,13 +66,13 @@
     <div v-if="aboveLargeBP" class="h-60 w-60 xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
-        :src="imgURL + '_light.png'"
         :alt="$t(imageAltText)"
+        :src="imgURL + '_light.png'"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
-        :src="imgURL + '_dark.png'"
         :alt="$t(imageAltText)"
+        :src="imgURL + '_dark.png'"
       />
     </div>
     <div
@@ -81,15 +81,15 @@
       <!-- Note: image on top of content. -->
       <img
         v-if="$colorMode.value == 'light' && !aboveLargeBP"
+        :alt="$t(imageAltText)"
         class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgURL + '_light.png'"
-        :alt="$t(imageAltText)"
       />
       <img
         v-else-if="$colorMode.value == 'dark' && !aboveLargeBP"
+        :alt="$t(imageAltText)"
         class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgURL + '_dark.png'"
-        :alt="$t(imageAltText)"
       />
       <h2
         class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl lg:text-left xl:text-4xl"
@@ -108,11 +108,11 @@
       </p>
       <BtnRouteInternal
         :id="btnId1"
+        :ariaLabel="btnAriaLabel1 ? btnAriaLabel1 : ''"
         :cta="true"
+        fontSize="xl"
         :label="`${btnText1}`"
         :linkTo="`${btnUrl1}`"
-        fontSize="xl"
-        :ariaLabel="btnAriaLabel1 ? btnAriaLabel1 : ''"
       />
     </div>
   </div>
@@ -139,21 +139,21 @@
       <div class="style-btns-next-to-one-another">
         <BtnRouteInternal
           :id="btnId1"
+          :ariaLabel="btnAriaLabel1 ? btnAriaLabel1 : ''"
           class="w-full"
           :cta="true"
+          fontSize="xl"
           :label="`${btnText1}`"
           :linkTo="`${btnUrl1}`"
-          fontSize="xl"
-          :ariaLabel="btnAriaLabel1 ? btnAriaLabel1 : ''"
         />
         <BtnRouteInternal
           :id="btnId2"
+          :ariaLabel="btnAriaLabel2 ? btnAriaLabel2 : ''"
           class="w-full"
           :cta="true"
+          fontSize="xl"
           :label="`${btnText2}`"
           :linkTo="`${btnUrl2}`"
-          fontSize="xl"
-          :ariaLabel="btnAriaLabel2 ? btnAriaLabel2 : ''"
         />
       </div>
       <div>

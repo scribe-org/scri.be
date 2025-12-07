@@ -2,38 +2,38 @@
 <template>
   <DropdownBase
     class="dropdown-language"
+    :isMenuButtonUppercase="false"
     :location="location"
     :menuButtonIcon="IconMap.CONJUGATE"
-    menuButtonLabel="i18n._global.conjugate_apps"
-    :isMenuButtonUppercase="false"
     menuButtonAriaLabel="i18n.components.dropdown._global.open_menu_dropdown_aria_label"
+    menuButtonLabel="i18n._global.conjugate_apps"
   >
     <ul class="px-2 py-2">
       <NuxtLink to="/docs/conjugate">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
-            :isButton="false"
-            :iconName="IconMap.INDEX"
-            label="i18n.components.dropdown._global.index"
             :active="active || isCurrentPath('/docs/conjugate')"
             :class="{
               'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
                 isCurrentPath('/docs/conjugate'),
             }"
+            :iconName="IconMap.INDEX"
+            :isButton="false"
+            label="i18n.components.dropdown._global.index"
           />
         </MenuItem>
       </NuxtLink>
       <NuxtLink to="/docs/conjugate/learn-more">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel
-            :isButton="false"
-            :iconName="IconMap.INFORMATION_CIRCLE"
-            label="i18n._global.learn_more"
             :active="active || isCurrentPath('/docs/conjugate/learn-more')"
             :class="{
               'hover:bg-scribe-blue-darker dark:hover:bg-scribe-blue-lighter':
                 isCurrentPath('/docs/conjugate/learn-more'),
             }"
+            :iconName="IconMap.INFORMATION_CIRCLE"
+            :isButton="false"
+            label="i18n._global.learn_more"
           />
         </MenuItem>
       </NuxtLink>
@@ -73,10 +73,6 @@
 
 <script setup lang="ts">
 import { MenuItem } from "@headlessui/vue";
-
-import type { DropdownLocation } from "~/types/location";
-
-import { IconMap } from "~/types/icon-map";
 
 defineProps<{
   location?: DropdownLocation;

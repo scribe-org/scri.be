@@ -1,14 +1,24 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <PageDocs
-    imgURL="/icons/docs/bootstrap_clipboard_data"
     imgAltText="i18n.pages.docs.server._global.clipboard_data_img_alt_text"
+    imgURL="/icons/docs/bootstrap_clipboard_data"
   >
     <PageBreadcrumbs />
     <h1 class="pb-2 font-bold">
       {{ $t("i18n._global.available_data") }}
     </h1>
     <p>{{ $t("i18n.pages.docs.server.available_data.table_description") }}</p>
+    <p>
+      {{ $t("i18n.pages.docs.server.available_data.download_available_data") }}:
+      <a
+        class="link-text"
+        href="https://scribe-server.toolforge.org/packs/sqlite"
+      >
+        scribe-server.toolforge.org/packs/sqlite
+      </a>
+      .
+    </p>
     <div class="my-6 flex">
       <div class="w-full max-w-4xl overflow-x-auto">
         <table class="min-w-full divide-y divide-distinct-text">

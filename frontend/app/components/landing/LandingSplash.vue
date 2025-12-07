@@ -5,9 +5,9 @@
   >
     <div class="flex justify-center">
       <img
+        alt="i18n.components.landing_splash.scribe_logo_img_alt_text"
         class="w-[50%] md:w-[40%]"
         :src="SCRIBE_LOGO_URL"
-        alt="i18n.components.landing_splash.scribe_logo_img_alt_text"
       />
     </div>
   </div>

@@ -4,19 +4,17 @@
     <CardDocsEntry
       v-for="card in cards"
       :key="card.id"
-      :url="route.path.replace(/\/$/, '') + '/' + card.url"
-      :iconURL="card.iconURL"
+      :description="card.description"
       :iconSize="card.iconSize"
+      :iconURL="card.iconURL"
       :imgAltText="card.imgAltText"
       :title="card.title"
-      :description="card.description"
+      :url="route.path.replace(/\/$/, '') + '/' + card.url"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import type { DocsEntry } from "~/types/docs-entry";
-
 defineProps<{
   cards?: DocsEntry[];
 }>();

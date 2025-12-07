@@ -4,8 +4,8 @@
     <Title>{{ $t("i18n._global.blog_posts") }}</Title>
   </Head>
   <PageDocs
-    imgURL="/icons/docs/bootstrap_file_text"
     imgAltText="i18n.pages.docs.about._global.file_text_img_alt_text"
+    imgURL="/icons/docs/bootstrap_file_text"
   >
     <PageBreadcrumbs />
     <h1 class="pb-2 font-bold">
@@ -603,12 +603,12 @@
     </div>
     <PageCommunityFooter>
       <BtnRouteInternal
+        ariaLabel="i18n.pages.docs._global.return_to_docs_home_aria_label"
         class="w-full"
         :cta="true"
+        fontSize="lg"
         label="i18n.pages.docs._global.return_to_docs_home"
         linkTo="/"
-        fontSize="lg"
-        ariaLabel="i18n.pages.docs._global.return_to_docs_home_aria_label"
       />
     </PageCommunityFooter>
   </PageDocs>

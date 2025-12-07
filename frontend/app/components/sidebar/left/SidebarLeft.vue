@@ -1,17 +1,15 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <aside
-    @mouseover="collapseSidebar(false)"
+    id="sidebar-left"
+    ref="sidebarWrapper"
     @focus="collapseSidebar(false)"
-    @mouseleave="collapseSidebar(true)"
     @focusout="
       collapseSidebar(true);
       handleFocusOut($event);
     "
-    ref="sidebarWrapper"
-    id="sidebar-left"
-    role="menu"
-    tabindex="0"
+    @mouseleave="collapseSidebar(true)"
+    @mouseover="collapseSidebar(false)"
     class="absolute z-40 block h-full flex-col border-r border-section-div bg-scribe-blue-lighter transition-all duration-500 elem-shadow-sm focus-brand dark:bg-scribe-blue-darker md:flex"
     :class="{
       'w-56': !sidebar.collapsed || sidebar.collapsedSwitch == false,
@@ -24,6 +22,8 @@
         sidebar.collapsedSwitch == true &&
         sidebarContentScrollable,
     }"
+    role="menu"
+    tabindex="0"
   >
     <SidebarLeftHeader
       @toggle-pressed="setSidebarContentScrollable()"

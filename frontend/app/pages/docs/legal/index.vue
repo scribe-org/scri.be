@@ -13,15 +13,11 @@
   </div>
   <div class="responsive-px-5 flex-col space-y-4 pb-10">
     <p>{{ $t("i18n.pages.docs._global.legal_description") }}</p>
-    <GridDocEntries class="responsive-py-1" :cards="cards" />
+    <GridDocEntries :cards="cards" class="responsive-py-1" />
   </div>
 </template>
 
 <script setup lang="ts">
-import type { DocsEntry } from "~/types/docs-entry";
-
-import { IconMap } from "~/types/icon-map";
-
 const cards: DocsEntry[] = [
   {
     id: 0,

@@ -17,7 +17,7 @@
             >
               {{ $t(platform.name) }}
             </NuxtLink>
-            <a v-else :href="platform.url" class="focus-brand" target="_blank">
+            <a v-else class="focus-brand" :href="platform.url" target="_blank">
               {{ $t(platform.name) }}
             </a>
           </div>
@@ -38,11 +38,11 @@
         <div class="mt-1 flex gap-10 sm:mt-0 sm:flex-col sm:gap-0">
           <template v-for="(connect, index) in links.connectLinks">
             <a
+              :aria-label="$t(connect.name)"
               class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
               :class="{ 'mt-3': index === 0 }"
               :href="connect.url"
               target="_blank"
-              :aria-label="$t(connect.name)"
             >
               <MetaTagSocialMedia
                 class="text-2xl sm:text-base"

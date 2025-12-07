@@ -9,8 +9,8 @@
       </Title>
     </Head>
     <PageDocs
-      imgURL="/images/landing/data"
       imgAltText="i18n.pages._global.data_img_alt_text"
+      imgURL="/images/landing/data"
     >
       <PageBreadcrumbs />
       <h1 class="pb-2 font-bold">
@@ -34,12 +34,12 @@
       </ul>
       <PageCommunityFooter>
         <BtnRouteInternal
+          ariaLabel="i18n.pages.docs._global.return_to_docs_home_aria_label"
           class="w-full"
           :cta="true"
+          fontSize="lg"
           label="i18n.pages.docs._global.return_to_docs_home"
           linkTo="/"
-          fontSize="lg"
-          ariaLabel="i18n.pages.docs._global.return_to_docs_home_aria_label"
         />
       </PageCommunityFooter>
     </PageDocs>

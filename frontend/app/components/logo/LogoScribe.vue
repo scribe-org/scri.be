@@ -1,23 +1,23 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <NuxtLink
-    :to="localePath('/')"
-    class="focus-brand"
     :aria-label="$t('i18n.components.logo_scribe.logo_aria_label')"
+    class="focus-brand"
+    :to="localePath('/')"
   >
     <svg
-      width="831"
+      fill="none"
       height="405"
       viewBox="0 0 831 405"
-      fill="none"
+      width="831"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_405_523)">
         <path
           d="M234.961 38.5728H347.165M208.971 55.0693V102.59C208.971 102.747 209.033 102.899 209.144 103.01C209.255 103.122 209.406 103.184 209.562 103.184H359.624C359.706 103.186 359.789 103.171 359.865 103.139C359.942 103.107 360.01 103.059 360.067 102.999L402.953 55.5152C403.046 55.407 403.098 55.2684 403.098 55.125C403.098 54.9817 403.046 54.8431 402.953 54.7349L359.993 7.17727C359.936 7.11683 359.868 7.06906 359.791 7.03706C359.715 7.00506 359.632 6.98954 359.55 6.9915H209.562C209.406 6.9915 209.255 7.05413 209.144 7.16561C209.033 7.2771 208.971 7.42831 208.971 7.58597V55.0693Z"
+          shape-rendering="crispEdges"
           stroke="white"
           stroke-width="10"
-          shape-rendering="crispEdges"
         />
       </g>
       <g filter="url(#filter1_d_405_523)">
@@ -39,19 +39,19 @@
       <defs>
         <filter
           id="filter0_d_405_523"
+          color-interpolation-filters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="116.193"
+          width="214.127"
           x="198.971"
           y="1.99133"
-          width="214.127"
-          height="116.193"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
+            result="hardAlpha"
             type="matrix"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
           />
           <feOffset dy="5" />
           <feGaussianBlur stdDeviation="2.5" />
@@ -61,32 +61,32 @@
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
           />
           <feBlend
-            mode="normal"
             in2="BackgroundImageFix"
+            mode="normal"
             result="effect1_dropShadow_405_523"
           />
           <feBlend
-            mode="normal"
             in="SourceGraphic"
             in2="effect1_dropShadow_405_523"
+            mode="normal"
             result="shape"
           />
         </filter>
         <filter
           id="filter1_d_405_523"
+          color-interpolation-filters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="324.183"
+          width="807.95"
           x="0"
           y="79.9213"
-          width="807.95"
-          height="324.183"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
+            result="hardAlpha"
             type="matrix"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
           />
           <feOffset dy="5" />
           <feGaussianBlur stdDeviation="5" />
@@ -96,32 +96,32 @@
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
           />
           <feBlend
-            mode="normal"
             in2="BackgroundImageFix"
+            mode="normal"
             result="effect1_dropShadow_405_523"
           />
           <feBlend
-            mode="normal"
             in="SourceGraphic"
             in2="effect1_dropShadow_405_523"
+            mode="normal"
             result="shape"
           />
         </filter>
         <filter
           id="filter2_d_405_523"
+          color-interpolation-filters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="290.718"
+          width="416.294"
           x="413.753"
           y="0"
-          width="416.294"
-          height="290.718"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
+            result="hardAlpha"
             type="matrix"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
           />
           <feOffset dy="5" />
           <feGaussianBlur stdDeviation="5" />
@@ -131,14 +131,14 @@
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
           />
           <feBlend
-            mode="normal"
             in2="BackgroundImageFix"
+            mode="normal"
             result="effect1_dropShadow_405_523"
           />
           <feBlend
-            mode="normal"
             in="SourceGraphic"
             in2="effect1_dropShadow_405_523"
+            mode="normal"
             result="shape"
           />
         </filter>
