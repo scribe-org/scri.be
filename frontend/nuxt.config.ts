@@ -64,8 +64,9 @@ export default defineNuxtConfig({
 
   i18n: {
     strategy: "prefix_and_default",
-    langDir: "locales",
-    vueI18n: "i18n.config.ts",
+    restructureDir: "./",
+    langDir: "./Scribe-i18n/i18n/locales",
+    vueI18n: "./i18n.config.ts",
     baseUrl: "https://scri.be",
     defaultLocale: "en",
     locales,

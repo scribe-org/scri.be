@@ -27,7 +27,7 @@
         btnText1="i18n._global.learn_more"
         btnUrl1="/docs/conjugate/learn-more"
         contentPosition="right"
-        header="i18n.pages.index.conjugation_apps_header"
+        header="i18n.pages._global.conjugation_apps"
         imageAltText="i18n.pages._global.conjugate_img_alt_text"
         :imgURL="CONJUGATE_IMAGE_URL"
         tagline="i18n.pages.index.conjugate_tagline"
