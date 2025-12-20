@@ -47,7 +47,7 @@ const resourcesLinks = [
 
 const organizationLinks = [
   {
-    name: "i18n.components.footer_website.about",
+    name: "i18n._global.about_scribe",
     url: "/docs/about/community",
   },
   {

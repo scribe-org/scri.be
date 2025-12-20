@@ -5,7 +5,7 @@
   >
     <Head>
       <Title>
-        {{ $t("i18n.pages.docs.conjugate.learn_more.conjugation_apps") }}
+        {{ $t("i18n.pages._global.conjugation_apps") }}
       </Title>
     </Head>
     <PageDocs
@@ -14,7 +14,7 @@
     >
       <PageBreadcrumbs />
       <h1 class="pb-2 font-bold">
-        {{ $t("i18n.pages.docs.conjugate.learn_more.conjugation_apps") }}
+        {{ $t("i18n.pages._global.conjugation_apps") }}
       </h1>
       <p>
         {{ $t("i18n.pages.docs.conjugate.learn_more.intro_paragraph") }}
