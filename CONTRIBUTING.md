@@ -161,6 +161,9 @@ Scribe is very open to contributions from people in the early stages of their co
 > </p>
 > </details>
 
+> [!NOTE]
+> Cloning this repository with `--recurse-submodules` also clones a copy of [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where the texts for Scribe projects are localized. When pulling changes from `main`, you should use the following command: `git pull --recurse-submodules`.
+
 ```bash
 # Clone your fork of the repo into the current directory (including submodules).
 git clone --recurse-submodules https://github.com/<your-username>/scri.be.git
