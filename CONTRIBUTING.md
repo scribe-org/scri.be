@@ -23,7 +23,7 @@ If you have questions or would like to communicate with the team, please [join u
 - [Bug reports](#bug-reports)
 - [Feature requests](#feature-requests)
 - [Pull requests](#pull-requests)
-- [Localization](#localization)
+- [Website Localization](#website-localization)
 - [Documentation](#documentation)
 - [Accessibility](#accessibility-)
 - [Internationalization](#internationalization-)
@@ -162,7 +162,7 @@ Scribe is very open to contributions from people in the early stages of their co
 > </details>
 
 > [!NOTE]
-> Cloning this repository with `--recurse-submodules` also clones a copy of [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where the texts for Scribe projects are localized. When pulling changes from `main`, you should use the following command: `git pull --recurse-submodules`.
+> Cloning this repository with `--recurse-submodules` also clones a copy of [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where the texts for Scribe projects are localized.  When pulling changes from `main`, you should also run the following command: `git submodule update --init --recursive`.
 
 ```bash
 # Clone your fork of the repo into the current directory (including submodules).
@@ -380,6 +380,18 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description.
 
 Thank you in advance for your contributions!
+
+<a id="website-localization"></a>
+
+## Website Localization [`⇧`](#contents)
+
+<a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
+  <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WeblateLogo.png" width="125" alt="Visit Weblate project" align="right">
+</a>
+
+Being a community that focusses on language learning, localization plays a big part in what Scribe will eventually be. Those interested are more than welcome to join the team at [scribe-org/Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where we work on localizing all Scribe applications via [Weblate](https://weblate.org/).
+
+Please run the [update_i18n_keys.sh](./update_i18n_keys.sh) script to load in the most recent version of the [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) app texts into scri.be.
 
 <a id="documentation"></a>
 
