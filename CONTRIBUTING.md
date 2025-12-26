@@ -154,7 +154,7 @@ Scribe is very open to contributions from people in the early stages of their co
 >
 > To run git commands with SSH, remember then to substitute the HTTPS URL, `https://github.com/...`, with the SSH one, `git@github.com:...`.
 >
-> - e.g. Cloning now becomes `git clone git@github.com:<your-username>/scri.be.git`
+> - e.g. Cloning (with submodules) now becomes `git clone --recurse-submodules  git@github.com:<your-username>/scri.be.git`
 >
 > GitHub also has their documentation on how to [Generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 🔑
 >
@@ -162,8 +162,8 @@ Scribe is very open to contributions from people in the early stages of their co
 > </details>
 
 ```bash
-# Clone your fork of the repo into the current directory.
-git clone https://github.com/<your-username>/scri.be.git
+# Clone your fork of the repo into the current directory (including submodules).
+git clone --recurse-submodules https://github.com/<your-username>/scri.be.git
 # Navigate to the newly cloned directory.
 cd scri.be
 # Assign the original repo to a remote called "upstream".
