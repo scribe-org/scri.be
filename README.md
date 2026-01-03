@@ -32,6 +32,7 @@ Scribe apps are available on [iOS](https://github.com/scribe-org/Scribe-iOS), [A
 
 - [Contributing](#contributing)
 - [Environment Setup](#environment-setup)
+- [Localization](#localization)
 - [Featured By](#featured-by)
 
 <a id="contributing"></a>
@@ -216,6 +217,22 @@ The following are the current and planned technologies for [scri.be](https://scr
 
 > [!NOTE]
 > Those new to any frameworks or technologies who want to work on their skills are more than welcome to contribute!
+
+<a id="lozalization"></a>
+
+# Localization [`⇧`](#contents)
+
+<a href="https://hosted.weblate.org/projects/scribe">
+  <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WeblateLogo.png" width="125" alt="Visit the Weblate project" align="right">
+</a>
+
+Localization of Scribe is done via [Weblate](https://weblate.org). Those interested are more than welcome to join the team at [scribe-org/Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where we work on localizing all Scribe applications. Please also join us in the [localization project on Weblate](https://hosted.weblate.org/projects/scribe) and the [Localization channel on Matrix](https://matrix.to/#/#scribe-localization:matrix.org)!
+
+### Progress
+
+<a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
+    <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
+</a>
 
 <a id="featured-by"></a>
 
