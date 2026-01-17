@@ -18,6 +18,28 @@
       <p>
         {{ $t("i18n.pages.docs.about.blog_posts.lack_of_localization_notice") }}
       </p>
+      <h3>2026</h3>
+      <ul class="list-disc pl-6">
+        <li>
+          January:
+          <a
+            class="link-text"
+            href="https://purnamasrahayu.hashnode.dev/midpoint-internship-report-finding-the-ground-before-building-up"
+            target="_blank"
+          >
+            Blog post on Hashnode
+          </a>
+          describing midpoint progress of connecting the Scribe client
+          applications to the Scribe server for
+          <a
+            class="link-text"
+            href="https://www.outreachy.org/"
+            target="_blank"
+          >
+            Outreachy
+          </a>
+        </li>
+      </ul>
       <h3>2025</h3>
       <ul class="list-disc pl-6">
         <li>
