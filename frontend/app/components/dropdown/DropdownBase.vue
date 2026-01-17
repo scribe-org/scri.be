@@ -1,6 +1,6 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
-  <Menu as="div" class="relative inline-block text-left">
+  <Menu :key="menuKey" as="div" class="relative inline-block text-left">
     <div>
       <MenuButton
         v-slot="{ open }"
@@ -108,6 +108,17 @@ const isSidebarLeftMenu = computed(() => {
 const isSideMenu = computed(() => {
   return props.location === DropdownLocation.SIDE_MENU;
 });
+
+const menuKey = ref(0);
+
+watch(
+  () => sidebar.collapsed,
+  (val) => {
+    if (val && isSidebarLeftMenu.value) {
+      menuKey.value += 1;
+    }
+  }
+);
 
 const expandOnFocus = () => {
   if (sidebar.collapsed === true) {
