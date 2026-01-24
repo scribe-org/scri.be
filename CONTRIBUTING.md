@@ -177,21 +177,27 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
   - `origin` (forked repository)
   - `upstream` (scri.be repository)
 
-4. Create a virtual environment for the developer tools, activate it and install dependencies:
+4. Create a virtual environment for i18n-check (Python `>=3.12`), activate it and install dependencies:
 
-    ```bash
-    # Unix or MacOS:
-    python3 -m venv venv
-    source venv/bin/activate
+   > [!NOTE]
+   > First, install `uv` if you don't already have it by following the [official installation guide](https://docs.astral.sh/uv/getting-started/installation/).
 
-    # Windows:
-    python -m venv venv
-    venv\Scripts\activate.bat
+   ```bash
+   uv sync --all-extras  # create .venv and install all dependencies from uv.lock
 
-    # After activating venv:
-    pip install --upgrade pip
-    pip install -r requirements-dev.txt
-    ```
+   # Unix or macOS:
+   source .venv/bin/activate
+
+   # Windows:
+   .venv\Scripts\activate.bat  # .venv\Scripts\activate.ps1 (PowerShell)
+   ```
+
+> [!NOTE]
+> If you change dependencies in `pyproject.toml`, regenerate the lock file with the following command:
+>
+> ```bash
+> uv lock  # refresh uv.lock for reproducible installs
+> ```
 
 5. Start your docker images with the following:
 
@@ -213,6 +219,7 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
    ```bash
    # In the project root:
    pre-commit install
+   # uv run pre-commit run --all-files  # lint and fix common problems in the codebase
    ```
 
 > [!NOTE]
@@ -221,6 +228,11 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
 > ```bash
 > pip install pre-commit
 > ```
+
+You're now ready to work on `scri.be`!
+
+> [!NOTE]
+> Feel free to contact the team in the [Web room on Matrix](https://matrix.to/#/#scri.be:matrix.org) if you're having problems getting your environment setup!
 
 <a id="style-guide-"></a>
 
