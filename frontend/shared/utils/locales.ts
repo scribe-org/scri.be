@@ -4,6 +4,7 @@ import type { LocaleObject } from "@nuxtjs/i18n";
 export enum LOCALE_NAME {
   BENGALI = "বাংলা",
   ENGLISH = "English",
+  GREEK = "Ελληνικά",
   HINDI = "हिन्दी",
   MALAYALAM = "മലയാളം",
   NEPALI = "नेपाली",
@@ -14,6 +15,7 @@ export enum LOCALE_NAME {
 export enum LOCALE_CODE {
   BENGALI = "bn",
   ENGLISH = "en",
+  GREEK = "el",
   HINDI = "hi",
   MALAYALAM = "ml",
   NEPALI = "ne",
@@ -22,7 +24,7 @@ export enum LOCALE_CODE {
 }
 
 export const locales: LocaleObject<
-  "bn" | "en" | "hi" | "ml" | "ne" | "ta" | "te"
+  "bn" | "en" | "el" | "hi" | "ml" | "ne" | "ta" | "te"
 >[] = [
   {
     code: LOCALE_CODE.BENGALI,
@@ -33,6 +35,11 @@ export const locales: LocaleObject<
     code: LOCALE_CODE.ENGLISH,
     name: LOCALE_NAME.ENGLISH,
     file: "en-US.json",
+  },
+  {
+    code: LOCALE_CODE.GREEK,
+    name: LOCALE_NAME.GREEK,
+    file: "el.json",
   },
   {
     code: LOCALE_CODE.HINDI,
