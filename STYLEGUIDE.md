@@ -1,4 +1,6 @@
-# Style Guidelines for scri.be
+<a id="top"></a>
+
+# Style Guide
 
 Thank you for following our style guide! The team asks that you familiarize yourself with this guide and follow it for any contributions. Doing so makes PRs and general code collaboration much more effective :)
 
@@ -6,9 +8,7 @@ We'll also link to this document in cases where these guidelines have not been f
 
 If you have questions or would like to communicate with the team, please [join us in our public Matrix chat rooms](https://matrix.to/#/#scribe_community:matrix.org). We'd be happy to hear from you!
 
-<a id="contents"></a>
-
-## **Contents**
+## Contents
 
 - [Vue and Nuxt](#vue-and-nuxt)
   - [Page routing](#page-routing)
@@ -28,9 +28,7 @@ If you have questions or would like to communicate with the team, please [join u
 - [Tab size](#tab-size)
 - [Padding](#padding)
 
-<a id="vue-and-nuxt"></a>
-
-## Vue and Nuxt [`⇧`](#contents)
+## Vue and Nuxt
 
 > [!NOTE]
 > For VS Code users: it is recommended to install [Vue extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to enable in-editor type-checking.
@@ -67,15 +65,15 @@ Vue files (`.vue`) are Single-File Components that have `<template>`, `<script>`
 
 Please see the [Vue.js style guide](https://vuejs.org/style-guide) for general suggestions on how to write Vue files.
 
-<a id="page-routing"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-### Page Routing [`⇧`](#contents)
+### Page Routing
 
 Page routing should use the `<NuxtLink />` component wherever possible to assure that the platform maintains the localization path of the user. If an external link via an `<a>` tag should be set, then please include `target="_blank"` to open a new tab (unless it's an email href).
 
-<a id="breakpoints"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-### Breakpoints [`⇧`](#contents)
+### Breakpoints
 
 scri.be uses Tailwind for CSS, and some parts of components will be conditionally rendered based on Tailwind breakpoints, but we want to avoid using it to show and hide whole components. The reason for this is that using CSS in this way means that unneeded TypeScript for the hidden components will still run on page load. Please use `useBreakpoint` for all conditional rendering of full components.
 
@@ -98,9 +96,9 @@ scri.be uses Tailwind for CSS, and some parts of components will be conditionall
     </template>
     ```
 
-<a id="typescript"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## TypeScript [`⇧`](#contents)
+## TypeScript
 
 - Create general frontend types in the [frontend/types](https://github.com/scribe-org/scri.be/tree/main/frontend/types) directory
 - When typing Arrays, use `arrayElementType[]` rather than the generic type `Array<T>` unless [extending](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#arrays):
@@ -144,9 +142,9 @@ Before opening a new PR, it is recommended to first generate the current types, 
 
 Within VS Code TS errors are visible, however, running these commands will help to ensure the new code does not introduce unintended TS errors at build time. Existing TS errors may be ignored. PRs are always welcome to address these errors!
 
-<a id="tailwind"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Tailwind [`⇧`](#contents)
+## Tailwind
 
 scri.be uses [Tailwind CSS](https://tailwindcss.com/) for CSS styling and [Headless UI](https://headlessui.com/) unstyled, accessible components for more complex page elements like dropdowns and popups. Tailwind styles are applied via space-separated `class="STYLE"` attributes on HTML elements in Vue `<template>` blocks. Generally these class attributes should be the first applied to an element and thus proceed all Vue component props so differences from shared styling are apparent:
 
@@ -155,9 +153,9 @@ scri.be uses [Tailwind CSS](https://tailwindcss.com/) for CSS styling and [Headl
 
 Please note that as scri.be uses Tailwind, this means that `<style>` blocks are often times not used within Vue Single-File Components. `<style>` blocks should only be used in cases where including the styles within the `<template>` block would be overly complex or if Tailwind does not support a certain style parameter. The team understands that Tailwind at times can lead to very long style classes, but because of this we make use of the custom classes [below](#common-styles) to combine commonly used elements into consistent, responsive drop-in attributes.
 
-<a id="common-styles"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Common styles [`⇧`](#contents)
+## Common styles
 
 The following are custom Tailwind classes from [frontend/assets/css/tailwind.css](frontend/assets/css/tailwind.css) that are consistently used within the scri.be frontend codes:
 
@@ -173,15 +171,15 @@ The following are custom Tailwind classes from [frontend/assets/css/tailwind.css
 > [!NOTE]
 > There's also custom styles available to make development easier such as `bg-breakpoint-test` that changes the background of the element it's applied to based on the current breakpoint.
 
-<a id="formatting"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Formatting [`⇧`](#contents)
+## Formatting
 
 For the frontend scri.be uses [Prettier](https://prettier.io/) to format the code and [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) to sort Tailwind CSS classes. The team suggests that you set up your environment to autoformat using te these formatters on save. We have workflows to check formatting for pull requests and will notify you if something's wrong :)
 
-<a id="colors"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Colors [`⇧`](#contents)
+## Colors
 
 The files [frontend/app/assets/css/tailwind.css](frontend/app/assets/css/tailwind.css) and [frontend/tailwind.config.ts](frontend/tailwind.config.ts) define all colors for the platform. Light and dark mode versions of each color are defined and loaded in via variables such that we only need to use a singular identifier throughout the codebase. There are however cases where you still need to specify `dark:` for colors - specifically when the color identifier for light mode is different than dark mode.
 
@@ -196,9 +194,9 @@ Note further that Tailwind allows for alpha components for opacity to be applied
 <!-- The background of this div has 40% opacity. -->
 <div class="bg-scribe-blue/40"></div>
 ```
-<a id="text-styles"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Text styles [`⇧`](#contents)
+## Text styles
 
 > [!IMPORTANT]
 > The examples below use plain text to be easily understandable, but note that all texts should be defined using i18n keys in the `frontend/i18n` JSON files. Please see the [Localization](#localization) section below to learn more.
@@ -238,15 +236,15 @@ Only add utility overrides if absolutely necessary for a unique layout or design
 > [!NOTE]
 > Global styles for headings and body text help ensure accessibility, dark mode support, and visual consistency. Avoid duplicating or overriding them unless necessary.
 
-<a id="font"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-### Font [`⇧`](#contents)
+### Font
 
 The fonts for scri.be are [Red Hat Text and Red Hat Display](https://www.redhat.com/en/about/brand/standards/typography) as defined in [frontend/tailwind.config.ts](frontend/tailwind.config.ts). `Red Hat Text` is applied throughout the website and `Red Hat Display` is used for all headers by applying `font-display`. As headers are defined by `responsive-h#` custom classes that include `font-display` being applied globally to their corresponding `h#` HTML, it will be rare that you'll need to apply it directly. See the next section for more details.
 
-<a id="text-size"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-### Text size [`⇧`](#contents)
+### Text size
 
 [frontend/assets/css/tailwind.css](frontend/assets/css/tailwind.css) defines custom combinations of default and Scribe defined Tailwind header sizes. Responsive header classes all have `font-display` applied to them and are globally applied to the corresponding HTML `h#` tag. Note that headers should generally have a `bold` style applied to them as well, with for example page headers being defined as follows:
 
@@ -254,6 +252,8 @@ The fonts for scri.be are [Red Hat Text and Red Hat Display](https://www.redhat.
 <!-- The size and weight styles for page headers. -->
 <h1 class="font-bold">Page Header</h1>
 ```
+
+<sub><a href="#top">Back to top.</a></sub>
 
 ### Text colors
 
@@ -293,9 +293,9 @@ These utility classes are responsive to theme changes (light/dark) and should be
 > [!NOTE]
 > Need a new text color variant? Add it to `@layer components` and ensure it maps to a CSS variable for both themes.
 
-<a id="localization"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Localization [`⇧`](#contents)
+## Localization
 
 scri.be is a global community that makes software that must function in countless different regions around the world. To achieve this, all strings on the platform must be defined using keys found in the [i18n directory of the frontend](frontend/i18n). We further leverage [i18n-check](https://github.com/activist-org/i18n-check) to make sure that our i18n keys are valid.
 
@@ -344,9 +344,9 @@ Localization keys should be defined based on the file in which they're used with
 > [!NOTE]
 > Do your best and we'll help you out during the PR process! You can also join us in the [localization room on Matrix](https://matrix.to/#/#scribe-localization:matrix.org) if you have questions :)
 
-<a id="images-and-icons"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Images and icons [`⇧`](#contents)
+## Images and icons
 
 Please define all routes for images and icons in the respective [url registry utils file](frontend/utils/imageURLRegistry.s.ts) and [icon map enum](frontend/types/icon-map.ts).
 
@@ -354,14 +354,16 @@ scri.be uses [@nuxt/icon](https://github.com/nuxt-modules/icon) for all icons. I
 
 Custom icons for scri.be can further be found in the [Icon directory of the frontend components](frontend/components/icon). These icons can also be referenced via the `<Icon>` component via their file name (ex: `<Icon name="IconConjugationTable">` for the conjugation table icon). For Tailwind coloration note that we need to use `fill-COLOR` for the custom scri.be icons rather than `text-COLOR`.
 
-<a id="tab-size"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Tab size [`⇧`](#contents)
+## Tab size
 
 Code in the frontend for Vue (`<template>`, `<script>` and `<style>` blocks), TypeScript, CSS and other related files should use two spaces for tabs.
 
-<a id="padding"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Padding [`⇧`](#contents)
+## Padding
 
 There are a few custom padding classes that can be used for `px` and `py` styling as defined in [frontend/assets/css/tailwind.css](frontend/assets/css/tailwind.css). Please use consistent custom padding classes to assure that elements move together at different breakpoints.
+
+<sub><a href="#top">Back to top.</a></sub>
