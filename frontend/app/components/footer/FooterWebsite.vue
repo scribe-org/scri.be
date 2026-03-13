@@ -1,13 +1,12 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <footer
-    class="responsive-px-5 responsive-py-5 bg-scribe-blue text-primary-text"
+    class="responsive-px-5 responsive-py-5 bg-layer-2 grid grid-cols-1 items-center justify-center space-y-5 text-distinct-text lg:grid-cols-2 lg:justify-start lg:space-y-2"
   >
-    <!-- Note: Content Sections Top for Mobile -->
     <div class="flex flex-col items-center justify-center space-y-5 lg:hidden">
       <div class="flex flex-col items-center justify-center space-y-2">
         <p>
-          {{ $t("i18n.components.footer.flex._global.scribe_tagline") }}
+          {{ $t("i18n.components.footer_website.scribe_tagline") }}
         </p>
         <!-- Note: Platform Links -->
         <div class="flex flex-wrap items-center justify-center">
@@ -20,39 +19,45 @@
               >
                 {{ $t(platform.name) }}
               </NuxtLink>
-              <a v-else class="focus-brand" :href="platform.url" target="_blank">
+              <a
+                v-else
+                class="focus-brand"
+                :href="platform.url"
+                target="_blank"
+              >
                 {{ $t(platform.name) }}
               </a>
             </div>
             <div v-if="index < platformLinks.length - 1" class="px-2">
+              <!-- Keep formatting from being changed by Prettier. -->
               •
             </div>
           </template>
         </div>
       </div>
       <div
-        class="grid max-w-xl justify-items-center gap-0 text-center sm:grid-cols-1 sm:gap-12 sm:text-left md:gap-16"
+        class="col-span-1 flex flex-col items-center justify-center text-center sm:flex-row sm:items-start sm:gap-12 sm:text-start md:gap-16 lg:justify-end lg:gap-0 lg:space-x-6 xl:space-x-8 2xl:space-x-24"
       >
         <!-- Note: Connect Links -->
         <div class="text-center">
           <p class="text-xl font-medium">
-            {{ $t("i18n.components.footer.flex._global.connect") }}
+            {{ $t("i18n.components.footer_website.connect") }}
           </p>
           <div class="mt-1 flex gap-10 sm:mt-0 sm:flex-col sm:gap-0">
             <template v-for="(connect, index) in connectLinks">
               <a
-              :aria-label="$t(connect.name)"
-              class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
-              :class="{ 'mt-3': index === 0 }"
-              :href="connect.url"
-              target="_blank"
+                :aria-label="$t(connect.name)"
+                class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
+                :class="{ 'mt-3': index === 0 }"
+                :href="connect.url"
+                target="_blank"
               >
-              <MetaTagSocialMedia
-                class="text-2xl sm:text-base"
-                :iconName="connect.iconName"
-                :text="$t(connect.name)"
-                textUtilityClasses="sr-only sm:not-sr-only"
-              />
+                <MetaTagSocialMedia
+                  class="text-2xl sm:text-base"
+                  :iconName="connect.iconName"
+                  :text="$t(connect.name)"
+                  textUtilityClasses="sr-only sm:not-sr-only"
+                />
               </a>
             </template>
           </div>
@@ -60,9 +65,11 @@
         <!-- Note: Resources Links -->
         <div>
           <p class="mt-6 text-xl font-medium sm:mt-0">
-            {{ $t("i18n.components.footer.flex._global.resources") }}
+            {{ $t("i18n.components.footer_website.resources") }}
           </p>
-          <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
+          <div
+            class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0"
+          >
             <template v-for="(resource, index) in resourcesLinks">
               <p
                 class="mt-2 text-base hover:text-distinct-text"
@@ -84,9 +91,11 @@
         <!-- Note: Organization Links -->
         <div>
           <p class="mt-6 text-xl font-medium sm:mt-0">
-            {{ $t("i18n.components.footer.flex._global.organization") }}
+            {{ $t("i18n.components.footer_website.organization") }}
           </p>
-          <div class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0">
+          <div
+            class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0"
+          >
             <template v-for="(oLink, index) in organizationLinks">
               <p
                 class="mt-2 text-base hover:text-distinct-text"
@@ -124,15 +133,15 @@
           </template>
         </div>
         <a
-        class="mt-2 w-fit hover:text-distinct-text"
-        href="https://www.netlify.com/"
-        target="_blank"
+          class="mt-2 w-fit hover:text-distinct-text"
+          href="https://www.netlify.com/"
+          target="_blank"
         >
-        {{ $t("i18n.components.footer.flex._global.powered_by_netlify") }}
+          {{ $t("i18n.components.footer_website.powered_by_netlify") }}
         </a>
         <p class="mt-2">
           {{
-            $t("i18n.components.footer.flex._global.copyright", {
+            $t("i18n.components.footer_website.copyright", {
               year: new Date().getFullYear(),
             })
           }}
@@ -144,7 +153,7 @@
       <!-- Note: Content Sections Left -->
       <div class="mt-0 flex w-[80%] flex-col justify-items-start">
         <p class="mt-3">
-          {{ $t("i18n.components.footer.flex._global.scribe_tagline") }}
+          {{ $t("i18n.components.footer_website.scribe_tagline") }}
         </p>
         <!-- Note: Platform Links -->
         <div class="mt-2 flex justify-start">
@@ -157,11 +166,17 @@
               >
                 {{ $t(platform.name) }}
               </NuxtLink>
-              <a v-else class="focus-brand" :href="platform.url" target="_blank">
+              <a
+                v-else
+                class="focus-brand"
+                :href="platform.url"
+                target="_blank"
+              >
                 {{ $t(platform.name) }}
               </a>
             </div>
             <div v-if="index < platformLinks.length - 1" class="px-2">
+              <!-- Keep formatting from being changed by Prettier. -->
               •
             </div>
           </template>
@@ -175,20 +190,21 @@
               </NuxtLink>
             </div>
             <div v-if="index < legalLinks.length - 1" class="px-2">
+              <!-- Keep formatting from being changed by Prettier. -->
               •
             </div>
           </template>
         </div>
         <a
-        class="mt-2 w-fit focus-brand hover:text-distinct-text"
-        href="https://www.netlify.com/"
-        target="_blank"
+          class="mt-2 w-fit focus-brand hover:text-distinct-text"
+          href="https://www.netlify.com/"
+          target="_blank"
         >
-        {{ $t("i18n.components.footer.flex._global.powered_by_netlify") }}
+          {{ $t("i18n.components.footer_website.powered_by_netlify") }}
         </a>
         <div class="mt-2">
           {{
-            $t("i18n.components.footer.flex._global.copyright", {
+            $t("i18n.components.footer_website.copyright", {
               year: new Date().getFullYear(),
             })
           }}
@@ -201,29 +217,29 @@
         <!-- Note: Connect Links -->
         <div>
           <p class="text-xl font-medium">
-            {{ $t("i18n.components.footer.flex._global.connect") }}
+            {{ $t("i18n.components.footer_website.connect") }}
           </p>
           <template v-for="(connect, index) in connectLinks">
             <a
-            :aria-label="$t(connect.name)"
-            class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
-            :class="{ 'mt-3': index === 0 }"
-            :href="connect.url"
-            target="_blank"
+              :aria-label="$t(connect.name)"
+              class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
+              :class="{ 'mt-3': index === 0 }"
+              :href="connect.url"
+              target="_blank"
             >
-            <MetaTagSocialMedia
-              class="!gap-2"
-              :iconName="connect.iconName"
-              :iconSize="connect.iconSize"
-              :text="$t(connect.name)"
-            />
+              <MetaTagSocialMedia
+                class="!gap-2"
+                :iconName="connect.iconName"
+                :iconSize="connect.iconSize"
+                :text="$t(connect.name)"
+              />
             </a>
           </template>
         </div>
         <!-- Note: Resources Links -->
         <div>
           <p class="text-xl font-medium">
-            {{ $t("i18n.components.footer.flex._global.resources") }}
+            {{ $t("i18n.components.footer_website.resources") }}
           </p>
           <template v-for="(resource, index) in resourcesLinks">
             <p
@@ -239,7 +255,7 @@
         <!-- Note: Organization Links -->
         <div>
           <p class="text-xl font-medium">
-            {{ $t("i18n.components.footer.flex._global.organization") }}
+            {{ $t("i18n.components.footer_website.organization") }}
           </p>
           <template v-for="(oLink, index) in organizationLinks">
             <p
@@ -285,12 +301,14 @@ const connectLinks = [
     iconSize: "1em",
   },
 ];
+
 const resourcesLinks = [
   {
     name: "i18n.components._global.documentation",
     url: "/docs",
   },
 ];
+
 const organizationLinks = [
   {
     name: "i18n._global.about_scribe",
@@ -305,6 +323,7 @@ const organizationLinks = [
     url: "/docs/about/imprint",
   },
 ];
+
 const platformLinks = [
   {
     name: "i18n.components.footer_website.version_number",
@@ -322,6 +341,7 @@ const platformLinks = [
     url: "https://github.com/orgs/scribe-org/projects/1",
   },
 ];
+
 const legalLinks = [
   {
     name: "i18n._global.trademark_policy",
