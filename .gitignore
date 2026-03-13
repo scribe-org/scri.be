@@ -40,7 +40,3 @@ frontend/!.yarn/plugins
 frontend/!.yarn/releases
 frontend/!.yarn/sdks
 frontend/!.yarn/versions
-package-lock.json
-frontend/package-lock.json
-frontend/package-lock.json
-frontend/yarn.lock
