@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <footer
-    class="responsive-px-5 responsive-py-5 bg-layer-2 grid grid-cols-1 items-center justify-center space-y-5 text-distinct-text lg:grid-cols-2 lg:justify-start lg:space-y-2"
+    class="responsive-px-5 responsive-py-5 bg-scribe-blue text-primary-text"
   >
     <div class="flex flex-col items-center justify-center space-y-5 lg:hidden">
       <div class="flex flex-col items-center justify-center space-y-2">
