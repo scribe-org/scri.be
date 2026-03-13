@@ -10,7 +10,7 @@
         </p>
         <!-- Note: Platform Links -->
         <div class="flex flex-wrap items-center justify-center">
-          <template v-for="(platform, index) in platformLinks">
+          <template v-for="(platform, index) in links.platformLinks">
             <div class="hover:text-distinct-text">
               <NuxtLink
                 v-if="platform.isLocalePath"
@@ -28,7 +28,7 @@
                 {{ $t(platform.name) }}
               </a>
             </div>
-            <div v-if="index < platformLinks.length - 1" class="px-2">
+            <div v-if="index < links.platformLinks.length - 1" class="px-2">
               <!-- Keep formatting from being changed by Prettier. -->
               •
             </div>
@@ -44,7 +44,7 @@
             {{ $t("i18n.components.footer_website.connect") }}
           </p>
           <div class="mt-1 flex gap-10 sm:mt-0 sm:flex-col sm:gap-0">
-            <template v-for="(connect, index) in connectLinks">
+            <template v-for="(connect, index) in links.connectLinks">
               <a
                 :aria-label="$t(connect.name)"
                 class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
@@ -70,7 +70,7 @@
           <div
             class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0"
           >
-            <template v-for="(resource, index) in resourcesLinks">
+            <template v-for="(resource, index) in links.resourcesLinks">
               <p
                 class="mt-2 text-base hover:text-distinct-text"
                 :class="{ 'sm:mt-3': index === 0 }"
@@ -79,7 +79,7 @@
                   {{ $t(resource.name) }}
                 </NuxtLink>
                 <span
-                  v-if="index < resourcesLinks.length - 1"
+                  v-if="index < links.resourcesLinks.length - 1"
                   class="flex-inline px-2 sm:hidden"
                 >
                   •
@@ -96,7 +96,7 @@
           <div
             class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0"
           >
-            <template v-for="(oLink, index) in organizationLinks">
+            <template v-for="(oLink, index) in links.organizationLinks">
               <p
                 class="mt-2 text-base hover:text-distinct-text"
                 :class="{ 'sm:mt-3': index === 0 }"
@@ -105,7 +105,7 @@
                   {{ $t(oLink.name) }}
                 </NuxtLink>
                 <span
-                  v-if="index < organizationLinks.length - 1"
+                  v-if="index < links.organizationLinks.length - 1"
                   class="flex-inline px-2 sm:hidden"
                 >
                   •
@@ -118,13 +118,13 @@
       <div class="flex flex-col items-center justify-center">
         <!-- Note: Legal Links -->
         <div class="flex flex-wrap items-center justify-center">
-          <template v-for="(policy, index) in legalLinks">
+          <template v-for="(policy, index) in links.legalLinks">
             <div class="hover:text-distinct-text">
               <NuxtLink class="focus-brand" :to="localePath(policy.url)">
                 {{ $t(policy.name) }}
               </NuxtLink>
               <span
-                v-if="index < legalLinks.length - 1"
+                v-if="index < links.legalLinks.length - 1"
                 class="flex-inline px-2"
               >
                 •
@@ -157,7 +157,7 @@
         </p>
         <!-- Note: Platform Links -->
         <div class="mt-2 flex justify-start">
-          <template v-for="(platform, index) in platformLinks">
+          <template v-for="(platform, index) in links.platformLinks">
             <div class="hover:text-distinct-text">
               <NuxtLink
                 v-if="platform.isLocalePath"
@@ -175,7 +175,7 @@
                 {{ $t(platform.name) }}
               </a>
             </div>
-            <div v-if="index < platformLinks.length - 1" class="px-2">
+            <div v-if="index < links.platformLinks.length - 1" class="px-2">
               <!-- Keep formatting from being changed by Prettier. -->
               •
             </div>
@@ -183,13 +183,13 @@
         </div>
         <!-- Note: Legal Links -->
         <div class="mt-5 flex">
-          <template v-for="(policy, index) in legalLinks">
+          <template v-for="(policy, index) in links.legalLinks">
             <div class="hover:text-distinct-text">
               <NuxtLink class="focus-brand" :to="localePath(policy.url)">
                 {{ $t(policy.name) }}
               </NuxtLink>
             </div>
-            <div v-if="index < legalLinks.length - 1" class="px-2">
+            <div v-if="index < links.legalLinks.length - 1" class="px-2">
               <!-- Keep formatting from being changed by Prettier. -->
               •
             </div>
@@ -219,7 +219,7 @@
           <p class="text-xl font-medium">
             {{ $t("i18n.components.footer_website.connect") }}
           </p>
-          <template v-for="(connect, index) in connectLinks">
+          <template v-for="(connect, index) in links.connectLinks">
             <a
               :aria-label="$t(connect.name)"
               class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
@@ -241,7 +241,7 @@
           <p class="text-xl font-medium">
             {{ $t("i18n.components.footer_website.resources") }}
           </p>
-          <template v-for="(resource, index) in resourcesLinks">
+          <template v-for="(resource, index) in links.resourcesLinks">
             <p
               class="mt-2 text-base hover:text-distinct-text"
               :class="{ 'mt-3': index === 0 }"
@@ -257,7 +257,7 @@
           <p class="text-xl font-medium">
             {{ $t("i18n.components.footer_website.organization") }}
           </p>
-          <template v-for="(oLink, index) in organizationLinks">
+          <template v-for="(oLink, index) in links.organizationLinks">
             <p
               class="mt-2 text-base hover:text-distinct-text"
               :class="{ 'mt-3': index === 0 }"
@@ -352,4 +352,12 @@ const legalLinks = [
     url: "/docs/legal/privacy-policy",
   },
 ];
+
+const links = {
+  connectLinks,
+  resourcesLinks,
+  organizationLinks,
+  platformLinks,
+  legalLinks,
+};
 </script>

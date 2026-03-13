@@ -185,19 +185,24 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
 > [!NOTE]
 > Feel free to contact the team in the [General room on Matrix](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org) if you're having problems getting your environment setup!
 
-7. Install [pre-commit](https://pre-commit.com/) to ensure that each of your commits is properly checked against our linter and formatters:
+7. Install [prek](https://prek.j178.dev/) to ensure that each of your commits is properly checked against our linter and formatters:
 
    ```bash
    # In the project root:
-   pre-commit install
-   # uv run pre-commit run --all-files  # lint and fix common problems in the codebase
+   prek install
+
+    # Then test the pre-commit hooks to see how it works:
+    prek run --all-files
    ```
 
 > [!NOTE]
-> pre-commit is Python package that can be installed via pip or any other Python package manager. You can also find it in our [requirements.txt](backend/requirements.txt) file.
+> prek is Python package that can be installed via pip or any other Python package manager. You can also find it in our [uv.lock](backend/uv.lock) file.
+
+> [!NOTE]
+> If you are having issues with prek and want to send along your changes regardless, you can ignore the pre-commit hooks via the following:
 >
 > ```bash
-> pip install pre-commit
+> git commit --no-verify -m "COMMIT_MESSAGE"
 > ```
 
 You're now ready to work on `scri.be`!
