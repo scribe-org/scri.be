@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 <div align="center">
   <a href="https://github.com/scribe-org/scri.be"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeGitHubOrgBanner.png" width=1024 alt="Scribe Logo"></a>
 </div>
@@ -26,18 +28,14 @@
 
 Scribe apps are available on [iOS](https://github.com/scribe-org/Scribe-iOS), [Android](https://github.com/scribe-org/Scribe-Android) (WIP) and [Desktop](https://github.com/scribe-org/Scribe-Desktop) (WIP). For the data formatting processes see [Scribe-Data](https://github.com/scribe-org/Scribe-Data) and for our data server see [Scribe-Server](https://github.com/scribe-org/Scribe-Server).
 
-<a id="contents"></a>
-
-# **Contents**
+# Contents
 
 - [Contributing](#contributing)
 - [Environment Setup](#environment-setup)
 - [Localization](#localization)
 - [Featured By](#featured-by)
 
-<a id="contributing"></a>
-
-# Contributing [`⇧`](#contents)
+# Contributing
 
 <a href="https://matrix.to/#/#scribe_community:matrix.org">
   <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/MatrixLogoGrey.png" width="175" alt="Public Matrix Chat" align="right">
@@ -52,27 +50,21 @@ Please see the [contribution guidelines](CONTRIBUTING.md) and [style guide](STYL
 
 Those interested can further check the [`-next release-`](https://github.com/scribe-org/scri.be/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/scri.be/labels/-priority-) labels in the [issues](https://github.com/scribe-org/scri.be/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first-time contributors. For those new to coding or our tech stack, we've collected [links to helpful documentation pages](CONTRIBUTING.md#learning-the-tech) in the [contribution guidelines](CONTRIBUTING.md).
 
-<a id="ways-to-help"></a>
-
-## Ways to Help [`⇧`](#contents)
+## Ways to Help
 
 - [Reporting bugs](https://github.com/scribe-org/scri.be/issues/new?assignees=&labels=bug&template=bug_report.yml) as they're found 🐞
 - Working on [new features](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue+is%3Aopen+label%3Afeature) ✨
 - [Localization](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue+is%3Aopen+label%3Alocalization) for the website 🌐
 - [Documentation](https://github.com/scribe-org/scri.be/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) for onboarding and project cohesion 📝
 
-<a id="road-map"></a>
-
-## Road Map [`⇧`](#contents)
+## Road Map
 
 The Scribe road map can be followed in the organization's [project board](https://github.com/orgs/scribe-org/projects/1) where we list the most important issues along with their priority, status and an indication of which sub projects they're included in (if applicable).
 
 > [!NOTE]
 > Consider joining our [bi-weekly developer syncs](https://etherpad.wikimedia.org/p/scribe-dev-sync)!
 
-<a id="designs"></a>
-
-## Designs [`⇧`](#contents)
+## Designs
 
 <a href="https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464">
   <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/FigmaLogo.png" width="100" alt="Public Figma Designs" align="right">
@@ -80,9 +72,9 @@ The Scribe road map can be followed in the organization's [project board](https:
 
 The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464) are made using [Figma](https://www.figma.com). Those with interest in contributing can [open a design issue](https://github.com/scribe-org/scri.be/issues/new?assignees=&labels=design&template=design_improvement.yml) to make suggestions! Design related issues are marked with the [`design`](https://github.com/scribe-org/scri.be/issues?q=is%3Aopen+is%3Aissue+label%3Adesign) label.
 
-<a id="environment-setup"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Environment Setup [`⇧`](#contents)
+# Environment Setup
 
 1. First and foremost, please see the suggested IDE extensions in the dropdown below to make sure that your editor is set up properly.
 
@@ -210,9 +202,9 @@ You're now ready to work on `scri.be`!
 > [!NOTE]
 > Feel free to contact the team in the [Web room on Matrix](https://matrix.to/#/#scri.be:matrix.org) if you're having problems getting your environment setup!
 
-<a id="tech-stack"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Tech Stack [`⇧`](#contents)
+## Tech Stack
 
 The following are the current and planned technologies for [scri.be](https://scri.be):
 
@@ -235,9 +227,9 @@ The following are the current and planned technologies for [scri.be](https://scr
 > [!NOTE]
 > Those new to any frameworks or technologies who want to work on their skills are more than welcome to contribute!
 
-<a id="lozalization"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Localization [`⇧`](#contents)
+# Localization
 
 <a href="https://hosted.weblate.org/projects/scribe">
   <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WeblateLogo.png" width="125" alt="Visit the Weblate project" align="right">
@@ -251,9 +243,9 @@ Localization of Scribe is done via [Weblate](https://weblate.org). Those interes
     <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
 </a>
 
-<a id="featured-by"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Featured By [`⇧`](#contents)
+# Featured By
 
 Please see the [blog posts page on our website](https://scri.be/docs/about/blog-posts) for a list of articles on Scribe, and feel free to open a pull request to add one that you've written at [scribe-org/scri.be](https://github.com/scribe-org/scri.be)!
 
@@ -279,7 +271,9 @@ The following organizations have supported the development of Scribe projects th
   <br>
 </div>
 
-# Powered By [`⇧`](#contents)
+<sub><a href="#top">Back to top.</a></sub>
+
+# Powered By
 
 ### Contributors
 
@@ -312,3 +306,5 @@ The Scribe community would like to thank all the great software that made scri.b
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <br>
 </div>
+
+<sub><a href="#top">Back to top.</a></sub>
