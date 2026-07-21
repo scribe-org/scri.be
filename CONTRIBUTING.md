@@ -219,7 +219,7 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
 5. Start your docker images with the following:
 
    ```bash
-   # --build only necessary with new dependencies or backend model changes.
+   # --build only necessary with new dependencies.
    docker compose --env-file .env.dev up --build
 
    # And to stop the containers when you're done working:
@@ -242,7 +242,7 @@ git remote add upstream https://github.com/scribe-org/scri.be.git
    ```
 
 > [!NOTE]
-> prek is Python package that can be installed via pip or any other Python package manager. You can also find it in our [uv.lock](backend/uv.lock) file.
+> prek is Python package that can be installed via pip or any other Python package manager. You can also find it in our [uv.lock](./uv.lock) file.
 
 > [!NOTE]
 > If you are having issues with prek and want to send along your changes regardless, you can ignore the pre-commit hooks via the following:
@@ -381,7 +381,7 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
    ```
 
 > [!NOTE]
-> prek is Python package that can be installed via pip or any other Python package manager. You can also find it in our [uv.lock](backend/uv.lock) file.
+> prek is Python package that can be installed via pip or any other Python package manager. You can also find it in our [uv.lock](./uv.lock) file.
 
 > [!NOTE]
 > If you are having issues with prek and want to send along your changes regardless, you can ignore the pre-commit hooks via the following:

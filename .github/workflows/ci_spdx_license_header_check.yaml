@@ -23,7 +23,7 @@ jobs:
         uses: to-sta/spdx-checker-action@v0.0.3
         with:
           target-license: "AGPL-3.0-or-later"
-          file-paths: "backend/,frontend/,services/"
+          file-paths: "frontend/"
           extensions: "css,d.ts,html,js,mjs,mts,py,ts,vue"
           exclude: "dist/,**/*.md,**/*.txt,**/.git/**,**/*__init__.py"
           continue-on-error: false
