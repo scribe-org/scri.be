@@ -1,7 +1,7 @@
 # Configuration file for i18n-check validation.
 # See https://github.com/activist-org/i18n-check for details.
 
-src-dir: frontend/app
+src-dirs: [frontend/app]
 i18n-dir: frontend/Scribe-i18n/i18n/locales
 i18n-src: frontend/Scribe-i18n/i18n/locales/en-US.json
 
