@@ -16,19 +16,25 @@
       {{ $t("i18n.pages.docs.about.community.open_source_developers") }}
     </h2>
     <p class="space-x-1">
-      {{ $t("i18n.pages.docs.about.community.contributor_thank_you") }}
-      <a
-        class="link-text focus-brand"
-        href="https://github.com/scribe-org/"
-        target="_blank"
+      <i18n-t
+        keypath="i18n.pages.docs.about.community.contributor_thank_you_github"
+        tag="span"
       >
-        {{ $t("i18n.pages.docs.about.community.github_contributors") }}
-        <Icon
-          name="bi:box-arrow-up-right"
-          size="1em"
-          style="vertical-align: baseline"
-        />
-      </a>
+        <template #github_contributors>
+          <a
+            class="link-text focus-brand"
+            href="https://github.com/scribe-org/"
+            target="_blank"
+          >
+            {{ $t("i18n.pages.docs.about.community.github_contributors") }}
+            <Icon
+              name="bi:box-arrow-up-right"
+              size="1em"
+              style="vertical-align: baseline"
+            />
+          </a>
+        </template>
+      </i18n-t>
       <Icon :name="IconMap.HEART" size="1em" style="vertical-align: baseline" />
     </p>
     <GridGitHubContributors />
