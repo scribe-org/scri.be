@@ -6,6 +6,7 @@ export enum LOCALE_NAME {
   ENGLISH = "English",
   GREEK = "Ελληνικά",
   HINDI = "हिन्दी",
+  KANNADA = "ಕನ್ನಡ",
   MALAYALAM = "മലയാളം",
   NEPALI = "नेपाली",
   TAMIL = "தமிழ்",
@@ -17,6 +18,7 @@ export enum LOCALE_CODE {
   ENGLISH = "en",
   GREEK = "el",
   HINDI = "hi",
+  KANNADA = "kn",
   MALAYALAM = "ml",
   NEPALI = "ne",
   TAMIL = "ta",
@@ -24,7 +26,7 @@ export enum LOCALE_CODE {
 }
 
 export const locales: LocaleObject<
-  "bn" | "en" | "el" | "hi" | "ml" | "ne" | "ta" | "te"
+  "bn" | "en" | "el" | "hi" | "kn" | "ml" | "ne" | "ta" | "te"
 >[] = [
   {
     code: LOCALE_CODE.BENGALI,
@@ -45,6 +47,11 @@ export const locales: LocaleObject<
     code: LOCALE_CODE.HINDI,
     name: LOCALE_NAME.HINDI,
     file: "hi.json",
+  },
+  {
+    code: LOCALE_CODE.KANNADA,
+    name: LOCALE_NAME.KANNADA,
+    file: "kn.json",
   },
   {
     code: LOCALE_CODE.MALAYALAM,
