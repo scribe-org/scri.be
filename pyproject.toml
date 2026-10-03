@@ -11,7 +11,7 @@ dependencies = []
 dev = [
     # Keep docs dependencies formatted in this way with ruff to allow for upgrades via VS Code extension.
     "i18n-check>=1.21.0",
-    "prek>=0.5.3",
+    "prek>=0.5.4",
 ]
 
 [project.urls]
