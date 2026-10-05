@@ -145,10 +145,11 @@ jobs:
           yarn typecheck 2>&1 | tee -a ../reports.md || true
           echo "\`\`\`" >> ../reports.md
 
-          echo -e "\n### Vitest Results\n" >> ../reports.md
-          echo "\`\`\`" >> ../reports.md
-          yarn test --reporter=dot --silent='passed-only' --no-color 2>&1 | tee -a ../reports.md || true
-          echo "\`\`\`" >> ../reports.md
+          # Note: No Vitest tests for now.
+          # echo -e "\n### Vitest Results\n" >> ../reports.md
+          # echo "\`\`\`" >> ../reports.md
+          # yarn test --reporter=dot --silent='passed-only' --no-color 2>&1 | tee -a ../reports.md || true
+          # echo "\`\`\`" >> ../reports.md
 
       # MARK: Create Issue
 
