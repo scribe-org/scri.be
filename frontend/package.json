@@ -59,8 +59,8 @@
     "@nuxtjs/axios": "5.13.6",
     "@nuxtjs/plausible": "2.0.1",
     "@opentelemetry/api": "1.9.0",
-    "@tailwindcss/vite": "4.1.17",
-    "@unocss/reset": "66.5.10",
+    "@tailwindcss/vite": "4.3.3",
+    "@unocss/reset": "66.10.5",
     "axios": "1.20.0",
     "dotenv": "17.2.3",
     "eslint-config-prettier": "10.1.8",
@@ -68,12 +68,12 @@
     "markdown-it": "14.3.3",
     "pinia": "4.1.0",
     "pinia-plugin-persistedstate": "4.7.1",
-    "postcss": "8.5.6",
-    "postcss-custom-properties": "14.0.6",
+    "postcss": "8.5.29",
+    "postcss-custom-properties": "15.0.4",
     "reduced-motion": "1.0.4",
     "tailwind-scrollbar": "4.0.2",
-    "tailwindcss": "4.1.17",
-    "unocss": "66.5.10"
+    "tailwindcss": "4.3.3",
+    "unocss": "66.10.5"
   },
   "packageManager": "yarn@4.12.0"
 }
