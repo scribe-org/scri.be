@@ -6,11 +6,11 @@
   >
     <PageBreadcrumbs />
     <h1 class="pb-2 font-bold">
-      {{ $t("i18n._global.available_data") }}
+      {{ t("i18n._global.available_data") }}
     </h1>
-    <p>{{ $t("i18n.pages.docs.server.available_data.table_description") }}</p>
+    <p>{{ t("i18n.pages.docs.server.available_data.table_description") }}</p>
     <p>
-      {{ $t("i18n.pages.docs.server.available_data.download_available_data") }}:
+      {{ t("i18n.pages.docs.server.available_data.download_available_data") }}:
       <a
         class="link-text"
         href="https://scribe-server.toolforge.org/packs/sqlite"
@@ -27,17 +27,17 @@
               <th
                 class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-primary-text"
               >
-                {{ $t("i18n.pages.docs.server.available_data.language") }}
+                {{ t("i18n.pages.docs.server.available_data.language") }}
               </th>
               <th
                 class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-primary-text"
               >
-                {{ $t("i18n.pages.docs.server.available_data.nouns") }}
+                {{ t("i18n.pages.docs.server.available_data.nouns") }}
               </th>
               <th
                 class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-primary-text"
               >
-                {{ $t("i18n.pages.docs.server.available_data.verbs") }}
+                {{ t("i18n.pages.docs.server.available_data.verbs") }}
               </th>
             </tr>
           </thead>
@@ -68,6 +68,8 @@ interface LanguageDataStat {
   nouns: number;
   verbs: number;
 }
+
+const { t } = useI18n();
 
 const languageData = ref<LanguageDataStat[]>([]);
 const error = ref<string | null>(null);

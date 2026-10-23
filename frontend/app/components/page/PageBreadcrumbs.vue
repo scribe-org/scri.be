@@ -1,6 +1,6 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
-  <nav :aria-label="$t('i18n.components.page_breadcrumbs.aria_label')">
+  <nav :aria-label="t('i18n.components.page_breadcrumbs.aria_label')">
     <ul class="flex flex-row flex-wrap text-sm md:text-base">
       <li
         v-for="(breadcrumb, index) in displayBreadcrumbs"
@@ -42,6 +42,8 @@
 <script setup lang="ts">
 const { locales } = useI18n();
 const localePath = useLocalePath();
+const { t } = useI18n();
+
 const breadcrumbs = ref<string[]>([]);
 
 function setBreadcrumbs() {

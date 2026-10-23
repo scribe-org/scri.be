@@ -6,7 +6,7 @@
     <div class="flex flex-col items-center justify-center space-y-5 lg:hidden">
       <div class="flex flex-col items-center justify-center space-y-2">
         <p>
-          {{ $t("i18n.components.footer_website.scribe_tagline") }}
+          {{ t("i18n.components.footer_website.scribe_tagline") }}
         </p>
         <!-- Note: Platform Links -->
         <div class="flex flex-wrap items-center justify-center">
@@ -17,7 +17,7 @@
                 class="focus-brand"
                 :to="localePath(platform.url)"
               >
-                {{ $t(platform.name) }}
+                {{ t(platform.name) }}
               </NuxtLink>
               <a
                 v-else
@@ -25,7 +25,7 @@
                 :href="platform.url"
                 target="_blank"
               >
-                {{ $t(platform.name) }}
+                {{ t(platform.name) }}
               </a>
             </div>
             <div v-if="index < links.platformLinks.length - 1" class="px-2">
@@ -41,12 +41,12 @@
         <!-- Note: Connect Links -->
         <div class="text-center">
           <p class="text-xl font-medium">
-            {{ $t("i18n.components.footer_website.connect") }}
+            {{ t("i18n.components.footer_website.connect") }}
           </p>
           <div class="mt-1 flex gap-10 sm:mt-0 sm:flex-col sm:gap-0">
             <template v-for="(connect, index) in links.connectLinks">
               <a
-                :aria-label="$t(connect.name)"
+                :aria-label="t(connect.name)"
                 class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
                 :class="{ 'mt-3': index === 0 }"
                 :href="connect.url"
@@ -55,7 +55,7 @@
                 <MetaTagSocialMedia
                   class="text-2xl sm:text-base"
                   :iconName="connect.iconName"
-                  :text="$t(connect.name)"
+                  :text="t(connect.name)"
                   textUtilityClasses="sr-only sm:not-sr-only"
                 />
               </a>
@@ -65,7 +65,7 @@
         <!-- Note: Resources Links -->
         <div>
           <p class="mt-6 text-xl font-medium sm:mt-0">
-            {{ $t("i18n.components.footer_website.resources") }}
+            {{ t("i18n.components.footer_website.resources") }}
           </p>
           <div
             class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0"
@@ -76,7 +76,7 @@
                 :class="{ 'sm:mt-3': index === 0 }"
               >
                 <NuxtLink class="focus-brand" :to="localePath(resource.url)">
-                  {{ $t(resource.name) }}
+                  {{ t(resource.name) }}
                 </NuxtLink>
                 <span
                   v-if="index < links.resourcesLinks.length - 1"
@@ -91,7 +91,7 @@
         <!-- Note: Organization Links -->
         <div>
           <p class="mt-6 text-xl font-medium sm:mt-0">
-            {{ $t("i18n.components.footer_website.organization") }}
+            {{ t("i18n.components.footer_website.organization") }}
           </p>
           <div
             class="flex flex-wrap justify-center gap-x-1 sm:flex-col sm:gap-0"
@@ -102,7 +102,7 @@
                 :class="{ 'sm:mt-3': index === 0 }"
               >
                 <NuxtLink class="focus-brand" :to="localePath(oLink.url)">
-                  {{ $t(oLink.name) }}
+                  {{ t(oLink.name) }}
                 </NuxtLink>
                 <span
                   v-if="index < links.organizationLinks.length - 1"
@@ -121,7 +121,7 @@
           <template v-for="(policy, index) in links.legalLinks">
             <div class="hover:text-distinct-text">
               <NuxtLink class="focus-brand" :to="localePath(policy.url)">
-                {{ $t(policy.name) }}
+                {{ t(policy.name) }}
               </NuxtLink>
               <span
                 v-if="index < links.legalLinks.length - 1"
@@ -137,11 +137,11 @@
           href="https://www.netlify.com/"
           target="_blank"
         >
-          {{ $t("i18n.components.footer_website.powered_by_netlify") }}
+          {{ t("i18n.components.footer_website.powered_by_netlify") }}
         </a>
         <p class="mt-2">
           {{
-            $t("i18n.components.footer_website.copyright", {
+            t("i18n.components.footer_website.copyright", {
               year: new Date().getFullYear(),
             })
           }}
@@ -153,7 +153,7 @@
       <!-- Note: Content Sections Left -->
       <div class="mt-0 flex w-[80%] flex-col justify-items-start">
         <p class="mt-3">
-          {{ $t("i18n.components.footer_website.scribe_tagline") }}
+          {{ t("i18n.components.footer_website.scribe_tagline") }}
         </p>
         <!-- Note: Platform Links -->
         <div class="mt-2 flex justify-start">
@@ -164,7 +164,7 @@
                 class="focus-brand"
                 :to="localePath(platform.url)"
               >
-                {{ $t(platform.name) }}
+                {{ t(platform.name) }}
               </NuxtLink>
               <a
                 v-else
@@ -172,7 +172,7 @@
                 :href="platform.url"
                 target="_blank"
               >
-                {{ $t(platform.name) }}
+                {{ t(platform.name) }}
               </a>
             </div>
             <div v-if="index < links.platformLinks.length - 1" class="px-2">
@@ -186,7 +186,7 @@
           <template v-for="(policy, index) in links.legalLinks">
             <div class="hover:text-distinct-text">
               <NuxtLink class="focus-brand" :to="localePath(policy.url)">
-                {{ $t(policy.name) }}
+                {{ t(policy.name) }}
               </NuxtLink>
             </div>
             <div v-if="index < links.legalLinks.length - 1" class="px-2">
@@ -200,11 +200,11 @@
           href="https://www.netlify.com/"
           target="_blank"
         >
-          {{ $t("i18n.components.footer_website.powered_by_netlify") }}
+          {{ t("i18n.components.footer_website.powered_by_netlify") }}
         </a>
         <div class="mt-2">
           {{
-            $t("i18n.components.footer_website.copyright", {
+            t("i18n.components.footer_website.copyright", {
               year: new Date().getFullYear(),
             })
           }}
@@ -217,11 +217,11 @@
         <!-- Note: Connect Links -->
         <div>
           <p class="text-xl font-medium">
-            {{ $t("i18n.components.footer_website.connect") }}
+            {{ t("i18n.components.footer_website.connect") }}
           </p>
           <template v-for="(connect, index) in links.connectLinks">
             <a
-              :aria-label="$t(connect.name)"
+              :aria-label="t(connect.name)"
               class="mt-2 flex items-center space-x-2 text-base focus-brand hover:text-distinct-text"
               :class="{ 'mt-3': index === 0 }"
               :href="connect.url"
@@ -231,7 +231,7 @@
                 class="!gap-2"
                 :iconName="connect.iconName"
                 :iconSize="connect.iconSize"
-                :text="$t(connect.name)"
+                :text="t(connect.name)"
               />
             </a>
           </template>
@@ -239,7 +239,7 @@
         <!-- Note: Resources Links -->
         <div>
           <p class="text-xl font-medium">
-            {{ $t("i18n.components.footer_website.resources") }}
+            {{ t("i18n.components.footer_website.resources") }}
           </p>
           <template v-for="(resource, index) in links.resourcesLinks">
             <p
@@ -247,7 +247,7 @@
               :class="{ 'mt-3': index === 0 }"
             >
               <NuxtLink class="focus-brand" :to="localePath(resource.url)">
-                {{ $t(resource.name) }}
+                {{ t(resource.name) }}
               </NuxtLink>
             </p>
           </template>
@@ -255,7 +255,7 @@
         <!-- Note: Organization Links -->
         <div>
           <p class="text-xl font-medium">
-            {{ $t("i18n.components.footer_website.organization") }}
+            {{ t("i18n.components.footer_website.organization") }}
           </p>
           <template v-for="(oLink, index) in links.organizationLinks">
             <p
@@ -263,7 +263,7 @@
               :class="{ 'mt-3': index === 0 }"
             >
               <NuxtLink class="focus-brand" :to="localePath(oLink.url)">
-                {{ $t(oLink.name) }}
+                {{ t(oLink.name) }}
               </NuxtLink>
             </p>
           </template>
@@ -274,6 +274,7 @@
 </template>
 <script setup lang="ts">
 const localePath = useLocalePath();
+const { t } = useI18n();
 
 const connectLinks = [
   {

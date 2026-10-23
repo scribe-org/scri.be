@@ -5,7 +5,7 @@
   >
     <ImageLogo
       :aria-label="
-        $t(
+        t(
           'i18n.components.grid_supporters.wikimedia_foundation_logo_aria_label'
         )
       "
@@ -14,7 +14,7 @@
     />
     <ImageLogo
       :aria-label="
-        $t(
+        t(
           'i18n.components.grid_supporters.wikimedia_deutschland_logo_aria_label'
         )
       "
@@ -23,3 +23,7 @@
     />
   </div>
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n();
+</script>

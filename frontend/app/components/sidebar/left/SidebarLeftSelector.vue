@@ -13,13 +13,13 @@
           class="select-none whitespace-nowrap"
         >
           <span class="sr-only">{{
-            $t("i18n.components.sidebar_left_selector.navigate_to")
+            t("i18n.components.sidebar_left_selector.navigate_to")
           }}</span>
-          {{ $t(label) }}
+          {{ t(label) }}
         </p>
         <span v-else class="sr-only">
-          {{ $t("i18n.components.sidebar_left_selector.navigate_to") }}
-          {{ $t(label) }}
+          {{ t("i18n.components.sidebar_left_selector.navigate_to") }}
+          {{ t(label) }}
         </span>
       </Transition>
     </div>
@@ -35,6 +35,7 @@ defineProps<{
 }>();
 
 const sidebar = useSidebar();
+const { t } = useI18n();
 </script>
 
 <style>

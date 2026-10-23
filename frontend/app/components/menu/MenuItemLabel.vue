@@ -27,7 +27,7 @@
         "
         v-bind="infoLabel"
       >
-        {{ $t(label) }}
+        {{ t(label) }}
       </component>
     </Transition>
   </component>
@@ -45,6 +45,7 @@ const props = defineProps<{
 }>();
 
 const sidebar = useSidebar();
+const { t } = useI18n();
 
 const infoComponent = computed(() => {
   return props.isButton

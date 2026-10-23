@@ -10,30 +10,30 @@
       <!-- Note: image on top of content. -->
       <img
         v-if="$colorMode.value == 'light' && !aboveLargeBP"
-        :alt="$t(imageAltText)"
+        :alt="t(imageAltText)"
         class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgURL + '_light.png'"
       />
       <img
         v-else-if="$colorMode.value == 'dark' && !aboveLargeBP"
-        :alt="$t(imageAltText)"
+        :alt="t(imageAltText)"
         class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgURL + '_dark.png'"
       />
       <h2
         class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl lg:text-left xl:text-4xl"
       >
-        {{ $t(header) }}
+        {{ t(header) }}
       </h2>
       <p
         class="text-transform: w-10/12 text-center text-base uppercase tracking-wider text-distinct-text sm:w-full sm:text-lg lg:text-left xl:text-xl"
       >
-        {{ $t(tagline) }}
+        {{ t(tagline) }}
       </p>
       <p
         class="w-10/12 pb-2 text-center text-sm sm:w-full sm:text-base md:text-lg lg:text-left"
       >
-        {{ $t(text) }}
+        {{ t(text) }}
       </p>
       <BtnRouteInternal
         :id="btnId1"
@@ -48,12 +48,12 @@
     <div v-if="aboveLargeBP" class="h-60 w-60 xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
-        :alt="$t(imageAltText)"
+        :alt="t(imageAltText)"
         :src="imgURL + '_light.png'"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
-        :alt="$t(imageAltText)"
+        :alt="t(imageAltText)"
         :src="imgURL + '_dark.png'"
       />
     </div>
@@ -66,12 +66,12 @@
     <div v-if="aboveLargeBP" class="h-60 w-60 xl:h-72 xl:w-72">
       <img
         v-if="$colorMode.value == 'light'"
-        :alt="$t(imageAltText)"
+        :alt="t(imageAltText)"
         :src="imgURL + '_light.png'"
       />
       <img
         v-else-if="$colorMode.value == 'dark'"
-        :alt="$t(imageAltText)"
+        :alt="t(imageAltText)"
         :src="imgURL + '_dark.png'"
       />
     </div>
@@ -81,30 +81,30 @@
       <!-- Note: image on top of content. -->
       <img
         v-if="$colorMode.value == 'light' && !aboveLargeBP"
-        :alt="$t(imageAltText)"
+        :alt="t(imageAltText)"
         class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgURL + '_light.png'"
       />
       <img
         v-else-if="$colorMode.value == 'dark' && !aboveLargeBP"
-        :alt="$t(imageAltText)"
+        :alt="t(imageAltText)"
         class="mb-4 h-48 sm:h-52 md:h-56"
         :src="imgURL + '_dark.png'"
       />
       <h2
         class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl lg:text-left xl:text-4xl"
       >
-        {{ $t(header) }}
+        {{ t(header) }}
       </h2>
       <p
         class="text-transform: w-10/12 text-center text-base uppercase tracking-wider text-distinct-text sm:w-full sm:text-lg lg:text-left xl:text-xl"
       >
-        {{ $t(tagline) }}
+        {{ t(tagline) }}
       </p>
       <p
         class="w-10/12 pb-2 text-center text-sm sm:w-full sm:text-base md:text-lg lg:text-left"
       >
-        {{ $t(text) }}
+        {{ t(text) }}
       </p>
       <BtnRouteInternal
         :id="btnId1"
@@ -124,17 +124,17 @@
       <h2
         class="w-10/12 text-center text-2xl font-semibold sm:w-full sm:text-3xl xl:text-4xl"
       >
-        {{ $t(header) }}
+        {{ t(header) }}
       </h2>
       <p
         class="text-transform: w-10/12 text-center text-base uppercase tracking-wider text-distinct-text sm:w-full sm:text-lg xl:text-xl"
       >
-        {{ $t(tagline) }}
+        {{ t(tagline) }}
       </p>
       <p
         class="mx-12 w-10/12 pb-2 text-center text-sm sm:text-base md:w-full md:max-w-lg md:text-lg lg:max-w-xl"
       >
-        {{ $t(text) }}
+        {{ t(text) }}
       </p>
       <div class="style-btns-next-to-one-another">
         <BtnRouteInternal
@@ -163,7 +163,7 @@
         v-if="subText"
         class="mx-12 pt-8 text-center text-distinct-text md:max-w-md lg:max-w-lg xl:pt-12"
       >
-        {{ $t(subText) }}
+        {{ t(subText) }}
       </p>
     </div>
   </div>
@@ -189,4 +189,5 @@ defineProps<{
 }>();
 
 const aboveLargeBP = useBreakpoint("lg");
+const { t } = useI18n();
 </script>

@@ -9,10 +9,10 @@
       <Icon :name="IconMap.GITHUB" size="2em" />
       <div class="ml-4 place-self-center pb-1">
         <div class="ml-0.5 text-xs font-semibold leading-4">
-          {{ $t("i18n.components.grid_community_shields.visit_us") }}
+          {{ t("i18n.components.grid_community_shields.visit_us") }}
         </div>
         <div class="text-2xl font-semibold leading-4">
-          {{ $t("i18n.components._global.github") }}
+          {{ t("i18n.components._global.github") }}
         </div>
       </div>
     </ShieldCommunity>
@@ -24,17 +24,17 @@
       <Icon :name="IconMap.MATRIX" size="2em" />
       <div class="ml-4 place-self-center pb-1">
         <div class="ml-0.5 text-xs font-semibold leading-4">
-          {{ $t("i18n.components.grid_community_shields.join_us") }}
+          {{ t("i18n.components.grid_community_shields.join_us") }}
         </div>
         <div class="text-2xl font-semibold leading-4">
-          {{ $t("i18n.components._global.matrix") }}
+          {{ t("i18n.components._global.matrix") }}
         </div>
       </div>
     </ShieldCommunity>
     <!-- <ShieldCommunity
       class="fill-primary-text"
       href="https://github.com/scribe-org/Scribe-iOS/forks"
-      :text="$t('i18n.components.grid_community_shields.fork')"
+      :text="t('i18n.components.grid_community_shields.fork')"
       :isLoading="isLoading"
       :count="GitHubData.forks_count"
     >
@@ -43,7 +43,7 @@
     <ShieldCommunity
       class="fill-primary-text"
       href="https://github.com/scribe-org/Scribe-iOS/stargazers"
-      :text="$t('i18n.components.grid_community_shields.star')"
+      :text="t('i18n.components.grid_community_shields.star')"
       :isLoading="isLoading"
       :count="GitHubData.stargazers_count"
     >
@@ -53,6 +53,7 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
 // const isLoading = ref(false);
 // const GitHubData = reactive({
 //   forks_count: 0,

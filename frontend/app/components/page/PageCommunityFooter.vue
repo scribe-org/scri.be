@@ -2,7 +2,7 @@
 <template>
   <div class="flex-col">
     <h4 class="font-bold">
-      {{ $t("i18n.components.page_community_footer.invite_text_1") }}
+      {{ t("i18n.components.page_community_footer.invite_text_1") }}
     </h4>
     <ul class="list-disc space-y-1 pb-1 pl-4 pt-3">
       <i18n-t
@@ -15,7 +15,7 @@
             href="https://github.com/scribe-org"
             target="_blank"
           >
-            {{ $t("i18n.components.page_community_footer.on_github") }}
+            {{ t("i18n.components.page_community_footer.on_github") }}
             <Icon
               :name="IconMap.EXTERNAL_LINK"
               size="1em"
@@ -35,7 +35,7 @@
             target="_blank"
           >
             {{
-              $t(
+              t(
                 "i18n.components.page_community_footer.public_matrix_chat_rooms"
               )
             }}
@@ -58,7 +58,7 @@
             target="_blank"
           >
             {{
-              $t(
+              t(
                 "i18n.components.page_community_footer.weblate_internationalization_project"
               )
             }}
@@ -77,3 +77,7 @@
     <slot />
   </div>
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n();
+</script>

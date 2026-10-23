@@ -5,7 +5,7 @@
       <MenuButton
         v-slot="{ open }"
         @focus="expandOnFocus"
-        :aria-label="$t(`${menuButtonAriaLabel}`)"
+        :aria-label="t(`${menuButtonAriaLabel}`)"
         class="selected-option style-btn inline-flex w-full select-none whitespace-nowrap rounded-md border-none px-2 py-2 font-semibold"
         :class="[
           {
@@ -45,7 +45,7 @@
                   'select-none': isSidebarLeftMenu,
                 }"
               >
-                {{ $t(`${menuButtonLabel}`) }}
+                {{ t(`${menuButtonLabel}`) }}
               </p>
             </Transition>
           </div>
@@ -100,6 +100,7 @@ const props = defineProps<{
 }>();
 
 const sidebar = useSidebar();
+const { t } = useI18n();
 
 const isSidebarLeftMenu = computed(() => {
   return props.location === DropdownLocation.SIDE_LEFT_MENU;

@@ -1,23 +1,24 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <Head>
-    <Title>{{ $t("i18n._global.legal") }}</Title>
+    <Title>{{ t("i18n._global.legal") }}</Title>
   </Head>
   <div>
     <div class="responsive-py-4 responsive-px-5 flex-col space-y-3">
       <PageBreadcrumbs />
       <h1 class="transition-all duration-500">
-        {{ $t("i18n._global.legal") }}
+        {{ t("i18n._global.legal") }}
       </h1>
     </div>
   </div>
   <div class="responsive-px-5 flex-col space-y-4 pb-10">
-    <p>{{ $t("i18n.pages.docs._global.legal_description") }}</p>
+    <p>{{ t("i18n.pages.docs._global.legal_description") }}</p>
     <GridDocEntries :cards="cards" class="responsive-py-1" />
   </div>
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
 const cards: DocsEntry[] = [
   {
     id: 0,

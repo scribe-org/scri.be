@@ -2,7 +2,7 @@
 <template>
   <button
     :id="id"
-    :aria-label="$t(ariaLabel)"
+    :aria-label="t(ariaLabel)"
     class="btn-base-class rounded-md xl:rounded-lg"
     :class="btnDynamicClass"
   >
@@ -23,4 +23,6 @@ import type { BtnAction } from "#shared/types/btn-props";
 const props = defineProps<BtnAction>();
 
 const btnDynamicClass = getBtnDynamicClass(props.cta, props.fontSize);
+
+const { t } = useI18n();
 </script>

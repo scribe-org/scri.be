@@ -2,7 +2,7 @@
 <template>
   <div class="overflow-hidden bg-layer-0">
     <Head>
-      <Title>{{ $t("i18n.pages.index.title") }}</Title>
+      <Title>{{ t("i18n.pages.index.title") }}</Title>
     </Head>
     <LandingSplash />
     <LandingCommunityBanner />
@@ -92,18 +92,22 @@
         <h2
           class="w-4/5 text-center text-2xl font-semibold sm:text-3xl md:w-3/5 xl:text-4xl"
         >
-          {{ $t("i18n.pages._global.contributors") }}
+          {{ t("i18n.pages._global.contributors") }}
         </h2>
         <p
           class="w-4/5 text-center text-base uppercase tracking-wider text-distinct-text sm:text-lg md:w-3/5 xl:text-xl"
         >
-          {{ $t("i18n.pages.index.contributors_tagline") }}
+          {{ t("i18n.pages.index.contributors_tagline") }}
         </p>
         <p class="mx-12 w-4/5 pb-2 text-center text-sm sm:text-base md:w-3/5">
-          {{ $t("i18n.pages.index.contributors_text") }}
+          {{ t("i18n.pages.index.contributors_text") }}
         </p>
         <GridGitHubContributors alwaysCentered />
       </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
