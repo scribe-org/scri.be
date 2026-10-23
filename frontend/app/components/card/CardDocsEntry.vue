@@ -17,16 +17,14 @@
       class="text-light-text dark:text-dark-text w-min grow flex-col space-y-2 lg:space-y-3"
     >
       <p class="font-bold responsive-h4">
-        {{ $t(title) }}
+        {{ t(title) }}
       </p>
-      <p>{{ $t(description) }}</p>
+      <p>{{ t(description) }}</p>
     </div>
   </NuxtLink>
 </template>
 
 <script setup lang="ts">
-const localPath = useLocalePath();
-
 defineProps<{
   url: string;
   iconURL: string;
@@ -35,4 +33,7 @@ defineProps<{
   title: string;
   description: string;
 }>();
+
+const localPath = useLocalePath();
+const { t } = useI18n();
 </script>

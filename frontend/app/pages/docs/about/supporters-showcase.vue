@@ -4,7 +4,7 @@
     class="bg-light-layer-0 text-light-text dark:bg-dark-layer-0 dark:text-dark-text"
   >
     <Head>
-      <Title>{{ $t("i18n.pages._global.our_supporters") }}</Title>
+      <Title>{{ t("i18n.pages._global.our_supporters") }}</Title>
     </Head>
     <PageDocs
       imgAltText="i18n.pages.docs.about._global.heart_img_alt_text"
@@ -12,33 +12,31 @@
     >
       <PageBreadcrumbs />
       <h1 class="font-bold">
-        {{ $t("i18n.pages._global.our_supporters") }}
+        {{ t("i18n.pages._global.our_supporters") }}
       </h1>
       <p class="pt-2 lg:pt-4 xl:pt-6">
         {{
-          $t(
-            "i18n.pages.docs.about.supporters_showcase.section_1_paragraph_1_1"
-          )
+          t("i18n.pages.docs.about.supporters_showcase.section_1_paragraph_1_1")
         }}
         <NuxtLink
           class="link-text focus-brand"
           :to="localePath('/docs/about/support-us')"
         >
-          {{ $t("i18n._global.support_scribe") }}
+          {{ t("i18n._global.support_scribe") }}
         </NuxtLink>
         .
       </p>
       <h2 class="responsive-py-1 font-bold responsive-h3">
-        {{ $t("i18n.pages._global.contributors") }}
+        {{ t("i18n.pages._global.contributors") }}
       </h2>
       <h3 class="font-bold responsive-h4">
         {{
-          $t("i18n.pages.docs.about.supporters_showcase.section_2_1_subheader")
+          t("i18n.pages.docs.about.supporters_showcase.section_2_1_subheader")
         }}
       </h3>
       <p class="space-x-1">
         {{
-          $t(
+          t(
             "i18n.pages.docs.about.supporters_showcase.section_2_1_paragraph_1_1"
           )
         }}
@@ -47,30 +45,24 @@
       <GridGitHubContributors />
       <h3 class="pt-4 font-bold responsive-h4">
         {{
-          $t("i18n.pages.docs.about.supporters_showcase.section_2_2_subheader")
+          t("i18n.pages.docs.about.supporters_showcase.section_2_2_subheader")
         }}
       </h3>
       <p>
         {{
-          $t(
-            "i18n.pages.docs.about.supporters_showcase.section_2_2_paragraph_1"
-          )
+          t("i18n.pages.docs.about.supporters_showcase.section_2_2_paragraph_1")
         }}
       </p>
       <!-- <ul class="py-4 pl-4 space-y-2"></ul> -->
       <p class="text-light-special-text dark:text-dark-special-text">
-        {{ $t("i18n.pages.docs.about.supporters_showcase.section_2_2_thanks") }}
+        {{ t("i18n.pages.docs.about.supporters_showcase.section_2_2_thanks") }}
       </p>
       <h2 class="responsive-py-1 font-bold responsive-h3">
-        {{
-          $t("i18n.pages.docs.about.supporters_showcase.section_3_subheader")
-        }}
+        {{ t("i18n.pages.docs.about.supporters_showcase.section_3_subheader") }}
       </h2>
       <p>
         {{
-          $t(
-            "i18n.pages.docs.about.supporters_showcase.section_3_paragraph_1_1"
-          )
+          t("i18n.pages.docs.about.supporters_showcase.section_3_paragraph_1_1")
         }}
       </p>
       <div
@@ -94,4 +86,5 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath();
+const { t } = useI18n();
 </script>

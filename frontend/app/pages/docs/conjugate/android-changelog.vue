@@ -7,11 +7,11 @@
     <PageBreadcrumbs />
     <div>
       <div v-if="loading">
-        {{ $t("i18n.pages.docs._global.changelog.loading_changelog") }}
+        {{ t("i18n.pages.docs._global.changelog.loading_changelog") }}
       </div>
       <div v-else-if="error">
         {{
-          $t("i18n.pages.docs._global.changelog.error", {
+          t("i18n.pages.docs._global.changelog.error", {
             error: error,
           })
         }}
@@ -27,6 +27,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
 
+const { t } = useI18n();
 const md = useMarkdown();
 const { base64ToUTF8 } = useBase64Decoder();
 

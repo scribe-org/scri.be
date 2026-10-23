@@ -55,15 +55,16 @@
       </defs>
     </svg>
     <span class="sr-only">{{
-      $t("i18n.components._global.navigate_to_start")
+      t("i18n.components._global.navigate_to_start")
     }}</span>
   </NuxtLink>
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath();
-
 defineProps<{
   color?: string;
 }>();
+
+const localePath = useLocalePath();
+const { t } = useI18n();
 </script>

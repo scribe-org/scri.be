@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <Head>
-    <Title>{{ $t("i18n._global.blog_posts") }}</Title>
+    <Title>{{ t("i18n._global.blog_posts") }}</Title>
   </Head>
   <PageDocs
     imgAltText="i18n.pages.docs.about._global.file_text_img_alt_text"
@@ -9,14 +9,14 @@
   >
     <PageBreadcrumbs />
     <h1 class="pb-2 font-bold">
-      {{ $t("i18n._global.blog_posts") }}
+      {{ t("i18n._global.blog_posts") }}
     </h1>
     <div class="flex flex-col space-y-4 pb-4">
       <p>
-        {{ $t("i18n.pages.docs.about.blog_posts.welcome_message") }}
+        {{ t("i18n.pages.docs.about.blog_posts.welcome_message") }}
       </p>
       <p>
-        {{ $t("i18n.pages.docs.about.blog_posts.lack_of_localization_notice") }}
+        {{ t("i18n.pages.docs.about.blog_posts.lack_of_localization_notice") }}
       </p>
       <h3>2026</h3>
       <ul class="list-disc pl-6">
@@ -653,3 +653,7 @@
     </PageCommunityFooter>
   </PageDocs>
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n();
+</script>

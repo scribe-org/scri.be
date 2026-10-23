@@ -10,7 +10,7 @@
       {{ value }}
     </p>
     <p v-if="label">
-      {{ $t(label) }}
+      {{ t(label) }}
     </p>
   </div>
 </template>
@@ -22,4 +22,6 @@ defineProps<{
   label?: string;
   iconSize?: string;
 }>();
+
+const { t } = useI18n();
 </script>

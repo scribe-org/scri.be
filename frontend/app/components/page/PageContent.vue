@@ -3,7 +3,7 @@
   <!-- Note: image on top of content. -->
   <img
     v-if="!aboveMediumBP"
-    :alt="$t(imgAltText)"
+    :alt="t(imgAltText)"
     class="mb-4 h-40 sm:h-52"
     :src="imgURL + '_' + $colorMode.value + '.png'"
   />
@@ -17,7 +17,7 @@
       <!-- Note: image floating right of content. -->
       <img
         v-if="aboveMediumBP && !above2xlBP"
-        :alt="$t(imgAltText)"
+        :alt="t(imgAltText)"
         class="float-right block h-52 p-4 lg:h-64"
         :src="imgURL + '_' + $colorMode.value + '.png'"
       />
@@ -29,7 +29,7 @@
       <!-- Note: image right of content. -->
       <img
         v-if="above2xlBP"
-        :alt="$t(imgAltText)"
+        :alt="t(imgAltText)"
         class="block h-72"
         :src="imgURL + '_' + $colorMode.value + '.png'"
       />
@@ -44,6 +44,7 @@ export interface Props {
   includeBreadcrumbs?: boolean;
 }
 
+const { t } = useI18n();
 const aboveMediumBP = useBreakpoint("md");
 const above2xlBP = useBreakpoint("2xl");
 

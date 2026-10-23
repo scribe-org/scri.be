@@ -14,7 +14,7 @@
       >
         <img
           :alt="
-            $t('i18n.components.grid_git_hub_contributors.img_alt_text', {
+            t('i18n.components.grid_git_hub_contributors.img_alt_text', {
               github_user_id: item.loginID,
             })
           "
@@ -32,7 +32,7 @@
       <button
         @click="onClickLoadMoreContributors"
         :aria-label="
-          $t('i18n.components.grid_git_hub_contributors.show_more_aria_label')
+          t('i18n.components.grid_git_hub_contributors.show_more_aria_label')
         "
         class="relative flex w-20 flex-col items-center space-y-1 focus-brand"
       >
@@ -42,7 +42,7 @@
         ></span>
         <span
           :alt="
-            $t(
+            t(
               'i18n.components.grid_git_hub_contributors.show_more_img_alt_text'
             )
           "
@@ -59,8 +59,8 @@
         >
           {{
             isLoading
-              ? $t("i18n.components.grid_git_hub_contributors.loading")
-              : $t("i18n.components.grid_git_hub_contributors.show_more")
+              ? t("i18n.components.grid_git_hub_contributors.loading")
+              : t("i18n.components.grid_git_hub_contributors.show_more")
           }}
         </p>
       </button>
@@ -77,6 +77,7 @@ defineProps({
 });
 
 const localePath = useLocalePath();
+const { t } = useI18n();
 
 interface GithubContributor {
   avatarUrl: string;

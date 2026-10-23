@@ -1,23 +1,25 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <Head>
-    <Title>{{ $t("i18n._global.data_extraction") }}</Title>
+    <Title>{{ t("i18n._global.data_extraction") }}</Title>
   </Head>
   <div>
     <div class="responsive-py-4 responsive-px-5 flex-col space-y-3">
       <PageBreadcrumbs />
       <h1 class="transition-all duration-500">
-        {{ $t("i18n._global.data_extraction") }}
+        {{ t("i18n._global.data_extraction") }}
       </h1>
     </div>
   </div>
   <div class="responsive-px-5 flex-col space-y-4 pb-10">
-    <p>{{ $t("i18n.pages.docs._global.data_extraction_description") }}</p>
+    <p>{{ t("i18n.pages.docs._global.data_extraction_description") }}</p>
     <GridDocEntries :cards="cards" class="responsive-py-1" />
   </div>
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 const cards: DocsEntry[] = [
   {
     id: 0,

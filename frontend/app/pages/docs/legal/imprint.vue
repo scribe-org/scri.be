@@ -4,7 +4,7 @@
     class="bg-light-layer-0 text-light-text dark:bg-dark-layer-0 dark:text-dark-text"
   >
     <Head>
-      <Title>{{ $t("i18n._global.imprint") }}</Title>
+      <Title>{{ t("i18n._global.imprint") }}</Title>
     </Head>
     <PageDocs
       imgAltText="i18n.pages.docs._global.information_icon_img_alt_text"
@@ -12,17 +12,17 @@
     >
       <PageBreadcrumbs />
       <h1 class="pb-2 font-bold">
-        {{ $t("i18n._global.imprint") }}
+        {{ t("i18n._global.imprint") }}
       </h1>
       <p>
-        {{ $t("i18n.pages.docs.legal.imprint.section_1_paragraph_1") }}
+        {{ t("i18n.pages.docs.legal.imprint.section_1_paragraph_1") }}
       </p>
       <p>
-        {{ $t("i18n.pages.docs.legal.imprint.section_1_paragraph_2") }}
+        {{ t("i18n.pages.docs.legal.imprint.section_1_paragraph_2") }}
       </p>
       <ul>
         <li>
-          <strong>{{ $t("i18n.pages.docs.legal.imprint.inquiries") }}</strong>
+          <strong>{{ t("i18n.pages.docs.legal.imprint.inquiries") }}</strong>
         </li>
         <li>
           <a class="link-text focus-brand" href="mailto:team@scri.be">
@@ -31,7 +31,7 @@
         </li>
       </ul>
       <p class="pb-2 lg:pb-4">
-        {{ $t("i18n.pages.docs.legal.imprint.message") }}
+        {{ t("i18n.pages.docs.legal.imprint.message") }}
       </p>
       <PageCommunityFooter>
         <BtnRouteInternal
@@ -46,3 +46,7 @@
     </PageDocs>
   </div>
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
