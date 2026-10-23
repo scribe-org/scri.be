@@ -21,6 +21,24 @@
       <h3>2026</h3>
       <ul class="list-disc pl-6">
         <li>
+          October:
+          <a
+            class="link-text"
+            href="https://docs.google.com/presentation/d/1Yw2tHmlMmTv2Zq-U09mK2JyGS5eAwymkJgGYhi6Uw98/edit?usp=sharing"
+            target="_blank"
+          >
+            Presentation slides
+          </a>
+          for a talk on Scribe's WDQS v2 migration at
+          <a
+            class="link-text"
+            href="https://www.wikidata.org/wiki/Event:Query_Service_Days_2026"
+            target="_blank"
+          >
+            Wikidata Query Service Days 2026
+          </a>
+        </li>
+        <li>
           January:
           <a
             class="link-text"
