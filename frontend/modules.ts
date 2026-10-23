@@ -9,7 +9,7 @@ const modules: (string | [string, Record<string, object>] | NuxtModule)[] = [
   "@nuxtjs/color-mode",
   "@nuxtjs/device",
   "@nuxtjs/i18n",
-  "@nuxtjs/plausible",
+  // "@nuxtjs/plausible",
 ];
 
 // This plugin may depend on Pinia.

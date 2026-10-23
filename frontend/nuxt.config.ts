@@ -95,8 +95,8 @@ export default defineNuxtConfig({
     preset: "netlify-static",
   },
 
-  plausible: {
-    // Prevent tracking on localhost.
-    ignoredHostnames: ["localhost"],
-  },
+  // plausible: {
+  //   // Prevent tracking on localhost.
+  //   ignoredHostnames: ["localhost"],
+  // },
 });
