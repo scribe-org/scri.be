@@ -1,34 +1,33 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-export default {
+import type { NuxtConfig } from "nuxt/schema";
+
+type AppHead = NonNullable<NuxtConfig["app"]>["head"];
+
+const head: AppHead = {
   charset: "utf-8",
   viewport: "width=device-width, initial-scale=1",
   title: "scri.be",
   meta: [
     {
-      hid: "description",
       name: "description",
       content:
         "Open-source community with apps to help language learners communicate with confidence.",
     },
     { property: "og:site_name", content: "scri.be" },
-    { hid: "og:type", property: "og:type", content: "website" },
+    { property: "og:type", content: "website" },
     {
-      hid: "og:url",
       property: "og:url",
       content: "https://scri.be",
     },
     {
-      hid: "og:title",
       property: "og:title",
       content: "scri.be",
     },
     {
-      hid: "og:description",
       property: "og:description",
       content: "Open-source language solutions.",
     },
     {
-      hid: "og:image",
       property: "og:image",
       content: "/images/Scribe/ScribeOpenGraphImage.png",
     },
@@ -37,22 +36,18 @@ export default {
     { name: "twitter:site", content: "@scribe_org" },
     { name: "twitter:card", content: "summary_large_image" },
     {
-      hid: "twitter:url",
       name: "twitter:url",
       content: "https://scri.be",
     },
     {
-      hid: "twitter:title",
       name: "twitter:title",
       content: "scri.be",
     },
     {
-      hid: "twitter:description",
       name: "twitter:description",
-      content: "Open-source activism platform.",
+      content: "Open-source language solutions.",
     },
     {
-      hid: "twitter:image",
       name: "twitter:image",
       content: "/images/Scribe/ScribeTwitterOpenGraphImage.png",
     },
@@ -89,9 +84,10 @@ export default {
       href: "/icons/favicons/android-chrome-512x512.png",
     },
     {
-      hid: "canonical",
       rel: "canonical",
       href: "https://scri.be",
     },
   ],
 };
+
+export default head;
