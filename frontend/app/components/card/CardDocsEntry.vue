@@ -1,17 +1,13 @@
 <!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <template>
   <NuxtLink
-    class="card-style group flex w-full space-x-4 bg-layer-1 px-3 py-3 hover:bg-highlight dark:hover:bg-highlight lg:px-4"
+    class="card-style group flex w-full space-x-4 bg-layer-1 p-3 hover:bg-highlight dark:hover:bg-highlight lg:px-4"
     :to="localPath(url)"
   >
     <div
-      class="flex h-20 w-20 items-center justify-center rounded-full bg-scribe-blue fill-primary-text text-primary-text group-hover:opacity-90 sm:h-24 sm:w-24"
+      class="flex size-20 items-center justify-center rounded-full bg-scribe-blue fill-primary-text text-primary-text group-hover:opacity-90 sm:size-24"
     >
-      <Icon
-        class="h-10 w-10 sm:h-12 sm:w-12"
-        :name="iconURL"
-        :size="iconSize"
-      />
+      <Icon class="size-10 sm:size-12" :name="iconURL" :size="iconSize" />
     </div>
     <div
       class="text-light-text dark:text-dark-text w-min grow flex-col space-y-2 lg:space-y-3"

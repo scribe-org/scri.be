@@ -5,7 +5,7 @@
       class="relative z-0 flex w-full items-center space-x-2 text-left text-sm font-medium"
     >
       <span class="pl-1">
-        <Icon v-if="iconUrl" class="h-5 w-5 flex-shrink-0" :name="iconUrl" />
+        <Icon v-if="iconUrl" class="size-5 flex-shrink-0" :name="iconUrl" />
       </span>
       <Transition>
         <p

@@ -2,20 +2,20 @@
 <template>
   <a class="group rounded-xl focus-brand" :href="imageLink" target="_blank">
     <div
-      class="relative z-0 h-[200px] w-[200px] rounded-xl bg-layer-1 group-hover:bg-highlight group-hover:fill-primary-text lg:h-[250px] lg:w-[250px]"
+      class="relative z-0 size-[200px] rounded-xl bg-layer-1 group-hover:bg-highlight group-hover:fill-primary-text lg:size-[250px]"
     >
       <div
         class="z-1 absolute inset-0 flex items-center justify-center overflow-clip"
       >
         <div v-if="imageName == 'WikimediaFoundation'">
           <LogoWikimediaFoundation
-            class="h-[200px] w-[200px] scale-[0.7] rounded-md group-hover:fill-primary-text lg:h-[250px] lg:w-[250px] lg:rounded-lg"
+            class="size-[200px] scale-[0.7] rounded-md group-hover:fill-primary-text lg:size-[250px] lg:rounded-lg"
           />
           <span class="sr-only">Wikimedia Foundation</span>
         </div>
         <div v-if="imageName == 'WikimediaDeutschland'">
           <LogoWikimediaDeutschland
-            class="h-[200px] w-[200px] group-hover:fill-primary-text lg:h-[250px] lg:w-[250px]"
+            class="size-[200px] group-hover:fill-primary-text lg:size-[250px]"
           />
           <span class="sr-only">Wikimedia Deutschland</span>
         </div>
