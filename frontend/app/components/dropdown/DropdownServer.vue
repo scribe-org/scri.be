@@ -8,7 +8,7 @@
     menuButtonAriaLabel="i18n.components.dropdown._global.open_menu_dropdown_aria_label"
     menuButtonLabel="i18n._global.data_server"
   >
-    <ul class="px-2 py-2">
+    <ul class="p-2">
       <NuxtLink to="/docs/server">
         <MenuItem v-slot="{ active }" class="flex">
           <MenuItemLabel

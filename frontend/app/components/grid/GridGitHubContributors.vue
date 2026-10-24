@@ -18,7 +18,7 @@
               github_user_id: item.loginID,
             })
           "
-          class="ring-light-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 h-16 w-16 rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
+          class="ring-light-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 size-16 rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
           :src="item.avatarUrl"
         />
         <p
@@ -38,7 +38,7 @@
       >
         <span
           v-if="isLoading"
-          class="absolute inline-flex h-[4rem] w-[4rem] animate-ping rounded-full border-4 border-scribe-blue opacity-75"
+          class="absolute inline-flex size-[4rem] animate-ping rounded-full border-4 border-scribe-blue opacity-75"
         ></span>
         <span
           :alt="
@@ -46,7 +46,7 @@
               'i18n.components.grid_git_hub_contributors.show_more_img_alt_text'
             )
           "
-          class="bg-light-section-div ring-light-section-div dark:bg-dark-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 flex h-16 w-16 items-center justify-center rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
+          class="bg-light-section-div ring-light-section-div dark:bg-dark-section-div dark:ring-dark-section-div dark:hover:ring-offset-dark-layer-0 flex size-16 items-center justify-center rounded-full ring-2 hover:ring-2 hover:ring-offset-2"
         >
           <Icon
             class="text-light-text dark:text-dark-text"
