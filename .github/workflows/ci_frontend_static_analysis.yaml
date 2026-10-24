@@ -56,7 +56,7 @@ jobs:
         working-directory: ./frontend
         run: sudo yarn lint
 
-      # - name: Run Vitest - Component Testing
-      #   if: always()
-      #   working-directory: ./frontend
-      #   run: sudo yarn test --silent
+      - name: Run Vitest - Component Testing
+        if: always()
+        working-directory: ./frontend
+        run: sudo yarn test --silent
