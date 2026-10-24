@@ -3156,6 +3156,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pkgr/core@npm:^0.3.6":
+  version: 0.3.6
+  resolution: "@pkgr/core@npm:0.3.6"
+  checksum: 10c0/153f0f4563f505faeba13c733efa0e05e467ce1c6b941055a5fd3b4560da60fbf1dff4b11da0075f034ddda11f2842b90395f60895dde5825875b616edccc11c
+  languageName: node
+  linkType: hard
+
 "@polka/url@npm:^1.0.0-next.24":
   version: 1.0.0-next.29
   resolution: "@polka/url@npm:1.0.0-next.29"
@@ -4405,7 +4412,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.72.0, @typescript-eslint/utils@npm:^8.66.0, @typescript-eslint/utils@npm:^8.71.2":
+"@typescript-eslint/utils@npm:8.72.0, @typescript-eslint/utils@npm:^8.37.0, @typescript-eslint/utils@npm:^8.66.0, @typescript-eslint/utils@npm:^8.71.2":
   version: 8.72.0
   resolution: "@typescript-eslint/utils@npm:8.72.0"
   dependencies:
@@ -7124,7 +7131,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.24.1":
+"enhanced-resolve@npm:^5.18.1, enhanced-resolve@npm:^5.24.1":
   version: 5.26.0
   resolution: "enhanced-resolve@npm:5.26.0"
   dependencies:
@@ -7627,6 +7634,25 @@ __metadata:
   peerDependencies:
     eslint: ">=9.38.0"
   checksum: 10c0/fc88e8282e860b7af0c15c80000412db88b66c2f30c069037593b71b42492f328a4c024bed1fb11795bc93000c7ce7d6dfea52a381311bd9625ea6f50cdf1cfc
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-tailwindcss@npm:4.4.0":
+  version: 4.4.0
+  resolution: "eslint-plugin-tailwindcss@npm:4.4.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^8.37.0"
+    postcss: "npm:^8.4.4"
+    postcss-nested: "npm:^7.0.2"
+    synckit: "npm:^0.11.11"
+    tailwind-api-utils: "npm:^1.0.3"
+  peerDependencies:
+    eslint: ^9.0.0 || ^10.0.0
+    tailwindcss: ^4.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10c0/c601739afb5095fb3ea788c8c8b8dc92a11f84e4387f5a6121affda71d62ef4aaf7a3339c0884cf9dd0eb0f06a8d9b5807d89204a5686207bd50a694824bf208
   languageName: node
   linkType: hard
 
@@ -10201,6 +10227,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"local-pkg@npm:^1.1.1, local-pkg@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "local-pkg@npm:1.2.1"
+  dependencies:
+    mlly: "npm:^1.7.4"
+    pkg-types: "npm:^2.3.0"
+    quansync: "npm:^0.2.11"
+  checksum: 10c0/d21ccfc2595b2eddf7369f19797533573feb06820d8b5766467902a7a54e36b3a1f2b8cc2aa4481a2ad432c8e798576eabfac2f1ec0646a8e11a68694c2ef9d4
+  languageName: node
+  linkType: hard
+
 "local-pkg@npm:^1.1.2":
   version: 1.1.2
   resolution: "local-pkg@npm:1.1.2"
@@ -10209,17 +10246,6 @@ __metadata:
     pkg-types: "npm:^2.3.0"
     quansync: "npm:^0.2.11"
   checksum: 10c0/1bcfcc5528dea95cba3caa478126a348d3985aad9f69ecf7802c13efef90897e1c5ff7851974332c5e6d4a4698efe610fef758a068c8bc3feb5322aeb35d5993
-  languageName: node
-  linkType: hard
-
-"local-pkg@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "local-pkg@npm:1.2.1"
-  dependencies:
-    mlly: "npm:^1.7.4"
-    pkg-types: "npm:^2.3.0"
-    quansync: "npm:^0.2.11"
-  checksum: 10c0/d21ccfc2595b2eddf7369f19797533573feb06820d8b5766467902a7a54e36b3a1f2b8cc2aa4481a2ad432c8e798576eabfac2f1ec0646a8e11a68694c2ef9d4
   languageName: node
   linkType: hard
 
@@ -12611,7 +12637,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^7.1.4":
+"postcss-nested@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "postcss-nested@npm:7.0.2"
+  dependencies:
+    postcss-selector-parser: "npm:^7.0.0"
+  peerDependencies:
+    postcss: ^8.2.14
+  checksum: 10c0/b467f328c89c5b0dcd1b569ae083f6163235c0cac09494a0b284eef5275fa1386bbc26c66c85adf194cef0a65d315994140724a34539a096e5acd39d9c753338
+  languageName: node
+  linkType: hard
+
+"postcss-selector-parser@npm:^7.0.0, postcss-selector-parser@npm:^7.1.4":
   version: 7.1.7
   resolution: "postcss-selector-parser@npm:7.1.7"
   dependencies:
@@ -12628,7 +12665,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.5.31, postcss@npm:^8.5.29, postcss@npm:^8.5.30":
+"postcss@npm:8.5.31, postcss@npm:^8.4.4, postcss@npm:^8.5.29, postcss@npm:^8.5.30":
   version: 8.5.31
   resolution: "postcss@npm:8.5.31"
   dependencies:
@@ -13653,6 +13690,7 @@ __metadata:
     eslint-config-prettier: "npm:10.1.8"
     eslint-flat-config-utils: "npm:3.2.0"
     eslint-plugin-perfectionist: "npm:5.13.0"
+    eslint-plugin-tailwindcss: "npm:4.4.0"
     eslint-plugin-vue: "npm:10.11.1"
     eslint-plugin-vuejs-accessibility: "npm:2.6.3"
     happy-dom: "npm:20.14.6"
@@ -14378,10 +14416,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"synckit@npm:^0.11.11":
+  version: 0.11.13
+  resolution: "synckit@npm:0.11.13"
+  dependencies:
+    "@pkgr/core": "npm:^0.3.6"
+  checksum: 10c0/5a6c19f4f79045aaa7994106401bff6dbe7cca23a6d0a0723ff14eb8b1bebeb4a71729118f6914905598e304ea2fa13509885e11ba07d92e7cb68a06740cb328
+  languageName: node
+  linkType: hard
+
 "tagged-tag@npm:^1.0.0":
   version: 1.0.0
   resolution: "tagged-tag@npm:1.0.0"
   checksum: 10c0/91d25c9ffb86a91f20522cefb2cbec9b64caa1febe27ad0df52f08993ff60888022d771e868e6416cf2e72dab68449d2139e8709ba009b74c6c7ecd4000048d1
+  languageName: node
+  linkType: hard
+
+"tailwind-api-utils@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "tailwind-api-utils@npm:1.0.3"
+  dependencies:
+    enhanced-resolve: "npm:^5.18.1"
+    jiti: "npm:^2.4.2"
+    local-pkg: "npm:^1.1.1"
+  peerDependencies:
+    tailwindcss: ^3.3.0 || ^4.0.0 || ^4.0.0-beta
+  checksum: 10c0/60c23af7c17ffccb0f835d063d129a6be7f4966d6b93a8c7ba51faf0c955da7adef95a9bb42b955b2c851d3d348b8b3befd2d10bb903cd48fc571c792c124d7b
   languageName: node
   linkType: hard
 

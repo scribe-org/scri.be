@@ -6,7 +6,7 @@
         v-slot="{ open }"
         @focus="expandOnFocus"
         :aria-label="t(`${menuButtonAriaLabel}`)"
-        class="selected-option style-btn inline-flex w-full select-none whitespace-nowrap rounded-md border-none px-2 py-2 font-semibold"
+        class="selected-option style-btn inline-flex w-full select-none whitespace-nowrap rounded-md border-none p-2 font-semibold"
         :class="[
           {
             'pl-5': isSideMenu,
@@ -25,7 +25,7 @@
           <div class="flex items-center space-x-2">
             <Icon
               :class="{
-                'h-5 w-5 flex-shrink-0 text-center': isSidebarLeftMenu,
+                'size-5 flex-shrink-0 text-center': isSidebarLeftMenu,
               }"
               :name="menuButtonIcon"
               :size="isSidebarLeftMenu ? '1.3rem' : ''"
