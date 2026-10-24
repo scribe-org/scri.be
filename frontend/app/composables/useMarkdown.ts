@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import MarkdownIt from "markdown-it";
 
-export function useMarkdown(): MarkdownIt {
+export function useMarkdown(): InstanceType<typeof MarkdownIt> {
   const md = new MarkdownIt();
 
   md.renderer.rules.heading_open = (tokens, idx, options, env, self) => {
     const token = tokens[idx];
-    if (token && token.tag === "h2") {
+    if (token?.tag === "h2") {
       return '<div class="changelog-version-section"><h2 class="sticky-header">';
     }
     return self.renderToken(tokens, idx, options);
@@ -14,7 +14,7 @@ export function useMarkdown(): MarkdownIt {
 
   md.renderer.rules.heading_close = (tokens, idx, options, env, self) => {
     const token = tokens[idx];
-    if (token && token.tag === "h2") {
+    if (token?.tag === "h2") {
       return "</h2></div>";
     }
     return self.renderToken(tokens, idx, options);
