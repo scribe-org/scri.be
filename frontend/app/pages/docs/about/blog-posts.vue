@@ -39,6 +39,45 @@
           </a>
         </li>
         <li>
+          August:
+          <a
+            class="link-text"
+            href="https://gauthammohanraj.substack.com/p/building-a-modular-autosuggestion"
+            target="_blank"
+          >
+            Substack blogpost
+          </a>
+          for the final report on Scribe-Android autosuggestions and
+          Conjugate-Android application development for
+          <a
+            class="link-text"
+            href="https://www.mediawiki.org/wiki/Google_Summer_of_Code/2026"
+            target="_blank"
+          >
+            Google Summer of Code 2026
+          </a>
+        </li>
+        <li>
+          August:
+          <a
+            class="link-text"
+            href="https://www.mediawiki.org/wiki/User:Gauthammohanraj/GSoC_2026_Mid_Report"
+            target="_blank"
+          >
+            MediaWiki page
+          </a>
+          describing the midpoint progress of developing autosuggestions for
+          Scribe-Android as well as progress on the Conjugate-Android
+          application for
+          <a
+            class="link-text"
+            href="https://www.mediawiki.org/wiki/Google_Summer_of_Code/2026"
+            target="_blank"
+          >
+            Google Summer of Code 2026
+          </a>
+        </li>
+        <li>
           January:
           <a
             class="link-text"
@@ -47,7 +86,7 @@
           >
             Blog post on Hashnode
           </a>
-          describing midpoint progress of connecting the Scribe client
+          describing the midpoint progress of connecting the Scribe client
           applications to the Scribe server for
           <a
             class="link-text"
