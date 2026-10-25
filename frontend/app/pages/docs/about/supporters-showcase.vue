@@ -40,7 +40,7 @@
             "i18n.pages.docs.about.supporters_showcase.section_2_1_paragraph_1_1"
           )
         }}
-        💙
+        🩵
       </p>
       <GridGitHubContributors />
       <h3 class="pt-4 font-bold responsive-h4">
