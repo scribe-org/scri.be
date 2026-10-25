@@ -30,7 +30,9 @@ function extractComposableNames(importsContent: string): Set<string> {
     const functions = exports
       .split(",")
       .map((f) => f.trim())
+      // Filter to only use* functions (use followed by uppercase letter).
       .filter((f) => /^use[A-Z]/.test(f))
+      // Handle cases like "useSomething as somethingElse" - take the original name.
       .map((f) => {
         const parts = f.split(/\s+as\s+/);
         return parts[0]?.trim() ?? "";
@@ -65,10 +67,15 @@ export function setupAutoImportMocks(): void {
   try {
     const importsContent = readFileSync(importsFile, "utf-8");
     const composables = extractComposableNames(importsContent);
+
+    // Create default mocks for all composables that aren't already mocked.
     for (const composable of composables) {
+      // Skip composables that are required by the test framework.
       if (EXCLUDED_COMPOSABLES.has(composable)) {
         continue;
       }
+      // Only create a default mock if one doesn't already exist.
+      // This allows custom mocks in setup.ts to override the defaults.
       if (!(composable in globalThis)) {
         (globalThis as Record<string, unknown>)[composable] =
           createDefaultMock();

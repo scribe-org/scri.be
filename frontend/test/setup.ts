@@ -64,6 +64,7 @@ config.global.mocks = {
 };
 
 // MARK: Component Mocks
+
 config.global.components = {
   Icon: {
     template: `<img role="img" :aria-label="getAriaLabel()" :style="computedStyle" v-bind="$attrs" />`,
