@@ -17,17 +17,17 @@ If you have questions or would like to communicate with the team, please [join u
 - [Tech stack](#tech-stack)
 - [Learning the tech stack](#learning-the-tech-stack)
 - [Development environment](#development-environment)
-- [Style guide](#style-guide-)
-- [Linting](#linting-)
-- [Testing](#testing-)
+- [Style guide](#style-guide)
+- [Linting](#linting)
+- [Testing](#testing)
 - [Issues and projects](#issues-and-projects)
 - [Bug reports](#bug-reports)
 - [Feature requests](#feature-requests)
 - [Pull requests](#pull-requests)
 - [Website Localization](#website-localization)
 - [Documentation](#documentation)
-- [Accessibility](#accessibility-)
-- [Internationalization](#internationalization-)
+- [Accessibility](#accessibility)
+- [Internationalization](#internationalization)
 - [Design](#design)
 
 <sub><a href="#top">Back to top.</a></sub>
@@ -297,11 +297,17 @@ yarn typecheck
 
 #### Automated Testing
 
-We use [Vitest](https://vitest.dev/) for component and unit testing.  You can run them with the following command:
+We use [Vitest](https://vitest.dev/) for component and unit testing. You can run them with the following command:
 
 ```bash
 # Within ./frontend:
 yarn test
+```
+
+If you would like to run a specific test, please run the following command:
+
+```bash
+yarn test FILE.spec.ts --run
 ```
 
 <sub><a href="#top">Back to top.</a></sub>
