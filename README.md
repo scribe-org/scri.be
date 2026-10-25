@@ -18,7 +18,7 @@
 [![testing](https://img.shields.io/badge/Testing-F0F0EB.svg?logo=github&logoColor=000000)](https://github.com/scribe-org/scri.be/actions)
 [![ci_frontend_vitest](https://img.shields.io/github/actions/workflow/status/scribe-org/scri.be/ci_frontend_vitest.yaml?branch=main&label=frontend%20vitest)](https://github.com/scribe-org/scri.be/actions/workflows/ci_frontend_vitest.yaml)
 [![ci_frontend_static_analysis](https://img.shields.io/github/actions/workflow/status/scribe-org/scri.be/ci_frontend_static_analysis.yaml?branch=main&label=frontend%20static)](https://github.com/scribe-org/scri.be/actions/workflows/ci_frontend_static_analysis.yaml)
-[![ci_i18n](https://img.shields.io/github/actions/workflow/status/scribe-org/scri.be/ci_i18n.yaml?branch=main&label=i18n)](https://github.com/scribe-org/scri.be/actions/workflows/ci_i18n.yaml)
+[![ci_i18n](https://img.shields.io/github/actions/workflow/status/scribe-org/scri.be/ci_i18n_check.yaml?branch=main&label=i18n)](https://github.com/scribe-org/scri.be/actions/workflows/ci_i18n_check.yaml)
 
 ## Scribe's community portal scri.be
 
