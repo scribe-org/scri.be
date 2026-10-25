@@ -23,6 +23,12 @@ venv/
 .cache
 .env
 dist
+.nuxtrc
+*.tsbuildinfo
+
+# Vitest coverage
+coverage/
+frontend/coverage/
 
 # Node dependencies
 node_modules
