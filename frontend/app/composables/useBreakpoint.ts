@@ -1,5 +1,9 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
+import type { MaybeRefOrGetter, Ref } from "vue";
+
 import { useBreakpoints } from "@vueuse/core";
+
+import { BreakpointMap } from "#shared/types/breakpoint-map";
 
 const breakpoints = useBreakpoints({
   sm: BreakpointMap.SMALL,
