@@ -11,5 +11,5 @@
       "#shared/*": ["./shared/*"]
     }
   },
-  "include": ["./test/**/*", "./vue-shim.d.ts"]
+  "include": ["./test/**/*", "./vue-shim.d.ts", "./.nuxt/types/imports.d.ts"]
 }
