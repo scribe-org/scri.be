@@ -1,6 +1,4 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-export const FAVICON_URL = "/icons/favicons/favicon.svg";
-
 export const SCRIBE_LOGO_URL = "/images/scribe/scribe_logo.svg";
 export const SCRIBE_LOGO_NO_SHADOW_URL =
   "/images/scribe/scribe_logo_no_shadow.svg";
