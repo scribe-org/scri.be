@@ -6,7 +6,7 @@ import DropdownTheme from "../../../app/components/dropdown/DropdownTheme.vue";
 import { createUseColorModeSpy } from "../../mocks/composableMocks";
 import render from "../../render";
 
-// Explicitly set up useColorMode mock using factory (Pattern 1: default behavior).
+// Explicitly set up useColorMode mock using factory.
 // Theme switching should be tested in the e2e tests.
 // Mocking theme switching to make it work in component tests is too complicated.
 globalThis.useColorMode = createUseColorModeSpy("dark", "dark");
