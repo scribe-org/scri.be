@@ -29,9 +29,9 @@ export default defineVitestConfig({
       reportsDirectory: resolve(__dirname, "coverage"),
       thresholds: {
         statements: 75,
-        branches: 45,
-        functions: 60,
-        lines: 75,
+        branches: 55,
+        functions: 70,
+        lines: 80,
       },
     },
   },
