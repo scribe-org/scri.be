@@ -84,11 +84,11 @@ describe("SidebarLeft", () => {
     await fireEvent.focus(aside);
     expect(sidebar.collapsed).toBe(false);
 
-    // Focusout with relatedTarget inside aside stays expanded
+    // Focusout with relatedTarget inside aside stays expanded.
     await fireEvent.focusOut(aside, { relatedTarget: aside });
     expect(sidebar.collapsed).toBe(false);
 
-    // Focusout with relatedTarget outside aside collapses
+    // Focusout with relatedTarget outside aside collapses.
     await fireEvent.focusOut(aside, { relatedTarget: null });
     expect(sidebar.collapsed).toBe(true);
   });
