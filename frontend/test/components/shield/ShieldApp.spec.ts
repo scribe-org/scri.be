@@ -50,4 +50,3 @@ describe("ShieldApp", () => {
     expect(link?.classList.contains("custom-shield-class")).toBe(true);
   });
 });
-

@@ -78,4 +78,3 @@ describe("ShieldCommunity", () => {
     expect(screen.queryByText("42")).toBeNull();
   });
 });
-
