@@ -1,5 +1,6 @@
-import { mount } from "@vue/test-utils";
 // SPDX-License-Identifier: AGPL-3.0-or-later
+
+import { mount } from "@vue/test-utils";
 import { it, expect, describe } from "vitest";
 
 import Error from "../app/error.vue";
@@ -23,6 +24,7 @@ describe("Error.vue", () => {
         stubs: {
           HeaderWebsite: { template: "<div />" },
           FooterWebsite: { template: "<div />" },
+          BtnRouteInternal: { template: '<button data-testid="home-btn" />' },
         },
       },
     });

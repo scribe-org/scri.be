@@ -1,13 +1,9 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { mount } from "@vue/test-utils";
-import { it, vi, expect, describe } from "vitest";
+import { it, expect, describe } from "vitest";
 
 import App from "../app/app.vue";
-
-const useHeadMock = vi.fn();
-
-vi.stubGlobal("useHead", useHeadMock);
 
 describe("App.vue", () => {
   it("renders NuxtLayout and Nuxtpage", () => {
