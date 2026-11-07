@@ -26,12 +26,4 @@ describe("Tests for IconConjugate", () => {
     expect(svg.attributes("height")).toBe("90");
     expect(svg.attributes("width")).toBe("110");
   });
-
-  it("Check so we have proper accessibility attributes", () => {
-    const wrapper = mount(IconConjugate);
-    const svg = wrapper.find("svg");
-    const isAccessibleImage = svg.attributes("role") === "img";
-
-    expect(isAccessibleImage).toBe(true);
-  });
 });

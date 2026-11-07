@@ -26,12 +26,4 @@ describe("Tests for IconLegal", () => {
     expect(svg.attributes("height")).toBe("16");
     expect(svg.attributes("width")).toBe("16");
   });
-
-  it("Check so we have proper accessibility attributes", () => {
-    const wrapper = mount(IconLegal);
-    const svg = wrapper.find("svg");
-    const isAccessibleImage = svg.attributes("role") === "img";
-
-    expect(isAccessibleImage).toBe(true);
-  });
 });

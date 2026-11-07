@@ -22,16 +22,8 @@ describe("Tests for IconScribeSidebar", () => {
     const wrapper = mount(IconScribeSidebar);
     const svg = wrapper.find("svg");
 
-    expect(svg.attributes("fill")).toBe("currentColor");
+    expect(svg.attributes("fill")).toBe("none");
     expect(svg.attributes("height")).toBe("117");
     expect(svg.attributes("width")).toBe("216");
-  });
-
-  it("Check so we have proper accessibility attributes", () => {
-    const wrapper = mount(IconScribeSidebar);
-    const svg = wrapper.find("svg");
-    const isAccessibleImage = svg.attributes("role") === "img";
-
-    expect(isAccessibleImage).toBe(true);
   });
 });

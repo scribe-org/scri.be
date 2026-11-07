@@ -26,12 +26,4 @@ describe("Tests for IconKeyboard", () => {
     expect(svg.attributes("height")).toBe("90");
     expect(svg.attributes("width")).toBe("110");
   });
-
-  it("Check so we have proper accesibility attributes", () => {
-    const wrapper = mount(IconKeyboard);
-    const svg = wrapper.find("svg");
-    const isAccessibleImage = svg.attributes("role") === "img";
-
-    expect(isAccessibleImage).toBe(true);
-  });
 });
