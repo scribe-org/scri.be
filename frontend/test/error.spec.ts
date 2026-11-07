@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { mount } from "@vue/test-utils";
-import { it, expect, describe } from "vitest";
+import { describe, expect, it } from "vitest";
 
 import Error from "../app/error.vue";
 
@@ -13,7 +13,7 @@ const errorMessage = (
   return { name, statusCode, message };
 };
 
-//Displays HTTP status code, error message, and checks if home recovery button existing
+//Displays HTTP status code, error message, and checks if home recovery button existing.
 describe("Error.vue", () => {
   it("displays the error code and message", () => {
     const wrapper = mount(Error, {

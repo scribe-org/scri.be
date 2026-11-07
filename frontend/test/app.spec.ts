@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { mount } from "@vue/test-utils";
-import { it, expect, describe } from "vitest";
+import { describe, expect, it } from "vitest";
 
 import App from "../app/app.vue";
 
