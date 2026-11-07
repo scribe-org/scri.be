@@ -8,6 +8,11 @@ import modules from "./modules";
 import locales from "./shared/utils/locales";
 
 export default defineNuxtConfig({
+  typescript: {
+    tsConfig: {
+      exclude: ["../test", "../test/**/*"],
+    },
+  },
   app: {
     head,
   },
