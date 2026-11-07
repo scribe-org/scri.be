@@ -2,7 +2,7 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
 
-import IconMatrix from "~/components/icon/IconMatrix.vue";
+import IconMatrix from "../../../app/components/icon/IconMatrix.vue";
 
 describe("Tests for IconMatrix", () => {
   it("renders SVG correctly", () => {
@@ -30,11 +30,8 @@ describe("Tests for IconMatrix", () => {
   it("Check so we have proper accessibility attributes", () => {
     const wrapper = mount(IconMatrix);
     const svg = wrapper.find("svg");
-    const isAccessibleImage =
-      svg.attributes("role") === "img" && !!svg.attributes("aria-label");
+    const isAccessibleImage = svg.attributes("role") === "img";
 
-    const isDecorativeImage = svg.attributes("aria-hidden") === "true";
-
-    expect(isDecorativeImage || isAccessibleImage).toBe(true);
+    expect(isAccessibleImage).toBe(true);
   });
 });

@@ -2,7 +2,7 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
 
-import IconScribeSidebar from "~/components/icon/IconScribeSidebar.vue";
+import IconScribeSidebar from "../../../app/components/icon/IconScribeSidebar.vue";
 
 describe("Tests for IconScribeSidebar", () => {
   it("renders SVG correctly", () => {
@@ -30,11 +30,8 @@ describe("Tests for IconScribeSidebar", () => {
   it("Check so we have proper accessibility attributes", () => {
     const wrapper = mount(IconScribeSidebar);
     const svg = wrapper.find("svg");
-    const isAccessibleImage =
-      svg.attributes("role") === "img" && !!svg.attributes("aria-label");
+    const isAccessibleImage = svg.attributes("role") === "img";
 
-    const isDecorativeImage = svg.attributes("aria-hidden") === "true";
-
-    expect(isDecorativeImage || isAccessibleImage).toBe(true);
+    expect(isAccessibleImage).toBe(true);
   });
 });

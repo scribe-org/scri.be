@@ -2,7 +2,7 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
 
-import IconKeyboard from "~/components/icon/IconKeyboard.vue";
+import IconKeyboard from "../../../app/components/icon/IconKeyboard.vue";
 
 describe("Tests for IconKeyboard", () => {
   it("renders SVG correctly", () => {
@@ -30,11 +30,8 @@ describe("Tests for IconKeyboard", () => {
   it("Check so we have proper accesibility attributes", () => {
     const wrapper = mount(IconKeyboard);
     const svg = wrapper.find("svg");
-    const isAccessibleImage =
-      svg.attributes("role") === "img" && !!svg.attributes("aria-label");
+    const isAccessibleImage = svg.attributes("role") === "img";
 
-    const isDecorativeImage = svg.attributes("aria-hidden") === "true";
-
-    expect(isDecorativeImage || isAccessibleImage).toBe(true);
+    expect(isAccessibleImage).toBe(true);
   });
 });

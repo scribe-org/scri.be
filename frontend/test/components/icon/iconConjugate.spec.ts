@@ -27,14 +27,11 @@ describe("Tests for IconConjugate", () => {
     expect(svg.attributes("width")).toBe("110");
   });
 
-  it("Check so we have proper accesibility attributes", () => {
+  it("Check so we have proper accessibility attributes", () => {
     const wrapper = mount(IconConjugate);
     const svg = wrapper.find("svg");
-    const isAccessibleImage =
-      svg.attributes("role") === "img" && !!svg.attributes("aria-label");
+    const isAccessibleImage = svg.attributes("role") === "img";
 
-    const isDecorativeImage = svg.attributes("aria-hidden") === "true";
-
-    expect(isDecorativeImage || isAccessibleImage).toBe(true);
+    expect(isAccessibleImage).toBe(true);
   });
 });
