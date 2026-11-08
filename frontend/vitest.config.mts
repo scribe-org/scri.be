@@ -28,8 +28,8 @@ export default defineVitestConfig({
       reporter: ["text", "json", "html"],
       reportsDirectory: resolve(__dirname, "coverage"),
       thresholds: {
-        statements: 80,
-        branches: 60,
+        statements: 85,
+        branches: 65,
         functions: 75,
         lines: 85,
       },
