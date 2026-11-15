@@ -7,6 +7,7 @@ on:
 jobs:
   check-repository:
     runs-on: ubuntu-latest
+
     outputs:
       is_remote_main: ${{ steps.check.outputs.is_remote_main }}
     steps:
@@ -24,10 +25,6 @@ jobs:
     needs: check-repository
     if: needs.check-repository.outputs.is_remote_main == 'true'
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      issues: write
-
     # Note: Update the following if there are dependencies that can't be upgraded.
     env:
       # Note: Set these values in yarn.config.cjs to enforce the version constraints.
@@ -78,7 +75,7 @@ jobs:
         continue-on-error: false
         run: |
           sudo corepack enable
-          corepack prepare yarn@4.12.0 --activate
+          corepack prepare yarn@4.18.1 --activate
 
       - name: Install Frontend Dependencies
         id: install-frontend
@@ -86,7 +83,7 @@ jobs:
         continue-on-error: false
         run: |
           rm -rf .yarn .pnp.* yarn.lock node_modules
-          yarn set version 4.12.0
+          yarn set version 4.18.1
           yarn install --no-immutable
 
       - name: Update Frontend Dependencies
@@ -110,7 +107,7 @@ jobs:
 
           # Attn: Max versions are set via the yarn.config.cjs file.
           # See: https://yarnpkg.com/features/constraints
-          yarn constraints || true  # view constraints for logging
+          yarn constraints  # view constraints for logging
           yarn constraints --fix
 
           # Sync node_modules with the newly updated package.json.
